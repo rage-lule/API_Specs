@@ -1,0 +1,98 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "PlayFab Client API",
+    "description": "All the client methods",
+    "version": "180521"
+  },
+  "host": "titleid.playfab.com",
+  "schemes": ["https"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/Client/LoginWithCustomId": {
+      "post": {
+        "tags": [
+          "Authentication"
+        ],
+        "summary": "LoginWithCustomId summary",
+        "description": "LoginWithCustomId markdown description",
+        "parameters": [{
+          "$ref": "#/definitions/LoginWithCustomIdRequest"
+        }],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/responses/LoginResult"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "GetPlayerCombinedInfoRequestParams": {
+      "type": "object",
+      "x-extra": "some stuff"
+    },
+    "LoginWithCustomIdRequest": {
+      "type": "object",
+      "required": ["TitleId"],
+      "properties": {
+        "InfoRequestParameters": {
+          "$ref": "#/definitions/GetPlayerCombinedInfoRequestParams"
+        },
+        "TitleId ": {
+          "type": "string"
+        }
+      }
+    },
+    "LoginResult": {
+      "type": "object"
+    }
+  },
+  "responses": {
+    "LoginResult": {
+      "description": "...",
+      "schema": {
+        "$ref": "#/definitions/LoginResult"
+      },
+      "examples": {
+        "application/json": {}
+      }
+    }
+  },
+  "securityDefinitions": {
+    "SecretKey": {
+      "type": "apiKey",
+      "name": "SecretKey",
+      "in": "header"
+    },
+    "SessionTicket": {
+      "type": "apiKey",
+      "name": "SessionTicket",
+      "in": "header"
+    },
+    "EntityToken": {
+      "type": "apiKey",
+      "name": "EntityToken",
+      "in": "header"
+    }
+  },
+  "tags": [
+    {
+      "name": "Authentication"
+    }
+  ],
+  "x-errors": {
+    "DataLengthExceeded": {
+      "id": 1146,
+      "name": "DataLengthExceeded"
+    },
+    "TooManyKeys": {
+      "id": 1147,
+      "name": "TooManyKeys"
+    },
+  }
+}

@@ -4,7 +4,7 @@
             "name": "PlayFabClientApi",
             "shortname": "ClientAPI",
             "path": "swagger/PlayFab/Client.swagger.json",
-            "format": "Swagger",
+            "format": "swagger2.0",
             "x-sdkGenMakeMethods": ["makeSwPfClient", "makeSwPfCombo"]
         },
         {
