@@ -1,0 +1,3958 @@
+{
+  "Swagger": "2.0",
+  "Info": {
+    "Version": "180530",
+    "Title": "PlayFab Matchmaker API",
+    "Description": "Enables the use of an external match-making service in conjunction with PlayFab hosted Game Server instances",
+    "TermsOfService": "https://playfab.com/terms/",
+    "Contact": {
+      "Url": "https://community.playfab.com/index.html"
+    },
+    "License": {
+      "Name": "Apache 2.0",
+      "Url": "https://github.com/PlayFab/API_Specs/blob/master/LICENSE"
+    }
+  },
+  "Host": "titleId.playfabapi.com",
+  "Schemes": [
+    "https"
+  ],
+  "Consumes": [
+    "application/json"
+  ],
+  "Produces": [
+    "application/json"
+  ],
+  "Paths": {
+    "/Matchmaker/AuthUser": {
+      "Post": {
+        "Tags": [
+          "Matchmaking"
+        ],
+        "Summary": "Validates a user with the PlayFab service",
+        "Description": "Validates a user with the PlayFab service",
+        "ExternalDocs": {
+          "Url": "https://api.playfab.com/documentation/Matchmaker/method/AuthUser"
+        },
+        "Parameters": [],
+        "Security": [
+          {
+            "TODO": [
+              "SecretKey"
+            ]
+          }
+        ],
+        "x-requestDetails": "This API allows the external match-making service to confirm that the user has a valid Session Ticket for the title, in order to securely enable match-making. The client passes the user's Session Ticket to the external match-making service, which then passes the Session Ticket in as the AuthorizationTicket in this call.",
+        "x-auth": "SecretKey",
+        "x-requestType": "AuthUserRequest",
+        "x-resultType": "AuthUserResponse",
+        "x-seeAlso": [
+          "Matchmaker/PlayerJoined",
+          "Matchmaker/PlayerLeft",
+          "Matchmaker/StartGame",
+          "Matchmaker/UserInfo"
+        ],
+        "x-errors": [
+          "InvalidParams"
+        ]
+      }
+    },
+    "/Matchmaker/DeregisterGame": {
+      "Post": {
+        "Tags": [
+          "Matchmaking"
+        ],
+        "Summary": "Inform the matchmaker that a Game Server Instance is removed.",
+        "Description": "Inform the matchmaker that a Game Server Instance is removed.",
+        "ExternalDocs": {
+          "Url": "https://api.playfab.com/documentation/Matchmaker/method/DeregisterGame"
+        },
+        "Parameters": [],
+        "Security": [
+          {
+            "TODO": [
+              "SecretKey"
+            ]
+          }
+        ],
+        "x-deprecation": {
+          "ProposedAfter": "09/19/2016",
+          "DeprecatedAfter": "10/19/2016",
+          "ObsoleteAfter": "11/19/2016",
+          "ReplacedBy": "Server/DeregisterGame"
+        },
+        "x-auth": "SecretKey",
+        "x-requestType": "DeregisterGameRequest",
+        "x-resultType": "DeregisterGameResponse",
+        "x-AllInclusiveFlags": [
+          "Beta"
+        ],
+        "x-seeAlso": [
+          "Server/DeregisterGame",
+          "Server/RegisterGame"
+        ],
+        "x-errors": [
+          "InvalidParams"
+        ]
+      }
+    },
+    "/Matchmaker/PlayerJoined": {
+      "Post": {
+        "Tags": [
+          "Matchmaking"
+        ],
+        "Summary": "Informs the PlayFab game server hosting service that the indicated user has joined the Game Server Instance specified",
+        "Description": "Informs the PlayFab game server hosting service that the indicated user has joined the Game Server Instance specified",
+        "ExternalDocs": {
+          "Url": "https://api.playfab.com/documentation/Matchmaker/method/PlayerJoined"
+        },
+        "Parameters": [],
+        "Security": [
+          {
+            "TODO": [
+              "SecretKey"
+            ]
+          }
+        ],
+        "x-auth": "SecretKey",
+        "x-requestType": "PlayerJoinedRequest",
+        "x-resultType": "PlayerJoinedResponse",
+        "x-seeAlso": [
+          "Matchmaker/AuthUser",
+          "Matchmaker/PlayerLeft",
+          "Matchmaker/StartGame",
+          "Matchmaker/UserInfo"
+        ],
+        "x-errors": [
+          "InvalidParams"
+        ]
+      }
+    },
+    "/Matchmaker/PlayerLeft": {
+      "Post": {
+        "Tags": [
+          "Matchmaking"
+        ],
+        "Summary": "Informs the PlayFab game server hosting service that the indicated user has left the Game Server Instance specified",
+        "Description": "Informs the PlayFab game server hosting service that the indicated user has left the Game Server Instance specified",
+        "ExternalDocs": {
+          "Url": "https://api.playfab.com/documentation/Matchmaker/method/PlayerLeft"
+        },
+        "Parameters": [],
+        "Security": [
+          {
+            "TODO": [
+              "SecretKey"
+            ]
+          }
+        ],
+        "x-auth": "SecretKey",
+        "x-requestType": "PlayerLeftRequest",
+        "x-resultType": "PlayerLeftResponse",
+        "x-seeAlso": [
+          "Matchmaker/AuthUser",
+          "Matchmaker/PlayerJoined",
+          "Matchmaker/StartGame",
+          "Matchmaker/UserInfo"
+        ],
+        "x-errors": [
+          "InvalidParams"
+        ]
+      }
+    },
+    "/Matchmaker/RegisterGame": {
+      "Post": {
+        "Tags": [
+          "Matchmaking"
+        ],
+        "Summary": "Inform the matchmaker that a new Game Server Instance is added.",
+        "Description": "Inform the matchmaker that a new Game Server Instance is added.",
+        "ExternalDocs": {
+          "Url": "https://api.playfab.com/documentation/Matchmaker/method/RegisterGame"
+        },
+        "Parameters": [],
+        "Security": [
+          {
+            "TODO": [
+              "SecretKey"
+            ]
+          }
+        ],
+        "x-deprecation": {
+          "ProposedAfter": "09/19/2016",
+          "DeprecatedAfter": "10/19/2016",
+          "ObsoleteAfter": "11/19/2016",
+          "ReplacedBy": "Server/RegisterGame"
+        },
+        "x-auth": "SecretKey",
+        "x-requestType": "RegisterGameRequest",
+        "x-resultType": "RegisterGameResponse",
+        "x-AllInclusiveFlags": [
+          "Beta"
+        ],
+        "x-seeAlso": [
+          "Server/DeregisterGame",
+          "Server/RegisterGame"
+        ],
+        "x-errors": [
+          "BuildNotFound",
+          "InvalidParams",
+          "InvalidRequest"
+        ]
+      }
+    },
+    "/Matchmaker/StartGame": {
+      "Post": {
+        "Tags": [
+          "Matchmaking"
+        ],
+        "Summary": "Instructs the PlayFab game server hosting service to instantiate a new Game Server Instance",
+        "Description": "Instructs the PlayFab game server hosting service to instantiate a new Game Server Instance",
+        "ExternalDocs": {
+          "Url": "https://api.playfab.com/documentation/Matchmaker/method/StartGame"
+        },
+        "Parameters": [],
+        "Security": [
+          {
+            "TODO": [
+              "SecretKey"
+            ]
+          }
+        ],
+        "x-auth": "SecretKey",
+        "x-requestType": "StartGameRequest",
+        "x-resultType": "StartGameResponse",
+        "x-seeAlso": [
+          "Matchmaker/AuthUser",
+          "Matchmaker/PlayerJoined",
+          "Matchmaker/PlayerLeft",
+          "Matchmaker/UserInfo"
+        ],
+        "x-errors": [
+          "BuildNotFound",
+          "InvalidParams"
+        ]
+      }
+    },
+    "/Matchmaker/UserInfo": {
+      "Post": {
+        "Tags": [
+          "Matchmaking"
+        ],
+        "Summary": "Retrieves the relevant details for a specified user, which the external match-making service can then use to compute effective matches",
+        "Description": "Retrieves the relevant details for a specified user, which the external match-making service can then use to compute effective matches",
+        "ExternalDocs": {
+          "Url": "https://api.playfab.com/documentation/Matchmaker/method/UserInfo"
+        },
+        "Parameters": [],
+        "Security": [
+          {
+            "TODO": [
+              "SecretKey"
+            ]
+          }
+        ],
+        "x-auth": "SecretKey",
+        "x-requestType": "UserInfoRequest",
+        "x-resultType": "UserInfoResponse",
+        "x-seeAlso": [
+          "Matchmaker/AuthUser",
+          "Matchmaker/PlayerJoined",
+          "Matchmaker/PlayerLeft",
+          "Matchmaker/StartGame"
+        ],
+        "x-errors": [
+          "InvalidParams"
+        ]
+      }
+    }
+  },
+  "Definitions": {
+    "AuthUserRequest": {
+      "Required": [],
+      "Type": "object",
+      "Properties": {
+        "AuthorizationTicket": {
+          "Description": "Session Ticket provided by the client.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": false
+        }
+      },
+      "x-ClassName": "AuthUserRequest"
+    },
+    "AuthUserResponse": {
+      "Required": [],
+      "Type": "object",
+      "Properties": {
+        "Authorized": {
+          "Description": "Boolean indicating if the user has been authorized to use the external match-making service.",
+          "x-jsontype": "Boolean",
+          "x-actualtype": "Boolean",
+          "x-optional": false
+        },
+        "PlayFabId": {
+          "Description": "PlayFab unique identifier of the account that has been authorized.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        }
+      },
+      "x-ClassName": "AuthUserResponse"
+    },
+    "DeregisterGameRequest": {
+      "Required": [],
+      "Type": "object",
+      "Properties": {
+        "LobbyId": {
+          "Description": "Unique identifier for the Game Server Instance that is being deregistered.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": false
+        }
+      },
+      "x-ClassName": "DeregisterGameRequest",
+      "x-AnyInclusiveFlags": [
+        "Beta"
+      ],
+      "x-deprecation": {
+        "ProposedAfter": "09/19/2016",
+        "DeprecatedAfter": "10/19/2016",
+        "ObsoleteAfter": "11/19/2016"
+      }
+    },
+    "DeregisterGameResponse": {
+      "Required": [],
+      "Type": "object",
+      "Properties": {},
+      "x-ClassName": "DeregisterGameResponse",
+      "x-AnyInclusiveFlags": [
+        "Beta"
+      ],
+      "x-deprecation": {
+        "ProposedAfter": "09/19/2016",
+        "DeprecatedAfter": "10/19/2016",
+        "ObsoleteAfter": "11/19/2016"
+      }
+    },
+    "ItemInstance": {
+      "Description": "A unique instance of an item in a user's inventory. Note, to retrieve additional information for an item instance (such as Tags, Description, or Custom Data that are set on the root catalog item), a call to GetCatalogItems is required. The Item ID of the instance can then be matched to a catalog entry, which contains the additional information. Also note that Custom Data is only set here from a call to UpdateUserInventoryItemCustomData.",
+      "Required": [],
+      "Type": "object",
+      "Properties": {
+        "Annotation": {
+          "Description": "Game specific comment associated with this instance when it was added to the user inventory.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "BundleContents": {
+          "Description": "Array of unique items that were awarded when this catalog item was purchased.",
+          "x-collection": "array",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "BundleParent": {
+          "Description": "Unique identifier for the parent inventory item, as defined in the catalog, for object which were added from a bundle or container.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "CatalogVersion": {
+          "Description": "Catalog version for the inventory item, when this instance was created.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "CustomData": {
+          "Description": "A set of custom key-value pairs on the inventory item.",
+          "x-collection": "map",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "DisplayName": {
+          "Description": "CatalogItem.DisplayName at the time this item was purchased.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "Expiration": {
+          "Description": "Timestamp for when this instance will expire.",
+          "x-jsontype": "String",
+          "x-actualtype": "DateTime",
+          "x-optional": true
+        },
+        "ItemClass": {
+          "Description": "Class name for the inventory item, as defined in the catalog.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "ItemId": {
+          "Description": "Unique identifier for the inventory item, as defined in the catalog.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "ItemInstanceId": {
+          "Description": "Unique item identifier for this specific instance of the item.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "PurchaseDate": {
+          "Description": "Timestamp for when this instance was purchased.",
+          "x-jsontype": "String",
+          "x-actualtype": "DateTime",
+          "x-optional": true
+        },
+        "RemainingUses": {
+          "Description": "Total number of remaining uses, if this is a consumable item.",
+          "x-jsontype": "Number",
+          "x-actualtype": "int32",
+          "x-optional": true
+        },
+        "UnitCurrency": {
+          "Description": "Currency type for the cost of the catalog item.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "UnitPrice": {
+          "Description": "Cost of the catalog item in the given currency.",
+          "x-jsontype": "Number",
+          "x-actualtype": "uint32",
+          "x-optional": false
+        },
+        "UsesIncrementedBy": {
+          "Description": "The number of uses that were added or removed to this item in this call.",
+          "x-jsontype": "Number",
+          "x-actualtype": "int32",
+          "x-optional": true
+        }
+      },
+      "x-ClassName": "ItemInstance",
+      "x-sortKey": "ItemInstanceId"
+    },
+    "PlayerJoinedRequest": {
+      "Required": [],
+      "Type": "object",
+      "Properties": {
+        "LobbyId": {
+          "Description": "Unique identifier of the Game Server Instance the user is joining. This must be a Game Server Instance started with the Matchmaker/StartGame API.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": false
+        },
+        "PlayFabId": {
+          "Description": "PlayFab unique identifier for the player joining.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": false
+        }
+      },
+      "x-ClassName": "PlayerJoinedRequest"
+    },
+    "PlayerJoinedResponse": {
+      "Required": [],
+      "Type": "object",
+      "Properties": {},
+      "x-ClassName": "PlayerJoinedResponse"
+    },
+    "PlayerLeftRequest": {
+      "Required": [],
+      "Type": "object",
+      "Properties": {
+        "LobbyId": {
+          "Description": "Unique identifier of the Game Server Instance the user is leaving. This must be a Game Server Instance started with the Matchmaker/StartGame API.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": false
+        },
+        "PlayFabId": {
+          "Description": "PlayFab unique identifier for the player leaving.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": false
+        }
+      },
+      "x-ClassName": "PlayerLeftRequest"
+    },
+    "PlayerLeftResponse": {
+      "Required": [],
+      "Type": "object",
+      "Properties": {},
+      "x-ClassName": "PlayerLeftResponse"
+    },
+    "Region": {
+      "Enum": [
+        "USCentral",
+        "USEast",
+        "EUWest",
+        "Singapore",
+        "Japan",
+        "Brazil",
+        "Australia"
+      ],
+      "Type": "object",
+      "x-ClassName": "Region"
+    },
+    "RegisterGameRequest": {
+      "Required": [],
+      "Type": "object",
+      "Properties": {
+        "Build": {
+          "Description": "Unique identifier of the build running on the Game Server Instance.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": false
+        },
+        "GameMode": {
+          "Description": "Game Mode the Game Server instance is running. Note that this must be defined in the Game Modes tab in the PlayFab Game Manager, along with the Build ID (the same Game Mode can be defined for multiple Build IDs).",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": false
+        },
+        "LobbyId": {
+          "Description": "Previous lobby id if re-registering an existing game.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "Region": {
+          "$ref": "#/definitions/Region",
+          "Description": "Region in which the Game Server Instance is running. For matchmaking using non-AWS region names, set this to any AWS region and use Tags (below) to specify your custom region.",
+          "x-jsontype": "String",
+          "x-actualtype": "Region",
+          "x-isenum": true,
+          "x-optional": false
+        },
+        "ServerHost": {
+          "Description": "IPV4 address of the Game Server Instance.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": false
+        },
+        "ServerIPV6Address": {
+          "Description": "IPV6 address of the Game Server Instance.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "ServerPort": {
+          "Description": "Port number for communication with the Game Server Instance.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": false
+        },
+        "Tags": {
+          "Description": "Tags for the Game Server Instance",
+          "x-collection": "map",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        }
+      },
+      "x-ClassName": "RegisterGameRequest",
+      "x-AnyInclusiveFlags": [
+        "Beta"
+      ],
+      "x-deprecation": {
+        "ProposedAfter": "09/19/2016",
+        "DeprecatedAfter": "10/19/2016",
+        "ObsoleteAfter": "11/19/2016"
+      }
+    },
+    "RegisterGameResponse": {
+      "Required": [],
+      "Type": "object",
+      "Properties": {
+        "LobbyId": {
+          "Description": "Unique identifier generated for the Game Server Instance that is registered. If LobbyId is specified in request and the game still exists in PlayFab, the LobbyId in request is returned. Otherwise a new lobby id will be returned.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        }
+      },
+      "x-ClassName": "RegisterGameResponse",
+      "x-AnyInclusiveFlags": [
+        "Beta"
+      ],
+      "x-deprecation": {
+        "ProposedAfter": "09/19/2016",
+        "DeprecatedAfter": "10/19/2016",
+        "ObsoleteAfter": "11/19/2016"
+      }
+    },
+    "StartGameRequest": {
+      "Required": [],
+      "Type": "object",
+      "Properties": {
+        "Build": {
+          "Description": "Unique identifier of the previously uploaded build executable which is to be started.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": false
+        },
+        "CustomCommandLineData": {
+          "Description": "Custom command line argument when starting game server process.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "ExternalMatchmakerEventEndpoint": {
+          "Description": "HTTP endpoint URL for receiving game status events, if using an external matchmaker. When the game ends, PlayFab will make a POST request to this URL with the X-SecretKey header set to the value of the game's secret and an application/json body of { \"EventName\": \"game_ended\", \"GameID\": \"<gameid>\" }.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": false
+        },
+        "GameMode": {
+          "Description": "Game mode for this Game Server Instance.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": false
+        },
+        "Region": {
+          "$ref": "#/definitions/Region",
+          "Description": "Region with which to associate the server, for filtering.",
+          "x-jsontype": "String",
+          "x-actualtype": "Region",
+          "x-isenum": true,
+          "x-optional": false
+        }
+      },
+      "x-ClassName": "StartGameRequest"
+    },
+    "StartGameResponse": {
+      "Required": [],
+      "Type": "object",
+      "Properties": {
+        "GameID": {
+          "Description": "Unique identifier for the game/lobby in the new Game Server Instance.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "ServerHostname": {
+          "Description": "IPV4 address of the new Game Server Instance.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "ServerIPV6Address": {
+          "Description": "IPV6 address of the new Game Server Instance.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "ServerPort": {
+          "Description": "Port number for communication with the Game Server Instance.",
+          "x-jsontype": "Number",
+          "x-actualtype": "uint32",
+          "x-optional": false
+        }
+      },
+      "x-ClassName": "StartGameResponse"
+    },
+    "UserInfoRequest": {
+      "Required": [],
+      "Type": "object",
+      "Properties": {
+        "MinCatalogVersion": {
+          "Description": "Minimum catalog version for which data is requested (filters the results to only contain inventory items which have a catalog version of this or higher).",
+          "x-jsontype": "Number",
+          "x-actualtype": "int32",
+          "x-optional": false
+        },
+        "PlayFabId": {
+          "Description": "PlayFab unique identifier of the user whose information is being requested.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": false
+        }
+      },
+      "x-ClassName": "UserInfoRequest"
+    },
+    "UserInfoResponse": {
+      "Required": [],
+      "Type": "object",
+      "Properties": {
+        "Inventory": {
+          "$ref": "#/definitions/ItemInstance",
+          "Description": "Array of inventory items in the user's current inventory.",
+          "Example": {},
+          "x-collection": "array",
+          "x-isUnordered": true,
+          "x-jsontype": "Object",
+          "x-actualtype": "ItemInstance",
+          "x-isclass": true,
+          "x-optional": true
+        },
+        "IsDeveloper": {
+          "Description": "Boolean indicating whether the user is a developer.",
+          "x-jsontype": "Boolean",
+          "x-actualtype": "Boolean",
+          "x-optional": false
+        },
+        "PlayFabId": {
+          "Description": "PlayFab unique identifier of the user whose information was requested.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "SteamId": {
+          "Description": "Steam unique identifier, if the user has an associated Steam account.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "TitleDisplayName": {
+          "Description": "Title specific display name, if set.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "Username": {
+          "Description": "PlayFab unique user name.",
+          "x-jsontype": "String",
+          "x-actualtype": "String",
+          "x-optional": true
+        },
+        "VirtualCurrency": {
+          "Description": "Array of virtual currency balance(s) belonging to the user.",
+          "x-collection": "map",
+          "x-jsontype": "Number",
+          "x-actualtype": "int32",
+          "x-optional": true
+        },
+        "VirtualCurrencyRechargeTimes": {
+          "$ref": "#/definitions/VirtualCurrencyRechargeTime",
+          "Description": "Array of remaining times and timestamps for virtual currencies.",
+          "Example": {},
+          "x-collection": "map",
+          "x-jsontype": "Object",
+          "x-actualtype": "VirtualCurrencyRechargeTime",
+          "x-isclass": true,
+          "x-optional": true
+        }
+      },
+      "x-ClassName": "UserInfoResponse"
+    },
+    "VirtualCurrencyRechargeTime": {
+      "Required": [],
+      "Type": "object",
+      "Properties": {
+        "RechargeMax": {
+          "Description": "Maximum value to which the regenerating currency will automatically increment. Note that it can exceed this value through use of the AddUserVirtualCurrency API call. However, it will not regenerate automatically until it has fallen below this value.",
+          "x-jsontype": "Number",
+          "x-actualtype": "int32",
+          "x-optional": false
+        },
+        "RechargeTime": {
+          "Description": "Server timestamp in UTC indicating the next time the virtual currency will be incremented.",
+          "x-jsontype": "String",
+          "x-actualtype": "DateTime",
+          "x-optional": false
+        },
+        "SecondsToRecharge": {
+          "Description": "Time remaining (in seconds) before the next recharge increment of the virtual currency.",
+          "x-jsontype": "Number",
+          "x-actualtype": "int32",
+          "x-optional": false
+        }
+      },
+      "x-ClassName": "VirtualCurrencyRechargeTime"
+    }
+  },
+  "Responses": {
+    "AbortFileUploadsResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AbortFileUploadsResponse"
+      }
+    },
+    "AcceptTradeResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AcceptTradeResponse"
+      }
+    },
+    "AddFriendResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AddFriendResult"
+      }
+    },
+    "AddGameAssetResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AddGameAssetResult"
+      }
+    },
+    "AddGameCertificateResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AddGameCertificateResult"
+      }
+    },
+    "AddGenericIDResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AddGenericIDResult"
+      }
+    },
+    "AddNewsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AddNewsResult"
+      }
+    },
+    "AddOrUpdateContactEmailResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AddOrUpdateContactEmailResult"
+      }
+    },
+    "AddPlayerTagResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AddPlayerTagResult"
+      }
+    },
+    "AddServerBuildResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AddServerBuildResult"
+      }
+    },
+    "AddSharedGroupMembersResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AddSharedGroupMembersResult"
+      }
+    },
+    "AddUsernamePasswordResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AddUsernamePasswordResult"
+      }
+    },
+    "AllocateSessionHostResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AllocateSessionHostResult"
+      }
+    },
+    "AndroidDevicePushNotificationRegistrationResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AndroidDevicePushNotificationRegistrationResult"
+      }
+    },
+    "ApplyToGroupResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ApplyToGroupResponse"
+      }
+    },
+    "AttributeInstallResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AttributeInstallResult"
+      }
+    },
+    "AuthenticateSessionTicketResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AuthenticateSessionTicketResult"
+      }
+    },
+    "AuthUserResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AuthUserResponse"
+      }
+    },
+    "AwardSteamAchievementResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/AwardSteamAchievementResult"
+      }
+    },
+    "BanUsersResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/BanUsersResult"
+      }
+    },
+    "BlankResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/BlankResult"
+      }
+    },
+    "CancelTradeResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/CancelTradeResponse"
+      }
+    },
+    "CheckLimitedEditionItemAvailabilityResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/CheckLimitedEditionItemAvailabilityResult"
+      }
+    },
+    "ConfirmPurchaseResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ConfirmPurchaseResult"
+      }
+    },
+    "ConsumeItemResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ConsumeItemResult"
+      }
+    },
+    "ConsumePSNEntitlementsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ConsumePSNEntitlementsResult"
+      }
+    },
+    "ConsumeXboxEntitlementsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ConsumeXboxEntitlementsResult"
+      }
+    },
+    "CreateBuildResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/CreateBuildResult"
+      }
+    },
+    "CreateGroupResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/CreateGroupResponse"
+      }
+    },
+    "CreateGroupRoleResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/CreateGroupRoleResponse"
+      }
+    },
+    "CreatePlayerSharedSecretResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/CreatePlayerSharedSecretResult"
+      }
+    },
+    "CreatePlayerStatisticDefinitionResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/CreatePlayerStatisticDefinitionResult"
+      }
+    },
+    "CreateSharedGroupResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/CreateSharedGroupResult"
+      }
+    },
+    "CreateTaskResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/CreateTaskResult"
+      }
+    },
+    "CreateTitleResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/CreateTitleResult"
+      }
+    },
+    "CurrentGamesResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/CurrentGamesResult"
+      }
+    },
+    "DeleteBuildResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/DeleteBuildResult"
+      }
+    },
+    "DeleteCharacterFromUserResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/DeleteCharacterFromUserResult"
+      }
+    },
+    "DeleteFilesResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/DeleteFilesResponse"
+      }
+    },
+    "DeleteMasterPlayerAccountResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/DeleteMasterPlayerAccountResult"
+      }
+    },
+    "DeletePlayerResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/DeletePlayerResult"
+      }
+    },
+    "DeletePlayerSharedSecretResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/DeletePlayerSharedSecretResult"
+      }
+    },
+    "DeleteSessionHostResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/DeleteSessionHostResult"
+      }
+    },
+    "DeleteStoreResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/DeleteStoreResult"
+      }
+    },
+    "DeleteTitleResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/DeleteTitleResult"
+      }
+    },
+    "DeleteUsersResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/DeleteUsersResult"
+      }
+    },
+    "DeregisterGameResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/DeregisterGameResponse"
+      }
+    },
+    "EditBuildResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/EditBuildResult"
+      }
+    },
+    "EmptyResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/EmptyResult"
+      }
+    },
+    "EvaluateRandomResultTableResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/EvaluateRandomResultTableResult"
+      }
+    },
+    "ExecuteCloudScriptResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ExecuteCloudScriptResult"
+      }
+    },
+    "ExportMasterPlayerDataResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ExportMasterPlayerDataResult"
+      }
+    },
+    "FinalizeFileUploadsResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/FinalizeFileUploadsResponse"
+      }
+    },
+    "GameServerRegionsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GameServerRegionsResult"
+      }
+    },
+    "GetAccountInfoResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetAccountInfoResult"
+      }
+    },
+    "GetActionsOnPlayersInSegmentTaskInstanceResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetActionsOnPlayersInSegmentTaskInstanceResult"
+      }
+    },
+    "GetAdPlacementsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetAdPlacementsResult"
+      }
+    },
+    "GetAllActionGroupsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetAllActionGroupsResult"
+      }
+    },
+    "GetAllSegmentsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetAllSegmentsResult"
+      }
+    },
+    "GetBuildsForTitleResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetBuildsForTitleResult"
+      }
+    },
+    "GetBuildStatusResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetBuildStatusResult"
+      }
+    },
+    "GetCatalogItemsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetCatalogItemsResult"
+      }
+    },
+    "GetCharacterDataResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetCharacterDataResult"
+      }
+    },
+    "GetCharacterInventoryResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetCharacterInventoryResult"
+      }
+    },
+    "GetCharacterLeaderboardResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetCharacterLeaderboardResult"
+      }
+    },
+    "GetCharacterStatisticsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetCharacterStatisticsResult"
+      }
+    },
+    "GetCloudScriptRevisionResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetCloudScriptRevisionResult"
+      }
+    },
+    "GetCloudScriptTaskInstanceResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetCloudScriptTaskInstanceResult"
+      }
+    },
+    "GetCloudScriptUrlResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetCloudScriptUrlResult"
+      }
+    },
+    "GetCloudScriptVersionsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetCloudScriptVersionsResult"
+      }
+    },
+    "GetContentDownloadUrlResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetContentDownloadUrlResult"
+      }
+    },
+    "GetContentListResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetContentListResult"
+      }
+    },
+    "GetContentUploadUrlResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetContentUploadUrlResult"
+      }
+    },
+    "GetDataReportResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetDataReportResult"
+      }
+    },
+    "GetEntityProfileResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetEntityProfileResponse"
+      }
+    },
+    "GetEntityProfilesResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetEntityProfilesResponse"
+      }
+    },
+    "GetEntityTokenResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetEntityTokenResponse"
+      }
+    },
+    "GetFilesResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetFilesResponse"
+      }
+    },
+    "GetFriendLeaderboardAroundCurrentUserResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetFriendLeaderboardAroundCurrentUserResult"
+      }
+    },
+    "GetFriendLeaderboardAroundPlayerResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetFriendLeaderboardAroundPlayerResult"
+      }
+    },
+    "GetFriendsListResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetFriendsListResult"
+      }
+    },
+    "GetGameAssetsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetGameAssetsResult"
+      }
+    },
+    "GetGameCertificatesResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetGameCertificatesResult"
+      }
+    },
+    "GetGlobalPolicyResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetGlobalPolicyResponse"
+      }
+    },
+    "GetGroupResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetGroupResponse"
+      }
+    },
+    "GetLeaderboardAroundCharacterResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetLeaderboardAroundCharacterResult"
+      }
+    },
+    "GetLeaderboardAroundCurrentUserResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetLeaderboardAroundCurrentUserResult"
+      }
+    },
+    "GetLeaderboardAroundPlayerResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetLeaderboardAroundPlayerResult"
+      }
+    },
+    "GetLeaderboardAroundUserResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetLeaderboardAroundUserResult"
+      }
+    },
+    "GetLeaderboardForUsersCharactersResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetLeaderboardForUsersCharactersResult"
+      }
+    },
+    "GetLeaderboardResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetLeaderboardResult"
+      }
+    },
+    "GetMatchmakerGameInfoResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetMatchmakerGameInfoResult"
+      }
+    },
+    "GetMatchmakerGameModesResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetMatchmakerGameModesResult"
+      }
+    },
+    "GetObjectsResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetObjectsResponse"
+      }
+    },
+    "GetPaymentTokenResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPaymentTokenResult"
+      }
+    },
+    "GetPhotonAuthenticationTokenResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPhotonAuthenticationTokenResult"
+      }
+    },
+    "GetPlayedTitleListResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayedTitleListResult"
+      }
+    },
+    "GetPlayerCombinedInfoResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayerCombinedInfoResult"
+      }
+    },
+    "GetPlayerIdFromAuthTokenResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayerIdFromAuthTokenResult"
+      }
+    },
+    "GetPlayerProfileResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayerProfileResult"
+      }
+    },
+    "GetPlayerSegmentsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayerSegmentsResult"
+      }
+    },
+    "GetPlayerSharedSecretsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayerSharedSecretsResult"
+      }
+    },
+    "GetPlayersInSegmentResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayersInSegmentResult"
+      }
+    },
+    "GetPlayerStatisticDefinitionsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayerStatisticDefinitionsResult"
+      }
+    },
+    "GetPlayerStatisticsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayerStatisticsResult"
+      }
+    },
+    "GetPlayerStatisticVersionsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayerStatisticVersionsResult"
+      }
+    },
+    "GetPlayerTagsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayerTagsResult"
+      }
+    },
+    "GetPlayerTradesResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayerTradesResponse"
+      }
+    },
+    "GetPlayFabIDsFromFacebookIDsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayFabIDsFromFacebookIDsResult"
+      }
+    },
+    "GetPlayFabIDsFromGameCenterIDsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayFabIDsFromGameCenterIDsResult"
+      }
+    },
+    "GetPlayFabIDsFromGenericIDsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayFabIDsFromGenericIDsResult"
+      }
+    },
+    "GetPlayFabIDsFromGoogleIDsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayFabIDsFromGoogleIDsResult"
+      }
+    },
+    "GetPlayFabIDsFromKongregateIDsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayFabIDsFromKongregateIDsResult"
+      }
+    },
+    "GetPlayFabIDsFromPSNAccountIDsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayFabIDsFromPSNAccountIDsResult"
+      }
+    },
+    "GetPlayFabIDsFromSteamIDsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayFabIDsFromSteamIDsResult"
+      }
+    },
+    "GetPlayFabIDsFromTwitchIDsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPlayFabIDsFromTwitchIDsResult"
+      }
+    },
+    "GetPolicyResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPolicyResponse"
+      }
+    },
+    "GetPublisherDataResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPublisherDataResult"
+      }
+    },
+    "GetPurchaseResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetPurchaseResult"
+      }
+    },
+    "GetQosServersForTitleResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetQosServersForTitleResult"
+      }
+    },
+    "GetQosServersResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetQosServersResult"
+      }
+    },
+    "GetRandomResultTablesResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetRandomResultTablesResult"
+      }
+    },
+    "GetServerBuildInfoResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetServerBuildInfoResult"
+      }
+    },
+    "GetServerBuildUploadURLResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetServerBuildUploadURLResult"
+      }
+    },
+    "GetSessionHostStatusResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetSessionHostStatusResult"
+      }
+    },
+    "GetSharedGroupDataResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetSharedGroupDataResult"
+      }
+    },
+    "GetStoreItemsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetStoreItemsResult"
+      }
+    },
+    "GetTaskInstancesResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetTaskInstancesResult"
+      }
+    },
+    "GetTasksResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetTasksResult"
+      }
+    },
+    "GetTimeResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetTimeResult"
+      }
+    },
+    "GetTitleDataResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetTitleDataResult"
+      }
+    },
+    "GetTitleNewsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetTitleNewsResult"
+      }
+    },
+    "GetTitlePublicKeyResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetTitlePublicKeyResult"
+      }
+    },
+    "GetTitleStatusResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetTitleStatusResult"
+      }
+    },
+    "GetTradeStatusResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetTradeStatusResponse"
+      }
+    },
+    "GetUserAccountInfoResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetUserAccountInfoResult"
+      }
+    },
+    "GetUserBansResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetUserBansResult"
+      }
+    },
+    "GetUserCombinedInfoResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetUserCombinedInfoResult"
+      }
+    },
+    "GetUserDataResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetUserDataResult"
+      }
+    },
+    "GetUserInventoryResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetUserInventoryResult"
+      }
+    },
+    "GetUserStatisticsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetUserStatisticsResult"
+      }
+    },
+    "GetWindowsHelloChallengeResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GetWindowsHelloChallengeResponse"
+      }
+    },
+    "GrantCharacterToUserResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GrantCharacterToUserResult"
+      }
+    },
+    "GrantItemsToCharacterResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GrantItemsToCharacterResult"
+      }
+    },
+    "GrantItemsToUserResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GrantItemsToUserResult"
+      }
+    },
+    "GrantItemsToUsersResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/GrantItemsToUsersResult"
+      }
+    },
+    "IncrementLimitedEditionItemAvailabilityResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/IncrementLimitedEditionItemAvailabilityResult"
+      }
+    },
+    "IncrementPlayerStatisticVersionResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/IncrementPlayerStatisticVersionResult"
+      }
+    },
+    "InitiateFileUploadsResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/InitiateFileUploadsResponse"
+      }
+    },
+    "InviteToGroupResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/InviteToGroupResponse"
+      }
+    },
+    "IsMemberResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/IsMemberResponse"
+      }
+    },
+    "LinkAndroidDeviceIDResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/LinkAndroidDeviceIDResult"
+      }
+    },
+    "LinkCustomIDResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/LinkCustomIDResult"
+      }
+    },
+    "LinkFacebookAccountResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/LinkFacebookAccountResult"
+      }
+    },
+    "LinkGameCenterAccountResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/LinkGameCenterAccountResult"
+      }
+    },
+    "LinkGoogleAccountResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/LinkGoogleAccountResult"
+      }
+    },
+    "LinkIOSDeviceIDResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/LinkIOSDeviceIDResult"
+      }
+    },
+    "LinkKongregateAccountResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/LinkKongregateAccountResult"
+      }
+    },
+    "LinkPSNAccountResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/LinkPSNAccountResult"
+      }
+    },
+    "LinkSteamAccountResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/LinkSteamAccountResult"
+      }
+    },
+    "LinkTwitchAccountResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/LinkTwitchAccountResult"
+      }
+    },
+    "LinkWindowsHelloAccountResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/LinkWindowsHelloAccountResponse"
+      }
+    },
+    "LinkXboxAccountResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/LinkXboxAccountResult"
+      }
+    },
+    "ListBuildsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ListBuildsResult"
+      }
+    },
+    "ListGroupApplicationsResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ListGroupApplicationsResponse"
+      }
+    },
+    "ListGroupBlocksResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ListGroupBlocksResponse"
+      }
+    },
+    "ListGroupInvitationsResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ListGroupInvitationsResponse"
+      }
+    },
+    "ListGroupMembersResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ListGroupMembersResponse"
+      }
+    },
+    "ListMembershipOpportunitiesResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ListMembershipOpportunitiesResponse"
+      }
+    },
+    "ListMembershipResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ListMembershipResponse"
+      }
+    },
+    "ListUsersCharactersResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ListUsersCharactersResult"
+      }
+    },
+    "ListVirtualCurrencyTypesResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ListVirtualCurrencyTypesResult"
+      }
+    },
+    "LogEventResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/LogEventResult"
+      }
+    },
+    "LoginResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/LoginResult"
+      }
+    },
+    "LookupUserAccountInfoResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/LookupUserAccountInfoResult"
+      }
+    },
+    "MatchmakeResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/MatchmakeResult"
+      }
+    },
+    "ModifyCharacterVirtualCurrencyResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ModifyCharacterVirtualCurrencyResult"
+      }
+    },
+    "ModifyItemUsesResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ModifyItemUsesResult"
+      }
+    },
+    "ModifyMatchmakerGameModesResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ModifyMatchmakerGameModesResult"
+      }
+    },
+    "ModifyServerBuildResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ModifyServerBuildResult"
+      }
+    },
+    "ModifyUserVirtualCurrencyResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ModifyUserVirtualCurrencyResult"
+      }
+    },
+    "MoveItemToCharacterFromCharacterResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/MoveItemToCharacterFromCharacterResult"
+      }
+    },
+    "MoveItemToCharacterFromUserResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/MoveItemToCharacterFromUserResult"
+      }
+    },
+    "MoveItemToUserFromCharacterResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/MoveItemToUserFromCharacterResult"
+      }
+    },
+    "NotifyMatchmakerPlayerLeftResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/NotifyMatchmakerPlayerLeftResult"
+      }
+    },
+    "OpenTradeResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/OpenTradeResponse"
+      }
+    },
+    "PayForPurchaseResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/PayForPurchaseResult"
+      }
+    },
+    "PlayerJoinedResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/PlayerJoinedResponse"
+      }
+    },
+    "PlayerLeftResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/PlayerLeftResponse"
+      }
+    },
+    "PurchaseItemResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/PurchaseItemResult"
+      }
+    },
+    "RedeemCouponResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RedeemCouponResult"
+      }
+    },
+    "RedeemMatchmakerTicketResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RedeemMatchmakerTicketResult"
+      }
+    },
+    "RefreshGameServerInstanceHeartbeatResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RefreshGameServerInstanceHeartbeatResult"
+      }
+    },
+    "RefundPurchaseResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RefundPurchaseResponse"
+      }
+    },
+    "RegisterForIOSPushNotificationResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RegisterForIOSPushNotificationResult"
+      }
+    },
+    "RegisterGameResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RegisterGameResponse"
+      }
+    },
+    "RegisterPlayFabUserResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RegisterPlayFabUserResult"
+      }
+    },
+    "RemoveContactEmailResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RemoveContactEmailResult"
+      }
+    },
+    "RemoveFriendResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RemoveFriendResult"
+      }
+    },
+    "RemoveGenericIDResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RemoveGenericIDResult"
+      }
+    },
+    "RemovePlayerTagResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RemovePlayerTagResult"
+      }
+    },
+    "RemoveServerBuildResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RemoveServerBuildResult"
+      }
+    },
+    "RemoveSharedGroupMembersResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RemoveSharedGroupMembersResult"
+      }
+    },
+    "ReportAdActivityResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ReportAdActivityResult"
+      }
+    },
+    "ReportPlayerClientResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ReportPlayerClientResult"
+      }
+    },
+    "ReportPlayerServerResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ReportPlayerServerResult"
+      }
+    },
+    "ResetCharacterStatisticsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ResetCharacterStatisticsResult"
+      }
+    },
+    "ResetPasswordResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ResetPasswordResult"
+      }
+    },
+    "ResetUserStatisticsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ResetUserStatisticsResult"
+      }
+    },
+    "ResolvePurchaseDisputeResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ResolvePurchaseDisputeResponse"
+      }
+    },
+    "RestoreIOSPurchasesResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RestoreIOSPurchasesResult"
+      }
+    },
+    "RevokeAllBansForUserResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RevokeAllBansForUserResult"
+      }
+    },
+    "RevokeBansResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RevokeBansResult"
+      }
+    },
+    "RevokeInventoryItemsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RevokeInventoryItemsResult"
+      }
+    },
+    "RevokeInventoryResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RevokeInventoryResult"
+      }
+    },
+    "RewardAdActivityResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RewardAdActivityResult"
+      }
+    },
+    "RunCloudScriptResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RunCloudScriptResult"
+      }
+    },
+    "RunTaskResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/RunTaskResult"
+      }
+    },
+    "SendAccountRecoveryEmailResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/SendAccountRecoveryEmailResult"
+      }
+    },
+    "SendCustomAccountRecoveryEmailResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/SendCustomAccountRecoveryEmailResult"
+      }
+    },
+    "SendEmailFromTemplateResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/SendEmailFromTemplateResult"
+      }
+    },
+    "SendPushNotificationResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/SendPushNotificationResult"
+      }
+    },
+    "SetEntityProfilePolicyResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/SetEntityProfilePolicyResponse"
+      }
+    },
+    "SetFriendTagsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/SetFriendTagsResult"
+      }
+    },
+    "SetGameServerInstanceDataResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/SetGameServerInstanceDataResult"
+      }
+    },
+    "SetGameServerInstanceStateResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/SetGameServerInstanceStateResult"
+      }
+    },
+    "SetGameServerInstanceTagsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/SetGameServerInstanceTagsResult"
+      }
+    },
+    "SetGlobalPolicyResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/SetGlobalPolicyResponse"
+      }
+    },
+    "SetObjectsResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/SetObjectsResponse"
+      }
+    },
+    "SetPlayerSecretResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/SetPlayerSecretResult"
+      }
+    },
+    "SetPublishedRevisionResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/SetPublishedRevisionResult"
+      }
+    },
+    "SetPublisherDataResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/SetPublisherDataResult"
+      }
+    },
+    "SetTitleDataResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/SetTitleDataResult"
+      }
+    },
+    "SetupPushNotificationResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/SetupPushNotificationResult"
+      }
+    },
+    "StartGameResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/StartGameResponse"
+      }
+    },
+    "StartGameResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/StartGameResult"
+      }
+    },
+    "StartPurchaseResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/StartPurchaseResult"
+      }
+    },
+    "UnlinkAndroidDeviceIDResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UnlinkAndroidDeviceIDResult"
+      }
+    },
+    "UnlinkCustomIDResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UnlinkCustomIDResult"
+      }
+    },
+    "UnlinkFacebookAccountResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UnlinkFacebookAccountResult"
+      }
+    },
+    "UnlinkGameCenterAccountResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UnlinkGameCenterAccountResult"
+      }
+    },
+    "UnlinkGoogleAccountResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UnlinkGoogleAccountResult"
+      }
+    },
+    "UnlinkIOSDeviceIDResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UnlinkIOSDeviceIDResult"
+      }
+    },
+    "UnlinkKongregateAccountResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UnlinkKongregateAccountResult"
+      }
+    },
+    "UnlinkPSNAccountResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UnlinkPSNAccountResult"
+      }
+    },
+    "UnlinkSteamAccountResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UnlinkSteamAccountResult"
+      }
+    },
+    "UnlinkTwitchAccountResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UnlinkTwitchAccountResult"
+      }
+    },
+    "UnlinkWindowsHelloAccountResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UnlinkWindowsHelloAccountResponse"
+      }
+    },
+    "UnlinkXboxAccountResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UnlinkXboxAccountResult"
+      }
+    },
+    "UnlockContainerItemResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UnlockContainerItemResult"
+      }
+    },
+    "UpdateBansResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UpdateBansResult"
+      }
+    },
+    "UpdateCatalogItemsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UpdateCatalogItemsResult"
+      }
+    },
+    "UpdateCharacterDataResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UpdateCharacterDataResult"
+      }
+    },
+    "UpdateCharacterStatisticsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UpdateCharacterStatisticsResult"
+      }
+    },
+    "UpdateCloudScriptResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UpdateCloudScriptResult"
+      }
+    },
+    "UpdateGroupResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UpdateGroupResponse"
+      }
+    },
+    "UpdateGroupRoleResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UpdateGroupRoleResponse"
+      }
+    },
+    "UpdatePlayerSharedSecretResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UpdatePlayerSharedSecretResult"
+      }
+    },
+    "UpdatePlayerStatisticDefinitionResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UpdatePlayerStatisticDefinitionResult"
+      }
+    },
+    "UpdatePlayerStatisticsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UpdatePlayerStatisticsResult"
+      }
+    },
+    "UpdatePolicyResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UpdatePolicyResponse"
+      }
+    },
+    "UpdateRandomResultTablesResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UpdateRandomResultTablesResult"
+      }
+    },
+    "UpdateSharedGroupDataResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UpdateSharedGroupDataResult"
+      }
+    },
+    "UpdateStoreItemsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UpdateStoreItemsResult"
+      }
+    },
+    "UpdateUserDataResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UpdateUserDataResult"
+      }
+    },
+    "UpdateUserStatisticsResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UpdateUserStatisticsResult"
+      }
+    },
+    "UpdateUserTitleDisplayNameResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UpdateUserTitleDisplayNameResult"
+      }
+    },
+    "UserInfoResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/UserInfoResponse"
+      }
+    },
+    "ValidateAmazonReceiptResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ValidateAmazonReceiptResult"
+      }
+    },
+    "ValidateGooglePlayPurchaseResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ValidateGooglePlayPurchaseResult"
+      }
+    },
+    "ValidateIOSReceiptResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ValidateIOSReceiptResult"
+      }
+    },
+    "ValidateWindowsReceiptResult": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/ValidateWindowsReceiptResult"
+      }
+    },
+    "WriteEventResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/WriteEventResponse"
+      }
+    },
+    "WriteEventsResponse": {
+      "Description": "Response Description",
+      "Schema": {
+        "$ref": "#/definitions/WriteEventsResponse"
+      }
+    }
+  },
+  "SecurityDefinitions": {
+    "SessionTicket": {
+      "Name": "SessionTicket",
+      "In": "header",
+      "Type": "apiKey",
+      "Description": "This API requires a client session ticket, available from any Client Login function."
+    },
+    "SecretKey": {
+      "Name": "SecretKey",
+      "In": "header",
+      "Type": "apiKey",
+      "Description": "This API requires a title secret key, available to title admins, from PlayFab Game Manager."
+    },
+    "EntityToken": {
+      "Name": "EntityToken",
+      "In": "header",
+      "Type": "apiKey",
+      "Description": "This API requires an Entity Session Token, available from the Entity GetEntityToken method."
+    }
+  },
+  "Tags": [
+    {
+      "Name": "Matchmaking",
+      "Description": "https://api.playfab.com/documentation/Matchmaker#Matchmaking"
+    }
+  ],
+  "x-errors": {
+    "AccountAlreadyLinked": {
+      "id": 1011,
+      "name": "AccountAlreadyLinked"
+    },
+    "AccountBanned": {
+      "id": 1002,
+      "name": "AccountBanned"
+    },
+    "AccountDeleted": {
+      "id": 1322,
+      "name": "AccountDeleted"
+    },
+    "AccountNotFound": {
+      "id": 1001,
+      "name": "AccountNotFound"
+    },
+    "AccountNotLinked": {
+      "id": 1014,
+      "name": "AccountNotLinked"
+    },
+    "ActionGroupNotFound": {
+      "id": 1250,
+      "name": "ActionGroupNotFound"
+    },
+    "AllAdPlacementViewsAlreadyConsumed": {
+      "id": 1269,
+      "name": "AllAdPlacementViewsAlreadyConsumed"
+    },
+    "AmazonValidationError": {
+      "id": 1150,
+      "name": "AmazonValidationError"
+    },
+    "APIClientRequestRateLimitExceeded": {
+      "id": 1199,
+      "name": "APIClientRequestRateLimitExceeded"
+    },
+    "APIConcurrentRequestLimitExceeded": {
+      "id": 1342,
+      "name": "APIConcurrentRequestLimitExceeded"
+    },
+    "APINotEnabledForGameClientAccess": {
+      "id": 1082,
+      "name": "APINotEnabledForGameClientAccess"
+    },
+    "APINotEnabledForGameServerAccess": {
+      "id": 1194,
+      "name": "APINotEnabledForGameServerAccess"
+    },
+    "APINotIncludedInTitleUsageTier": {
+      "id": 1128,
+      "name": "APINotIncludedInTitleUsageTier"
+    },
+    "APIRequestLimitExceeded": {
+      "id": 1130,
+      "name": "APIRequestLimitExceeded"
+    },
+    "APIRequestsDisabledForTitle": {
+      "id": 1295,
+      "name": "APIRequestsDisabledForTitle"
+    },
+    "AuthTokenAlreadyUsedToResetPassword": {
+      "id": 1329,
+      "name": "AuthTokenAlreadyUsedToResetPassword"
+    },
+    "AuthTokenDoesNotExist": {
+      "id": 1327,
+      "name": "AuthTokenDoesNotExist"
+    },
+    "AuthTokenExpired": {
+      "id": 1328,
+      "name": "AuthTokenExpired"
+    },
+    "BadPartnerConfiguration": {
+      "id": 1304,
+      "name": "BadPartnerConfiguration"
+    },
+    "BillingInformationRequired": {
+      "id": 1266,
+      "name": "BillingInformationRequired"
+    },
+    "BodyTooLarge": {
+      "id": 1068,
+      "name": "BodyTooLarge"
+    },
+    "BuildAlreadyExists": {
+      "id": 1084,
+      "name": "BuildAlreadyExists"
+    },
+    "BuildNotAvailable": {
+      "id": 1132,
+      "name": "BuildNotAvailable"
+    },
+    "BuildNotFound": {
+      "id": 1032,
+      "name": "BuildNotFound"
+    },
+    "BuildPackageDoesNotExist": {
+      "id": 1085,
+      "name": "BuildPackageDoesNotExist"
+    },
+    "CatalogNotConfigured": {
+      "id": 1218,
+      "name": "CatalogNotConfigured"
+    },
+    "CharacterNotFound": {
+      "id": 1135,
+      "name": "CharacterNotFound"
+    },
+    "CloudScriptAPIRequestCountExceeded": {
+      "id": 1209,
+      "name": "CloudScriptAPIRequestCountExceeded"
+    },
+    "CloudScriptAPIRequestError": {
+      "id": 1210,
+      "name": "CloudScriptAPIRequestError"
+    },
+    "CloudScriptExecutionTimeLimitExceeded": {
+      "id": 1206,
+      "name": "CloudScriptExecutionTimeLimitExceeded"
+    },
+    "CloudScriptFunctionArgumentSizeExceeded": {
+      "id": 1208,
+      "name": "CloudScriptFunctionArgumentSizeExceeded"
+    },
+    "CloudScriptHTTPRequestError": {
+      "id": 1211,
+      "name": "CloudScriptHTTPRequestError"
+    },
+    "CloudScriptNotFound": {
+      "id": 1136,
+      "name": "CloudScriptNotFound"
+    },
+    "ComputeAccepted": {
+      "id": 1380,
+      "name": "ComputeAccepted"
+    },
+    "ComputeBadRequest": {
+      "id": 1382,
+      "name": "ComputeBadRequest"
+    },
+    "ComputeConflict": {
+      "id": 1386,
+      "name": "ComputeConflict"
+    },
+    "ComputeForbidden": {
+      "id": 1384,
+      "name": "ComputeForbidden"
+    },
+    "ComputeInternalServerError": {
+      "id": 1387,
+      "name": "ComputeInternalServerError"
+    },
+    "ComputeNoContent": {
+      "id": 1381,
+      "name": "ComputeNoContent"
+    },
+    "ComputeNotFound": {
+      "id": 1385,
+      "name": "ComputeNotFound"
+    },
+    "ComputeOK": {
+      "id": 1379,
+      "name": "ComputeOK"
+    },
+    "ComputeServiceUnavailable": {
+      "id": 1388,
+      "name": "ComputeServiceUnavailable"
+    },
+    "ComputeUnauthorized": {
+      "id": 1383,
+      "name": "ComputeUnauthorized"
+    },
+    "ConcurrentEditError": {
+      "id": 1133,
+      "name": "ConcurrentEditError"
+    },
+    "ContainerKeyInvalid": {
+      "id": 1205,
+      "name": "ContainerKeyInvalid"
+    },
+    "ContainerNotOwned": {
+      "id": 1018,
+      "name": "ContainerNotOwned"
+    },
+    "ContentNotFound": {
+      "id": 1134,
+      "name": "ContentNotFound"
+    },
+    "ContentQuotaExceeded": {
+      "id": 1137,
+      "name": "ContentQuotaExceeded"
+    },
+    "ContentS3OriginBucketNotConfigured": {
+      "id": 1299,
+      "name": "ContentS3OriginBucketNotConfigured"
+    },
+    "CouponAlreadyRedeemed": {
+      "id": 1226,
+      "name": "CouponAlreadyRedeemed"
+    },
+    "CouponCodeNotFound": {
+      "id": 1016,
+      "name": "CouponCodeNotFound"
+    },
+    "CustomAnalyticsEventsNotEnabledForTitle": {
+      "id": 1087,
+      "name": "CustomAnalyticsEventsNotEnabledForTitle"
+    },
+    "CustomIdNotLinked": {
+      "id": 1185,
+      "name": "CustomIdNotLinked"
+    },
+    "DatabaseThroughputExceeded": {
+      "id": 1113,
+      "name": "DatabaseThroughputExceeded"
+    },
+    "DataLengthExceeded": {
+      "id": 1146,
+      "name": "DataLengthExceeded"
+    },
+    "DataUpdateRateExceeded": {
+      "id": 1287,
+      "name": "DataUpdateRateExceeded"
+    },
+    "DAULimitExceeded": {
+      "id": 1129,
+      "name": "DAULimitExceeded"
+    },
+    "DeleteKeyConflict": {
+      "id": 1187,
+      "name": "DeleteKeyConflict"
+    },
+    "DeviceAlreadyLinked": {
+      "id": 1119,
+      "name": "DeviceAlreadyLinked"
+    },
+    "DeviceNotLinked": {
+      "id": 1120,
+      "name": "DeviceNotLinked"
+    },
+    "DownstreamServiceUnavailable": {
+      "id": 1127,
+      "name": "DownstreamServiceUnavailable"
+    },
+    "DuplicateDropTableId": {
+      "id": 1378,
+      "name": "DuplicateDropTableId"
+    },
+    "DuplicateEmail": {
+      "id": 1046,
+      "name": "DuplicateEmail"
+    },
+    "DuplicateRoleId": {
+      "id": 1360,
+      "name": "DuplicateRoleId"
+    },
+    "DuplicateStatisticName": {
+      "id": 1253,
+      "name": "DuplicateStatisticName"
+    },
+    "DuplicateUsername": {
+      "id": 1065,
+      "name": "DuplicateUsername"
+    },
+    "EmailAddressNotAvailable": {
+      "id": 1006,
+      "name": "EmailAddressNotAvailable"
+    },
+    "EmailClientCanceledTask": {
+      "id": 1317,
+      "name": "EmailClientCanceledTask"
+    },
+    "EmailClientTimeout": {
+      "id": 1316,
+      "name": "EmailClientTimeout"
+    },
+    "EmailConfirmationTokenDoesNotExist": {
+      "id": 1320,
+      "name": "EmailConfirmationTokenDoesNotExist"
+    },
+    "EmailConfirmationTokenExpired": {
+      "id": 1321,
+      "name": "EmailConfirmationTokenExpired"
+    },
+    "EmailMessageFromAddressIsMissing": {
+      "id": 1309,
+      "name": "EmailMessageFromAddressIsMissing"
+    },
+    "EmailMessageToAddressIsMissing": {
+      "id": 1310,
+      "name": "EmailMessageToAddressIsMissing"
+    },
+    "EmailReportAlreadySent": {
+      "id": 1369,
+      "name": "EmailReportAlreadySent"
+    },
+    "EmailReportRecipientBlacklisted": {
+      "id": 1370,
+      "name": "EmailReportRecipientBlacklisted"
+    },
+    "EmailTemplateMissing": {
+      "id": 1318,
+      "name": "EmailTemplateMissing"
+    },
+    "EncryptedRequestNotAllowed": {
+      "id": 1301,
+      "name": "EncryptedRequestNotAllowed"
+    },
+    "EncryptionKeyBroken": {
+      "id": 1291,
+      "name": "EncryptionKeyBroken"
+    },
+    "EncryptionKeyDisabled": {
+      "id": 1289,
+      "name": "EncryptionKeyDisabled"
+    },
+    "EncryptionKeyMissing": {
+      "id": 1290,
+      "name": "EncryptionKeyMissing"
+    },
+    "EntityBlockedByGroup": {
+      "id": 1357,
+      "name": "EntityBlockedByGroup"
+    },
+    "EntityFileOperationPending": {
+      "id": 1350,
+      "name": "EntityFileOperationPending"
+    },
+    "EntityIsAlreadyMember": {
+      "id": 1359,
+      "name": "EntityIsAlreadyMember"
+    },
+    "EntityProfileVersionMismatch": {
+      "id": 1352,
+      "name": "EntityProfileVersionMismatch"
+    },
+    "EntityTokenExpired": {
+      "id": 1336,
+      "name": "EntityTokenExpired"
+    },
+    "EntityTokenInvalid": {
+      "id": 1335,
+      "name": "EntityTokenInvalid"
+    },
+    "EntityTokenMissing": {
+      "id": 1334,
+      "name": "EntityTokenMissing"
+    },
+    "EntityTokenRevoked": {
+      "id": 1337,
+      "name": "EntityTokenRevoked"
+    },
+    "ErrorCreatingStream": {
+      "id": 1076,
+      "name": "ErrorCreatingStream"
+    },
+    "EventEntityNotAllowed": {
+      "id": 1372,
+      "name": "EventEntityNotAllowed"
+    },
+    "EventNamespaceNotAllowed": {
+      "id": 1371,
+      "name": "EventNamespaceNotAllowed"
+    },
+    "EventNotFound": {
+      "id": 1215,
+      "name": "EventNotFound"
+    },
+    "ExpiredAuthToken": {
+      "id": 1153,
+      "name": "ExpiredAuthToken"
+    },
+    "ExpiredContinuationToken": {
+      "id": 1241,
+      "name": "ExpiredContinuationToken"
+    },
+    "ExpiredGameTicket": {
+      "id": 1116,
+      "name": "ExpiredGameTicket"
+    },
+    "ExpiredXboxLiveToken": {
+      "id": 1189,
+      "name": "ExpiredXboxLiveToken"
+    },
+    "ExpressionInvokeFailure": {
+      "id": 1285,
+      "name": "ExpressionInvokeFailure"
+    },
+    "ExpressionParseFailure": {
+      "id": 1284,
+      "name": "ExpressionParseFailure"
+    },
+    "ExpressionTooLong": {
+      "id": 1286,
+      "name": "ExpressionTooLong"
+    },
+    "FacebookAPIError": {
+      "id": 1143,
+      "name": "FacebookAPIError"
+    },
+    "FailedByPaymentProvider": {
+      "id": 1015,
+      "name": "FailedByPaymentProvider"
+    },
+    "FailedLoginAttemptRateLimitExceeded": {
+      "id": 1356,
+      "name": "FailedLoginAttemptRateLimitExceeded"
+    },
+    "FailedToConsumeEntitlement": {
+      "id": 1155,
+      "name": "FailedToConsumeEntitlement"
+    },
+    "FailedToGetEntitlements": {
+      "id": 1154,
+      "name": "FailedToGetEntitlements"
+    },
+    "FeatureNotConfiguredForTitle": {
+      "id": 1177,
+      "name": "FeatureNotConfiguredForTitle"
+    },
+    "FileNotFound": {
+      "id": 1045,
+      "name": "FileNotFound"
+    },
+    "FileTooLarge": {
+      "id": 1346,
+      "name": "FileTooLarge"
+    },
+    "FreeTierCannotHaveVirtualCurrency": {
+      "id": 1148,
+      "name": "FreeTierCannotHaveVirtualCurrency"
+    },
+    "GameModeNotFound": {
+      "id": 1025,
+      "name": "GameModeNotFound"
+    },
+    "GameNotFound": {
+      "id": 1024,
+      "name": "GameNotFound"
+    },
+    "GameServerBuildCountLimitExceeded": {
+      "id": 1228,
+      "name": "GameServerBuildCountLimitExceeded"
+    },
+    "GameServerBuildSizeLimitExceeded": {
+      "id": 1227,
+      "name": "GameServerBuildSizeLimitExceeded"
+    },
+    "GameServerHostCountLimitExceeded": {
+      "id": 1247,
+      "name": "GameServerHostCountLimitExceeded"
+    },
+    "GameTicketDoesNotMatchLobby": {
+      "id": 1117,
+      "name": "GameTicketDoesNotMatchLobby"
+    },
+    "GoogleOAuthError": {
+      "id": 1271,
+      "name": "GoogleOAuthError"
+    },
+    "GoogleOAuthNoIdTokenIncludedInResponse": {
+      "id": 1275,
+      "name": "GoogleOAuthNoIdTokenIncludedInResponse"
+    },
+    "GoogleOAuthNotConfiguredForTitle": {
+      "id": 1270,
+      "name": "GoogleOAuthNotConfiguredForTitle"
+    },
+    "GoogleServiceAccountInvalid": {
+      "id": 1332,
+      "name": "GoogleServiceAccountInvalid"
+    },
+    "GoogleServiceAccountParseFailure": {
+      "id": 1333,
+      "name": "GoogleServiceAccountParseFailure"
+    },
+    "GroupApplicationNotFound": {
+      "id": 1362,
+      "name": "GroupApplicationNotFound"
+    },
+    "GroupInvitationNotFound": {
+      "id": 1361,
+      "name": "GroupInvitationNotFound"
+    },
+    "GroupNameNotAvailable": {
+      "id": 1368,
+      "name": "GroupNameNotAvailable"
+    },
+    "GuildNotFound": {
+      "id": 1213,
+      "name": "GuildNotFound"
+    },
+    "IdentifierAlreadyClaimed": {
+      "id": 1238,
+      "name": "IdentifierAlreadyClaimed"
+    },
+    "IdentifierNotLinked": {
+      "id": 1239,
+      "name": "IdentifierNotLinked"
+    },
+    "InsufficientFunds": {
+      "id": 1059,
+      "name": "InsufficientFunds"
+    },
+    "InsufficientGuildRole": {
+      "id": 1212,
+      "name": "InsufficientGuildRole"
+    },
+    "InternalServerError": {
+      "id": 1110,
+      "name": "InternalServerError"
+    },
+    "InvalidAccount": {
+      "id": 1078,
+      "name": "InvalidAccount"
+    },
+    "InvalidAdPlacementAndReward": {
+      "id": 1268,
+      "name": "InvalidAdPlacementAndReward"
+    },
+    "InvalidAPIEndpoint": {
+      "id": 1131,
+      "name": "InvalidAPIEndpoint"
+    },
+    "InvalidAuthToken": {
+      "id": 1326,
+      "name": "InvalidAuthToken"
+    },
+    "InvalidBundleID": {
+      "id": 1098,
+      "name": "InvalidBundleID"
+    },
+    "InvalidBuyerInfo": {
+      "id": 1066,
+      "name": "InvalidBuyerInfo"
+    },
+    "InvalidCertificateForAad": {
+      "id": 1377,
+      "name": "InvalidCertificateForAad"
+    },
+    "InvalidCharacterStatistics": {
+      "id": 1138,
+      "name": "InvalidCharacterStatistics"
+    },
+    "InvalidContainerItem": {
+      "id": 1017,
+      "name": "InvalidContainerItem"
+    },
+    "InvalidContentType": {
+      "id": 1144,
+      "name": "InvalidContentType"
+    },
+    "InvalidContinuationToken": {
+      "id": 1240,
+      "name": "InvalidContinuationToken"
+    },
+    "InvalidCurrencyCode": {
+      "id": 1179,
+      "name": "InvalidCurrencyCode"
+    },
+    "InvalidDeveloper": {
+      "id": 1035,
+      "name": "InvalidDeveloper"
+    },
+    "InvalidDeviceID": {
+      "id": 1060,
+      "name": "InvalidDeviceID"
+    },
+    "InvalidDropTable": {
+      "id": 1201,
+      "name": "InvalidDropTable"
+    },
+    "InvalidEmailAddress": {
+      "id": 1005,
+      "name": "InvalidEmailAddress"
+    },
+    "InvalidEmailOrPassword": {
+      "id": 1142,
+      "name": "InvalidEmailOrPassword"
+    },
+    "InvalidEntityId": {
+      "id": 1307,
+      "name": "InvalidEntityId"
+    },
+    "InvalidEntityType": {
+      "id": 1373,
+      "name": "InvalidEntityType"
+    },
+    "InvalidEnvironmentForReceipt": {
+      "id": 1300,
+      "name": "InvalidEnvironmentForReceipt"
+    },
+    "InvalidEventField": {
+      "id": 1216,
+      "name": "InvalidEventField"
+    },
+    "InvalidEventName": {
+      "id": 1217,
+      "name": "InvalidEventName"
+    },
+    "InvalidFacebookToken": {
+      "id": 1013,
+      "name": "InvalidFacebookToken"
+    },
+    "InvalidGameTicket": {
+      "id": 1115,
+      "name": "InvalidGameTicket"
+    },
+    "InvalidGoogleToken": {
+      "id": 1026,
+      "name": "InvalidGoogleToken"
+    },
+    "InvalidHostForTitleId": {
+      "id": 1319,
+      "name": "InvalidHostForTitleId"
+    },
+    "InvalidIdentityProviderId": {
+      "id": 1263,
+      "name": "InvalidIdentityProviderId"
+    },
+    "InvalidItemId": {
+      "id": 1093,
+      "name": "InvalidItemId"
+    },
+    "InvalidItemIdInTable": {
+      "id": 1020,
+      "name": "InvalidItemIdInTable"
+    },
+    "InvalidItemProperties": {
+      "id": 1091,
+      "name": "InvalidItemProperties"
+    },
+    "InvalidJSONContent": {
+      "id": 1200,
+      "name": "InvalidJSONContent"
+    },
+    "InvalidKongregateToken": {
+      "id": 1176,
+      "name": "InvalidKongregateToken"
+    },
+    "InvalidOrderInfo": {
+      "id": 1036,
+      "name": "InvalidOrderInfo"
+    },
+    "InvalidParams": {
+      "id": 1000,
+      "name": "InvalidParams"
+    },
+    "InvalidPartnerResponse": {
+      "id": 1193,
+      "name": "InvalidPartnerResponse"
+    },
+    "InvalidPassword": {
+      "id": 1008,
+      "name": "InvalidPassword"
+    },
+    "InvalidPaymentProvider": {
+      "id": 1063,
+      "name": "InvalidPaymentProvider"
+    },
+    "InvalidPlatform": {
+      "id": 1038,
+      "name": "InvalidPlatform"
+    },
+    "InvalidProductForSubscription": {
+      "id": 1338,
+      "name": "InvalidProductForSubscription"
+    },
+    "InvalidPSNAuthCode": {
+      "id": 1092,
+      "name": "InvalidPSNAuthCode"
+    },
+    "InvalidPSNIssuerId": {
+      "id": 1151,
+      "name": "InvalidPSNIssuerId"
+    },
+    "InvalidPublicKey": {
+      "id": 1274,
+      "name": "InvalidPublicKey"
+    },
+    "InvalidPublisherId": {
+      "id": 1126,
+      "name": "InvalidPublisherId"
+    },
+    "InvalidPurchaseTransactionStatus": {
+      "id": 1081,
+      "name": "InvalidPurchaseTransactionStatus"
+    },
+    "InvalidPushNotificationToken": {
+      "id": 1061,
+      "name": "InvalidPushNotificationToken"
+    },
+    "InvalidReceipt": {
+      "id": 1021,
+      "name": "InvalidReceipt"
+    },
+    "InvalidRegion": {
+      "id": 1055,
+      "name": "InvalidRegion"
+    },
+    "InvalidReportDate": {
+      "id": 1111,
+      "name": "InvalidReportDate"
+    },
+    "InvalidRequest": {
+      "id": 1071,
+      "name": "InvalidRequest"
+    },
+    "InvalidScheduledTaskName": {
+      "id": 1256,
+      "name": "InvalidScheduledTaskName"
+    },
+    "InvalidScheduledTaskType": {
+      "id": 1265,
+      "name": "InvalidScheduledTaskType"
+    },
+    "InvalidSearchTerm": {
+      "id": 1245,
+      "name": "InvalidSearchTerm"
+    },
+    "InvalidSegment": {
+      "id": 1242,
+      "name": "InvalidSegment"
+    },
+    "InvalidServiceLimitLevel": {
+      "id": 1224,
+      "name": "InvalidServiceLimitLevel"
+    },
+    "InvalidSessionId": {
+      "id": 1243,
+      "name": "InvalidSessionId"
+    },
+    "InvalidSessionTicket": {
+      "id": 1100,
+      "name": "InvalidSessionTicket"
+    },
+    "InvalidSharedGroupId": {
+      "id": 1088,
+      "name": "InvalidSharedGroupId"
+    },
+    "InvalidSharedSecretKey": {
+      "id": 1296,
+      "name": "InvalidSharedSecretKey"
+    },
+    "InvalidSignature": {
+      "id": 1273,
+      "name": "InvalidSignature"
+    },
+    "InvalidSignatureTime": {
+      "id": 1324,
+      "name": "InvalidSignatureTime"
+    },
+    "InvalidStatistic": {
+      "id": 1283,
+      "name": "InvalidStatistic"
+    },
+    "InvalidStatisticName": {
+      "id": 1222,
+      "name": "InvalidStatisticName"
+    },
+    "InvalidSteamTicket": {
+      "id": 1010,
+      "name": "InvalidSteamTicket"
+    },
+    "InvalidTaskSchedule": {
+      "id": 1257,
+      "name": "InvalidTaskSchedule"
+    },
+    "InvalidTicket": {
+      "id": 1034,
+      "name": "InvalidTicket"
+    },
+    "InvalidTitleForDeveloper": {
+      "id": 1028,
+      "name": "InvalidTitleForDeveloper"
+    },
+    "InvalidTitleId": {
+      "id": 1004,
+      "name": "InvalidTitleId"
+    },
+    "InvalidTokenResultFromAad": {
+      "id": 1375,
+      "name": "InvalidTokenResultFromAad"
+    },
+    "InvalidTwitchToken": {
+      "id": 1232,
+      "name": "InvalidTwitchToken"
+    },
+    "InvalidTypeInBody": {
+      "id": 1070,
+      "name": "InvalidTypeInBody"
+    },
+    "InvalidUsername": {
+      "id": 1007,
+      "name": "InvalidUsername"
+    },
+    "InvalidUsernameOrPassword": {
+      "id": 1003,
+      "name": "InvalidUsernameOrPassword"
+    },
+    "InvalidUserStatistics": {
+      "id": 1073,
+      "name": "InvalidUserStatistics"
+    },
+    "InvalidVirtualCurrency": {
+      "id": 1051,
+      "name": "InvalidVirtualCurrency"
+    },
+    "InvalidVirtualCurrencyCode": {
+      "id": 1236,
+      "name": "InvalidVirtualCurrencyCode"
+    },
+    "InvalidXboxLiveToken": {
+      "id": 1188,
+      "name": "InvalidXboxLiveToken"
+    },
+    "ItemNotAffordable": {
+      "id": 1050,
+      "name": "ItemNotAffordable"
+    },
+    "ItemNotFound": {
+      "id": 1047,
+      "name": "ItemNotFound"
+    },
+    "ItemNotOwned": {
+      "id": 1048,
+      "name": "ItemNotOwned"
+    },
+    "ItemNotRecycleable": {
+      "id": 1049,
+      "name": "ItemNotRecycleable"
+    },
+    "JavascriptException": {
+      "id": 1099,
+      "name": "JavascriptException"
+    },
+    "KeyLengthExceeded": {
+      "id": 1145,
+      "name": "KeyLengthExceeded"
+    },
+    "KeyNotOwned": {
+      "id": 1019,
+      "name": "KeyNotOwned"
+    },
+    "LeaderboardVersionNotAvailable": {
+      "id": 1277,
+      "name": "LeaderboardVersionNotAvailable"
+    },
+    "LimitedEditionItemUnavailable": {
+      "id": 1267,
+      "name": "LimitedEditionItemUnavailable"
+    },
+    "LimitNotAnUpgradeOption": {
+      "id": 1259,
+      "name": "LimitNotAnUpgradeOption"
+    },
+    "LinkedAccountAlreadyClaimed": {
+      "id": 1012,
+      "name": "LinkedAccountAlreadyClaimed"
+    },
+    "LinkedDeviceAlreadyClaimed": {
+      "id": 1118,
+      "name": "LinkedDeviceAlreadyClaimed"
+    },
+    "LinkedIdentifierAlreadyClaimed": {
+      "id": 1184,
+      "name": "LinkedIdentifierAlreadyClaimed"
+    },
+    "MaximumSegmentBulkActionJobsRunning": {
+      "id": 1251,
+      "name": "MaximumSegmentBulkActionJobsRunning"
+    },
+    "MembershipDefinitionInUse": {
+      "id": 1354,
+      "name": "MembershipDefinitionInUse"
+    },
+    "MembershipNameTooLong": {
+      "id": 1330,
+      "name": "MembershipNameTooLong"
+    },
+    "MembershipNotFound": {
+      "id": 1331,
+      "name": "MembershipNotFound"
+    },
+    "MisconfiguredIdentityProvider": {
+      "id": 1264,
+      "name": "MisconfiguredIdentityProvider"
+    },
+    "MissingAmazonSharedKey": {
+      "id": 1149,
+      "name": "MissingAmazonSharedKey"
+    },
+    "MissingTitleGoogleProperties": {
+      "id": 1090,
+      "name": "MissingTitleGoogleProperties"
+    },
+    "NameNotAvailable": {
+      "id": 1058,
+      "name": "NameNotAvailable"
+    },
+    "NoActionsOnPlayersInSegmentJob": {
+      "id": 1252,
+      "name": "NoActionsOnPlayersInSegmentJob"
+    },
+    "NoContactEmailAddressFound": {
+      "id": 1325,
+      "name": "NoContactEmailAddressFound"
+    },
+    "NoEntityFileOperationPending": {
+      "id": 1351,
+      "name": "NoEntityFileOperationPending"
+    },
+    "NoGameModeParamsSet": {
+      "id": 1067,
+      "name": "NoGameModeParamsSet"
+    },
+    "NoMatchingCatalogItemForReceipt": {
+      "id": 1178,
+      "name": "NoMatchingCatalogItemForReceipt"
+    },
+    "NonPositiveValue": {
+      "id": 1054,
+      "name": "NonPositiveValue"
+    },
+    "NoPartnerEnabled": {
+      "id": 1192,
+      "name": "NoPartnerEnabled"
+    },
+    "NoPushNotificationARNForTitle": {
+      "id": 1083,
+      "name": "NoPushNotificationARNForTitle"
+    },
+    "NoRealMoneyPriceForCatalogItem": {
+      "id": 1180,
+      "name": "NoRealMoneyPriceForCatalogItem"
+    },
+    "NoRemainingUses": {
+      "id": 1062,
+      "name": "NoRemainingUses"
+    },
+    "NoSecretKeyEnabledForCloudScript": {
+      "id": 1260,
+      "name": "NoSecretKeyEnabledForCloudScript"
+    },
+    "NoSharedSecretKeyConfigured": {
+      "id": 1292,
+      "name": "NoSharedSecretKeyConfigured"
+    },
+    "NoSuchMod": {
+      "id": 1044,
+      "name": "NoSuchMod"
+    },
+    "NotAuthenticated": {
+      "id": 1074,
+      "name": "NotAuthenticated"
+    },
+    "NotAuthorized": {
+      "id": 1089,
+      "name": "NotAuthorized"
+    },
+    "NotAuthorizedByTitle": {
+      "id": 1191,
+      "name": "NotAuthorizedByTitle"
+    },
+    "NoValidCertificateForAad": {
+      "id": 1376,
+      "name": "NoValidCertificateForAad"
+    },
+    "NoWritePermissionsForEvent": {
+      "id": 1207,
+      "name": "NoWritePermissionsForEvent"
+    },
+    "NullTokenResultFromAad": {
+      "id": 1374,
+      "name": "NullTokenResultFromAad"
+    },
+    "OperationNotSupportedForPlatform": {
+      "id": 1219,
+      "name": "OperationNotSupportedForPlatform"
+    },
+    "OutstandingApplicationAcceptedInstead": {
+      "id": 1364,
+      "name": "OutstandingApplicationAcceptedInstead"
+    },
+    "OutstandingInvitationAcceptedInstead": {
+      "id": 1363,
+      "name": "OutstandingInvitationAcceptedInstead"
+    },
+    "OverLimit": {
+      "id": 1214,
+      "name": "OverLimit"
+    },
+    "PartialFailure": {
+      "id": 1121,
+      "name": "PartialFailure"
+    },
+    "PaymentPageNotConfigured": {
+      "id": 1355,
+      "name": "PaymentPageNotConfigured"
+    },
+    "PhotonApplicationNotAssociatedWithTitle": {
+      "id": 1141,
+      "name": "PhotonApplicationNotAssociatedWithTitle"
+    },
+    "PhotonApplicationNotFound": {
+      "id": 1140,
+      "name": "PhotonApplicationNotFound"
+    },
+    "PhotonNotEnabledForTitle": {
+      "id": 1139,
+      "name": "PhotonNotEnabledForTitle"
+    },
+    "PlayerNotInGame": {
+      "id": 1033,
+      "name": "PlayerNotInGame"
+    },
+    "PlayerSecretAlreadyConfigured": {
+      "id": 1294,
+      "name": "PlayerSecretAlreadyConfigured"
+    },
+    "PlayerSecretNotConfigured": {
+      "id": 1323,
+      "name": "PlayerSecretNotConfigured"
+    },
+    "PlayerTagCountLimitExceeded": {
+      "id": 1248,
+      "name": "PlayerTagCountLimitExceeded"
+    },
+    "PrizeTableHasMissingRanks": {
+      "id": 1281,
+      "name": "PrizeTableHasMissingRanks"
+    },
+    "PrizeTableHasNoRanks": {
+      "id": 1297,
+      "name": "PrizeTableHasNoRanks"
+    },
+    "PrizeTableHasOverlappingRanks": {
+      "id": 1280,
+      "name": "PrizeTableHasOverlappingRanks"
+    },
+    "PrizeTableRankStartsAtZero": {
+      "id": 1282,
+      "name": "PrizeTableRankStartsAtZero"
+    },
+    "ProfaneDisplayName": {
+      "id": 1234,
+      "name": "ProfaneDisplayName"
+    },
+    "ProfileDoesNotExist": {
+      "id": 1298,
+      "name": "ProfileDoesNotExist"
+    },
+    "PSNInaccessible": {
+      "id": 1152,
+      "name": "PSNInaccessible"
+    },
+    "PublisherNotSet": {
+      "id": 1122,
+      "name": "PublisherNotSet"
+    },
+    "PurchaseDoesNotExist": {
+      "id": 1080,
+      "name": "PurchaseDoesNotExist"
+    },
+    "PurchaseInitializationFailure": {
+      "id": 1064,
+      "name": "PurchaseInitializationFailure"
+    },
+    "PushNotEnabledForAccount": {
+      "id": 1094,
+      "name": "PushNotEnabledForAccount"
+    },
+    "PushServiceError": {
+      "id": 1095,
+      "name": "PushServiceError"
+    },
+    "ReceiptAlreadyUsed": {
+      "id": 1022,
+      "name": "ReceiptAlreadyUsed"
+    },
+    "ReceiptCancelled": {
+      "id": 1023,
+      "name": "ReceiptCancelled"
+    },
+    "ReceiptContainsMultipleInAppItems": {
+      "id": 1097,
+      "name": "ReceiptContainsMultipleInAppItems"
+    },
+    "ReceiptDoesNotContainInAppItems": {
+      "id": 1096,
+      "name": "ReceiptDoesNotContainInAppItems"
+    },
+    "RegionAtCapacity": {
+      "id": 1056,
+      "name": "RegionAtCapacity"
+    },
+    "RegistrationIncomplete": {
+      "id": 1037,
+      "name": "RegistrationIncomplete"
+    },
+    "RegistrationSessionNotFound": {
+      "id": 1043,
+      "name": "RegistrationSessionNotFound"
+    },
+    "ReportNotAvailable": {
+      "id": 1112,
+      "name": "ReportNotAvailable"
+    },
+    "RequestAlreadyRunning": {
+      "id": 1249,
+      "name": "RequestAlreadyRunning"
+    },
+    "RequestViewConstraintParamsNotAllowed": {
+      "id": 1303,
+      "name": "RequestViewConstraintParamsNotAllowed"
+    },
+    "ReservedEventName": {
+      "id": 1072,
+      "name": "ReservedEventName"
+    },
+    "ReservedWordInBody": {
+      "id": 1069,
+      "name": "ReservedWordInBody"
+    },
+    "ResettableStatisticVersionRequired": {
+      "id": 1190,
+      "name": "ResettableStatisticVersionRequired"
+    },
+    "RestrictedEmailDomain": {
+      "id": 1288,
+      "name": "RestrictedEmailDomain"
+    },
+    "RevisionNotFound": {
+      "id": 1125,
+      "name": "RevisionNotFound"
+    },
+    "RoleDoesNotExist": {
+      "id": 1358,
+      "name": "RoleDoesNotExist"
+    },
+    "RoleIsGroupAdmin": {
+      "id": 1366,
+      "name": "RoleIsGroupAdmin"
+    },
+    "RoleIsGroupDefaultMember": {
+      "id": 1365,
+      "name": "RoleIsGroupDefaultMember"
+    },
+    "RoleNameNotAvailable": {
+      "id": 1367,
+      "name": "RoleNameNotAvailable"
+    },
+    "ScheduledTaskCreateConflict": {
+      "id": 1255,
+      "name": "ScheduledTaskCreateConflict"
+    },
+    "ScheduledTaskNameConflict": {
+      "id": 1254,
+      "name": "ScheduledTaskNameConflict"
+    },
+    "SecretKeyNotFound": {
+      "id": 1293,
+      "name": "SecretKeyNotFound"
+    },
+    "SegmentNotFound": {
+      "id": 1220,
+      "name": "SegmentNotFound"
+    },
+    "ServerFailedToStart": {
+      "id": 1057,
+      "name": "ServerFailedToStart"
+    },
+    "ServiceLimitLevelInTransition": {
+      "id": 1225,
+      "name": "ServiceLimitLevelInTransition"
+    },
+    "ServiceUnavailable": {
+      "id": 1123,
+      "name": "ServiceUnavailable"
+    },
+    "SessionLogNotFound": {
+      "id": 1244,
+      "name": "SessionLogNotFound"
+    },
+    "SignedRequestNotAllowed": {
+      "id": 1302,
+      "name": "SignedRequestNotAllowed"
+    },
+    "SmtpAddonNotEnabled": {
+      "id": 1341,
+      "name": "SmtpAddonNotEnabled"
+    },
+    "SmtpServerAuthenticationError": {
+      "id": 1311,
+      "name": "SmtpServerAuthenticationError"
+    },
+    "SmtpServerCommunicationError": {
+      "id": 1314,
+      "name": "SmtpServerCommunicationError"
+    },
+    "SmtpServerGeneralFailure": {
+      "id": 1315,
+      "name": "SmtpServerGeneralFailure"
+    },
+    "SmtpServerInsufficientStorage": {
+      "id": 1313,
+      "name": "SmtpServerInsufficientStorage"
+    },
+    "SmtpServerLimitExceeded": {
+      "id": 1312,
+      "name": "SmtpServerLimitExceeded"
+    },
+    "StatisticAlreadyHasPrizeTable": {
+      "id": 1279,
+      "name": "StatisticAlreadyHasPrizeTable"
+    },
+    "StatisticCountLimitExceeded": {
+      "id": 1203,
+      "name": "StatisticCountLimitExceeded"
+    },
+    "StatisticNameConflict": {
+      "id": 1196,
+      "name": "StatisticNameConflict"
+    },
+    "StatisticNotFound": {
+      "id": 1195,
+      "name": "StatisticNotFound"
+    },
+    "StatisticUpdateInProgress": {
+      "id": 1276,
+      "name": "StatisticUpdateInProgress"
+    },
+    "StatisticValueAggregationOverflow": {
+      "id": 1308,
+      "name": "StatisticValueAggregationOverflow"
+    },
+    "StatisticVersionAlreadyIncrementedForScheduledInterval": {
+      "id": 1202,
+      "name": "StatisticVersionAlreadyIncrementedForScheduledInterval"
+    },
+    "StatisticVersionClosedForWrites": {
+      "id": 1197,
+      "name": "StatisticVersionClosedForWrites"
+    },
+    "StatisticVersionIncrementRateExceeded": {
+      "id": 1204,
+      "name": "StatisticVersionIncrementRateExceeded"
+    },
+    "StatisticVersionInvalid": {
+      "id": 1198,
+      "name": "StatisticVersionInvalid"
+    },
+    "SteamApplicationNotOwned": {
+      "id": 1040,
+      "name": "SteamApplicationNotOwned"
+    },
+    "SteamNotEnabledForTitle": {
+      "id": 1258,
+      "name": "SteamNotEnabledForTitle"
+    },
+    "StoreNotFound": {
+      "id": 1221,
+      "name": "StoreNotFound"
+    },
+    "StreamAlreadyExists": {
+      "id": 1075,
+      "name": "StreamAlreadyExists"
+    },
+    "StreamNotFound": {
+      "id": 1077,
+      "name": "StreamNotFound"
+    },
+    "SubscriptionAlreadyTaken": {
+      "id": 1340,
+      "name": "SubscriptionAlreadyTaken"
+    },
+    "Success": {
+      "name": "Success"
+    },
+    "TaskInstanceNotFound": {
+      "id": 1262,
+      "name": "TaskInstanceNotFound"
+    },
+    "TaskNotFound": {
+      "id": 1261,
+      "name": "TaskNotFound"
+    },
+    "TemplateVersionNotDefined": {
+      "id": 1345,
+      "name": "TemplateVersionNotDefined"
+    },
+    "TemplateVersionTooOld": {
+      "id": 1353,
+      "name": "TemplateVersionTooOld"
+    },
+    "TitleContainsUserAccounts": {
+      "id": 1348,
+      "name": "TitleContainsUserAccounts"
+    },
+    "TitleDeleted": {
+      "id": 1347,
+      "name": "TitleDeleted"
+    },
+    "TitleDeletionPlayerCleanupFailure": {
+      "id": 1349,
+      "name": "TitleDeletionPlayerCleanupFailure"
+    },
+    "TitleNameConflicts": {
+      "id": 1029,
+      "name": "TitleNameConflicts"
+    },
+    "TitleNewsItemCountLimitExceeded": {
+      "id": 1231,
+      "name": "TitleNewsItemCountLimitExceeded"
+    },
+    "TitleNotActivated": {
+      "id": 1042,
+      "name": "TitleNotActivated"
+    },
+    "TitleNotQualifiedForLimit": {
+      "id": 1223,
+      "name": "TitleNotQualifiedForLimit"
+    },
+    "TooManyKeys": {
+      "id": 1147,
+      "name": "TooManyKeys"
+    },
+    "TotalDataSizeExceeded": {
+      "id": 1186,
+      "name": "TotalDataSizeExceeded"
+    },
+    "TradeAcceptedCatalogItemInvalid": {
+      "id": 1170,
+      "name": "TradeAcceptedCatalogItemInvalid"
+    },
+    "TradeAcceptedCatalogItemIsNotTradable": {
+      "id": 1182,
+      "name": "TradeAcceptedCatalogItemIsNotTradable"
+    },
+    "TradeAcceptedItemIsBundle": {
+      "id": 1167,
+      "name": "TradeAcceptedItemIsBundle"
+    },
+    "TradeAcceptedItemIsStackable": {
+      "id": 1168,
+      "name": "TradeAcceptedItemIsStackable"
+    },
+    "TradeAcceptedItemsMismatch": {
+      "id": 1175,
+      "name": "TradeAcceptedItemsMismatch"
+    },
+    "TradeAcceptingUserNotAllowed": {
+      "id": 1156,
+      "name": "TradeAcceptingUserNotAllowed"
+    },
+    "TradeAllowedUsersInvalid": {
+      "id": 1171,
+      "name": "TradeAllowedUsersInvalid"
+    },
+    "TradeAlreadyFilled": {
+      "id": 1163,
+      "name": "TradeAlreadyFilled"
+    },
+    "TradeCancelled": {
+      "id": 1162,
+      "name": "TradeCancelled"
+    },
+    "TradeDoesNotExist": {
+      "id": 1161,
+      "name": "TradeDoesNotExist"
+    },
+    "TradeInventoryItemDoesNotExist": {
+      "id": 1172,
+      "name": "TradeInventoryItemDoesNotExist"
+    },
+    "TradeInventoryItemExpired": {
+      "id": 1165,
+      "name": "TradeInventoryItemExpired"
+    },
+    "TradeInventoryItemInvalidStatus": {
+      "id": 1169,
+      "name": "TradeInventoryItemInvalidStatus"
+    },
+    "TradeInventoryItemIsAssignedToCharacter": {
+      "id": 1157,
+      "name": "TradeInventoryItemIsAssignedToCharacter"
+    },
+    "TradeInventoryItemIsBundle": {
+      "id": 1158,
+      "name": "TradeInventoryItemIsBundle"
+    },
+    "TradeInventoryItemIsConsumed": {
+      "id": 1173,
+      "name": "TradeInventoryItemIsConsumed"
+    },
+    "TradeInventoryItemIsNotTradable": {
+      "id": 1181,
+      "name": "TradeInventoryItemIsNotTradable"
+    },
+    "TradeInventoryItemIsStackable": {
+      "id": 1174,
+      "name": "TradeInventoryItemIsStackable"
+    },
+    "TradeMissingOfferedAndAcceptedItems": {
+      "id": 1166,
+      "name": "TradeMissingOfferedAndAcceptedItems"
+    },
+    "TradeStatusNotValidForAccepting": {
+      "id": 1160,
+      "name": "TradeStatusNotValidForAccepting"
+    },
+    "TradeStatusNotValidForCancelling": {
+      "id": 1159,
+      "name": "TradeStatusNotValidForCancelling"
+    },
+    "TradeWaitForStatusTimeout": {
+      "id": 1164,
+      "name": "TradeWaitForStatusTimeout"
+    },
+    "TwitchResponseError": {
+      "id": 1233,
+      "name": "TwitchResponseError"
+    },
+    "TwoFactorAuthenticationTokenRequired": {
+      "id": 1246,
+      "name": "TwoFactorAuthenticationTokenRequired"
+    },
+    "UnableToConnectToDatabase": {
+      "id": 1101,
+      "name": "UnableToConnectToDatabase"
+    },
+    "UnknownError": {
+      "id": 1039,
+      "name": "UnknownError"
+    },
+    "UnkownError": {
+      "id": 500,
+      "name": "UnkownError"
+    },
+    "UserAlreadyAdded": {
+      "id": 1235,
+      "name": "UserAlreadyAdded"
+    },
+    "UserIsNotPartOfDeveloper": {
+      "id": 1027,
+      "name": "UserIsNotPartOfDeveloper"
+    },
+    "UserisNotValid": {
+      "id": 1030,
+      "name": "UserisNotValid"
+    },
+    "UsernameNotAvailable": {
+      "id": 1009,
+      "name": "UsernameNotAvailable"
+    },
+    "UserNotFriend": {
+      "id": 1272,
+      "name": "UserNotFriend"
+    },
+    "UsersAlreadyFriends": {
+      "id": 1183,
+      "name": "UsersAlreadyFriends"
+    },
+    "ValueAlreadyExists": {
+      "id": 1031,
+      "name": "ValueAlreadyExists"
+    },
+    "VariableNotDefined": {
+      "id": 1344,
+      "name": "VariableNotDefined"
+    },
+    "VersionNotFound": {
+      "id": 1124,
+      "name": "VersionNotFound"
+    },
+    "VirtualCurrencyCannotBeDeleted": {
+      "id": 1237,
+      "name": "VirtualCurrencyCannotBeDeleted"
+    },
+    "VirtualCurrencyCodeExists": {
+      "id": 1230,
+      "name": "VirtualCurrencyCodeExists"
+    },
+    "VirtualCurrencyCountLimitExceeded": {
+      "id": 1229,
+      "name": "VirtualCurrencyCountLimitExceeded"
+    },
+    "WrongPrice": {
+      "id": 1053,
+      "name": "WrongPrice"
+    },
+    "WrongSteamAccount": {
+      "id": 1041,
+      "name": "WrongSteamAccount"
+    },
+    "WrongVirtualCurrency": {
+      "id": 1052,
+      "name": "WrongVirtualCurrency"
+    },
+    "XboxBPCertificateFailure": {
+      "id": 1305,
+      "name": "XboxBPCertificateFailure"
+    },
+    "XboxInaccessible": {
+      "id": 1339,
+      "name": "XboxInaccessible"
+    },
+    "XboxRejectedXSTSExchangeRequest": {
+      "id": 1343,
+      "name": "XboxRejectedXSTSExchangeRequest"
+    },
+    "XboxXASSExchangeFailure": {
+      "id": 1306,
+      "name": "XboxXASSExchangeFailure"
+    }
+  }
+}
