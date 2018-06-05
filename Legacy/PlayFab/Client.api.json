@@ -14795,7 +14795,8 @@
         "Client/GetPlayFabIDsFromGenericIDs"
       ],
       "errors": [
-        "AccountNotLinked"
+        "AccountNotLinked",
+        "IdentifierNotLinked"
       ]
     },
     {

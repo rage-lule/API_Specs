@@ -4,154 +4,153 @@
       "Group": "none",
       "Classes": [
         {
-          "Required": [],
-          "Type": "object",
-          "Properties": {
+          "type": "object",
+          "properties": {
             "AdCampaignAttributions": {
-              "$ref": "#/definitions/AdCampaignAttribution",
-              "Description": "Array of ad campaigns player has been attributed to",
-              "Example": {},
+              "description": "Array of ad campaigns player has been attributed to",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "AdCampaignAttribution",
+              "$ref": "#/definitions/AdCampaignAttribution",
               "x-isclass": true,
+              "example": {},
               "x-optional": true
             },
             "AvatarUrl": {
-              "Description": "Image URL of the player's avatar.",
+              "description": "Image URL of the player's avatar.",
               "x-jsontype": "String",
               "x-actualtype": "String",
               "x-optional": true
             },
             "BannedUntil": {
-              "Description": "Banned until UTC Date. If permanent ban this is set for 20 years after the original ban date.",
+              "description": "Banned until UTC Date. If permanent ban this is set for 20 years after the original ban date.",
               "x-jsontype": "String",
               "x-actualtype": "DateTime",
               "x-optional": true
             },
             "ContactEmailAddresses": {
-              "$ref": "#/definitions/ContactEmailInfo",
-              "Description": "Array of contact email addresses associated with the player",
-              "Example": {},
+              "description": "Array of contact email addresses associated with the player",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "ContactEmailInfo",
+              "$ref": "#/definitions/ContactEmailInfo",
               "x-isclass": true,
+              "example": {},
               "x-optional": true
             },
             "Created": {
-              "Description": "Player record created",
+              "description": "Player record created",
               "x-jsontype": "String",
               "x-actualtype": "DateTime",
               "x-optional": true
             },
             "DisplayName": {
-              "Description": "Player Display Name",
+              "description": "Player Display Name",
               "x-jsontype": "String",
               "x-actualtype": "String",
               "x-optional": true
             },
             "LastLogin": {
-              "Description": "Last login",
+              "description": "Last login",
               "x-jsontype": "String",
               "x-actualtype": "DateTime",
               "x-optional": true
             },
             "LinkedAccounts": {
-              "$ref": "#/definitions/PlayerLinkedAccount",
-              "Description": "Array of third party accounts linked to this player",
-              "Example": {},
+              "description": "Array of third party accounts linked to this player",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "PlayerLinkedAccount",
+              "$ref": "#/definitions/PlayerLinkedAccount",
               "x-isclass": true,
+              "example": {},
               "x-optional": true
             },
             "Locations": {
-              "$ref": "#/definitions/PlayerLocation",
-              "Description": "Dictionary of player's locations by type.",
-              "Example": {},
+              "description": "Dictionary of player's locations by type.",
               "x-collection": "map",
               "x-jsontype": "Object",
               "x-actualtype": "PlayerLocation",
+              "$ref": "#/definitions/PlayerLocation",
               "x-isclass": true,
+              "example": {},
               "x-optional": true
             },
             "Origination": {
-              "$ref": "#/definitions/LoginIdentityProvider",
-              "Description": "Player account origination",
+              "description": "Player account origination",
               "x-jsontype": "String",
               "x-actualtype": "LoginIdentityProvider",
+              "$ref": "#/definitions/LoginIdentityProvider",
               "x-isenum": true,
               "x-optional": true
             },
             "PlayerId": {
-              "Description": "PlayFab Player ID",
+              "description": "PlayFab Player ID",
               "x-jsontype": "String",
               "x-actualtype": "String",
               "x-optional": true
             },
             "PlayerStatistics": {
-              "$ref": "#/definitions/PlayerStatistic",
-              "Description": "Array of player statistics",
-              "Example": {},
+              "description": "Array of player statistics",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "PlayerStatistic",
+              "$ref": "#/definitions/PlayerStatistic",
               "x-isclass": true,
+              "example": {},
               "x-optional": true
             },
             "PublisherId": {
-              "Description": "Publisher this player belongs to",
+              "description": "Publisher this player belongs to",
               "x-jsontype": "String",
               "x-actualtype": "String",
               "x-optional": true
             },
             "PushNotificationRegistrations": {
-              "$ref": "#/definitions/PushNotificationRegistration",
-              "Description": "Array of configured push notification end points",
-              "Example": {},
+              "description": "Array of configured push notification end points",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "PushNotificationRegistration",
+              "$ref": "#/definitions/PushNotificationRegistration",
               "x-isclass": true,
+              "example": {},
               "x-optional": true
             },
             "Statistics": {
-              "Description": "Dictionary of player's statistics using only the latest version's value",
+              "description": "Dictionary of player's statistics using only the latest version's value",
               "x-collection": "map",
               "x-jsontype": "Number",
               "x-actualtype": "int32",
               "x-optional": true
             },
             "Tags": {
-              "Description": "List of player's tags for segmentation.",
+              "description": "List of player's tags for segmentation.",
               "x-collection": "array",
               "x-jsontype": "String",
               "x-actualtype": "String",
               "x-optional": true
             },
             "TitleId": {
-              "Description": "Title ID this profile applies to",
+              "description": "Title ID this profile applies to",
               "x-jsontype": "String",
               "x-actualtype": "String",
               "x-optional": true
             },
             "TotalValueToDateInUSD": {
-              "Description": "A sum of player's total purchases in USD across all currencies.",
+              "description": "A sum of player's total purchases in USD across all currencies.",
               "x-jsontype": "Number",
               "x-actualtype": "uint32",
               "x-optional": true
             },
             "ValuesToDate": {
-              "Description": "Dictionary of player's total purchases by currency.",
+              "description": "Dictionary of player's total purchases by currency.",
               "x-collection": "map",
               "x-jsontype": "Number",
               "x-actualtype": "uint32",
               "x-optional": true
             },
             "VirtualCurrencyBalances": {
-              "Description": "Dictionary of player's virtual currency balances",
+              "description": "Dictionary of player's virtual currency balances",
               "x-collection": "map",
               "x-jsontype": "Number",
               "x-actualtype": "int32",
@@ -165,7 +164,8 @@
   ],
   "ChildTypes": [
     {
-      "Enum": [
+      "type": "object",
+      "enum": [
         "Unknown",
         "PlayFab",
         "Custom",
@@ -181,11 +181,11 @@
         "Twitch",
         "WindowsHello"
       ],
-      "Type": "object",
       "x-ClassName": "LoginIdentityProvider"
     },
     {
-      "Enum": [
+      "type": "object",
+      "enum": [
         "AF",
         "AN",
         "AS",
@@ -194,11 +194,11 @@
         "OC",
         "SA"
       ],
-      "Type": "object",
       "x-ClassName": "ContinentCode"
     },
     {
-      "Enum": [
+      "type": "object",
+      "enum": [
         "AF",
         "AX",
         "AL",
@@ -449,43 +449,41 @@
         "ZM",
         "ZW"
       ],
-      "Type": "object",
       "x-ClassName": "CountryCode"
     },
     {
-      "Required": [],
-      "Type": "object",
-      "Properties": {
+      "type": "object",
+      "properties": {
         "City": {
-          "Description": "City of the player's geographic location.",
+          "description": "City of the player's geographic location.",
           "x-jsontype": "String",
           "x-actualtype": "String",
           "x-optional": true
         },
         "ContinentCode": {
-          "$ref": "#/definitions/ContinentCode",
-          "Description": "The two-character continent code for this location",
+          "description": "The two-character continent code for this location",
           "x-jsontype": "String",
           "x-actualtype": "ContinentCode",
+          "$ref": "#/definitions/ContinentCode",
           "x-isenum": true,
           "x-optional": false
         },
         "CountryCode": {
-          "$ref": "#/definitions/CountryCode",
-          "Description": "The two-character ISO 3166-1 country code for the country associated with the location",
+          "description": "The two-character ISO 3166-1 country code for the country associated with the location",
           "x-jsontype": "String",
           "x-actualtype": "CountryCode",
+          "$ref": "#/definitions/CountryCode",
           "x-isenum": true,
           "x-optional": false
         },
         "Latitude": {
-          "Description": "Latitude coordinate of the player's geographic location.",
+          "description": "Latitude coordinate of the player's geographic location.",
           "x-jsontype": "Number",
           "x-actualtype": "double",
           "x-optional": true
         },
         "Longitude": {
-          "Description": "Longitude coordinate of the player's geographic location.",
+          "description": "Longitude coordinate of the player's geographic location.",
           "x-jsontype": "Number",
           "x-actualtype": "double",
           "x-optional": true
@@ -494,23 +492,22 @@
       "x-ClassName": "PlayerLocation"
     },
     {
-      "Required": [],
-      "Type": "object",
-      "Properties": {
+      "type": "object",
+      "properties": {
         "AttributedAt": {
-          "Description": "UTC time stamp of attribution",
+          "description": "UTC time stamp of attribution",
           "x-jsontype": "String",
           "x-actualtype": "DateTime",
           "x-optional": false
         },
         "CampaignId": {
-          "Description": "Attribution campaign identifier",
+          "description": "Attribution campaign identifier",
           "x-jsontype": "String",
           "x-actualtype": "String",
           "x-optional": true
         },
         "Platform": {
-          "Description": "Attribution network name",
+          "description": "Attribution network name",
           "x-jsontype": "String",
           "x-actualtype": "String",
           "x-optional": true
@@ -519,28 +516,27 @@
       "x-ClassName": "AdCampaignAttribution"
     },
     {
-      "Enum": [
+      "type": "object",
+      "enum": [
         "ApplePushNotificationService",
         "GoogleCloudMessaging"
       ],
-      "Type": "object",
       "x-ClassName": "PushNotificationPlatform"
     },
     {
-      "Required": [],
-      "Type": "object",
-      "Properties": {
+      "type": "object",
+      "properties": {
         "NotificationEndpointARN": {
-          "Description": "Notification configured endpoint",
+          "description": "Notification configured endpoint",
           "x-jsontype": "String",
           "x-actualtype": "String",
           "x-optional": true
         },
         "Platform": {
-          "$ref": "#/definitions/PushNotificationPlatform",
-          "Description": "Push notification platform",
+          "description": "Push notification platform",
           "x-jsontype": "String",
           "x-actualtype": "PushNotificationPlatform",
+          "$ref": "#/definitions/PushNotificationPlatform",
           "x-isenum": true,
           "x-optional": true
         }
@@ -548,31 +544,30 @@
       "x-ClassName": "PushNotificationRegistration"
     },
     {
-      "Required": [],
-      "Type": "object",
-      "Properties": {
+      "type": "object",
+      "properties": {
         "Email": {
-          "Description": "Linked account's email",
+          "description": "Linked account's email",
           "x-jsontype": "String",
           "x-actualtype": "String",
           "x-optional": true
         },
         "Platform": {
-          "$ref": "#/definitions/LoginIdentityProvider",
-          "Description": "Authentication platform",
+          "description": "Authentication platform",
           "x-jsontype": "String",
           "x-actualtype": "LoginIdentityProvider",
+          "$ref": "#/definitions/LoginIdentityProvider",
           "x-isenum": true,
           "x-optional": true
         },
         "PlatformUserId": {
-          "Description": "Platform user identifier",
+          "description": "Platform user identifier",
           "x-jsontype": "String",
           "x-actualtype": "String",
           "x-optional": true
         },
         "Username": {
-          "Description": "Linked account's username",
+          "description": "Linked account's username",
           "x-jsontype": "String",
           "x-actualtype": "String",
           "x-optional": true
@@ -581,29 +576,28 @@
       "x-ClassName": "PlayerLinkedAccount"
     },
     {
-      "Required": [],
-      "Type": "object",
-      "Properties": {
+      "type": "object",
+      "properties": {
         "Id": {
-          "Description": "Statistic ID",
+          "description": "Statistic ID",
           "x-jsontype": "String",
           "x-actualtype": "String",
           "x-optional": true
         },
         "Name": {
-          "Description": "Statistic name",
+          "description": "Statistic name",
           "x-jsontype": "String",
           "x-actualtype": "String",
           "x-optional": true
         },
         "StatisticValue": {
-          "Description": "Current statistic value",
+          "description": "Current statistic value",
           "x-jsontype": "Number",
           "x-actualtype": "int32",
           "x-optional": false
         },
         "StatisticVersion": {
-          "Description": "Statistic version (0 if not a versioned statistic)",
+          "description": "Statistic version (0 if not a versioned statistic)",
           "x-jsontype": "Number",
           "x-actualtype": "int32",
           "x-optional": false
@@ -612,35 +606,34 @@
       "x-ClassName": "PlayerStatistic"
     },
     {
-      "Enum": [
+      "type": "object",
+      "enum": [
         "Unverified",
         "Pending",
         "Confirmed"
       ],
-      "Type": "object",
       "x-ClassName": "EmailVerificationStatus"
     },
     {
-      "Required": [],
-      "Type": "object",
-      "Properties": {
+      "type": "object",
+      "properties": {
         "EmailAddress": {
-          "Description": "The email address",
+          "description": "The email address",
           "x-jsontype": "String",
           "x-actualtype": "String",
           "x-optional": true
         },
         "Name": {
-          "Description": "The name of the email info data",
+          "description": "The name of the email info data",
           "x-jsontype": "String",
           "x-actualtype": "String",
           "x-optional": true
         },
         "VerificationStatus": {
-          "$ref": "#/definitions/EmailVerificationStatus",
-          "Description": "The verification status of the email",
+          "description": "The verification status of the email",
           "x-jsontype": "String",
           "x-actualtype": "EmailVerificationStatus",
+          "$ref": "#/definitions/EmailVerificationStatus",
           "x-isenum": true,
           "x-optional": true
         }

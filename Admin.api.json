@@ -11228,6 +11228,7 @@
         "Admin/GetAllSegments"
       ],
       "errors": [
+        "ExpiredContinuationToken",
         "SegmentNotFound"
       ]
     },
@@ -12134,6 +12135,7 @@
         "Admin/UpdateCatalogItems"
       ],
       "errors": [
+        "InvalidDropTable",
         "InvalidItemProperties",
         "InvalidJSONContent"
       ]
