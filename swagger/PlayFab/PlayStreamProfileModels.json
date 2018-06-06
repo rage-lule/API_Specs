@@ -7,13 +7,12 @@
           "type": "object",
           "properties": {
             "AdCampaignAttributions": {
+              "$ref": "#/definitions/AdCampaignAttribution",
               "description": "Array of ad campaigns player has been attributed to",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "AdCampaignAttribution",
-              "$ref": "#/definitions/AdCampaignAttribution",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "AvatarUrl": {
@@ -29,13 +28,12 @@
               "x-optional": true
             },
             "ContactEmailAddresses": {
+              "$ref": "#/definitions/ContactEmailInfo",
               "description": "Array of contact email addresses associated with the player",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "ContactEmailInfo",
-              "$ref": "#/definitions/ContactEmailInfo",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "Created": {
@@ -57,30 +55,28 @@
               "x-optional": true
             },
             "LinkedAccounts": {
+              "$ref": "#/definitions/PlayerLinkedAccount",
               "description": "Array of third party accounts linked to this player",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "PlayerLinkedAccount",
-              "$ref": "#/definitions/PlayerLinkedAccount",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "Locations": {
+              "$ref": "#/definitions/PlayerLocation",
               "description": "Dictionary of player's locations by type.",
               "x-collection": "map",
               "x-jsontype": "Object",
               "x-actualtype": "PlayerLocation",
-              "$ref": "#/definitions/PlayerLocation",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "Origination": {
+              "$ref": "#/definitions/LoginIdentityProvider",
               "description": "Player account origination",
               "x-jsontype": "String",
               "x-actualtype": "LoginIdentityProvider",
-              "$ref": "#/definitions/LoginIdentityProvider",
               "x-isenum": true,
               "x-optional": true
             },
@@ -91,13 +87,12 @@
               "x-optional": true
             },
             "PlayerStatistics": {
+              "$ref": "#/definitions/PlayerStatistic",
               "description": "Array of player statistics",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "PlayerStatistic",
-              "$ref": "#/definitions/PlayerStatistic",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "PublisherId": {
@@ -107,13 +102,12 @@
               "x-optional": true
             },
             "PushNotificationRegistrations": {
+              "$ref": "#/definitions/PushNotificationRegistration",
               "description": "Array of configured push notification end points",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "PushNotificationRegistration",
-              "$ref": "#/definitions/PushNotificationRegistration",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "Statistics": {
@@ -461,18 +455,18 @@
           "x-optional": true
         },
         "ContinentCode": {
+          "$ref": "#/definitions/ContinentCode",
           "description": "The two-character continent code for this location",
           "x-jsontype": "String",
           "x-actualtype": "ContinentCode",
-          "$ref": "#/definitions/ContinentCode",
           "x-isenum": true,
           "x-optional": false
         },
         "CountryCode": {
+          "$ref": "#/definitions/CountryCode",
           "description": "The two-character ISO 3166-1 country code for the country associated with the location",
           "x-jsontype": "String",
           "x-actualtype": "CountryCode",
-          "$ref": "#/definitions/CountryCode",
           "x-isenum": true,
           "x-optional": false
         },
@@ -533,10 +527,10 @@
           "x-optional": true
         },
         "Platform": {
+          "$ref": "#/definitions/PushNotificationPlatform",
           "description": "Push notification platform",
           "x-jsontype": "String",
           "x-actualtype": "PushNotificationPlatform",
-          "$ref": "#/definitions/PushNotificationPlatform",
           "x-isenum": true,
           "x-optional": true
         }
@@ -553,10 +547,10 @@
           "x-optional": true
         },
         "Platform": {
+          "$ref": "#/definitions/LoginIdentityProvider",
           "description": "Authentication platform",
           "x-jsontype": "String",
           "x-actualtype": "LoginIdentityProvider",
-          "$ref": "#/definitions/LoginIdentityProvider",
           "x-isenum": true,
           "x-optional": true
         },
@@ -630,10 +624,10 @@
           "x-optional": true
         },
         "VerificationStatus": {
+          "$ref": "#/definitions/EmailVerificationStatus",
           "description": "The verification status of the email",
           "x-jsontype": "String",
           "x-actualtype": "EmailVerificationStatus",
-          "$ref": "#/definitions/EmailVerificationStatus",
           "x-isenum": true,
           "x-optional": true
         }

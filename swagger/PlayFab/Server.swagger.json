@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "180605",
+    "version": "180606",
     "title": "PlayFab Server API",
     "description": "Provides functionality to allow external (developer-controlled) servers to interact with user inventories and data in a trusted manner, and to handle matchmaking and client connection orchestration",
     "termsOfService": "https://playfab.com/terms/",
@@ -52,11 +52,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/ModifyCharacterVirtualCurrencyResult"
@@ -108,11 +108,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/EmptyResult"
@@ -167,11 +167,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/AddPlayerTagResult"
@@ -225,11 +225,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/AddSharedGroupMembersResult"
@@ -279,11 +279,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/ModifyUserVirtualCurrencyResult"
@@ -334,11 +334,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/AuthenticateSessionTicketResult"
@@ -387,11 +387,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/AwardSteamAchievementResult"
@@ -436,11 +436,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/BanUsersResult"
@@ -492,11 +492,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/ConsumeItemResult"
@@ -548,11 +548,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/CreateSharedGroupResult"
@@ -601,11 +601,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/DeleteCharacterFromUserResult"
@@ -655,11 +655,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/EmptyResult"
@@ -707,11 +707,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/DeleteUsersResult"
@@ -762,11 +762,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/DeregisterGameResponse"
@@ -814,11 +814,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/EvaluateRandomResultTableResult"
@@ -868,11 +868,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/ExecuteCloudScriptResult"
@@ -925,11 +925,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetAllActionGroupsResult"
@@ -983,11 +983,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetAllSegmentsResult"
@@ -1036,11 +1036,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/ListUsersCharactersResult"
@@ -1086,11 +1086,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetCatalogItemsResult"
@@ -1135,11 +1135,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetCharacterDataResult"
@@ -1195,11 +1195,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetCharacterDataResult"
@@ -1255,11 +1255,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetCharacterInventoryResult"
@@ -1311,11 +1311,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetCharacterLeaderboardResult"
@@ -1366,11 +1366,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetCharacterDataResult"
@@ -1426,11 +1426,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetCharacterStatisticsResult"
@@ -1485,11 +1485,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetContentDownloadUrlResult"
@@ -1540,11 +1540,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetLeaderboardResult"
@@ -1598,11 +1598,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetFriendsListResult"
@@ -1658,11 +1658,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetLeaderboardResult"
@@ -1716,11 +1716,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetLeaderboardAroundCharacterResult"
@@ -1774,11 +1774,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetLeaderboardAroundUserResult"
@@ -1833,11 +1833,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetLeaderboardForUsersCharactersResult"
@@ -1891,11 +1891,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetPlayerCombinedInfoResult"
@@ -1940,11 +1940,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetPlayerProfileResult"
@@ -1994,11 +1994,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetPlayerSegmentsResult"
@@ -2046,11 +2046,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetPlayersInSegmentResult"
@@ -2103,11 +2103,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetPlayerStatisticsResult"
@@ -2162,11 +2162,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetPlayerStatisticVersionsResult"
@@ -2220,11 +2220,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetPlayerTagsResult"
@@ -2277,11 +2277,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetPlayFabIDsFromFacebookIDsResult"
@@ -2331,11 +2331,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetPlayFabIDsFromSteamIDsResult"
@@ -2385,11 +2385,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetPublisherDataResult"
@@ -2441,11 +2441,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetRandomResultTablesResult"
@@ -2498,11 +2498,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetSharedGroupDataResult"
@@ -2550,11 +2550,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetTimeResult"
@@ -2604,11 +2604,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetTitleDataResult"
@@ -2657,11 +2657,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetTitleDataResult"
@@ -2710,11 +2710,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetTitleNewsResult"
@@ -2759,11 +2759,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetUserAccountInfoResult"
@@ -2812,11 +2812,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetUserBansResult"
@@ -2871,11 +2871,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetUserDataResult"
@@ -2928,11 +2928,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetUserDataResult"
@@ -2985,11 +2985,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetUserInventoryResult"
@@ -3038,11 +3038,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetUserDataResult"
@@ -3098,11 +3098,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetUserDataResult"
@@ -3158,11 +3158,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetUserDataResult"
@@ -3218,11 +3218,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetUserDataResult"
@@ -3275,11 +3275,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GetUserStatisticsResult"
@@ -3342,11 +3342,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GrantCharacterToUserResult"
@@ -3395,11 +3395,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GrantItemsToCharacterResult"
@@ -3450,11 +3450,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GrantItemsToUserResult"
@@ -3504,11 +3504,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/GrantItemsToUsersResult"
@@ -3558,11 +3558,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/LogEventResult"
@@ -3622,11 +3622,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/ModifyItemUsesResult"
@@ -3676,11 +3676,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/MoveItemToCharacterFromCharacterResult"
@@ -3736,11 +3736,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/MoveItemToCharacterFromUserResult"
@@ -3795,11 +3795,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/MoveItemToUserFromCharacterResult"
@@ -3854,11 +3854,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/NotifyMatchmakerPlayerLeftResult"
@@ -3906,11 +3906,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/RedeemCouponResult"
@@ -3962,11 +3962,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/RedeemMatchmakerTicketResult"
@@ -4018,11 +4018,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/RefreshGameServerInstanceHeartbeatResult"
@@ -4070,11 +4070,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/RegisterGameResponse"
@@ -4125,11 +4125,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/EmptyResult"
@@ -4181,11 +4181,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/RemovePlayerTagResult"
@@ -4238,11 +4238,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/RemoveSharedGroupMembersResult"
@@ -4290,11 +4290,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/ReportPlayerServerResult"
@@ -4340,11 +4340,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/RevokeAllBansForUserResult"
@@ -4399,11 +4399,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/RevokeBansResult"
@@ -4455,11 +4455,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/RevokeInventoryResult"
@@ -4511,11 +4511,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/RevokeInventoryItemsResult"
@@ -4567,11 +4567,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/SendCustomAccountRecoveryEmailResult"
@@ -4625,11 +4625,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/SendEmailFromTemplateResult"
@@ -4682,11 +4682,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/SendPushNotificationResult"
@@ -4735,11 +4735,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/EmptyResult"
@@ -4793,11 +4793,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/SetGameServerInstanceDataResult"
@@ -4845,11 +4845,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/SetGameServerInstanceStateResult"
@@ -4897,11 +4897,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/SetGameServerInstanceTagsResult"
@@ -4949,11 +4949,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/SetPlayerSecretResult"
@@ -5002,11 +5002,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/SetPublisherDataResult"
@@ -5058,11 +5058,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/SetTitleDataResult"
@@ -5115,11 +5115,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/SetTitleDataResult"
@@ -5172,11 +5172,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/ModifyCharacterVirtualCurrencyResult"
@@ -5228,11 +5228,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/ModifyUserVirtualCurrencyResult"
@@ -5283,11 +5283,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/UnlockContainerItemResult"
@@ -5341,11 +5341,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/UnlockContainerItemResult"
@@ -5399,11 +5399,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/EmptyResult"
@@ -5451,11 +5451,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/UpdateBansResult"
@@ -5507,11 +5507,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/UpdateCharacterDataResult"
@@ -5567,11 +5567,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/UpdateCharacterDataResult"
@@ -5627,11 +5627,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/UpdateCharacterDataResult"
@@ -5687,11 +5687,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/UpdateCharacterStatisticsResult"
@@ -5742,11 +5742,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/UpdatePlayerStatisticsResult"
@@ -5807,11 +5807,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/UpdateSharedGroupDataResult"
@@ -5861,11 +5861,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/UpdateUserDataResult"
@@ -5918,11 +5918,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/UpdateUserDataResult"
@@ -5975,11 +5975,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/EmptyResult"
@@ -6029,11 +6029,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/UpdateUserDataResult"
@@ -6089,11 +6089,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/UpdateUserDataResult"
@@ -6149,11 +6149,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/UpdateUserDataResult"
@@ -6209,11 +6209,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/UpdateUserDataResult"
@@ -6266,11 +6266,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/UpdateUserStatisticsResult"
@@ -6336,11 +6336,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/WriteEventResponse"
@@ -6391,11 +6391,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/WriteEventResponse"
@@ -6447,11 +6447,11 @@
               "properties": {
                 "code": {
                   "type": "integer",
-                  "description": ""
+                  "description": "The Http status code. If X-ReportErrorAsSuccess header is set to true, this will report the actual http error code."
                 },
                 "status": {
                   "type": "string",
-                  "description": ""
+                  "description": "The Http status code as a string."
                 },
                 "data": {
                   "$ref": "#/responses/WriteEventResponse"
@@ -6671,10 +6671,10 @@
           "x-optional": false
         },
         "Platform": {
+          "$ref": "#/definitions/PushNotificationPlatform",
           "description": "The platform that should receive the Json.",
           "x-jsontype": "String",
           "x-actualtype": "PushNotificationPlatform",
-          "$ref": "#/definitions/PushNotificationPlatform",
           "x-isenum": true,
           "x-optional": false
         }
@@ -6697,12 +6697,11 @@
       "type": "object",
       "properties": {
         "UserInfo": {
+          "$ref": "#/definitions/UserAccountInfo",
           "description": "Account info for the user whose session ticket was supplied.",
           "x-jsontype": "Object",
           "x-actualtype": "UserAccountInfo",
-          "$ref": "#/definitions/UserAccountInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -6736,13 +6735,12 @@
       "type": "object",
       "properties": {
         "Achievements": {
+          "$ref": "#/definitions/AwardSteamAchievementItem",
           "description": "Array of achievements to grant and the users to whom they are to be granted.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "AwardSteamAchievementItem",
-          "$ref": "#/definitions/AwardSteamAchievementItem",
           "x-isclass": true,
-          "example": {},
           "x-optional": false
         }
       },
@@ -6752,13 +6750,12 @@
       "type": "object",
       "properties": {
         "AchievementResults": {
+          "$ref": "#/definitions/AwardSteamAchievementItem",
           "description": "Array of achievements granted.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "AwardSteamAchievementItem",
-          "$ref": "#/definitions/AwardSteamAchievementItem",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -6860,13 +6857,12 @@
       "type": "object",
       "properties": {
         "Bans": {
+          "$ref": "#/definitions/BanRequest",
           "description": "List of ban requests to be applied. Maximum 100.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "BanRequest",
-          "$ref": "#/definitions/BanRequest",
           "x-isclass": true,
-          "example": {},
           "x-optional": false
         }
       },
@@ -6876,13 +6872,12 @@
       "type": "object",
       "properties": {
         "BanData": {
+          "$ref": "#/definitions/BanInfo",
           "description": "Information on the bans that were applied",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "BanInfo",
-          "$ref": "#/definitions/BanInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -6893,12 +6888,11 @@
       "type": "object",
       "properties": {
         "Bundle": {
+          "$ref": "#/definitions/CatalogItemBundleInfo",
           "description": "defines the bundle properties for the item - bundles are items which contain other items, including random drop tables and virtual currencies",
           "x-jsontype": "Object",
           "x-actualtype": "CatalogItemBundleInfo",
-          "$ref": "#/definitions/CatalogItemBundleInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "CanBecomeCharacter": {
@@ -6914,21 +6908,19 @@
           "x-optional": true
         },
         "Consumable": {
+          "$ref": "#/definitions/CatalogItemConsumableInfo",
           "description": "defines the consumable properties (number of uses, timeout) for the item",
           "x-jsontype": "Object",
           "x-actualtype": "CatalogItemConsumableInfo",
-          "$ref": "#/definitions/CatalogItemConsumableInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Container": {
+          "$ref": "#/definitions/CatalogItemContainerInfo",
           "description": "defines the container properties for the item - what items it contains, including random drop tables and virtual currencies, and what item (if any) is required to open it via the UnlockContainerItem API",
           "x-jsontype": "Object",
           "x-actualtype": "CatalogItemContainerInfo",
-          "$ref": "#/definitions/CatalogItemContainerInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "CustomData": {
@@ -7116,13 +7108,12 @@
           "x-optional": true
         },
         "Inventory": {
+          "$ref": "#/definitions/ItemInstance",
           "description": "The inventory of this character.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "ItemInstance",
-          "$ref": "#/definitions/ItemInstance",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -7273,10 +7264,10 @@
           "x-optional": true
         },
         "VerificationStatus": {
+          "$ref": "#/definitions/EmailVerificationStatus",
           "description": "The verification status of the email",
           "x-jsontype": "String",
           "x-actualtype": "EmailVerificationStatus",
-          "$ref": "#/definitions/EmailVerificationStatus",
           "x-isenum": true,
           "x-optional": true
         }
@@ -7299,10 +7290,10 @@
           "x-optional": true
         },
         "VerificationStatus": {
+          "$ref": "#/definitions/EmailVerificationStatus",
           "description": "The verification status of the email",
           "x-jsontype": "String",
           "x-actualtype": "EmailVerificationStatus",
-          "$ref": "#/definitions/EmailVerificationStatus",
           "x-isenum": true,
           "x-optional": true
         }
@@ -7876,10 +7867,10 @@
           "x-optional": false
         },
         "Type": {
+          "$ref": "#/definitions/EntityTypes",
           "description": "Entity type. Optional to be used but one of EntityType or EntityTypeString must be set.",
           "x-jsontype": "String",
           "x-actualtype": "EntityTypes",
-          "$ref": "#/definitions/EntityTypes",
           "x-isenum": true,
           "x-optional": true
         },
@@ -7944,12 +7935,11 @@
           "x-optional": false
         },
         "Error": {
+          "$ref": "#/definitions/ScriptExecutionError",
           "description": "Information about the error, if any, that occurred during execution",
           "x-jsontype": "Object",
           "x-actualtype": "ScriptExecutionError",
-          "$ref": "#/definitions/ScriptExecutionError",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "ExecutionTimeSeconds": {
@@ -7982,13 +7972,12 @@
           "x-optional": false
         },
         "Logs": {
+          "$ref": "#/definitions/LogStatement",
           "description": "Entries logged during the function execution. These include both entries logged in the function code using log.info() and log.error() and error entries for API and HTTP request failures.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "LogStatement",
-          "$ref": "#/definitions/LogStatement",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "LogsTooLarge": {
@@ -8045,10 +8034,10 @@
           "x-optional": false
         },
         "RevisionSelection": {
+          "$ref": "#/definitions/CloudScriptRevisionOption",
           "description": "Option for which revision of the CloudScript to execute. 'Latest' executes the most recently created revision, 'Live' executes the current live, published revision, and 'Specific' executes the specified revision. The default value is 'Specific', if the SpeificRevision parameter is specified, otherwise it is 'Live'.",
           "x-jsontype": "String",
           "x-actualtype": "CloudScriptRevisionOption",
-          "$ref": "#/definitions/CloudScriptRevisionOption",
           "x-isenum": true,
           "x-optional": true
         },
@@ -8089,12 +8078,11 @@
           "x-optional": true
         },
         "FacebookInfo": {
+          "$ref": "#/definitions/UserFacebookInfo",
           "description": "Available Facebook information (if the user and PlayFab friend are also connected in Facebook).",
           "x-jsontype": "Object",
           "x-actualtype": "UserFacebookInfo",
-          "$ref": "#/definitions/UserFacebookInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "FriendPlayFabId": {
@@ -8104,39 +8092,35 @@
           "x-optional": true
         },
         "GameCenterInfo": {
+          "$ref": "#/definitions/UserGameCenterInfo",
           "description": "Available Game Center information (if the user and PlayFab friend are also connected in Game Center).",
           "x-jsontype": "Object",
           "x-actualtype": "UserGameCenterInfo",
-          "$ref": "#/definitions/UserGameCenterInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Profile": {
+          "$ref": "#/definitions/PlayerProfileModel",
           "description": "The profile of the user, if requested.",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerProfileModel",
-          "$ref": "#/definitions/PlayerProfileModel",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "PSNInfo": {
+          "$ref": "#/definitions/UserPsnInfo",
           "description": "Available PSN information, if the user and PlayFab friend are both connected to PSN.",
           "x-jsontype": "Object",
           "x-actualtype": "UserPsnInfo",
-          "$ref": "#/definitions/UserPsnInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "SteamInfo": {
+          "$ref": "#/definitions/UserSteamInfo",
           "description": "Available Steam information (if the user and PlayFab friend are also connected in Steam).",
           "x-jsontype": "Object",
           "x-actualtype": "UserSteamInfo",
-          "$ref": "#/definitions/UserSteamInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Tags": {
@@ -8159,12 +8143,11 @@
           "x-optional": true
         },
         "XboxInfo": {
+          "$ref": "#/definitions/UserXboxInfo",
           "description": "Available Xbox information, if the user and PlayFab friend are both connected to Xbox Live.",
           "x-jsontype": "Object",
           "x-actualtype": "UserXboxInfo",
-          "$ref": "#/definitions/UserXboxInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -8182,6 +8165,7 @@
       "type": "object",
       "enum": [
         "Success",
+        "MatchmakingHopperIdInvalid",
         "UnkownError",
         "InvalidParams",
         "AccountNotFound",
@@ -8550,16 +8534,47 @@
         "NoValidCertificateForAad",
         "InvalidCertificateForAad",
         "DuplicateDropTableId",
-        "ComputeOK",
-        "ComputeAccepted",
-        "ComputeNoContent",
-        "ComputeBadRequest",
-        "ComputeUnauthorized",
-        "ComputeForbidden",
-        "ComputeNotFound",
-        "ComputeConflict",
-        "ComputeInternalServerError",
-        "ComputeServiceUnavailable"
+        "GameServerOk",
+        "GameServerAccepted",
+        "GameServerNoContent",
+        "GameServerBadRequest",
+        "GameServerUnauthorized",
+        "GameServerForbidden",
+        "GameServerNotFound",
+        "GameServerConflict",
+        "GameServerInternalServerError",
+        "GameServerServiceUnavailable",
+        "MatchmakingInvalidEntityKeyList",
+        "MatchmakingInvalidTicketCreatorProfile",
+        "MatchmakingInvalidUserAttributes",
+        "MatchmakingCreateRequestMissing",
+        "MatchmakingCreateRequestCreatorMissing",
+        "MatchmakingCreateRequestCreatorIdMissing",
+        "MatchmakingCreateRequestUserListMissing",
+        "MatchmakingCreateRequestGiveUpAfterInvalid",
+        "MatchmakingTicketIdMissing",
+        "MatchmakingMatchIdMissing",
+        "MatchmakingMatchIdIdMissing",
+        "MatchmakingHopperIdMissing",
+        "MatchmakingTitleIdMissing",
+        "MatchmakingTicketIdIdMissing",
+        "MatchmakingUserIdMissing",
+        "MatchmakingJoinRequestUserMissing",
+        "MatchmakingHopperConfigNotFound",
+        "MatchmakingMatchNotFound",
+        "MatchmakingTicketNotFound",
+        "MatchmakingCreateTicketServerIdentityInvalid",
+        "MatchmakingCreateTicketClientIdentityInvalid",
+        "MatchmakingGetTicketUserMismatch",
+        "MatchmakingJoinTicketServerIdentityInvalid",
+        "MatchmakingJoinTicketUserIdentityMismatch",
+        "MatchmakingCancelTicketServerIdentityInvalid",
+        "MatchmakingCancelTicketUserIdentityMismatch",
+        "MatchmakingGetMatchIdentityMismatch",
+        "MatchmakingUserIdentityMismatch",
+        "MatchmakingAlreadyJoinedTicket",
+        "MatchmakingTicketAlreadyCompleted",
+        "MatchmakingHopperConfigInvalid"
       ],
       "x-ClassName": "GenericErrorCodes"
     },
@@ -8600,13 +8615,12 @@
       "type": "object",
       "properties": {
         "ActionGroups": {
+          "$ref": "#/definitions/GetActionGroupResult",
           "description": "List of Action Groups.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "GetActionGroupResult",
-          "$ref": "#/definitions/GetActionGroupResult",
           "x-isclass": true,
-          "example": {},
           "x-optional": false
         }
       },
@@ -8626,13 +8640,12 @@
       "type": "object",
       "properties": {
         "Segments": {
+          "$ref": "#/definitions/GetSegmentResult",
           "description": "Array of segments for this title.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "GetSegmentResult",
-          "$ref": "#/definitions/GetSegmentResult",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -8654,14 +8667,13 @@
       "type": "object",
       "properties": {
         "Catalog": {
+          "$ref": "#/definitions/CatalogItem",
           "description": "Array of items which can be purchased.",
           "x-collection": "array",
           "x-isUnordered": true,
           "x-jsontype": "Object",
           "x-actualtype": "CatalogItem",
-          "$ref": "#/definitions/CatalogItem",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -8708,13 +8720,12 @@
           "x-optional": true
         },
         "Data": {
+          "$ref": "#/definitions/UserDataRecord",
           "description": "User specific data for this title.",
           "x-collection": "map",
           "x-jsontype": "Object",
           "x-actualtype": "UserDataRecord",
-          "$ref": "#/definitions/UserDataRecord",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "DataVersion": {
@@ -8766,14 +8777,13 @@
           "x-optional": true
         },
         "Inventory": {
+          "$ref": "#/definitions/ItemInstance",
           "description": "Array of inventory items belonging to the character.",
           "x-collection": "array",
           "x-isUnordered": true,
           "x-jsontype": "Object",
           "x-actualtype": "ItemInstance",
-          "$ref": "#/definitions/ItemInstance",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "PlayFabId": {
@@ -8790,13 +8800,12 @@
           "x-optional": true
         },
         "VirtualCurrencyRechargeTimes": {
+          "$ref": "#/definitions/VirtualCurrencyRechargeTime",
           "description": "Array of remaining times and timestamps for virtual currencies.",
           "x-collection": "map",
           "x-jsontype": "Object",
           "x-actualtype": "VirtualCurrencyRechargeTime",
-          "$ref": "#/definitions/VirtualCurrencyRechargeTime",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -8842,13 +8851,12 @@
       "type": "object",
       "properties": {
         "Leaderboard": {
+          "$ref": "#/definitions/CharacterLeaderboardEntry",
           "description": "Ordered list of leaderboard entries.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "CharacterLeaderboardEntry",
-          "$ref": "#/definitions/CharacterLeaderboardEntry",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -8961,12 +8969,11 @@
           "x-optional": false
         },
         "ProfileConstraints": {
+          "$ref": "#/definitions/PlayerProfileViewConstraints",
           "description": "If non-null, this determines which properties of the resulting player profiles to return. For API calls from the client, only the allowed client profile properties for the title may be requested. These allowed properties are configured in the Game Manager \"Client Profile Options\" tab in the \"Settings\" section.",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerProfileViewConstraints",
-          "$ref": "#/definitions/PlayerProfileViewConstraints",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "StartPosition": {
@@ -9025,12 +9032,11 @@
           "x-optional": false
         },
         "ProfileConstraints": {
+          "$ref": "#/definitions/PlayerProfileViewConstraints",
           "description": "If non-null, this determines which properties of the resulting player profiles to return. For API calls from the client, only the allowed client profile properties for the title may be requested. These allowed properties are configured in the Game Manager \"Client Profile Options\" tab in the \"Settings\" section.",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerProfileViewConstraints",
-          "$ref": "#/definitions/PlayerProfileViewConstraints",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "XboxToken": {
@@ -9046,13 +9052,12 @@
       "type": "object",
       "properties": {
         "Friends": {
+          "$ref": "#/definitions/FriendInfo",
           "description": "Array of friends found.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "FriendInfo",
-          "$ref": "#/definitions/FriendInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -9098,13 +9103,12 @@
       "type": "object",
       "properties": {
         "Leaderboard": {
+          "$ref": "#/definitions/CharacterLeaderboardEntry",
           "description": "Ordered list of leaderboard entries.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "CharacterLeaderboardEntry",
-          "$ref": "#/definitions/CharacterLeaderboardEntry",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -9126,12 +9130,11 @@
           "x-optional": false
         },
         "ProfileConstraints": {
+          "$ref": "#/definitions/PlayerProfileViewConstraints",
           "description": "If non-null, this determines which properties of the resulting player profiles to return. For API calls from the client, only the allowed client profile properties for the title may be requested. These allowed properties are configured in the Game Manager \"Client Profile Options\" tab in the \"Settings\" section.",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerProfileViewConstraints",
-          "$ref": "#/definitions/PlayerProfileViewConstraints",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "StatisticName": {
@@ -9160,13 +9163,12 @@
       "type": "object",
       "properties": {
         "Leaderboard": {
+          "$ref": "#/definitions/PlayerLeaderboardEntry",
           "description": "Ordered listing of users and their positions in the requested leaderboard.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerLeaderboardEntry",
-          "$ref": "#/definitions/PlayerLeaderboardEntry",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "NextReset": {
@@ -9212,13 +9214,12 @@
       "type": "object",
       "properties": {
         "Leaderboard": {
+          "$ref": "#/definitions/CharacterLeaderboardEntry",
           "description": "Ordered list of leaderboard entries.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "CharacterLeaderboardEntry",
-          "$ref": "#/definitions/CharacterLeaderboardEntry",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -9234,12 +9235,11 @@
           "x-optional": false
         },
         "ProfileConstraints": {
+          "$ref": "#/definitions/PlayerProfileViewConstraints",
           "description": "If non-null, this determines which properties of the resulting player profiles to return. For API calls from the client, only the allowed client profile properties for the title may be requested. These allowed properties are configured in the Game Manager \"Client Profile Options\" tab in the \"Settings\" section.",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerProfileViewConstraints",
-          "$ref": "#/definitions/PlayerProfileViewConstraints",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "StartPosition": {
@@ -9274,13 +9274,12 @@
       "type": "object",
       "properties": {
         "Leaderboard": {
+          "$ref": "#/definitions/PlayerLeaderboardEntry",
           "description": "Ordered listing of users and their positions in the requested leaderboard.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerLeaderboardEntry",
-          "$ref": "#/definitions/PlayerLeaderboardEntry",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "NextReset": {
@@ -9302,12 +9301,11 @@
       "type": "object",
       "properties": {
         "InfoRequestParameters": {
+          "$ref": "#/definitions/GetPlayerCombinedInfoRequestParams",
           "description": "Flags for which pieces of info to return for the user.",
           "x-jsontype": "Object",
           "x-actualtype": "GetPlayerCombinedInfoRequestParams",
-          "$ref": "#/definitions/GetPlayerCombinedInfoRequestParams",
           "x-isclass": true,
-          "example": {},
           "x-optional": false
         },
         "PlayFabId": {
@@ -9390,12 +9388,11 @@
           "x-optional": true
         },
         "ProfileConstraints": {
+          "$ref": "#/definitions/PlayerProfileViewConstraints",
           "description": "Specifies the properties to return from the player profile. Defaults to returning the player's display name.",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerProfileViewConstraints",
-          "$ref": "#/definitions/PlayerProfileViewConstraints",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "TitleDataKeys": {
@@ -9426,12 +9423,11 @@
       "type": "object",
       "properties": {
         "InfoResultPayload": {
+          "$ref": "#/definitions/GetPlayerCombinedInfoResultPayload",
           "description": "Results for requested info.",
           "x-jsontype": "Object",
           "x-actualtype": "GetPlayerCombinedInfoResultPayload",
-          "$ref": "#/definitions/GetPlayerCombinedInfoResultPayload",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "PlayFabId": {
@@ -9447,51 +9443,46 @@
       "type": "object",
       "properties": {
         "AccountInfo": {
+          "$ref": "#/definitions/UserAccountInfo",
           "description": "Account information for the user. This is always retrieved.",
           "x-jsontype": "Object",
           "x-actualtype": "UserAccountInfo",
-          "$ref": "#/definitions/UserAccountInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "CharacterInventories": {
+          "$ref": "#/definitions/CharacterInventory",
           "description": "Inventories for each character for the user.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "CharacterInventory",
-          "$ref": "#/definitions/CharacterInventory",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "CharacterList": {
+          "$ref": "#/definitions/CharacterResult",
           "description": "List of characters for the user.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "CharacterResult",
-          "$ref": "#/definitions/CharacterResult",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "PlayerProfile": {
+          "$ref": "#/definitions/PlayerProfileModel",
           "description": "The profile of the players. This profile is not guaranteed to be up-to-date. For a new player, this profile will not exist.",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerProfileModel",
-          "$ref": "#/definitions/PlayerProfileModel",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "PlayerStatistics": {
+          "$ref": "#/definitions/StatisticValue",
           "description": "List of statistics for this player.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "StatisticValue",
-          "$ref": "#/definitions/StatisticValue",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "TitleData": {
@@ -9502,13 +9493,12 @@
           "x-optional": true
         },
         "UserData": {
+          "$ref": "#/definitions/UserDataRecord",
           "description": "User specific custom data.",
           "x-collection": "map",
           "x-jsontype": "Object",
           "x-actualtype": "UserDataRecord",
-          "$ref": "#/definitions/UserDataRecord",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "UserDataVersion": {
@@ -9518,24 +9508,22 @@
           "x-optional": false
         },
         "UserInventory": {
+          "$ref": "#/definitions/ItemInstance",
           "description": "Array of inventory items in the user's current inventory.",
           "x-collection": "array",
           "x-isUnordered": true,
           "x-jsontype": "Object",
           "x-actualtype": "ItemInstance",
-          "$ref": "#/definitions/ItemInstance",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "UserReadOnlyData": {
+          "$ref": "#/definitions/UserDataRecord",
           "description": "User specific read-only data.",
           "x-collection": "map",
           "x-jsontype": "Object",
           "x-actualtype": "UserDataRecord",
-          "$ref": "#/definitions/UserDataRecord",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "UserReadOnlyDataVersion": {
@@ -9552,13 +9540,12 @@
           "x-optional": true
         },
         "UserVirtualCurrencyRechargeTimes": {
+          "$ref": "#/definitions/VirtualCurrencyRechargeTime",
           "description": "Dictionary of remaining times and timestamps for virtual currencies.",
           "x-collection": "map",
           "x-jsontype": "Object",
           "x-actualtype": "VirtualCurrencyRechargeTime",
-          "$ref": "#/definitions/VirtualCurrencyRechargeTime",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -9574,12 +9561,11 @@
           "x-optional": false
         },
         "ProfileConstraints": {
+          "$ref": "#/definitions/PlayerProfileViewConstraints",
           "description": "If non-null, this determines which properties of the resulting player profiles to return. For API calls from the client, only the allowed client profile properties for the title may be requested. These allowed properties are configured in the Game Manager \"Client Profile Options\" tab in the \"Settings\" section.",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerProfileViewConstraints",
-          "$ref": "#/definitions/PlayerProfileViewConstraints",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -9589,12 +9575,11 @@
       "type": "object",
       "properties": {
         "PlayerProfile": {
+          "$ref": "#/definitions/PlayerProfileModel",
           "description": "The profile of the player. This profile is not guaranteed to be up-to-date. For a new player, this profile will not exist.",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerProfileModel",
-          "$ref": "#/definitions/PlayerProfileModel",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -9604,13 +9589,12 @@
       "type": "object",
       "properties": {
         "Segments": {
+          "$ref": "#/definitions/GetSegmentResult",
           "description": "Array of segments the requested player currently belongs to.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "GetSegmentResult",
-          "$ref": "#/definitions/GetSegmentResult",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -9656,13 +9640,12 @@
           "x-optional": true
         },
         "PlayerProfiles": {
+          "$ref": "#/definitions/PlayerProfile",
           "description": "Array of player profiles in this segment.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerProfile",
-          "$ref": "#/definitions/PlayerProfile",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "ProfilesInSegment": {
@@ -9703,13 +9686,12 @@
           "x-optional": true
         },
         "StatisticNameVersions": {
+          "$ref": "#/definitions/StatisticNameVersion",
           "description": "statistics to return, if StatisticNames is not set (only statistics which have a version matching that provided will be returned)",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "StatisticNameVersion",
-          "$ref": "#/definitions/StatisticNameVersion",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -9725,13 +9707,12 @@
           "x-optional": true
         },
         "Statistics": {
+          "$ref": "#/definitions/StatisticValue",
           "description": "User statistics for the requested user.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "StatisticValue",
-          "$ref": "#/definitions/StatisticValue",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -9753,13 +9734,12 @@
       "type": "object",
       "properties": {
         "StatisticVersions": {
+          "$ref": "#/definitions/PlayerStatisticVersion",
           "description": "version change history of the statistic",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerStatisticVersion",
-          "$ref": "#/definitions/PlayerStatisticVersion",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -9819,13 +9799,12 @@
       "type": "object",
       "properties": {
         "Data": {
+          "$ref": "#/definitions/FacebookPlayFabIdPair",
           "description": "Mapping of Facebook identifiers to PlayFab identifiers.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "FacebookPlayFabIdPair",
-          "$ref": "#/definitions/FacebookPlayFabIdPair",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -9861,13 +9840,12 @@
       "type": "object",
       "properties": {
         "Data": {
+          "$ref": "#/definitions/SteamPlayFabIdPair",
           "description": "Mapping of Steam identifiers to PlayFab identifiers.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "SteamPlayFabIdPair",
-          "$ref": "#/definitions/SteamPlayFabIdPair",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -9922,13 +9900,12 @@
       "type": "object",
       "properties": {
         "Tables": {
+          "$ref": "#/definitions/RandomResultTableListing",
           "description": "array of random result tables currently available",
           "x-collection": "map",
           "x-jsontype": "Object",
           "x-actualtype": "RandomResultTableListing",
-          "$ref": "#/definitions/RandomResultTableListing",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -9987,13 +9964,12 @@
       "type": "object",
       "properties": {
         "Data": {
+          "$ref": "#/definitions/SharedGroupDataRecord",
           "description": "Data for the requested keys.",
           "x-collection": "map",
           "x-jsontype": "Object",
           "x-actualtype": "SharedGroupDataRecord",
-          "$ref": "#/definitions/SharedGroupDataRecord",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Members": {
@@ -10065,13 +10041,12 @@
       "type": "object",
       "properties": {
         "News": {
+          "$ref": "#/definitions/TitleNewsItem",
           "description": "Array of news items.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "TitleNewsItem",
-          "$ref": "#/definitions/TitleNewsItem",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -10093,12 +10068,11 @@
       "type": "object",
       "properties": {
         "UserInfo": {
+          "$ref": "#/definitions/UserAccountInfo",
           "description": "Account details for the user whose information was requested.",
           "x-jsontype": "Object",
           "x-actualtype": "UserAccountInfo",
-          "$ref": "#/definitions/UserAccountInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -10120,13 +10094,12 @@
       "type": "object",
       "properties": {
         "BanData": {
+          "$ref": "#/definitions/BanInfo",
           "description": "Information about the bans",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "BanInfo",
-          "$ref": "#/definitions/BanInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -10161,13 +10134,12 @@
       "type": "object",
       "properties": {
         "Data": {
+          "$ref": "#/definitions/UserDataRecord",
           "description": "User specific data for this title.",
           "x-collection": "map",
           "x-jsontype": "Object",
           "x-actualtype": "UserDataRecord",
-          "$ref": "#/definitions/UserDataRecord",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "DataVersion": {
@@ -10201,14 +10173,13 @@
       "type": "object",
       "properties": {
         "Inventory": {
+          "$ref": "#/definitions/ItemInstance",
           "description": "Array of inventory items belonging to the user.",
           "x-collection": "array",
           "x-isUnordered": true,
           "x-jsontype": "Object",
           "x-actualtype": "ItemInstance",
-          "$ref": "#/definitions/ItemInstance",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "PlayFabId": {
@@ -10225,13 +10196,12 @@
           "x-optional": true
         },
         "VirtualCurrencyRechargeTimes": {
+          "$ref": "#/definitions/VirtualCurrencyRechargeTime",
           "description": "Array of remaining times and timestamps for virtual currencies.",
           "x-collection": "map",
           "x-jsontype": "Object",
           "x-actualtype": "VirtualCurrencyRechargeTime",
-          "$ref": "#/definitions/VirtualCurrencyRechargeTime",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -10473,13 +10443,12 @@
       "type": "object",
       "properties": {
         "ItemGrantResults": {
+          "$ref": "#/definitions/GrantedItemInstance",
           "description": "Array of items granted to users.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "GrantedItemInstance",
-          "$ref": "#/definitions/GrantedItemInstance",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -10520,13 +10489,12 @@
       "type": "object",
       "properties": {
         "ItemGrantResults": {
+          "$ref": "#/definitions/GrantedItemInstance",
           "description": "Array of items granted to users.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "GrantedItemInstance",
-          "$ref": "#/definitions/GrantedItemInstance",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -10542,14 +10510,13 @@
           "x-optional": true
         },
         "ItemGrants": {
+          "$ref": "#/definitions/ItemGrant",
           "description": "Array of items to grant and the users to whom the items are to be granted.",
           "x-collection": "array",
           "x-isUnordered": true,
           "x-jsontype": "Object",
           "x-actualtype": "ItemGrant",
-          "$ref": "#/definitions/ItemGrant",
           "x-isclass": true,
-          "example": {},
           "x-optional": false
         }
       },
@@ -10559,13 +10526,12 @@
       "type": "object",
       "properties": {
         "ItemGrantResults": {
+          "$ref": "#/definitions/GrantedItemInstance",
           "description": "Array of items granted to users.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "GrantedItemInstance",
-          "$ref": "#/definitions/GrantedItemInstance",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -10725,10 +10691,10 @@
           "x-optional": true
         },
         "Platform": {
+          "$ref": "#/definitions/LoginIdentityProvider",
           "description": "Authentication platform",
           "x-jsontype": "String",
           "x-actualtype": "LoginIdentityProvider",
-          "$ref": "#/definitions/LoginIdentityProvider",
           "x-isenum": true,
           "x-optional": true
         },
@@ -10763,13 +10729,12 @@
       "type": "object",
       "properties": {
         "Characters": {
+          "$ref": "#/definitions/CharacterResult",
           "description": "The requested list of characters.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "CharacterResult",
-          "$ref": "#/definitions/CharacterResult",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -10785,18 +10750,18 @@
           "x-optional": true
         },
         "ContinentCode": {
+          "$ref": "#/definitions/ContinentCode",
           "description": "The two-character continent code for this location",
           "x-jsontype": "String",
           "x-actualtype": "ContinentCode",
-          "$ref": "#/definitions/ContinentCode",
           "x-isenum": true,
           "x-optional": true
         },
         "CountryCode": {
+          "$ref": "#/definitions/CountryCode",
           "description": "The two-character ISO 3166-1 country code for the country associated with the location",
           "x-jsontype": "String",
           "x-actualtype": "CountryCode",
-          "$ref": "#/definitions/CountryCode",
           "x-isenum": true,
           "x-optional": true
         },
@@ -10957,13 +10922,12 @@
           "x-optional": true
         },
         "Subscriptions": {
+          "$ref": "#/definitions/SubscriptionModel",
           "description": "The list of subscriptions that this player has for this membership",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "SubscriptionModel",
-          "$ref": "#/definitions/SubscriptionModel",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -11174,10 +11138,10 @@
       "type": "object",
       "properties": {
         "PlayerState": {
+          "$ref": "#/definitions/PlayerConnectionState",
           "description": "State of user leaving the Game Server Instance.",
           "x-jsontype": "String",
           "x-actualtype": "PlayerConnectionState",
-          "$ref": "#/definitions/PlayerConnectionState",
           "x-isenum": true,
           "x-optional": true
         }
@@ -11216,12 +11180,11 @@
           "x-optional": false
         },
         "Profile": {
+          "$ref": "#/definitions/PlayerProfileModel",
           "description": "The profile of the user, if requested.",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerProfileModel",
-          "$ref": "#/definitions/PlayerProfileModel",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "StatValue": {
@@ -11243,10 +11206,10 @@
           "x-optional": true
         },
         "Platform": {
+          "$ref": "#/definitions/LoginIdentityProvider",
           "description": "Authentication platform",
           "x-jsontype": "String",
           "x-actualtype": "LoginIdentityProvider",
-          "$ref": "#/definitions/LoginIdentityProvider",
           "x-isenum": true,
           "x-optional": true
         },
@@ -11275,18 +11238,18 @@
           "x-optional": true
         },
         "ContinentCode": {
+          "$ref": "#/definitions/ContinentCode",
           "description": "The two-character continent code for this location",
           "x-jsontype": "String",
           "x-actualtype": "ContinentCode",
-          "$ref": "#/definitions/ContinentCode",
           "x-isenum": true,
           "x-optional": false
         },
         "CountryCode": {
+          "$ref": "#/definitions/CountryCode",
           "description": "The two-character ISO 3166-1 country code for the country associated with the location",
           "x-jsontype": "String",
           "x-actualtype": "CountryCode",
-          "$ref": "#/definitions/CountryCode",
           "x-isenum": true,
           "x-optional": false
         },
@@ -11309,13 +11272,12 @@
       "type": "object",
       "properties": {
         "AdCampaignAttributions": {
+          "$ref": "#/definitions/AdCampaignAttribution",
           "description": "Array of ad campaigns player has been attributed to",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "AdCampaignAttribution",
-          "$ref": "#/definitions/AdCampaignAttribution",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "AvatarUrl": {
@@ -11331,13 +11293,12 @@
           "x-optional": true
         },
         "ContactEmailAddresses": {
+          "$ref": "#/definitions/ContactEmailInfo",
           "description": "Array of contact email addresses associated with the player",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "ContactEmailInfo",
-          "$ref": "#/definitions/ContactEmailInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Created": {
@@ -11359,30 +11320,28 @@
           "x-optional": true
         },
         "LinkedAccounts": {
+          "$ref": "#/definitions/PlayerLinkedAccount",
           "description": "Array of third party accounts linked to this player",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerLinkedAccount",
-          "$ref": "#/definitions/PlayerLinkedAccount",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Locations": {
+          "$ref": "#/definitions/PlayerLocation",
           "description": "Dictionary of player's locations by type.",
           "x-collection": "map",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerLocation",
-          "$ref": "#/definitions/PlayerLocation",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Origination": {
+          "$ref": "#/definitions/LoginIdentityProvider",
           "description": "Player account origination",
           "x-jsontype": "String",
           "x-actualtype": "LoginIdentityProvider",
-          "$ref": "#/definitions/LoginIdentityProvider",
           "x-isenum": true,
           "x-optional": true
         },
@@ -11393,13 +11352,12 @@
           "x-optional": true
         },
         "PlayerStatistics": {
+          "$ref": "#/definitions/PlayerStatistic",
           "description": "Array of player statistics",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerStatistic",
-          "$ref": "#/definitions/PlayerStatistic",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "PublisherId": {
@@ -11409,13 +11367,12 @@
           "x-optional": true
         },
         "PushNotificationRegistrations": {
+          "$ref": "#/definitions/PushNotificationRegistration",
           "description": "Array of configured push notification end points",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "PushNotificationRegistration",
-          "$ref": "#/definitions/PushNotificationRegistration",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Statistics": {
@@ -11465,13 +11422,12 @@
       "type": "object",
       "properties": {
         "AdCampaignAttributions": {
+          "$ref": "#/definitions/AdCampaignAttributionModel",
           "description": "List of advertising campaigns the player has been attributed to",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "AdCampaignAttributionModel",
-          "$ref": "#/definitions/AdCampaignAttributionModel",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "AvatarUrl": {
@@ -11487,13 +11443,12 @@
           "x-optional": true
         },
         "ContactEmailAddresses": {
+          "$ref": "#/definitions/ContactEmailInfoModel",
           "description": "List of all contact email info associated with the player account",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "ContactEmailInfoModel",
-          "$ref": "#/definitions/ContactEmailInfoModel",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Created": {
@@ -11515,40 +11470,37 @@
           "x-optional": true
         },
         "LinkedAccounts": {
+          "$ref": "#/definitions/LinkedPlatformAccountModel",
           "description": "List of all authentication systems linked to this player account",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "LinkedPlatformAccountModel",
-          "$ref": "#/definitions/LinkedPlatformAccountModel",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Locations": {
+          "$ref": "#/definitions/LocationModel",
           "description": "List of geographic locations from which the player has logged in to the title",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "LocationModel",
-          "$ref": "#/definitions/LocationModel",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Memberships": {
+          "$ref": "#/definitions/MembershipModel",
           "description": "List of memberships for the player, along with whether are expired.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "MembershipModel",
-          "$ref": "#/definitions/MembershipModel",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Origination": {
+          "$ref": "#/definitions/LoginIdentityProvider",
           "description": "Player account origination",
           "x-jsontype": "String",
           "x-actualtype": "LoginIdentityProvider",
-          "$ref": "#/definitions/LoginIdentityProvider",
           "x-isenum": true,
           "x-optional": true
         },
@@ -11565,33 +11517,30 @@
           "x-optional": true
         },
         "PushNotificationRegistrations": {
+          "$ref": "#/definitions/PushNotificationRegistrationModel",
           "description": "List of configured end points registered for sending the player push notifications",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "PushNotificationRegistrationModel",
-          "$ref": "#/definitions/PushNotificationRegistrationModel",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Statistics": {
+          "$ref": "#/definitions/StatisticModel",
           "description": "List of leaderboard statistic values for the player",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "StatisticModel",
-          "$ref": "#/definitions/StatisticModel",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Tags": {
+          "$ref": "#/definitions/TagModel",
           "description": "List of player's tags for segmentation",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "TagModel",
-          "$ref": "#/definitions/TagModel",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "TitleId": {
@@ -11607,13 +11556,12 @@
           "x-optional": true
         },
         "ValuesToDate": {
+          "$ref": "#/definitions/ValueToDateModel",
           "description": "List of the player's lifetime purchase totals, summed by real-money currency",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "ValueToDateModel",
-          "$ref": "#/definitions/ValueToDateModel",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -11865,10 +11813,10 @@
           "x-optional": true
         },
         "Platform": {
+          "$ref": "#/definitions/PushNotificationPlatform",
           "description": "Push notification platform",
           "x-jsontype": "String",
           "x-actualtype": "PushNotificationPlatform",
-          "$ref": "#/definitions/PushNotificationPlatform",
           "x-isenum": true,
           "x-optional": true
         }
@@ -11885,10 +11833,10 @@
           "x-optional": true
         },
         "Platform": {
+          "$ref": "#/definitions/PushNotificationPlatform",
           "description": "Push notification platform",
           "x-jsontype": "String",
           "x-actualtype": "PushNotificationPlatform",
-          "$ref": "#/definitions/PushNotificationPlatform",
           "x-isenum": true,
           "x-optional": true
         }
@@ -11905,13 +11853,12 @@
           "x-optional": true
         },
         "Nodes": {
+          "$ref": "#/definitions/ResultTableNode",
           "description": "Child nodes that indicate what kind of drop table item this actually is.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "ResultTableNode",
-          "$ref": "#/definitions/ResultTableNode",
           "x-isclass": true,
-          "example": {},
           "x-optional": false
         },
         "TableId": {
@@ -11957,13 +11904,12 @@
       "type": "object",
       "properties": {
         "GrantedItems": {
+          "$ref": "#/definitions/ItemInstance",
           "description": "Items granted to the player as a result of redeeming the coupon.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "ItemInstance",
-          "$ref": "#/definitions/ItemInstance",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -12003,12 +11949,11 @@
           "x-optional": false
         },
         "UserInfo": {
+          "$ref": "#/definitions/UserAccountInfo",
           "description": "User account information for the user validated.",
           "x-jsontype": "Object",
           "x-actualtype": "UserAccountInfo",
-          "$ref": "#/definitions/UserAccountInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -12066,10 +12011,10 @@
           "x-optional": true
         },
         "Region": {
+          "$ref": "#/definitions/Region",
           "description": "Region in which the Game Server Instance is running. For matchmaking using non-AWS region names, set this to any AWS region and use Tags (below) to specify your custom region.",
           "x-jsontype": "String",
           "x-actualtype": "Region",
-          "$ref": "#/definitions/Region",
           "x-isenum": true,
           "x-optional": false
         },
@@ -12235,10 +12180,10 @@
           "x-optional": false
         },
         "ResultItemType": {
+          "$ref": "#/definitions/ResultTableNodeType",
           "description": "Whether this entry in the table is an item or a link to another table",
           "x-jsontype": "String",
           "x-actualtype": "ResultTableNodeType",
-          "$ref": "#/definitions/ResultTableNodeType",
           "x-isenum": true,
           "x-optional": false
         },
@@ -12275,13 +12220,12 @@
       "type": "object",
       "properties": {
         "BanData": {
+          "$ref": "#/definitions/BanInfo",
           "description": "Information on the bans that were revoked.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "BanInfo",
-          "$ref": "#/definitions/BanInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -12304,13 +12248,12 @@
       "type": "object",
       "properties": {
         "BanData": {
+          "$ref": "#/definitions/BanInfo",
           "description": "Information on the bans that were revoked",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "BanInfo",
-          "$ref": "#/definitions/BanInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -12368,13 +12311,12 @@
       "type": "object",
       "properties": {
         "Items": {
+          "$ref": "#/definitions/RevokeInventoryItem",
           "description": "Array of player items to revoke, between 1 and 25 items.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "RevokeInventoryItem",
-          "$ref": "#/definitions/RevokeInventoryItem",
           "x-isclass": true,
-          "example": {},
           "x-optional": false
         }
       },
@@ -12384,13 +12326,12 @@
       "type": "object",
       "properties": {
         "Errors": {
+          "$ref": "#/definitions/RevokeItemError",
           "description": "Collection of any errors that occurred during processing.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "RevokeItemError",
-          "$ref": "#/definitions/RevokeItemError",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -12405,20 +12346,19 @@
       "type": "object",
       "properties": {
         "Error": {
+          "$ref": "#/definitions/GenericErrorCodes",
           "description": "Specific error that was encountered.",
           "x-jsontype": "String",
           "x-actualtype": "GenericErrorCodes",
-          "$ref": "#/definitions/GenericErrorCodes",
           "x-isenum": true,
           "x-optional": true
         },
         "Item": {
+          "$ref": "#/definitions/RevokeInventoryItem",
           "description": "Item information that failed to be revoked.",
           "x-jsontype": "Object",
           "x-actualtype": "RevokeInventoryItem",
-          "$ref": "#/definitions/RevokeInventoryItem",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -12504,13 +12444,12 @@
       "type": "object",
       "properties": {
         "AdvancedPlatformDelivery": {
+          "$ref": "#/definitions/AdvancedPushPlatformMsg",
           "description": "Allows you to provide precisely formatted json to target devices. This is an advanced feature, allowing you to deliver to custom plugin logic, fields, or functionality not natively supported by PlayFab.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "AdvancedPushPlatformMsg",
-          "$ref": "#/definitions/AdvancedPushPlatformMsg",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Message": {
@@ -12520,12 +12459,11 @@
           "x-optional": true
         },
         "Package": {
+          "$ref": "#/definitions/PushNotificationPackage",
           "description": "Defines all possible push attributes like message, title, icon, etc. Some parameters are device specific - please see the PushNotificationPackage documentation for details.",
           "x-jsontype": "Object",
           "x-actualtype": "PushNotificationPackage",
-          "$ref": "#/definitions/PushNotificationPackage",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Recipient": {
@@ -12541,11 +12479,11 @@
           "x-optional": true
         },
         "TargetPlatforms": {
+          "$ref": "#/definitions/PushNotificationPlatform",
           "description": "Target Platforms that should receive the Message or Package. If omitted, we will send to all available platforms.",
           "x-collection": "array",
           "x-jsontype": "String",
           "x-actualtype": "PushNotificationPlatform",
-          "$ref": "#/definitions/PushNotificationPlatform",
           "x-isenum": true,
           "x-optional": true
         }
@@ -12615,10 +12553,10 @@
           "x-optional": false
         },
         "State": {
+          "$ref": "#/definitions/GameInstanceState",
           "description": "State to set for the specified game server instance.",
           "x-jsontype": "String",
           "x-actualtype": "GameInstanceState",
-          "$ref": "#/definitions/GameInstanceState",
           "x-isenum": true,
           "x-optional": false
         }
@@ -12739,10 +12677,10 @@
           "x-optional": true
         },
         "Permission": {
+          "$ref": "#/definitions/UserDataPermission",
           "description": "Indicates whether this data can be read by all users (public) or only members of the group (private).",
           "x-jsontype": "String",
           "x-actualtype": "UserDataPermission",
-          "$ref": "#/definitions/UserDataPermission",
           "x-isenum": true,
           "x-optional": true
         },
@@ -12897,10 +12835,10 @@
           "x-optional": false
         },
         "Status": {
+          "$ref": "#/definitions/SubscriptionProviderStatus",
           "description": "The status of this subscription, according to the subscription provider.",
           "x-jsontype": "String",
           "x-actualtype": "SubscriptionProviderStatus",
-          "$ref": "#/definitions/SubscriptionProviderStatus",
           "x-isenum": true,
           "x-optional": true
         },
@@ -13116,13 +13054,12 @@
       "type": "object",
       "properties": {
         "GrantedItems": {
+          "$ref": "#/definitions/ItemInstance",
           "description": "Items granted to the player as a result of unlocking the container.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "ItemInstance",
-          "$ref": "#/definitions/ItemInstance",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "UnlockedItemInstanceId": {
@@ -13218,13 +13155,12 @@
       "type": "object",
       "properties": {
         "Bans": {
+          "$ref": "#/definitions/UpdateBanRequest",
           "description": "List of bans to be updated. Maximum 100.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "UpdateBanRequest",
-          "$ref": "#/definitions/UpdateBanRequest",
           "x-isclass": true,
-          "example": {},
           "x-optional": false
         }
       },
@@ -13234,13 +13170,12 @@
       "type": "object",
       "properties": {
         "BanData": {
+          "$ref": "#/definitions/BanInfo",
           "description": "Information on the bans that were updated",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "BanInfo",
-          "$ref": "#/definitions/BanInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -13270,10 +13205,10 @@
           "x-optional": true
         },
         "Permission": {
+          "$ref": "#/definitions/UserDataPermission",
           "description": "Permission to be applied to all user data keys written in this request. Defaults to \"private\" if not set.",
           "x-jsontype": "String",
           "x-actualtype": "UserDataPermission",
-          "$ref": "#/definitions/UserDataPermission",
           "x-isenum": true,
           "x-optional": true
         },
@@ -13344,13 +13279,12 @@
           "x-optional": false
         },
         "Statistics": {
+          "$ref": "#/definitions/StatisticUpdate",
           "description": "Statistics to be updated with the provided values",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "StatisticUpdate",
-          "$ref": "#/definitions/StatisticUpdate",
           "x-isclass": true,
-          "example": {},
           "x-optional": false
         }
       },
@@ -13379,10 +13313,10 @@
           "x-optional": true
         },
         "Permission": {
+          "$ref": "#/definitions/UserDataPermission",
           "description": "Permission to be applied to all user data keys in this request.",
           "x-jsontype": "String",
           "x-actualtype": "UserDataPermission",
-          "$ref": "#/definitions/UserDataPermission",
           "x-isenum": true,
           "x-optional": true
         },
@@ -13418,10 +13352,10 @@
           "x-optional": true
         },
         "Permission": {
+          "$ref": "#/definitions/UserDataPermission",
           "description": "Permission to be applied to all user data keys written in this request. Defaults to \"private\" if not set.",
           "x-jsontype": "String",
           "x-actualtype": "UserDataPermission",
-          "$ref": "#/definitions/UserDataPermission",
           "x-isenum": true,
           "x-optional": true
         },
@@ -13548,12 +13482,11 @@
       "type": "object",
       "properties": {
         "AndroidDeviceInfo": {
+          "$ref": "#/definitions/UserAndroidDeviceInfo",
           "description": "User Android device information, if an Android device has been linked",
           "x-jsontype": "Object",
           "x-actualtype": "UserAndroidDeviceInfo",
-          "$ref": "#/definitions/UserAndroidDeviceInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Created": {
@@ -13563,57 +13496,51 @@
           "x-optional": false
         },
         "CustomIdInfo": {
+          "$ref": "#/definitions/UserCustomIdInfo",
           "description": "Custom ID information, if a custom ID has been assigned",
           "x-jsontype": "Object",
           "x-actualtype": "UserCustomIdInfo",
-          "$ref": "#/definitions/UserCustomIdInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "FacebookInfo": {
+          "$ref": "#/definitions/UserFacebookInfo",
           "description": "User Facebook information, if a Facebook account has been linked",
           "x-jsontype": "Object",
           "x-actualtype": "UserFacebookInfo",
-          "$ref": "#/definitions/UserFacebookInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "GameCenterInfo": {
+          "$ref": "#/definitions/UserGameCenterInfo",
           "description": "User Gamecenter information, if a Gamecenter account has been linked",
           "x-jsontype": "Object",
           "x-actualtype": "UserGameCenterInfo",
-          "$ref": "#/definitions/UserGameCenterInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "GoogleInfo": {
+          "$ref": "#/definitions/UserGoogleInfo",
           "description": "User Google account information, if a Google account has been linked",
           "x-jsontype": "Object",
           "x-actualtype": "UserGoogleInfo",
-          "$ref": "#/definitions/UserGoogleInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "IosDeviceInfo": {
+          "$ref": "#/definitions/UserIosDeviceInfo",
           "description": "User iOS device information, if an iOS device has been linked",
           "x-jsontype": "Object",
           "x-actualtype": "UserIosDeviceInfo",
-          "$ref": "#/definitions/UserIosDeviceInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "KongregateInfo": {
+          "$ref": "#/definitions/UserKongregateInfo",
           "description": "User Kongregate account information, if a Kongregate account has been linked",
           "x-jsontype": "Object",
           "x-actualtype": "UserKongregateInfo",
-          "$ref": "#/definitions/UserKongregateInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "PlayFabId": {
@@ -13623,48 +13550,43 @@
           "x-optional": true
         },
         "PrivateInfo": {
+          "$ref": "#/definitions/UserPrivateAccountInfo",
           "description": "Personal information for the user which is considered more sensitive",
           "x-jsontype": "Object",
           "x-actualtype": "UserPrivateAccountInfo",
-          "$ref": "#/definitions/UserPrivateAccountInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "PsnInfo": {
+          "$ref": "#/definitions/UserPsnInfo",
           "description": "User PSN account information, if a PSN account has been linked",
           "x-jsontype": "Object",
           "x-actualtype": "UserPsnInfo",
-          "$ref": "#/definitions/UserPsnInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "SteamInfo": {
+          "$ref": "#/definitions/UserSteamInfo",
           "description": "User Steam information, if a Steam account has been linked",
           "x-jsontype": "Object",
           "x-actualtype": "UserSteamInfo",
-          "$ref": "#/definitions/UserSteamInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "TitleInfo": {
+          "$ref": "#/definitions/UserTitleInfo",
           "description": "Title-specific information for the user account",
           "x-jsontype": "Object",
           "x-actualtype": "UserTitleInfo",
-          "$ref": "#/definitions/UserTitleInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "TwitchInfo": {
+          "$ref": "#/definitions/UserTwitchInfo",
           "description": "User Twitch account information, if a Twitch account has been linked",
           "x-jsontype": "Object",
           "x-actualtype": "UserTwitchInfo",
-          "$ref": "#/definitions/UserTwitchInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Username": {
@@ -13674,12 +13596,11 @@
           "x-optional": true
         },
         "XboxInfo": {
+          "$ref": "#/definitions/UserXboxInfo",
           "description": "User XBox account information, if a XBox account has been linked",
           "x-jsontype": "Object",
           "x-actualtype": "UserXboxInfo",
-          "$ref": "#/definitions/UserXboxInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -13728,10 +13649,10 @@
           "x-optional": false
         },
         "Permission": {
+          "$ref": "#/definitions/UserDataPermission",
           "description": "Indicates whether this data can be read by all users (public) or only the user (private). This is used for GetUserData requests being made by one player about another player.",
           "x-jsontype": "String",
           "x-actualtype": "UserDataPermission",
-          "$ref": "#/definitions/UserDataPermission",
           "x-isenum": true,
           "x-optional": true
         },
@@ -13892,10 +13813,10 @@
       "type": "object",
       "properties": {
         "SteamActivationStatus": {
+          "$ref": "#/definitions/TitleActivationStatus",
           "description": "what stage of game ownership the user is listed as being in, from Steam",
           "x-jsontype": "String",
           "x-actualtype": "TitleActivationStatus",
-          "$ref": "#/definitions/TitleActivationStatus",
           "x-isenum": true,
           "x-optional": true
         },
@@ -13906,10 +13827,10 @@
           "x-optional": true
         },
         "SteamCurrency": {
+          "$ref": "#/definitions/Currency",
           "description": "currency type set in the user Steam account",
           "x-jsontype": "String",
           "x-actualtype": "Currency",
-          "$ref": "#/definitions/Currency",
           "x-isenum": true,
           "x-optional": true
         },
@@ -13962,20 +13883,19 @@
           "x-optional": true
         },
         "Origination": {
+          "$ref": "#/definitions/UserOrigination",
           "description": "source by which the user first joined the game, if known",
           "x-jsontype": "String",
           "x-actualtype": "UserOrigination",
-          "$ref": "#/definitions/UserOrigination",
           "x-isenum": true,
           "x-optional": true
         },
         "TitlePlayerAccount": {
+          "$ref": "#/definitions/EntityKey",
           "description": "Title player account entity for this user",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "$ref": "#/definitions/EntityKey",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -14786,6 +14706,10 @@
   "x-errors": {
     "Success": {
       "name": "Success"
+    },
+    "MatchmakingHopperIdInvalid": {
+      "id": 230,
+      "name": "MatchmakingHopperIdInvalid"
     },
     "UnkownError": {
       "id": 500,
@@ -16259,45 +16183,169 @@
       "id": 1378,
       "name": "DuplicateDropTableId"
     },
-    "ComputeOK": {
+    "GameServerOk": {
       "id": 1379,
-      "name": "ComputeOK"
+      "name": "GameServerOk"
     },
-    "ComputeAccepted": {
+    "GameServerAccepted": {
       "id": 1380,
-      "name": "ComputeAccepted"
+      "name": "GameServerAccepted"
     },
-    "ComputeNoContent": {
+    "GameServerNoContent": {
       "id": 1381,
-      "name": "ComputeNoContent"
+      "name": "GameServerNoContent"
     },
-    "ComputeBadRequest": {
+    "GameServerBadRequest": {
       "id": 1382,
-      "name": "ComputeBadRequest"
+      "name": "GameServerBadRequest"
     },
-    "ComputeUnauthorized": {
+    "GameServerUnauthorized": {
       "id": 1383,
-      "name": "ComputeUnauthorized"
+      "name": "GameServerUnauthorized"
     },
-    "ComputeForbidden": {
+    "GameServerForbidden": {
       "id": 1384,
-      "name": "ComputeForbidden"
+      "name": "GameServerForbidden"
     },
-    "ComputeNotFound": {
+    "GameServerNotFound": {
       "id": 1385,
-      "name": "ComputeNotFound"
+      "name": "GameServerNotFound"
     },
-    "ComputeConflict": {
+    "GameServerConflict": {
       "id": 1386,
-      "name": "ComputeConflict"
+      "name": "GameServerConflict"
     },
-    "ComputeInternalServerError": {
+    "GameServerInternalServerError": {
       "id": 1387,
-      "name": "ComputeInternalServerError"
+      "name": "GameServerInternalServerError"
     },
-    "ComputeServiceUnavailable": {
+    "GameServerServiceUnavailable": {
       "id": 1388,
-      "name": "ComputeServiceUnavailable"
+      "name": "GameServerServiceUnavailable"
+    },
+    "MatchmakingInvalidEntityKeyList": {
+      "id": 2000,
+      "name": "MatchmakingInvalidEntityKeyList"
+    },
+    "MatchmakingInvalidTicketCreatorProfile": {
+      "id": 2001,
+      "name": "MatchmakingInvalidTicketCreatorProfile"
+    },
+    "MatchmakingInvalidUserAttributes": {
+      "id": 2002,
+      "name": "MatchmakingInvalidUserAttributes"
+    },
+    "MatchmakingCreateRequestMissing": {
+      "id": 2003,
+      "name": "MatchmakingCreateRequestMissing"
+    },
+    "MatchmakingCreateRequestCreatorMissing": {
+      "id": 2004,
+      "name": "MatchmakingCreateRequestCreatorMissing"
+    },
+    "MatchmakingCreateRequestCreatorIdMissing": {
+      "id": 2005,
+      "name": "MatchmakingCreateRequestCreatorIdMissing"
+    },
+    "MatchmakingCreateRequestUserListMissing": {
+      "id": 2006,
+      "name": "MatchmakingCreateRequestUserListMissing"
+    },
+    "MatchmakingCreateRequestGiveUpAfterInvalid": {
+      "id": 2007,
+      "name": "MatchmakingCreateRequestGiveUpAfterInvalid"
+    },
+    "MatchmakingTicketIdMissing": {
+      "id": 2008,
+      "name": "MatchmakingTicketIdMissing"
+    },
+    "MatchmakingMatchIdMissing": {
+      "id": 2009,
+      "name": "MatchmakingMatchIdMissing"
+    },
+    "MatchmakingMatchIdIdMissing": {
+      "id": 2010,
+      "name": "MatchmakingMatchIdIdMissing"
+    },
+    "MatchmakingHopperIdMissing": {
+      "id": 2011,
+      "name": "MatchmakingHopperIdMissing"
+    },
+    "MatchmakingTitleIdMissing": {
+      "id": 2012,
+      "name": "MatchmakingTitleIdMissing"
+    },
+    "MatchmakingTicketIdIdMissing": {
+      "id": 2013,
+      "name": "MatchmakingTicketIdIdMissing"
+    },
+    "MatchmakingUserIdMissing": {
+      "id": 2014,
+      "name": "MatchmakingUserIdMissing"
+    },
+    "MatchmakingJoinRequestUserMissing": {
+      "id": 2015,
+      "name": "MatchmakingJoinRequestUserMissing"
+    },
+    "MatchmakingHopperConfigNotFound": {
+      "id": 2016,
+      "name": "MatchmakingHopperConfigNotFound"
+    },
+    "MatchmakingMatchNotFound": {
+      "id": 2017,
+      "name": "MatchmakingMatchNotFound"
+    },
+    "MatchmakingTicketNotFound": {
+      "id": 2018,
+      "name": "MatchmakingTicketNotFound"
+    },
+    "MatchmakingCreateTicketServerIdentityInvalid": {
+      "id": 2019,
+      "name": "MatchmakingCreateTicketServerIdentityInvalid"
+    },
+    "MatchmakingCreateTicketClientIdentityInvalid": {
+      "id": 2020,
+      "name": "MatchmakingCreateTicketClientIdentityInvalid"
+    },
+    "MatchmakingGetTicketUserMismatch": {
+      "id": 2021,
+      "name": "MatchmakingGetTicketUserMismatch"
+    },
+    "MatchmakingJoinTicketServerIdentityInvalid": {
+      "id": 2022,
+      "name": "MatchmakingJoinTicketServerIdentityInvalid"
+    },
+    "MatchmakingJoinTicketUserIdentityMismatch": {
+      "id": 2023,
+      "name": "MatchmakingJoinTicketUserIdentityMismatch"
+    },
+    "MatchmakingCancelTicketServerIdentityInvalid": {
+      "id": 2024,
+      "name": "MatchmakingCancelTicketServerIdentityInvalid"
+    },
+    "MatchmakingCancelTicketUserIdentityMismatch": {
+      "id": 2025,
+      "name": "MatchmakingCancelTicketUserIdentityMismatch"
+    },
+    "MatchmakingGetMatchIdentityMismatch": {
+      "id": 2026,
+      "name": "MatchmakingGetMatchIdentityMismatch"
+    },
+    "MatchmakingUserIdentityMismatch": {
+      "id": 2027,
+      "name": "MatchmakingUserIdentityMismatch"
+    },
+    "MatchmakingAlreadyJoinedTicket": {
+      "id": 2028,
+      "name": "MatchmakingAlreadyJoinedTicket"
+    },
+    "MatchmakingTicketAlreadyCompleted": {
+      "id": 2029,
+      "name": "MatchmakingTicketAlreadyCompleted"
+    },
+    "MatchmakingHopperConfigInvalid": {
+      "id": 2031,
+      "name": "MatchmakingHopperConfigInvalid"
     }
   }
 }

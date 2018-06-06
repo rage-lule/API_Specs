@@ -44,13 +44,12 @@
               "x-optional": true
             },
             "History": {
+              "$ref": "#/definitions/PlayStreamEventHistory",
               "description": "The history of events associated with this event. This is set in cases where an event has generated children events via a trigger action.",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "PlayStreamEventHistory",
-              "$ref": "#/definitions/PlayStreamEventHistory",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "Reserved": {
@@ -66,10 +65,10 @@
               "x-optional": true
             },
             "SourceType": {
+              "$ref": "#/definitions/SourceType",
               "description": "The type of source of this event (PlayFab partner, other backend, or from the PlayFab API).",
               "x-jsontype": "String",
               "x-actualtype": "SourceType",
-              "$ref": "#/definitions/SourceType",
               "x-isenum": true,
               "x-optional": true
             },

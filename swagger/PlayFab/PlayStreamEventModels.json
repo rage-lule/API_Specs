@@ -19,12 +19,11 @@
           "type": "object",
           "properties": {
             "CloudScriptExecutionResult": {
+              "$ref": "#/definitions/ExecuteCloudScriptResult",
               "description": "Result of the CloudScript function, including diagnostic information that is useful for debugging.",
               "x-jsontype": "Object",
               "x-actualtype": "ExecuteCloudScriptResult",
-              "$ref": "#/definitions/ExecuteCloudScriptResult",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "EntityChain": {
@@ -50,13 +49,12 @@
               "x-optional": true
             },
             "Files": {
+              "$ref": "#/definitions/FileSet",
               "description": "The files that were updated.",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "FileSet",
-              "$ref": "#/definitions/FileSet",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             }
           },
@@ -82,13 +80,12 @@
               "x-optional": true
             },
             "Objects": {
+              "$ref": "#/definitions/ObjectSet",
               "description": "Objects that were updated",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "ObjectSet",
-              "$ref": "#/definitions/ObjectSet",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             }
           },
@@ -167,13 +164,12 @@
               "x-optional": true
             },
             "Members": {
+              "$ref": "#/definitions/Member",
               "description": "The list of entities that were added to the group and role to which this event applies",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "Member",
-              "$ref": "#/definitions/Member",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "RoleId": {
@@ -206,13 +202,12 @@
               "x-optional": true
             },
             "Members": {
+              "$ref": "#/definitions/Member",
               "description": "The list of entities that were removed from the group to which this event applies",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "Member",
-              "$ref": "#/definitions/Member",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             }
           },
@@ -315,13 +310,12 @@
               "x-optional": true
             },
             "Members": {
+              "$ref": "#/definitions/Member",
               "description": "The list of entities that were added to the group and role to which this event applies",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "Member",
-              "$ref": "#/definitions/Member",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "RoleId": {
@@ -354,13 +348,12 @@
               "x-optional": true
             },
             "Members": {
+              "$ref": "#/definitions/Member",
               "description": "The list of entities that were removed from the group to which this event applies",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "Member",
-              "$ref": "#/definitions/Member",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "RoleId": {
@@ -393,21 +386,19 @@
               "x-optional": true
             },
             "NewValues": {
+              "$ref": "#/definitions/RolePropertyValues",
               "description": "The new values of the role's changed properties",
               "x-jsontype": "Object",
               "x-actualtype": "RolePropertyValues",
-              "$ref": "#/definitions/RolePropertyValues",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "OldValues": {
+              "$ref": "#/definitions/RolePropertyValues",
               "description": "The previous values of the role's changed properties",
               "x-jsontype": "Object",
               "x-actualtype": "RolePropertyValues",
-              "$ref": "#/definitions/RolePropertyValues",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "RoleId": {
@@ -452,21 +443,19 @@
               "x-optional": true
             },
             "NewValues": {
+              "$ref": "#/definitions/GroupPropertyValues",
               "description": "The new values of the group's changed properties",
               "x-jsontype": "Object",
               "x-actualtype": "GroupPropertyValues",
-              "$ref": "#/definitions/GroupPropertyValues",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "OldValues": {
+              "$ref": "#/definitions/GroupPropertyValues",
               "description": "The previous values of the group's changed properties",
               "x-jsontype": "Object",
               "x-actualtype": "GroupPropertyValues",
-              "$ref": "#/definitions/GroupPropertyValues",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "UpdaterEntityId": {
@@ -519,10 +508,10 @@
               "x-optional": true
             },
             "AuthenticationProvider": {
+              "$ref": "#/definitions/AuthenticationProvider",
               "description": "Authentication provider for the user",
               "x-jsontype": "String",
               "x-actualtype": "AuthenticationProvider",
-              "$ref": "#/definitions/AuthenticationProvider",
               "x-isenum": true,
               "x-optional": true
             },
@@ -572,10 +561,10 @@
           "type": "object",
           "properties": {
             "AuthenticationProvider": {
+              "$ref": "#/definitions/AuthenticationProvider",
               "description": "Authentication provider type required for user to register with",
               "x-jsontype": "String",
               "x-actualtype": "AuthenticationProvider",
-              "$ref": "#/definitions/AuthenticationProvider",
               "x-isenum": true,
               "x-optional": true
             },
@@ -642,10 +631,10 @@
               "x-optional": true
             },
             "AuthenticationProvider": {
+              "$ref": "#/definitions/AuthenticationProvider",
               "description": "Authentication provider for the user",
               "x-jsontype": "String",
               "x-actualtype": "AuthenticationProvider",
-              "$ref": "#/definitions/AuthenticationProvider",
               "x-isenum": true,
               "x-optional": true
             },
@@ -1032,10 +1021,10 @@
               "x-optional": true
             },
             "PhotonApplicationType": {
+              "$ref": "#/definitions/PhotonServicesEnum",
               "description": "Type of Photon Cloud application to which the player is connected",
               "x-jsontype": "String",
               "x-actualtype": "PhotonServicesEnum",
-              "$ref": "#/definitions/PhotonServicesEnum",
               "x-isenum": true,
               "x-optional": true
             },
@@ -1151,10 +1140,10 @@
               "x-optional": true
             },
             "Platform": {
+              "$ref": "#/definitions/LoginIdentityProvider",
               "description": "Authentication method used to register player's account.",
               "x-jsontype": "String",
               "x-actualtype": "LoginIdentityProvider",
-              "$ref": "#/definitions/LoginIdentityProvider",
               "x-isenum": true,
               "x-optional": true
             },
@@ -1486,10 +1475,10 @@
               "x-optional": false
             },
             "InitiatedBy": {
+              "$ref": "#/definitions/PasswordResetInitiationSource",
               "description": "Source that initiated the password reset process.",
               "x-jsontype": "String",
               "x-actualtype": "PasswordResetInitiationSource",
-              "$ref": "#/definitions/PasswordResetInitiationSource",
               "x-isenum": true,
               "x-optional": true
             },
@@ -1661,12 +1650,11 @@
           "type": "object",
           "properties": {
             "CloudScriptExecutionResult": {
+              "$ref": "#/definitions/ExecuteCloudScriptResult",
               "description": "Result of the CloudScript function, including diagnostic information that is useful for debugging.",
               "x-jsontype": "Object",
               "x-actualtype": "ExecuteCloudScriptResult",
-              "$ref": "#/definitions/ExecuteCloudScriptResult",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "FunctionName": {
@@ -1891,10 +1879,10 @@
               "x-optional": true
             },
             "Origination": {
+              "$ref": "#/definitions/LoginIdentityProvider",
               "description": "Authentication method being linked to a player's account.",
               "x-jsontype": "String",
               "x-actualtype": "LoginIdentityProvider",
-              "$ref": "#/definitions/LoginIdentityProvider",
               "x-isenum": true,
               "x-optional": true
             },
@@ -1924,19 +1912,18 @@
           "type": "object",
           "properties": {
             "Location": {
+              "$ref": "#/definitions/EventLocation",
               "description": "Player's geographic location, if known. Location is estimated from factors such as IP address and is not always available or accurate.",
               "x-jsontype": "Object",
               "x-actualtype": "EventLocation",
-              "$ref": "#/definitions/EventLocation",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "Platform": {
+              "$ref": "#/definitions/LoginIdentityProvider",
               "description": "Authentication method used to login the player.",
               "x-jsontype": "String",
               "x-actualtype": "LoginIdentityProvider",
-              "$ref": "#/definitions/LoginIdentityProvider",
               "x-isenum": true,
               "x-optional": true
             },
@@ -2021,10 +2008,10 @@
           "type": "object",
           "properties": {
             "InitiatedBy": {
+              "$ref": "#/definitions/PasswordResetInitiationSource",
               "description": "Source that initiated the password reset process.",
               "x-jsontype": "String",
               "x-actualtype": "PasswordResetInitiationSource",
-              "$ref": "#/definitions/PasswordResetInitiationSource",
               "x-isenum": true,
               "x-optional": true
             },
@@ -2108,10 +2095,10 @@
               "x-optional": false
             },
             "Status": {
+              "$ref": "#/definitions/TransactionStatus",
               "description": "Status of the transaction.",
               "x-jsontype": "String",
               "x-actualtype": "TransactionStatus",
-              "$ref": "#/definitions/TransactionStatus",
               "x-isenum": true,
               "x-optional": true
             },
@@ -2143,12 +2130,11 @@
           "type": "object",
           "properties": {
             "LeaderboardSource": {
+              "$ref": "#/definitions/LeaderboardSource",
               "description": "Source of the values for the leaderboard.",
               "x-jsontype": "Object",
               "x-actualtype": "LeaderboardSource",
-              "$ref": "#/definitions/LeaderboardSource",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "Rank": {
@@ -2176,10 +2162,10 @@
               "x-optional": false
             },
             "VersionChangeBehavior": {
+              "$ref": "#/definitions/LeaderboardVersionChangeBehavior",
               "description": "Behavior with respect to the leaderboard values when the version changed.",
               "x-jsontype": "String",
               "x-actualtype": "LeaderboardVersionChangeBehavior",
-              "$ref": "#/definitions/LeaderboardVersionChangeBehavior",
               "x-isenum": true,
               "x-optional": true
             }
@@ -2209,10 +2195,10 @@
               "x-optional": true
             },
             "PaymentType": {
+              "$ref": "#/definitions/PaymentType",
               "description": "Type of payment used to make the purchase.",
               "x-jsontype": "String",
               "x-actualtype": "PaymentType",
-              "$ref": "#/definitions/PaymentType",
               "x-isenum": true,
               "x-optional": true
             },
@@ -2230,10 +2216,10 @@
               "x-optional": true
             },
             "TransactionCurrency": {
+              "$ref": "#/definitions/Currency",
               "description": "Local currency used to make the purchase, if applicable.",
               "x-jsontype": "String",
               "x-actualtype": "Currency",
-              "$ref": "#/definitions/Currency",
               "x-isenum": true,
               "x-optional": true
             },
@@ -2269,10 +2255,10 @@
               "x-optional": true
             },
             "PaymentType": {
+              "$ref": "#/definitions/PaymentType",
               "description": "Type of payment used to make the purchase attempt.",
               "x-jsontype": "String",
               "x-actualtype": "PaymentType",
-              "$ref": "#/definitions/PaymentType",
               "x-isenum": true,
               "x-optional": true
             },
@@ -2308,13 +2294,12 @@
               "x-optional": true
             },
             "GrantedInventoryItems": {
+              "$ref": "#/definitions/CouponGrantedInventoryItem",
               "description": "Items added to the player's inventory by redeeming the coupon.",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "CouponGrantedInventoryItem",
-              "$ref": "#/definitions/CouponGrantedInventoryItem",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "TitleId": {
@@ -2337,10 +2322,10 @@
               "x-optional": true
             },
             "Platform": {
+              "$ref": "#/definitions/PushNotificationPlatform",
               "description": "Platform on which the player is registering for push notifications.",
               "x-jsontype": "String",
               "x-actualtype": "PushNotificationPlatform",
-              "$ref": "#/definitions/PushNotificationPlatform",
               "x-isenum": true,
               "x-optional": true
             },
@@ -2396,10 +2381,10 @@
           "type": "object",
           "properties": {
             "Property": {
+              "$ref": "#/definitions/PlayerProfileProperty",
               "description": "Property of the profile to be set",
               "x-jsontype": "String",
               "x-actualtype": "PlayerProfileProperty",
-              "$ref": "#/definitions/PlayerProfileProperty",
               "x-isenum": true,
               "x-optional": true
             },
@@ -2429,13 +2414,12 @@
               "x-optional": true
             },
             "Contents": {
+              "$ref": "#/definitions/CartItem",
               "description": "Cart items to be purchased.",
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "CartItem",
-              "$ref": "#/definitions/CartItem",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "OrderId": {
@@ -2464,10 +2448,10 @@
           "type": "object",
           "properties": {
             "AggregationMethod": {
+              "$ref": "#/definitions/StatisticAggregationMethod",
               "description": "Aggregation method applied for calculating the new value of the statistic.",
               "x-jsontype": "String",
               "x-actualtype": "StatisticAggregationMethod",
-              "$ref": "#/definitions/StatisticAggregationMethod",
               "x-isenum": true,
               "x-optional": true
             },
@@ -2602,12 +2586,11 @@
           "type": "object",
           "properties": {
             "CloudScriptExecutionResult": {
+              "$ref": "#/definitions/ExecuteCloudScriptResult",
               "description": "Result of the CloudScript function, including an error information. Useful for debugging.",
               "x-jsontype": "Object",
               "x-actualtype": "ExecuteCloudScriptResult",
-              "$ref": "#/definitions/ExecuteCloudScriptResult",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "FunctionName": {
@@ -2635,12 +2618,11 @@
               "x-optional": true
             },
             "TriggeringPlayer": {
+              "$ref": "#/definitions/PlayerProfile",
               "description": "JSON data profile of the player that triggered this CloudScript function to run.",
               "x-jsontype": "Object",
               "x-actualtype": "PlayerProfile",
-              "$ref": "#/definitions/PlayerProfile",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             }
           },
@@ -2651,10 +2633,10 @@
           "type": "object",
           "properties": {
             "Origination": {
+              "$ref": "#/definitions/LoginIdentityProvider",
               "description": "Authentication method being unlinked from a player's account.",
               "x-jsontype": "String",
               "x-actualtype": "LoginIdentityProvider",
-              "$ref": "#/definitions/LoginIdentityProvider",
               "x-isenum": true,
               "x-optional": true
             },
@@ -2850,10 +2832,10 @@
               "x-optional": true
             },
             "EmailTemplateType": {
+              "$ref": "#/definitions/EmailTemplateType",
               "description": "The email template type during a send email attempt.",
               "x-jsontype": "String",
               "x-actualtype": "EmailTemplateType",
-              "$ref": "#/definitions/EmailTemplateType",
               "x-isenum": true,
               "x-optional": true
             },
@@ -3163,10 +3145,10 @@
               "x-optional": false
             },
             "StopReason": {
+              "$ref": "#/definitions/GameServerHostStopReason",
               "description": "Reason that the host was stopped.",
               "x-jsontype": "String",
               "x-actualtype": "GameServerHostStopReason",
-              "$ref": "#/definitions/GameServerHostStopReason",
               "x-isenum": true,
               "x-optional": true
             },
@@ -3345,11 +3327,11 @@
               "x-optional": false
             },
             "Regions": {
+              "$ref": "#/definitions/Region",
               "description": "This build is being deployed in these regions and will shortly be available for players to join.",
               "x-collection": "array",
               "x-jsontype": "String",
               "x-actualtype": "Region",
-              "$ref": "#/definitions/Region",
               "x-isenum": true,
               "x-optional": true
             },
@@ -3371,21 +3353,19 @@
               "x-optional": true
             },
             "PreviousSettingsValues": {
+              "$ref": "#/definitions/APISettings",
               "description": "Settings values before the change.",
               "x-jsontype": "Object",
               "x-actualtype": "APISettings",
-              "$ref": "#/definitions/APISettings",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "SettingsValues": {
+              "$ref": "#/definitions/APISettings",
               "description": "Settings values after the change.",
               "x-jsontype": "Object",
               "x-actualtype": "APISettings",
-              "$ref": "#/definitions/APISettings",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "UserId": {
@@ -3436,10 +3416,10 @@
               "x-optional": true
             },
             "AlertState": {
+              "$ref": "#/definitions/AlertStates",
               "description": "State of the alert. Values include Triggered, Recovered, ReTriggered.",
               "x-jsontype": "String",
               "x-actualtype": "AlertStates",
-              "$ref": "#/definitions/AlertStates",
               "x-isenum": true,
               "x-optional": true
             },
@@ -3462,10 +3442,10 @@
               "x-optional": true
             },
             "Level": {
+              "$ref": "#/definitions/AlertLevel",
               "description": "Level of the alert. Values include Warn, Alert, Critical.",
               "x-jsontype": "String",
               "x-actualtype": "AlertLevel",
-              "$ref": "#/definitions/AlertLevel",
               "x-isenum": true,
               "x-optional": true
             }
@@ -3489,10 +3469,10 @@
               "x-optional": false
             },
             "Result": {
+              "$ref": "#/definitions/TaskInstanceStatus",
               "description": "Result of the task run, whether it has succeeded, failed or aborted.",
               "x-jsontype": "String",
               "x-actualtype": "TaskInstanceStatus",
-              "$ref": "#/definitions/TaskInstanceStatus",
               "x-isenum": true,
               "x-optional": true
             },
@@ -3527,12 +3507,11 @@
               "x-optional": true
             },
             "ScheduledTask": {
+              "$ref": "#/definitions/NameIdentifier",
               "description": "Identity of the scheduled task",
               "x-jsontype": "Object",
               "x-actualtype": "NameIdentifier",
-              "$ref": "#/definitions/NameIdentifier",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "UserId": {
@@ -3559,12 +3538,11 @@
               "x-optional": true
             },
             "ScheduledTask": {
+              "$ref": "#/definitions/NameIdentifier",
               "description": "Identity of the scheduled task",
               "x-jsontype": "Object",
               "x-actualtype": "NameIdentifier",
-              "$ref": "#/definitions/NameIdentifier",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "UserId": {
@@ -3605,10 +3583,10 @@
               "x-optional": false
             },
             "Unit": {
+              "$ref": "#/definitions/MetricUnit",
               "description": "The unit of the limit that was exceeded.",
               "x-jsontype": "String",
               "x-actualtype": "MetricUnit",
-              "$ref": "#/definitions/MetricUnit",
               "x-isenum": true,
               "x-optional": true
             },
@@ -3632,10 +3610,10 @@
               "x-optional": true
             },
             "AlertState": {
+              "$ref": "#/definitions/AlertStates",
               "description": "State of the alert. Values include Triggered, Recovered, ReTriggered.",
               "x-jsontype": "String",
               "x-actualtype": "AlertStates",
-              "$ref": "#/definitions/AlertStates",
               "x-isenum": true,
               "x-optional": true
             },
@@ -3658,10 +3636,10 @@
               "x-optional": true
             },
             "Level": {
+              "$ref": "#/definitions/AlertLevel",
               "description": "Level of the alert. Values include Warn, Alert, Critical.",
               "x-jsontype": "String",
               "x-actualtype": "AlertLevel",
-              "$ref": "#/definitions/AlertLevel",
               "x-isenum": true,
               "x-optional": true
             }
@@ -3744,10 +3722,10 @@
               "x-optional": true
             },
             "Unit": {
+              "$ref": "#/definitions/MetricUnit",
               "description": "The unit of the limit that changed.",
               "x-jsontype": "String",
               "x-actualtype": "MetricUnit",
-              "$ref": "#/definitions/MetricUnit",
               "x-isenum": true,
               "x-optional": true
             },
@@ -3788,11 +3766,11 @@
               "x-optional": false
             },
             "Regions": {
+              "$ref": "#/definitions/Region",
               "description": "List of regions where the build has been deployed.",
               "x-collection": "array",
               "x-jsontype": "String",
               "x-actualtype": "Region",
-              "$ref": "#/definitions/Region",
               "x-isenum": true,
               "x-optional": true
             },
@@ -3827,10 +3805,10 @@
               "x-optional": true
             },
             "Status": {
+              "$ref": "#/definitions/NewsStatus",
               "description": "The current status of the news that is new or updated.",
               "x-jsontype": "String",
               "x-actualtype": "NewsStatus",
-              "$ref": "#/definitions/NewsStatus",
               "x-isenum": true,
               "x-optional": true
             }
@@ -3982,10 +3960,10 @@
               "x-optional": true
             },
             "Unit": {
+              "$ref": "#/definitions/MetricUnit",
               "description": "The unit of the limit requested to change.",
               "x-jsontype": "String",
               "x-actualtype": "MetricUnit",
-              "$ref": "#/definitions/MetricUnit",
               "x-isenum": true,
               "x-optional": true
             },
@@ -4008,12 +3986,11 @@
           "type": "object",
           "properties": {
             "CloudScriptExecutionResult": {
+              "$ref": "#/definitions/ExecuteCloudScriptResult",
               "description": "Result of the CloudScript function, including an error information. Useful for debugging.",
               "x-jsontype": "Object",
               "x-actualtype": "ExecuteCloudScriptResult",
-              "$ref": "#/definitions/ExecuteCloudScriptResult",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "FunctionName": {
@@ -4023,12 +4000,11 @@
               "x-optional": true
             },
             "ScheduledTask": {
+              "$ref": "#/definitions/NameId",
               "description": "Scheduled task that called the CloudScript",
               "x-jsontype": "Object",
               "x-actualtype": "NameId",
-              "$ref": "#/definitions/NameId",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             }
           },
@@ -4103,12 +4079,11 @@
               "x-optional": true
             },
             "ScheduledTask": {
+              "$ref": "#/definitions/NameIdentifier",
               "description": "Identity of the scheduled task",
               "x-jsontype": "Object",
               "x-actualtype": "NameIdentifier",
-              "$ref": "#/definitions/NameIdentifier",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "TaskInstanceId": {
@@ -4136,10 +4111,10 @@
           "type": "object",
           "properties": {
             "ScheduledResetInterval": {
+              "$ref": "#/definitions/StatisticResetIntervalOption",
               "description": "The interval on which the statistic leaderboard was configured to reset, if any.",
               "x-jsontype": "String",
               "x-actualtype": "StatisticResetIntervalOption",
-              "$ref": "#/definitions/StatisticResetIntervalOption",
               "x-isenum": true,
               "x-optional": true
             },
@@ -4214,12 +4189,11 @@
               "x-optional": false
             },
             "ScheduledTask": {
+              "$ref": "#/definitions/NameIdentifier",
               "description": "Identity of the scheduled task",
               "x-jsontype": "Object",
               "x-actualtype": "NameIdentifier",
-              "$ref": "#/definitions/NameIdentifier",
               "x-isclass": true,
-              "example": {},
               "x-optional": true
             },
             "UserId": {
@@ -4266,10 +4240,10 @@
           "x-optional": true
         },
         "Operation": {
+          "$ref": "#/definitions/OperationTypes",
           "description": "The operation that was performed.",
           "x-jsontype": "String",
           "x-actualtype": "OperationTypes",
-          "$ref": "#/definitions/OperationTypes",
           "x-isenum": true,
           "x-optional": true
         },
@@ -4357,12 +4331,11 @@
           "x-optional": false
         },
         "Error": {
+          "$ref": "#/definitions/ScriptExecutionError",
           "description": "Information about the error, if any, that occurred during execution",
           "x-jsontype": "Object",
           "x-actualtype": "ScriptExecutionError",
-          "$ref": "#/definitions/ScriptExecutionError",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "ExecutionTimeSeconds": {
@@ -4395,13 +4368,12 @@
           "x-optional": false
         },
         "Logs": {
+          "$ref": "#/definitions/LogStatement",
           "description": "Entries logged during the function execution. These include both entries logged in the function code using log.info() and log.error() and error entries for API and HTTP request failures.",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "LogStatement",
-          "$ref": "#/definitions/LogStatement",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "LogsTooLarge": {
@@ -4496,10 +4468,10 @@
           "x-optional": true
         },
         "Operation": {
+          "$ref": "#/definitions/OperationTypes",
           "description": "The operation that was performed.",
           "x-jsontype": "String",
           "x-actualtype": "OperationTypes",
-          "$ref": "#/definitions/OperationTypes",
           "x-isenum": true,
           "x-optional": true
         }
@@ -4664,12 +4636,11 @@
       "type": "object",
       "properties": {
         "Statistic": {
+          "$ref": "#/definitions/StatisticLeaderboardSource",
           "description": "Statistic associated with the leaderboard.",
           "x-jsontype": "Object",
           "x-actualtype": "StatisticLeaderboardSource",
-          "$ref": "#/definitions/StatisticLeaderboardSource",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         }
       },
@@ -5173,18 +5144,18 @@
           "x-optional": true
         },
         "ContinentCode": {
+          "$ref": "#/definitions/ContinentCode",
           "description": "The two-character continent code for this location",
           "x-jsontype": "String",
           "x-actualtype": "ContinentCode",
-          "$ref": "#/definitions/ContinentCode",
           "x-isenum": true,
           "x-optional": false
         },
         "CountryCode": {
+          "$ref": "#/definitions/CountryCode",
           "description": "The two-character ISO 3166-1 country code for the country associated with the location",
           "x-jsontype": "String",
           "x-actualtype": "CountryCode",
-          "$ref": "#/definitions/CountryCode",
           "x-isenum": true,
           "x-optional": false
         },
@@ -5245,10 +5216,10 @@
           "x-optional": true
         },
         "Platform": {
+          "$ref": "#/definitions/PushNotificationPlatform",
           "description": "Push notification platform",
           "x-jsontype": "String",
           "x-actualtype": "PushNotificationPlatform",
-          "$ref": "#/definitions/PushNotificationPlatform",
           "x-isenum": true,
           "x-optional": true
         }
@@ -5265,10 +5236,10 @@
           "x-optional": true
         },
         "Platform": {
+          "$ref": "#/definitions/LoginIdentityProvider",
           "description": "Authentication platform",
           "x-jsontype": "String",
           "x-actualtype": "LoginIdentityProvider",
-          "$ref": "#/definitions/LoginIdentityProvider",
           "x-isenum": true,
           "x-optional": true
         },
@@ -5342,10 +5313,10 @@
           "x-optional": true
         },
         "VerificationStatus": {
+          "$ref": "#/definitions/EmailVerificationStatus",
           "description": "The verification status of the email",
           "x-jsontype": "String",
           "x-actualtype": "EmailVerificationStatus",
-          "$ref": "#/definitions/EmailVerificationStatus",
           "x-isenum": true,
           "x-optional": true
         }
@@ -5356,13 +5327,12 @@
       "type": "object",
       "properties": {
         "AdCampaignAttributions": {
+          "$ref": "#/definitions/AdCampaignAttribution",
           "description": "Array of ad campaigns player has been attributed to",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "AdCampaignAttribution",
-          "$ref": "#/definitions/AdCampaignAttribution",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "AvatarUrl": {
@@ -5378,13 +5348,12 @@
           "x-optional": true
         },
         "ContactEmailAddresses": {
+          "$ref": "#/definitions/ContactEmailInfo",
           "description": "Array of contact email addresses associated with the player",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "ContactEmailInfo",
-          "$ref": "#/definitions/ContactEmailInfo",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Created": {
@@ -5406,30 +5375,28 @@
           "x-optional": true
         },
         "LinkedAccounts": {
+          "$ref": "#/definitions/PlayerLinkedAccount",
           "description": "Array of third party accounts linked to this player",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerLinkedAccount",
-          "$ref": "#/definitions/PlayerLinkedAccount",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Locations": {
+          "$ref": "#/definitions/PlayerLocation",
           "description": "Dictionary of player's locations by type.",
           "x-collection": "map",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerLocation",
-          "$ref": "#/definitions/PlayerLocation",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Origination": {
+          "$ref": "#/definitions/LoginIdentityProvider",
           "description": "Player account origination",
           "x-jsontype": "String",
           "x-actualtype": "LoginIdentityProvider",
-          "$ref": "#/definitions/LoginIdentityProvider",
           "x-isenum": true,
           "x-optional": true
         },
@@ -5440,13 +5407,12 @@
           "x-optional": true
         },
         "PlayerStatistics": {
+          "$ref": "#/definitions/PlayerStatistic",
           "description": "Array of player statistics",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "PlayerStatistic",
-          "$ref": "#/definitions/PlayerStatistic",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "PublisherId": {
@@ -5456,13 +5422,12 @@
           "x-optional": true
         },
         "PushNotificationRegistrations": {
+          "$ref": "#/definitions/PushNotificationRegistration",
           "description": "Array of configured push notification end points",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "PushNotificationRegistration",
-          "$ref": "#/definitions/PushNotificationRegistration",
           "x-isclass": true,
-          "example": {},
           "x-optional": true
         },
         "Statistics": {
@@ -5637,18 +5602,18 @@
           "x-optional": true
         },
         "ContinentCode": {
+          "$ref": "#/definitions/ContinentCode",
           "description": "Two-character code representing the continent of geographic location.",
           "x-jsontype": "String",
           "x-actualtype": "ContinentCode",
-          "$ref": "#/definitions/ContinentCode",
           "x-isenum": true,
           "x-optional": true
         },
         "CountryCode": {
+          "$ref": "#/definitions/CountryCode",
           "description": "Two-character ISO 3166-1 code representing the country of the geographic location.",
           "x-jsontype": "String",
           "x-actualtype": "CountryCode",
-          "$ref": "#/definitions/CountryCode",
           "x-isenum": true,
           "x-optional": true
         },
