@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "180606",
+    "version": "180608",
     "title": "PlayFab Entity API",
     "description": "PlayFab Entity APIs provide a variety of core PlayFab features and work consistently across a broad set of entities, such as titles, players, characters, and more.",
     "termsOfService": "https://playfab.com/terms/",
@@ -29,10 +29,9 @@
         "tags": [
           "Authentication"
         ],
-        "summary": "Method to exchange a legacy AuthenticationTicket or title SecretKey for an Entity Token or to refresh a still valid Entity Token.",
         "description": "Method to exchange a legacy AuthenticationTicket or title SecretKey for an Entity Token or to refresh a still valid Entity Token.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/GetEntityToken"
+          "url": "https://api.playfab.com/documentation/entity/method/GetEntityToken"
         },
         "parameters": [
           {
@@ -69,9 +68,6 @@
           }
         },
         "x-requestDetails": "This API must be called with X-SecretKey, X-Authentication or X-EntityToken headers. An optional EntityKey may be included to attempt to set the resulting EntityToken to a specific entity, however the entity must be a relation of the caller, such as the master_player_account of a character. If sending X-EntityToken the account will be marked as freshly logged in and will issue a new token. If using X-Authentication or X-EntityToken the header must still be valid and cannot be expired or revoked.",
-        "x-auth": "None",
-        "x-requestType": "GetEntityTokenRequest",
-        "x-resultType": "GetEntityTokenResponse",
         "x-errors": [
           "EntityTokenExpired",
           "EntityTokenInvalid",
@@ -85,10 +81,9 @@
         "tags": [
           "PlayStream Events"
         ],
-        "summary": "Writes events to PlayStream.",
         "description": "Writes events to PlayStream.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/WriteEvents"
+          "url": "https://api.playfab.com/documentation/entity/method/WriteEvents"
         },
         "parameters": [
           {
@@ -124,9 +119,6 @@
             "$ref": "#/responses/ApiErrorWrapper"
           }
         },
-        "x-auth": "EntityToken",
-        "x-requestType": "WriteEventsRequest",
-        "x-resultType": "WriteEventsResponse",
         "x-AllInclusiveFlags": [
           "Beta"
         ],
@@ -146,10 +138,9 @@
         "tags": [
           "File"
         ],
-        "summary": "Abort pending file uploads to an entity's profile.",
         "description": "Abort pending file uploads to an entity's profile.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/AbortFileUploads"
+          "url": "https://api.playfab.com/documentation/entity/method/AbortFileUploads"
         },
         "parameters": [
           {
@@ -186,9 +177,6 @@
           }
         },
         "x-requestDetails": "Aborts the pending upload of the requested files.",
-        "x-auth": "EntityToken",
-        "x-requestType": "AbortFileUploadsRequest",
-        "x-resultType": "AbortFileUploadsResponse",
         "x-seeAlso": [
           "File/DeleteFiles",
           "File/FinalizeFileUploads",
@@ -206,10 +194,9 @@
         "tags": [
           "File"
         ],
-        "summary": "Delete files on an entity's profile.",
         "description": "Delete files on an entity's profile.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/DeleteFiles"
+          "url": "https://api.playfab.com/documentation/entity/method/DeleteFiles"
         },
         "parameters": [
           {
@@ -246,9 +233,6 @@
           }
         },
         "x-requestDetails": "Deletes the requested files from the entity's profile.",
-        "x-auth": "EntityToken",
-        "x-requestType": "DeleteFilesRequest",
-        "x-resultType": "DeleteFilesResponse",
         "x-seeAlso": [
           "File/FinalizeFileUploads",
           "File/GetFiles",
@@ -265,10 +249,9 @@
         "tags": [
           "File"
         ],
-        "summary": "Finalize file uploads to an entity's profile.",
         "description": "Finalize file uploads to an entity's profile.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/FinalizeFileUploads"
+          "url": "https://api.playfab.com/documentation/entity/method/FinalizeFileUploads"
         },
         "parameters": [
           {
@@ -305,9 +288,6 @@
           }
         },
         "x-requestDetails": "Finalizes the upload of the requested files. Verifies that the files have been successfully uploaded and moves the file pointers from pending to live.",
-        "x-auth": "EntityToken",
-        "x-requestType": "FinalizeFileUploadsRequest",
-        "x-resultType": "FinalizeFileUploadsResponse",
         "x-seeAlso": [
           "File/AbortFileUploads",
           "File/DeleteFiles",
@@ -325,10 +305,9 @@
         "tags": [
           "File"
         ],
-        "summary": "Retrieves file metadata from an entity's profile.",
         "description": "Retrieves file metadata from an entity's profile.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/GetFiles"
+          "url": "https://api.playfab.com/documentation/entity/method/GetFiles"
         },
         "parameters": [
           {
@@ -365,9 +344,6 @@
           }
         },
         "x-requestDetails": "Returns URLs that may be used to download the files for a profile for a limited length of time. Only returns files that have been successfully uploaded, files that are still pending will either return the old value, if it exists, or nothing. ",
-        "x-auth": "EntityToken",
-        "x-requestType": "GetFilesRequest",
-        "x-resultType": "GetFilesResponse",
         "x-seeAlso": [
           "File/AbortFileUploads",
           "File/DeleteFiles",
@@ -381,10 +357,9 @@
         "tags": [
           "File"
         ],
-        "summary": "Initiates file uploads to an entity's profile.",
         "description": "Initiates file uploads to an entity's profile.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/InitiateFileUploads"
+          "url": "https://api.playfab.com/documentation/entity/method/InitiateFileUploads"
         },
         "parameters": [
           {
@@ -421,9 +396,6 @@
           }
         },
         "x-requestDetails": "Returns URLs that may be used to upload the files for a profile 5 minutes. After using the upload calls FinalizeFileUploads must be called to move the file status from pending to live.",
-        "x-auth": "EntityToken",
-        "x-requestType": "InitiateFileUploadsRequest",
-        "x-resultType": "InitiateFileUploadsResponse",
         "x-seeAlso": [
           "File/AbortFileUploads",
           "File/DeleteFiles",
@@ -440,10 +412,9 @@
         "tags": [
           "GameServer"
         ],
-        "summary": null,
         "description": null,
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/AllocateSessionHost"
+          "url": "https://api.playfab.com/documentation/entity/method/AllocateSessionHost"
         },
         "parameters": [
           {
@@ -479,9 +450,6 @@
             "$ref": "#/responses/ApiErrorWrapper"
           }
         },
-        "x-auth": "EntityToken",
-        "x-requestType": "AllocateSessionHostRequest",
-        "x-resultType": "AllocateSessionHostResultResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -505,10 +473,9 @@
         "tags": [
           "GameServer"
         ],
-        "summary": null,
         "description": null,
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/CreateBuild"
+          "url": "https://api.playfab.com/documentation/entity/method/CreateBuild"
         },
         "parameters": [
           {
@@ -544,9 +511,6 @@
             "$ref": "#/responses/ApiErrorWrapper"
           }
         },
-        "x-auth": "EntityToken",
-        "x-requestType": "CreateBuildRequest",
-        "x-resultType": "CreateBuildResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -570,10 +534,9 @@
         "tags": [
           "GameServer"
         ],
-        "summary": null,
         "description": null,
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/CreateRemoteUser"
+          "url": "https://api.playfab.com/documentation/entity/method/CreateRemoteUser"
         },
         "parameters": [
           {
@@ -609,9 +572,6 @@
             "$ref": "#/responses/ApiErrorWrapper"
           }
         },
-        "x-auth": "EntityToken",
-        "x-requestType": "CreateRemoteUserRequest",
-        "x-resultType": "CreateRemoteUserResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -637,10 +597,9 @@
         "tags": [
           "GameServer"
         ],
-        "summary": null,
         "description": null,
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/DeleteBuild"
+          "url": "https://api.playfab.com/documentation/entity/method/DeleteBuild"
         },
         "parameters": [
           {
@@ -676,9 +635,6 @@
             "$ref": "#/responses/ApiErrorWrapper"
           }
         },
-        "x-auth": "EntityToken",
-        "x-requestType": "DeleteBuildRequest",
-        "x-resultType": "DeleteBuildResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -702,10 +658,9 @@
         "tags": [
           "GameServer"
         ],
-        "summary": null,
         "description": null,
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/GetAssetUploadUrl"
+          "url": "https://api.playfab.com/documentation/entity/method/GetAssetUploadUrl"
         },
         "parameters": [
           {
@@ -741,9 +696,6 @@
             "$ref": "#/responses/ApiErrorWrapper"
           }
         },
-        "x-auth": "EntityToken",
-        "x-requestType": "GetAssetUploadUrlRequest",
-        "x-resultType": "GetAssetUploadUrlResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -771,10 +723,9 @@
         "tags": [
           "GameServer"
         ],
-        "summary": null,
         "description": null,
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/GetBuild"
+          "url": "https://api.playfab.com/documentation/entity/method/GetBuild"
         },
         "parameters": [
           {
@@ -810,9 +761,6 @@
             "$ref": "#/responses/ApiErrorWrapper"
           }
         },
-        "x-auth": "EntityToken",
-        "x-requestType": "GetBuildRequest",
-        "x-resultType": "GetBuildResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -837,10 +785,9 @@
         "tags": [
           "GameServer"
         ],
-        "summary": null,
         "description": null,
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/GetRemoteLoginEndpoint"
+          "url": "https://api.playfab.com/documentation/entity/method/GetRemoteLoginEndpoint"
         },
         "parameters": [
           {
@@ -876,9 +823,6 @@
             "$ref": "#/responses/ApiErrorWrapper"
           }
         },
-        "x-auth": "EntityToken",
-        "x-requestType": "GetRemoteLoginEndpointRequest",
-        "x-resultType": "GetRemoteLoginEndpointResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -904,10 +848,9 @@
         "tags": [
           "GameServer"
         ],
-        "summary": null,
         "description": null,
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/GetSessionHostDetails"
+          "url": "https://api.playfab.com/documentation/entity/method/GetSessionHostDetails"
         },
         "parameters": [
           {
@@ -943,9 +886,6 @@
             "$ref": "#/responses/ApiErrorWrapper"
           }
         },
-        "x-auth": "EntityToken",
-        "x-requestType": "GetSessionHostDetailsRequest",
-        "x-resultType": "GetSessionHostResultDetailsResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -968,10 +908,9 @@
         "tags": [
           "GameServer"
         ],
-        "summary": null,
         "description": null,
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/ListAssets"
+          "url": "https://api.playfab.com/documentation/entity/method/ListAssets"
         },
         "parameters": [
           {
@@ -1007,9 +946,6 @@
             "$ref": "#/responses/ApiErrorWrapper"
           }
         },
-        "x-auth": "EntityToken",
-        "x-requestType": "ListAssetsRequest",
-        "x-resultType": "ListAssetsResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -1037,10 +973,9 @@
         "tags": [
           "GameServer"
         ],
-        "summary": null,
         "description": null,
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/ListBuilds"
+          "url": "https://api.playfab.com/documentation/entity/method/ListBuilds"
         },
         "parameters": [
           {
@@ -1076,9 +1011,6 @@
             "$ref": "#/responses/ApiErrorWrapper"
           }
         },
-        "x-auth": "EntityToken",
-        "x-requestType": "ListBuildsRequest",
-        "x-resultType": "ListBuildsResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -1102,10 +1034,9 @@
         "tags": [
           "GameServer"
         ],
-        "summary": null,
         "description": null,
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/ListCertificates"
+          "url": "https://api.playfab.com/documentation/entity/method/ListCertificates"
         },
         "parameters": [
           {
@@ -1141,9 +1072,6 @@
             "$ref": "#/responses/ApiErrorWrapper"
           }
         },
-        "x-auth": "EntityToken",
-        "x-requestType": "ListCertificatesRequest",
-        "x-resultType": "ListCertificatesResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -1171,10 +1099,9 @@
         "tags": [
           "GameServer"
         ],
-        "summary": null,
         "description": null,
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/ListQosServers"
+          "url": "https://api.playfab.com/documentation/entity/method/ListQosServers"
         },
         "parameters": [
           {
@@ -1210,9 +1137,6 @@
             "$ref": "#/responses/ApiErrorWrapper"
           }
         },
-        "x-auth": "EntityToken",
-        "x-requestType": "ListQosServersRequest",
-        "x-resultType": "ListQosServersResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -1230,10 +1154,9 @@
         "tags": [
           "GameServer"
         ],
-        "summary": null,
         "description": null,
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/ListSessionHosts"
+          "url": "https://api.playfab.com/documentation/entity/method/ListSessionHosts"
         },
         "parameters": [
           {
@@ -1269,9 +1192,6 @@
             "$ref": "#/responses/ApiErrorWrapper"
           }
         },
-        "x-auth": "EntityToken",
-        "x-requestType": "ListSessionHostsRequest",
-        "x-resultType": "ListSessionHostsResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -1294,10 +1214,9 @@
         "tags": [
           "GameServer"
         ],
-        "summary": null,
         "description": null,
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/UpdateBuildRegions"
+          "url": "https://api.playfab.com/documentation/entity/method/UpdateBuildRegions"
         },
         "parameters": [
           {
@@ -1333,9 +1252,6 @@
             "$ref": "#/responses/ApiErrorWrapper"
           }
         },
-        "x-auth": "EntityToken",
-        "x-requestType": "UpdateBuildRegionsRequest",
-        "x-resultType": "UpdateBuildRegionsResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -1359,10 +1275,9 @@
         "tags": [
           "GameServer"
         ],
-        "summary": null,
         "description": null,
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/UploadCertificate"
+          "url": "https://api.playfab.com/documentation/entity/method/UploadCertificate"
         },
         "parameters": [
           {
@@ -1398,9 +1313,6 @@
             "$ref": "#/responses/ApiErrorWrapper"
           }
         },
-        "x-auth": "EntityToken",
-        "x-requestType": "UploadCertificateRequest",
-        "x-resultType": "UploadCertificateResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -1428,10 +1340,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Accepts an outstanding invitation to to join a group",
         "description": "Accepts an outstanding invitation to to join a group",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/AcceptGroupApplication"
+          "url": "https://api.playfab.com/documentation/entity/method/AcceptGroupApplication"
         },
         "parameters": [
           {
@@ -1468,9 +1379,6 @@
           }
         },
         "x-requestDetails": "Accepts an outstanding invitation to to join a group if the invited entity is not blocked by the group. Nothing is returned in the case of success.",
-        "x-auth": "EntityToken",
-        "x-requestType": "AcceptGroupApplicationRequest",
-        "x-resultType": "EmptyResult",
         "x-seeAlso": [
           "Group/ApplyToGroup",
           "Group/ListGroupApplications",
@@ -1487,10 +1395,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Accepts an invitation to join a group",
         "description": "Accepts an invitation to join a group",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/AcceptGroupInvitation"
+          "url": "https://api.playfab.com/documentation/entity/method/AcceptGroupInvitation"
         },
         "parameters": [
           {
@@ -1527,9 +1434,6 @@
           }
         },
         "x-requestDetails": "Accepts an outstanding invitation to join the group if the invited entity is not blocked by the group. Only the invited entity or a parent in its chain (e.g. title) may accept the invitation on the invited entity's behalf. Nothing is returned in the case of success.",
-        "x-auth": "EntityToken",
-        "x-requestType": "AcceptGroupInvitationRequest",
-        "x-resultType": "EmptyResult",
         "x-seeAlso": [
           "Group/InviteToGroup",
           "Group/ListGroupInvitations",
@@ -1547,10 +1451,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Adds members to a group or role.",
         "description": "Adds members to a group or role.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/AddMembers"
+          "url": "https://api.playfab.com/documentation/entity/method/AddMembers"
         },
         "parameters": [
           {
@@ -1587,9 +1490,6 @@
           }
         },
         "x-requestDetails": "Adds members to a group or role. Existing members of the group will added to roles within the group, but if the user is not already a member of the group, only title claimants may add them to the group, and others must use the group application or invite system to add new members to a group. Returns nothing if successful.",
-        "x-auth": "EntityToken",
-        "x-requestType": "AddMembersRequest",
-        "x-resultType": "EmptyResult",
         "x-seeAlso": [
           "Group/ApplyToGroup",
           "Group/InviteToGroup",
@@ -1609,10 +1509,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Applies to join a group",
         "description": "Applies to join a group",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/ApplyToGroup"
+          "url": "https://api.playfab.com/documentation/entity/method/ApplyToGroup"
         },
         "parameters": [
           {
@@ -1649,9 +1548,6 @@
           }
         },
         "x-requestDetails": "Creates an application to join a group. Calling this while a group application already exists will return the same application instead of an error and will not refresh the time before the application expires. By default, if the entity has an invitation to join the group outstanding, this will accept the invitation to join the group instead and return an error indicating such, rather than creating a duplicate application to join that will need to be cleaned up later. Returns information about the application or an error indicating an invitation was accepted instead.",
-        "x-auth": "EntityToken",
-        "x-requestType": "ApplyToGroupRequest",
-        "x-resultType": "ApplyToGroupResponse",
         "x-seeAlso": [
           "Group/AcceptGroupApplication",
           "Group/ListGroupApplications",
@@ -1670,10 +1566,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Blocks a list of entities from joining a group.",
         "description": "Blocks a list of entities from joining a group.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/BlockEntity"
+          "url": "https://api.playfab.com/documentation/entity/method/BlockEntity"
         },
         "parameters": [
           {
@@ -1710,9 +1605,6 @@
           }
         },
         "x-requestDetails": "Blocks a list of entities from joining a group. Blocked entities may not create new applications to join, be invited to join, accept an invitation, or have an application accepted. Failure due to being blocked does not clean up existing applications or invitations to the group. No data is returned in the case of success.",
-        "x-auth": "EntityToken",
-        "x-requestType": "BlockEntityRequest",
-        "x-resultType": "EmptyResult",
         "x-seeAlso": [
           "Group/ListGroupBlocks",
           "Group/UnblockEntity"
@@ -1728,10 +1620,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Changes the role membership of a list of entities from one role to another.",
         "description": "Changes the role membership of a list of entities from one role to another.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/ChangeMemberRole"
+          "url": "https://api.playfab.com/documentation/entity/method/ChangeMemberRole"
         },
         "parameters": [
           {
@@ -1768,9 +1659,6 @@
           }
         },
         "x-requestDetails": "Changes the role membership of a list of entities from one role to another in in a single operation. The destination role must already exist. This is equivalent to adding the entities to the destination role and removing from the origin role. Returns nothing if successful.",
-        "x-auth": "EntityToken",
-        "x-requestType": "ChangeMemberRoleRequest",
-        "x-resultType": "EmptyResult",
         "x-seeAlso": [
           "Group/AddMembers",
           "Group/CreateRole",
@@ -1789,10 +1677,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Creates a new group.",
         "description": "Creates a new group.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/CreateGroup"
+          "url": "https://api.playfab.com/documentation/entity/method/CreateGroup"
         },
         "parameters": [
           {
@@ -1829,9 +1716,6 @@
           }
         },
         "x-requestDetails": "Creates a new group, as well as administration and member roles, based off of a title's group template. Returns information about the group that was created.",
-        "x-auth": "EntityToken",
-        "x-requestType": "CreateGroupRequest",
-        "x-resultType": "CreateGroupResponse",
         "x-seeAlso": [
           "Group/AddMembers",
           "Group/ApplyToGroup",
@@ -1853,10 +1737,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Creates a new group role.",
         "description": "Creates a new group role.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/CreateRole"
+          "url": "https://api.playfab.com/documentation/entity/method/CreateRole"
         },
         "parameters": [
           {
@@ -1893,9 +1776,6 @@
           }
         },
         "x-requestDetails": "Creates a new role within an existing group, with no members. Both the role ID and role name must be unique within the group, but the name can be the same as the ID. The role ID is set at creation and cannot be changed. Returns information about the role that was created.",
-        "x-auth": "EntityToken",
-        "x-requestType": "CreateGroupRoleRequest",
-        "x-resultType": "CreateGroupRoleResponse",
         "x-seeAlso": [
           "Group/DeleteRole"
         ],
@@ -1912,10 +1792,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Deletes a group and all roles, invitations, join requests, and blocks associated with it.",
         "description": "Deletes a group and all roles, invitations, join requests, and blocks associated with it.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/DeleteGroup"
+          "url": "https://api.playfab.com/documentation/entity/method/DeleteGroup"
         },
         "parameters": [
           {
@@ -1952,9 +1831,6 @@
           }
         },
         "x-requestDetails": "Deletes a group and all roles, invitations, join requests, and blocks associated with it. Permission to delete is only required the group itself to execute this action. The group and data cannot be cannot be recovered once removed, but any abuse reports about the group will remain. No data is returned in the case of success.",
-        "x-auth": "EntityToken",
-        "x-requestType": "DeleteGroupRequest",
-        "x-resultType": "EmptyResult",
         "x-seeAlso": [
           "Group/CreateGroup"
         ],
@@ -1969,10 +1845,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Deletes an existing role in a group.",
         "description": "Deletes an existing role in a group.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/DeleteRole"
+          "url": "https://api.playfab.com/documentation/entity/method/DeleteRole"
         },
         "parameters": [
           {
@@ -2009,9 +1884,6 @@
           }
         },
         "x-requestDetails": "Returns information about the role",
-        "x-auth": "EntityToken",
-        "x-requestType": "DeleteRoleRequest",
-        "x-resultType": "EmptyResult",
         "x-seeAlso": [
           "Group/CreateRole"
         ],
@@ -2027,10 +1899,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Gets information about a group and its roles",
         "description": "Gets information about a group and its roles",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/GetGroup"
+          "url": "https://api.playfab.com/documentation/entity/method/GetGroup"
         },
         "parameters": [
           {
@@ -2067,9 +1938,6 @@
           }
         },
         "x-requestDetails": "Returns the ID, name, role list and other non-membership related information about a group.",
-        "x-auth": "EntityToken",
-        "x-requestType": "GetGroupRequest",
-        "x-resultType": "GetGroupResponse",
         "x-seeAlso": [
           "Group/UpdateGroup"
         ],
@@ -2084,10 +1952,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Invites a player to join a group",
         "description": "Invites a player to join a group",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/InviteToGroup"
+          "url": "https://api.playfab.com/documentation/entity/method/InviteToGroup"
         },
         "parameters": [
           {
@@ -2124,9 +1991,6 @@
           }
         },
         "x-requestDetails": "Invites a player to join a group, if they are not blocked by the group. An optional role can be provided to automatically assign the player to the role if they accept the invitation. By default, if the entity has an application to the group outstanding, this will accept the application instead and return an error indicating such, rather than creating a duplicate invitation to join that will need to be cleaned up later. Returns information about the new invitation or an error indicating an existing application to join was accepted.",
-        "x-auth": "EntityToken",
-        "x-requestType": "InviteToGroupRequest",
-        "x-resultType": "InviteToGroupResponse",
         "x-seeAlso": [
           "Group/AcceptGroupInvitation",
           "Group/ListGroupInvitations",
@@ -2146,10 +2010,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Checks to see if an entity is a member of a group or role within the group",
         "description": "Checks to see if an entity is a member of a group or role within the group",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/IsMember"
+          "url": "https://api.playfab.com/documentation/entity/method/IsMember"
         },
         "parameters": [
           {
@@ -2186,9 +2049,6 @@
           }
         },
         "x-requestDetails": "Checks to see if an entity is a member of a group or role within the group. A result indicating if the entity is a member of the group is returned, or a permission error if the caller does not have permission to read the group's member list.",
-        "x-auth": "EntityToken",
-        "x-requestType": "IsMemberRequest",
-        "x-resultType": "IsMemberResponse",
         "x-seeAlso": [
           "Group/GetGroup"
         ],
@@ -2203,10 +2063,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Lists all outstanding requests to join a group",
         "description": "Lists all outstanding requests to join a group",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/ListGroupApplications"
+          "url": "https://api.playfab.com/documentation/entity/method/ListGroupApplications"
         },
         "parameters": [
           {
@@ -2243,9 +2102,6 @@
           }
         },
         "x-requestDetails": "Lists all outstanding requests to join a group. Returns a list of all requests to join, as well as when the request will expire. To get the group applications for a specific entity, use ListMembershipOpportunities.",
-        "x-auth": "EntityToken",
-        "x-requestType": "ListGroupApplicationsRequest",
-        "x-resultType": "ListGroupApplicationsResponse",
         "x-seeAlso": [
           "Group/AcceptGroupApplication",
           "Group/ApplyToGroup",
@@ -2262,10 +2118,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Lists all entities blocked from joining a group",
         "description": "Lists all entities blocked from joining a group",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/ListGroupBlocks"
+          "url": "https://api.playfab.com/documentation/entity/method/ListGroupBlocks"
         },
         "parameters": [
           {
@@ -2302,9 +2157,6 @@
           }
         },
         "x-requestDetails": "Lists all entities blocked from joining a group. A list of blocked entities is returned",
-        "x-auth": "EntityToken",
-        "x-requestType": "ListGroupBlocksRequest",
-        "x-resultType": "ListGroupBlocksResponse",
         "x-seeAlso": [
           "Group/BlockEntity",
           "Group/UnblockEntity"
@@ -2320,10 +2172,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Lists all outstanding invitations for a group",
         "description": "Lists all outstanding invitations for a group",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/ListGroupInvitations"
+          "url": "https://api.playfab.com/documentation/entity/method/ListGroupInvitations"
         },
         "parameters": [
           {
@@ -2360,9 +2211,6 @@
           }
         },
         "x-requestDetails": "Lists all outstanding invitations for a group. Returns a list of entities that have been invited, as well as when the invitation will expire. To get the group invitations for a specific entity, use ListMembershipOpportunities.",
-        "x-auth": "EntityToken",
-        "x-requestType": "ListGroupInvitationsRequest",
-        "x-resultType": "ListGroupInvitationsResponse",
         "x-seeAlso": [
           "Group/AcceptGroupInvitation",
           "Group/InviteToGroup",
@@ -2380,10 +2228,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Lists all members for a group",
         "description": "Lists all members for a group",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/ListGroupMembers"
+          "url": "https://api.playfab.com/documentation/entity/method/ListGroupMembers"
         },
         "parameters": [
           {
@@ -2420,9 +2267,6 @@
           }
         },
         "x-requestDetails": "Gets a list of members and the roles they belong to within the group. If the caller does not have permission to view the role, and the member is in no other role, the member is not displayed. Returns a list of entities that are members of the group.",
-        "x-auth": "EntityToken",
-        "x-requestType": "ListGroupMembersRequest",
-        "x-resultType": "ListGroupMembersResponse",
         "x-seeAlso": [
           "Group/ListMembership"
         ],
@@ -2437,10 +2281,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Lists all groups and roles for an entity",
         "description": "Lists all groups and roles for an entity",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/ListMembership"
+          "url": "https://api.playfab.com/documentation/entity/method/ListMembership"
         },
         "parameters": [
           {
@@ -2477,9 +2320,6 @@
           }
         },
         "x-requestDetails": "Lists the groups and roles that an entity is a part of, checking to see if group and role metadata and memberships should be visible to the caller. If the entity is not in any roles that are visible to the caller, the group is not returned in the results, even if the caller otherwise has permission to see that the entity is a member of that group.",
-        "x-auth": "EntityToken",
-        "x-requestType": "ListMembershipRequest",
-        "x-resultType": "ListMembershipResponse",
         "x-seeAlso": [
           "Group/ListGroupMembers",
           "Group/ListMembershipOpportunities"
@@ -2495,10 +2335,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Lists all outstanding invitations and group applications for an entity",
         "description": "Lists all outstanding invitations and group applications for an entity",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/ListMembershipOpportunities"
+          "url": "https://api.playfab.com/documentation/entity/method/ListMembershipOpportunities"
         },
         "parameters": [
           {
@@ -2535,9 +2374,6 @@
           }
         },
         "x-requestDetails": "Lists all outstanding group applications and invitations for an entity. Anyone may call this for any entity, but data will only be returned for the entity or a parent of that entity. To list invitations or applications for a group to check if a player is trying to join, use ListGroupInvitations and ListGroupApplications.",
-        "x-auth": "EntityToken",
-        "x-requestType": "ListMembershipOpportunitiesRequest",
-        "x-resultType": "ListMembershipOpportunitiesResponse",
         "x-seeAlso": [
           "Group/ListGroupApplications",
           "Group/ListGroupInvitations"
@@ -2553,10 +2389,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Removes an application to join a group",
         "description": "Removes an application to join a group",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/RemoveGroupApplication"
+          "url": "https://api.playfab.com/documentation/entity/method/RemoveGroupApplication"
         },
         "parameters": [
           {
@@ -2593,9 +2428,6 @@
           }
         },
         "x-requestDetails": "Removes an existing application to join the group. This is used for both rejection of an application as well as withdrawing an application. The applying entity or a parent in its chain (e.g. title) may withdraw the application, and any caller with appropriate access in the group may reject an application. No data is returned in the case of success.",
-        "x-auth": "EntityToken",
-        "x-requestType": "RemoveGroupApplicationRequest",
-        "x-resultType": "EmptyResult",
         "x-seeAlso": [
           "Group/AcceptGroupApplication",
           "Group/ApplyToGroup",
@@ -2613,10 +2445,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Removes an invitation join a group",
         "description": "Removes an invitation join a group",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/RemoveGroupInvitation"
+          "url": "https://api.playfab.com/documentation/entity/method/RemoveGroupInvitation"
         },
         "parameters": [
           {
@@ -2653,9 +2484,6 @@
           }
         },
         "x-requestDetails": "Removes an existing invitation to join the group. This is used for both rejection of an invitation as well as rescinding an invitation. The invited entity or a parent in its chain (e.g. title) may reject the invitation by calling this method, and any caller with appropriate access in the group may rescind an invitation. No data is returned in the case of success.",
-        "x-auth": "EntityToken",
-        "x-requestType": "RemoveGroupInvitationRequest",
-        "x-resultType": "EmptyResult",
         "x-seeAlso": [
           "Group/AcceptGroupInvitation",
           "Group/InviteToGroup",
@@ -2673,10 +2501,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Removes members from a group.",
         "description": "Removes members from a group.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/RemoveMembers"
+          "url": "https://api.playfab.com/documentation/entity/method/RemoveMembers"
         },
         "parameters": [
           {
@@ -2713,9 +2540,6 @@
           }
         },
         "x-requestDetails": "Removes members from a group. A member can always remove themselves from a group, regardless of permissions. Returns nothing if successful.",
-        "x-auth": "EntityToken",
-        "x-requestType": "RemoveMembersRequest",
-        "x-resultType": "EmptyResult",
         "x-seeAlso": [
           "Group/AddMembers",
           "Group/ListGroupMembers"
@@ -2731,10 +2555,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Unblocks a list of entities from joining a group",
         "description": "Unblocks a list of entities from joining a group",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/UnblockEntity"
+          "url": "https://api.playfab.com/documentation/entity/method/UnblockEntity"
         },
         "parameters": [
           {
@@ -2771,9 +2594,6 @@
           }
         },
         "x-requestDetails": "Unblocks a list of entities from joining a group. No data is returned in the case of success.",
-        "x-auth": "EntityToken",
-        "x-requestType": "UnblockEntityRequest",
-        "x-resultType": "EmptyResult",
         "x-seeAlso": [
           "Group/BlockEntity",
           "Group/ListGroupBlocks"
@@ -2789,10 +2609,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Updates non-membership data about a group.",
         "description": "Updates non-membership data about a group.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/UpdateGroup"
+          "url": "https://api.playfab.com/documentation/entity/method/UpdateGroup"
         },
         "parameters": [
           {
@@ -2829,9 +2648,6 @@
           }
         },
         "x-requestDetails": "Updates data about a group, such as the name or default member role. Returns information about whether the update was successful. Only title claimants may modify the administration role for a group.",
-        "x-auth": "EntityToken",
-        "x-requestType": "UpdateGroupRequest",
-        "x-resultType": "UpdateGroupResponse",
         "x-seeAlso": [
           "Group/CreateGroup",
           "Group/DeleteGroup",
@@ -2849,10 +2665,9 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Updates metadata about a role.",
         "description": "Updates metadata about a role.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/UpdateRole"
+          "url": "https://api.playfab.com/documentation/entity/method/UpdateRole"
         },
         "parameters": [
           {
@@ -2889,9 +2704,6 @@
           }
         },
         "x-requestDetails": "Updates the role name. Returns information about whether the update was successful.",
-        "x-auth": "EntityToken",
-        "x-requestType": "UpdateGroupRoleRequest",
-        "x-resultType": "UpdateGroupRoleResponse",
         "x-seeAlso": [
           "Group/CreateRole",
           "Group/DeleteRole"
@@ -2908,10 +2720,9 @@
         "tags": [
           "Matchmaking"
         ],
-        "summary": "Cancel a matchmaking ticket.",
         "description": "Cancel a matchmaking ticket.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/CancelMatchmakingTicket"
+          "url": "https://api.playfab.com/documentation/entity/method/CancelMatchmakingTicket"
         },
         "parameters": [
           {
@@ -2948,9 +2759,6 @@
           }
         },
         "x-requestDetails": "Users can cancel a matchmaking ticket at anytime. Anyone in the matchmaking ticket can cancel         it. We do not allow resubmitting a cancelled ticket because the players         must consent to enter matchmaking again after the cancellation which is the         same as creating a new ticket.         The ticket can be in different states when it is cancelled:         * The ticket has not started matching because not everyone has joined the ticket.          If the ticket is cancelled, it will be deleted and never match.         * The ticket is matching. If the ticket is cancelled, it will stop matching          and it will be deleted.         * The ticket has been matched. A matched ticket cannot be cancelled.         There may be race conditions due to latency between the ticket being matched and         the client being notified the match is ready. The client must handle the possibility         that the cancel request may fail if the match has been made but the notification         has not arrived.",
-        "x-auth": "EntityToken",
-        "x-requestType": "CancelMatchmakingTicketRequest",
-        "x-resultType": "CancelMatchmakingTicketResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -2971,10 +2779,9 @@
         "tags": [
           "Matchmaking"
         ],
-        "summary": "Create a matchmaking ticket as a client.",
         "description": "Create a matchmaking ticket as a client.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/CreateMatchmakingTicket"
+          "url": "https://api.playfab.com/documentation/entity/method/CreateMatchmakingTicket"
         },
         "parameters": [
           {
@@ -3011,9 +2818,6 @@
           }
         },
         "x-requestDetails": "The client specifies the creator's attributes and optionally a list of other users to match with.",
-        "x-auth": "EntityToken",
-        "x-requestType": "CreateMatchmakingTicketRequest",
-        "x-resultType": "CreateMatchmakingTicketResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -3038,10 +2842,9 @@
         "tags": [
           "Matchmaking"
         ],
-        "summary": "Create a matchmaking ticket as a server.",
         "description": "Create a matchmaking ticket as a server.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/CreateServerMatchmakingTicket"
+          "url": "https://api.playfab.com/documentation/entity/method/CreateServerMatchmakingTicket"
         },
         "parameters": [
           {
@@ -3078,9 +2881,6 @@
           }
         },
         "x-requestDetails": "The server specifies all the creators and their attributes.",
-        "x-auth": "EntityToken",
-        "x-requestType": "CreateServerMatchmakingTicketRequest",
-        "x-resultType": "CreateMatchmakingTicketResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -3103,10 +2903,9 @@
         "tags": [
           "Matchmaking"
         ],
-        "summary": "Get a match.",
         "description": "Get a match.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/GetMatch"
+          "url": "https://api.playfab.com/documentation/entity/method/GetMatch"
         },
         "parameters": [
           {
@@ -3143,9 +2942,6 @@
           }
         },
         "x-requestDetails": "When matchmaking has successfully matched together a collection of         tickets, it produces a 'match' with an ID. The match contains all of         the players that were matched together, server connection information,         etc. The match ID is usually sent to the matched players using the         activity service.         Only the players in the original ticket can get the match.",
-        "x-auth": "EntityToken",
-        "x-requestType": "GetMatchRequest",
-        "x-resultType": "GetMatchResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -3163,10 +2959,9 @@
         "tags": [
           "Matchmaking"
         ],
-        "summary": "Get a matchmaking ticket by ticket ID.",
         "description": "Get a matchmaking ticket by ticket ID.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/GetMatchmakingTicket"
+          "url": "https://api.playfab.com/documentation/entity/method/GetMatchmakingTicket"
         },
         "parameters": [
           {
@@ -3203,9 +2998,6 @@
           }
         },
         "x-requestDetails": "The ticket includes the players who have joined, their attributes,         who still hasn't joined, etc. Only the ticket creator and invited players can get the ticket.",
-        "x-auth": "EntityToken",
-        "x-requestType": "GetMatchmakingTicketRequest",
-        "x-resultType": "GetMatchmakingTicketResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -3225,10 +3017,9 @@
         "tags": [
           "Matchmaking"
         ],
-        "summary": "Join a matchmaking ticket.",
         "description": "Join a matchmaking ticket.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/JoinMatchmakingTicket"
+          "url": "https://api.playfab.com/documentation/entity/method/JoinMatchmakingTicket"
         },
         "parameters": [
           {
@@ -3265,9 +3056,6 @@
           }
         },
         "x-requestDetails": "Add the user to a matchmaking ticket and specify all the user's matchmaking         attributes. Users can only join a ticket if and only if they were 'invited'         to join the ticket by the ticket creator in the CreateMatchmakingTicket         call.         The matchmaking service automatically starts matching the ticket against         other matchmaking tickets once all players have joined the ticket. Therefore,         it is not possible to join a ticket once it has started matching.",
-        "x-auth": "EntityToken",
-        "x-requestType": "JoinMatchmakingTicketRequest",
-        "x-resultType": "JoinMatchmakingTicketResult",
         "x-AnyInclusiveFlags": [
           "Beta"
         ],
@@ -3293,10 +3081,9 @@
         "tags": [
           "Object"
         ],
-        "summary": "Retrieves objects from an entity's profile.",
         "description": "Retrieves objects from an entity's profile.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/GetObjects"
+          "url": "https://api.playfab.com/documentation/entity/method/GetObjects"
         },
         "parameters": [
           {
@@ -3333,9 +3120,6 @@
           }
         },
         "x-requestDetails": "Gets JSON objects from an entity profile and returns it. ",
-        "x-auth": "EntityToken",
-        "x-requestType": "GetObjectsRequest",
-        "x-resultType": "GetObjectsResponse",
         "x-seeAlso": [
           "Object/SetObjects"
         ]
@@ -3346,10 +3130,9 @@
         "tags": [
           "Object"
         ],
-        "summary": "Sets objects on an entity's profile.",
         "description": "Sets objects on an entity's profile.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/SetObjects"
+          "url": "https://api.playfab.com/documentation/entity/method/SetObjects"
         },
         "parameters": [
           {
@@ -3386,9 +3169,6 @@
           }
         },
         "x-requestDetails": "Sets JSON objects on the requested entity profile. May include a version number to be used to perform optimistic concurrency operations during update. If the current version differs from the version in the request the request will be ignored. If no version is set on the request then the value will always be updated if the values differ. Using the version value does not guarantee a write though, ConcurrentEditError may still occur if multiple clients are attempting to update the same profile. ",
-        "x-auth": "EntityToken",
-        "x-requestType": "SetObjectsRequest",
-        "x-resultType": "SetObjectsResponse",
         "x-seeAlso": [
           "Object/GetObjects"
         ],
@@ -3402,10 +3182,9 @@
         "tags": [
           "Account Management"
         ],
-        "summary": "Gets the global title access policy ",
         "description": "Gets the global title access policy ",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/GetGlobalPolicy"
+          "url": "https://api.playfab.com/documentation/entity/method/GetGlobalPolicy"
         },
         "parameters": [
           {
@@ -3442,9 +3221,6 @@
           }
         },
         "x-requestDetails": "Retrieves the title access policy that is used before the profile's policy is inspected during a request. If never customized this will return the default starter policy built by PlayFab.",
-        "x-auth": "EntityToken",
-        "x-requestType": "GetGlobalPolicyRequest",
-        "x-resultType": "GetGlobalPolicyResponse",
         "x-seeAlso": [
           "Profile/GetProfile"
         ],
@@ -3458,10 +3234,9 @@
         "tags": [
           "Account Management"
         ],
-        "summary": "Retrieves the entity's profile.",
         "description": "Retrieves the entity's profile.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/GetProfile"
+          "url": "https://api.playfab.com/documentation/entity/method/GetProfile"
         },
         "parameters": [
           {
@@ -3498,9 +3273,6 @@
           }
         },
         "x-requestDetails": "Given an entity type and entity identifier will retrieve the profile from the entity store. If the profile being retrieved is the caller's, then the read operation is consistent, if not it is an inconsistent read. An inconsistent read means that we do not guarantee all committed writes have occurred before reading the profile, allowing for a stale read. If consistency is important the Version Number on the result can be used to compare which version of the profile any reader has.",
-        "x-auth": "EntityToken",
-        "x-requestType": "GetEntityProfileRequest",
-        "x-resultType": "GetEntityProfileResponse",
         "x-errors": [
           "NotAuthenticated",
           "NotAuthorized",
@@ -3513,10 +3285,9 @@
         "tags": [
           "Account Management"
         ],
-        "summary": "Retrieves the entity's profile.",
         "description": "Retrieves the entity's profile.",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/GetProfiles"
+          "url": "https://api.playfab.com/documentation/entity/method/GetProfiles"
         },
         "parameters": [
           {
@@ -3553,9 +3324,6 @@
           }
         },
         "x-requestDetails": "Given a set of entity types and entity identifiers will retrieve all readable profiles properties for the caller. Profiles that the caller is not allowed to read will silently not be included in the results.",
-        "x-auth": "EntityToken",
-        "x-requestType": "GetEntityProfilesRequest",
-        "x-resultType": "GetEntityProfilesResponse",
         "x-errors": [
           "NotAuthenticated",
           "NotAuthorized",
@@ -3568,10 +3336,9 @@
         "tags": [
           "Account Management"
         ],
-        "summary": "Sets the global title access policy ",
         "description": "Sets the global title access policy ",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/SetGlobalPolicy"
+          "url": "https://api.playfab.com/documentation/entity/method/SetGlobalPolicy"
         },
         "parameters": [
           {
@@ -3608,9 +3375,6 @@
           }
         },
         "x-requestDetails": "Updates the title access policy that is used before the profile's policy is inspected during a request. Policies are compiled and cached for several minutes so an update here may not be reflected in behavior for a short time.",
-        "x-auth": "EntityToken",
-        "x-requestType": "SetGlobalPolicyRequest",
-        "x-resultType": "SetGlobalPolicyResponse",
         "x-seeAlso": [
           "Profile/GetProfile"
         ],
@@ -3624,10 +3388,9 @@
         "tags": [
           "Account Management"
         ],
-        "summary": "Sets the profiles access policy",
         "description": "Sets the profiles access policy",
         "externalDocs": {
-          "url": "https://api.playfab.com/documentation/Entity/Method/SetProfilePolicy"
+          "url": "https://api.playfab.com/documentation/entity/method/SetProfilePolicy"
         },
         "parameters": [
           {
@@ -3664,9 +3427,6 @@
           }
         },
         "x-requestDetails": "This will set the access policy statements on the given entity profile. This is not additive, any existing statements will be replaced with the statements in this request.",
-        "x-auth": "EntityToken",
-        "x-requestType": "SetEntityProfilePolicyRequest",
-        "x-resultType": "SetEntityProfilePolicyResponse",
         "x-seeAlso": [
           "Profile/GetProfile"
         ],
@@ -3679,6 +3439,42 @@
     }
   },
   "definitions": {
+    "ApiErrorWrapper": {
+      "description": "The basic wrapper around every failed API result",
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "Numerical HTTP code",
+          "x-jsontype": "Number",
+          "x-actualtype": "int32"
+        },
+        "status": {
+          "description": "String HTTP code",
+          "x-jsontype": "String",
+          "x-actualtype": "String"
+        },
+        "error": {
+          "description": "Playfab error code",
+          "x-jsontype": "String",
+          "x-actualtype": "String"
+        },
+        "errorCode": {
+          "description": "Numerical Playfab error code",
+          "x-jsontype": "Number",
+          "x-actualtype": "int32"
+        },
+        "errorMessage": {
+          "description": "Description for the Playfab errorCode",
+          "x-jsontype": "String",
+          "x-actualtype": "String"
+        },
+        "errorDetails": {
+          "description": "Detailed description of individual issues with the request object",
+          "x-jsontype": "object",
+          "x-actualtype": "object"
+        }
+      }
+    },
     "AbortFileUploadsRequest": {
       "type": "object",
       "properties": {
@@ -3687,24 +3483,24 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "FileNames": {
           "description": "Names of the files to have their pending uploads aborted.",
           "x-collection": "array",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "ProfileVersion": {
           "description": "The expected version of the profile, if set and doesn't match the current version of the profile the operation will not be performed.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": true
+          "x-actualtype": "int32"
         }
       },
-      "x-ClassName": "AbortFileUploadsRequest"
+      "required": [
+        "FileNames",
+        "Entity"
+      ]
     },
     "AbortFileUploadsResponse": {
       "type": "object",
@@ -3714,17 +3510,17 @@
           "description": "The entity id and type.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "ProfileVersion": {
           "description": "The current version of the profile, can be used for concurrency control during updates.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         }
       },
-      "x-ClassName": "AbortFileUploadsResponse"
+      "required": [
+        "ProfileVersion"
+      ]
     },
     "AcceptGroupApplicationRequest": {
       "type": "object",
@@ -3734,19 +3530,20 @@
           "description": "Optional. Type of the entity to accept as. If specified, must be the same entity as the claimant or an entity that is a child of the claimant entity. Defaults to the claimant entity.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "AcceptGroupApplicationRequest"
+      "required": [
+        "Group",
+        "Entity"
+      ]
     },
     "AcceptGroupInvitationRequest": {
       "type": "object",
@@ -3756,19 +3553,19 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "AcceptGroupInvitationRequest"
+      "required": [
+        "Group"
+      ]
     },
     "AddMembersRequest": {
       "type": "object",
@@ -3778,8 +3575,7 @@
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "Members": {
           "$ref": "#/definitions/EntityKey",
@@ -3787,17 +3583,18 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "RoleId": {
           "description": "Optional: The ID of the existing role to add the entities to. If this is not specified, the default member role for the group will be used. Role IDs must be between 1 and 64 characters long.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "AddMembersRequest"
+      "required": [
+        "Group",
+        "Members"
+      ]
     },
     "AllocateSessionHostRequest": {
       "type": "object",
@@ -3805,29 +3602,29 @@
         "BuildId": {
           "description": "BuildId to allocate against",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "PreferredRegions": {
           "$ref": "#/definitions/AzureRegion",
           "x-collection": "array",
           "x-jsontype": "String",
           "x-actualtype": "AzureRegion",
-          "x-isenum": true,
-          "x-optional": false
+          "x-isenum": true
         },
         "SessionCookie": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "SessionId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "AllocateSessionHostRequest",
+      "required": [
+        "BuildId",
+        "SessionId",
+        "PreferredRegions"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -3840,51 +3637,42 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "ConnectedPlayer",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "IPv4Address": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Ports": {
           "$ref": "#/definitions/Port",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "Port",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "Region": {
           "$ref": "#/definitions/AzureRegion",
           "x-jsontype": "String",
           "x-actualtype": "AzureRegion",
-          "x-isenum": true,
-          "x-optional": true
+          "x-isenum": true
         },
         "SessionHostId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "SessionId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "State": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "VmId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "AllocateSessionHostResultResult",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -3895,27 +3683,26 @@
         "AutoAcceptOutstandingInvite": {
           "description": "Optional, default true. Automatically accept an outstanding invitation if one exists instead of creating an application",
           "x-jsontype": "Boolean",
-          "x-actualtype": "Boolean",
-          "x-optional": true
+          "x-actualtype": "Boolean"
         },
         "Entity": {
           "$ref": "#/definitions/EntityKey",
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "ApplyToGroupRequest"
+      "required": [
+        "Group"
+      ]
     },
     "ApplyToGroupResponse": {
       "description": "Describes an application to join a group",
@@ -3926,41 +3713,37 @@
           "description": "Type of entity that requested membership",
           "x-jsontype": "Object",
           "x-actualtype": "EntityWithLineage",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "Expires": {
           "description": "When the application to join will expire and be deleted",
           "x-jsontype": "String",
-          "x-actualtype": "DateTime",
-          "x-optional": false
+          "x-actualtype": "DateTime"
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "ID of the group that the entity requesting membership to",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
       },
-      "x-ClassName": "ApplyToGroupResponse"
+      "required": [
+        "Expires"
+      ]
     },
     "AssetReference": {
       "type": "object",
       "properties": {
         "MountPath": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Name": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "AssetReference",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -3970,16 +3753,13 @@
       "properties": {
         "MountPath": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Name": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "AssetReferenceParams",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -3990,16 +3770,13 @@
         "Metadata": {
           "x-collection": "map",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Name": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "AssetSummary",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4013,7 +3790,6 @@
         "NorthEurope",
         "WestEurope"
       ],
-      "x-ClassName": "AzureRegion",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4043,7 +3819,6 @@
         "Standard_NV12",
         "Standard_NV24"
       ],
-      "x-ClassName": "AzureVmSize",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4056,49 +3831,49 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "BlockEntityRequest"
+      "required": [
+        "Group",
+        "Entity"
+      ]
     },
     "BuildRegion": {
       "type": "object",
       "properties": {
         "MaxSessions": {
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         },
         "Region": {
           "$ref": "#/definitions/AzureRegion",
           "x-jsontype": "String",
           "x-actualtype": "AzureRegion",
-          "x-isenum": true,
-          "x-optional": true
+          "x-isenum": true
         },
         "StandbySessions": {
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         },
         "Status": {
           "$ref": "#/definitions/BuildRegionStatus",
           "x-jsontype": "String",
           "x-actualtype": "BuildRegionStatus",
-          "x-isenum": true,
-          "x-optional": true
+          "x-isenum": true
         }
       },
-      "x-ClassName": "BuildRegion",
+      "required": [
+        "MaxSessions",
+        "StandbySessions"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4108,21 +3883,22 @@
       "properties": {
         "MaxSessions": {
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         },
         "Region": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "StandbySessions": {
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         }
       },
-      "x-ClassName": "BuildRegionParams",
+      "required": [
+        "Region",
+        "MaxSessions",
+        "StandbySessions"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4137,7 +3913,6 @@
         "PendingDeletion",
         "Deleted"
       ],
-      "x-ClassName": "BuildRegionStatus",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4147,71 +3922,67 @@
       "properties": {
         "BuildId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "BuildName": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "ContainerFlavor": {
           "$ref": "#/definitions/ContainerFlavor",
           "x-jsontype": "String",
           "x-actualtype": "ContainerFlavor",
-          "x-isenum": true,
-          "x-optional": true
+          "x-isenum": true
         },
         "GameAssetReferences": {
           "$ref": "#/definitions/AssetReference",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "AssetReference",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "GameCertificateReferences": {
           "x-collection": "array",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "MappedPorts": {
           "$ref": "#/definitions/Port",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "Port",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "Metadata": {
           "x-collection": "map",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "RegionConfigurations": {
           "$ref": "#/definitions/BuildRegion",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "BuildRegion",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
+        },
+        "SessionHostCountPerVm": {
+          "x-jsontype": "Number",
+          "x-actualtype": "int32"
         },
         "StartGameCommand": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "VmSize": {
           "$ref": "#/definitions/AzureVmSize",
           "x-jsontype": "String",
           "x-actualtype": "AzureVmSize",
-          "x-isenum": true,
-          "x-optional": true
+          "x-isenum": true
         }
       },
-      "x-ClassName": "BuildSummary",
+      "required": [
+        "SessionHostCountPerVm"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4224,23 +3995,23 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "HopperId": {
           "description": "The Id of the hopper to join.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "TicketId": {
           "description": "The Id of the ticket to find a match for.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "CancelMatchmakingTicketRequest",
+      "required": [
+        "TicketId",
+        "HopperId"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4248,7 +4019,6 @@
     "CancelMatchmakingTicketResult": {
       "type": "object",
       "properties": {},
-      "x-ClassName": "CancelMatchmakingTicketResult",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4258,21 +4028,17 @@
       "properties": {
         "Base64EncodedValue": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Name": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Password": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "Certificate",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4282,16 +4048,13 @@
       "properties": {
         "Name": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Thumbprint": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "CertificateSummary",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4302,16 +4065,14 @@
         "DestinationRoleId": {
           "description": "The ID of the role that the entities will become a member of. This must be an existing role. Role IDs must be between 1 and 64 characters long.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "Members": {
           "$ref": "#/definitions/EntityKey",
@@ -4319,28 +4080,28 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "OriginRoleId": {
           "description": "The ID of the role that the entities currently are a member of. Role IDs must be between 1 and 64 characters long.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "ChangeMemberRoleRequest"
+      "required": [
+        "Group",
+        "OriginRoleId",
+        "Members"
+      ]
     },
     "ConnectedPlayer": {
       "type": "object",
       "properties": {
         "PlayerId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "ConnectedPlayer",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4350,26 +4111,6 @@
       "enum": [
         "WindowsServerCorePlayFab"
       ],
-      "x-ClassName": "ContainerFlavor",
-      "x-AnyInclusiveFlags": [
-        "Beta"
-      ]
-    },
-    "ContainerImageReferenceParams": {
-      "type": "object",
-      "properties": {
-        "ImageName": {
-          "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
-        },
-        "Tag": {
-          "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
-        }
-      },
-      "x-ClassName": "ContainerImageReferenceParams",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4379,78 +4120,66 @@
       "properties": {
         "BuildName": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "ContainerFlavor": {
           "$ref": "#/definitions/ContainerFlavor",
           "x-jsontype": "String",
           "x-actualtype": "ContainerFlavor",
-          "x-isenum": true,
-          "x-optional": true
+          "x-isenum": true
         },
         "GameAssetReferences": {
           "$ref": "#/definitions/AssetReferenceParams",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "AssetReferenceParams",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "GameCertificateReferences": {
           "x-collection": "array",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
-        },
-        "GameContainerImage": {
-          "$ref": "#/definitions/ContainerImageReferenceParams",
-          "x-jsontype": "Object",
-          "x-actualtype": "ContainerImageReferenceParams",
-          "x-isclass": true,
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "MappedPorts": {
           "$ref": "#/definitions/Port",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "Port",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "Metadata": {
           "x-collection": "map",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "RegionConfiguration": {
           "$ref": "#/definitions/BuildRegionParams",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "BuildRegionParams",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "SessionHostCountPerVm": {
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         },
         "StartGameCommand": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "VmSize": {
           "$ref": "#/definitions/AzureVmSize",
           "x-jsontype": "String",
           "x-actualtype": "AzureVmSize",
-          "x-isenum": true,
-          "x-optional": true
+          "x-isenum": true
         }
       },
-      "x-ClassName": "CreateBuildRequest",
+      "required": [
+        "BuildName",
+        "SessionHostCountPerVm",
+        "MappedPorts",
+        "RegionConfiguration"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4462,11 +4191,9 @@
           "$ref": "#/definitions/BuildSummary",
           "x-jsontype": "Object",
           "x-actualtype": "BuildSummary",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
       },
-      "x-ClassName": "CreateBuildResult",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4479,17 +4206,17 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "GroupName": {
           "description": "The name of the group. This is unique at the title level by default.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "CreateGroupRequest"
+      "required": [
+        "GroupName"
+      ]
     },
     "CreateGroupResponse": {
       "type": "object",
@@ -4497,50 +4224,47 @@
         "AdminRoleId": {
           "description": "The ID of the administrator role for the group.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Created": {
           "description": "The server date and time the group was created.",
           "x-jsontype": "String",
-          "x-actualtype": "DateTime",
-          "x-optional": false
+          "x-actualtype": "DateTime"
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "GroupName": {
           "description": "The name of the group.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "MemberRoleId": {
           "description": "The ID of the default member role for the group.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "ProfileVersion": {
           "description": "The current version of the profile, can be used for concurrency control during updates.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         },
         "Roles": {
           "description": "The list of roles and names that belong to the group.",
           "x-collection": "map",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "CreateGroupResponse"
+      "required": [
+        "Group",
+        "Created",
+        "ProfileVersion"
+      ]
     },
     "CreateGroupRoleRequest": {
       "type": "object",
@@ -4550,23 +4274,24 @@
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "RoleId": {
           "description": "The ID of the role. This must be unique within the group and cannot be changed. Role IDs must be between 1 and 64 characters long.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "RoleName": {
           "description": "The name of the role. This must be unique within the group and can be changed later. Role names must be between 1 and 100 characters long",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "CreateGroupRoleRequest"
+      "required": [
+        "RoleId",
+        "RoleName",
+        "Group"
+      ]
     },
     "CreateGroupRoleResponse": {
       "type": "object",
@@ -4574,23 +4299,22 @@
         "ProfileVersion": {
           "description": "The current version of the group profile, can be used for concurrency control during updates.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         },
         "RoleId": {
           "description": "ID for the role",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "RoleName": {
           "description": "The name of the role",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "CreateGroupRoleResponse"
+      "required": [
+        "ProfileVersion"
+      ]
     },
     "CreateMatchmakingTicketRequest": {
       "type": "object",
@@ -4600,28 +4324,24 @@
           "description": "The User who created this ticket.",
           "x-jsontype": "Object",
           "x-actualtype": "MatchmakingUser",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "Entity": {
           "$ref": "#/definitions/EntityKey",
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "GiveUpAfterSeconds": {
           "description": "How long to attempt matching this ticket in seconds.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         },
         "HopperId": {
           "description": "The Id of a match hopper.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "MembersToMatchWith": {
           "$ref": "#/definitions/EntityKey",
@@ -4629,11 +4349,14 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
       },
-      "x-ClassName": "CreateMatchmakingTicketRequest",
+      "required": [
+        "Creator",
+        "GiveUpAfterSeconds",
+        "HopperId"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4644,11 +4367,12 @@
         "TicketId": {
           "description": "The Id of the ticket to find a match for.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "CreateMatchmakingTicketResult",
+      "required": [
+        "TicketId"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4658,39 +4382,39 @@
       "properties": {
         "BuildId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "ExpirationTime": {
           "description": "The expiration time for the remote user created. Defaults to expiring in one day if not specified.",
           "x-jsontype": "String",
-          "x-actualtype": "DateTime",
-          "x-optional": true
+          "x-actualtype": "DateTime"
         },
         "Password": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "Region": {
           "$ref": "#/definitions/AzureRegion",
           "x-jsontype": "String",
           "x-actualtype": "AzureRegion",
-          "x-isenum": true,
-          "x-optional": false
+          "x-isenum": true
         },
         "Username": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "VmId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "CreateRemoteUserRequest",
+      "required": [
+        "BuildId",
+        "Region",
+        "VmId",
+        "Username",
+        "Password"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4698,7 +4422,6 @@
     "CreateRemoteUserResult": {
       "type": "object",
       "properties": {},
-      "x-ClassName": "CreateRemoteUserResult",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4711,20 +4434,17 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "GiveUpAfterSeconds": {
           "description": "How long to attempt matching this ticket in seconds.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         },
         "HopperId": {
           "description": "The Id of a match hopper.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "Members": {
           "$ref": "#/definitions/MatchmakingUser",
@@ -4732,11 +4452,14 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "MatchmakingUser",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "CreateServerMatchmakingTicketRequest",
+      "required": [
+        "Members",
+        "GiveUpAfterSeconds",
+        "HopperId"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4746,11 +4469,12 @@
       "properties": {
         "BuildId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "DeleteBuildRequest",
+      "required": [
+        "BuildId"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4758,7 +4482,6 @@
     "DeleteBuildResult": {
       "type": "object",
       "properties": {},
-      "x-ClassName": "DeleteBuildResult",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -4771,24 +4494,24 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "FileNames": {
           "description": "Names of the files to be deleted.",
           "x-collection": "array",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "ProfileVersion": {
           "description": "The expected version of the profile, if set and doesn't match the current version of the profile the operation will not be performed.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": true
+          "x-actualtype": "int32"
         }
       },
-      "x-ClassName": "DeleteFilesRequest"
+      "required": [
+        "FileNames",
+        "Entity"
+      ]
     },
     "DeleteFilesResponse": {
       "type": "object",
@@ -4798,17 +4521,17 @@
           "description": "The entity id and type.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "ProfileVersion": {
           "description": "The current version of the profile, can be used for concurrency control during updates.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         }
       },
-      "x-ClassName": "DeleteFilesResponse"
+      "required": [
+        "ProfileVersion"
+      ]
     },
     "DeleteGroupRequest": {
       "type": "object",
@@ -4818,11 +4541,12 @@
           "description": "ID of the group or role to remove",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "DeleteGroupRequest"
+      "required": [
+        "Group"
+      ]
     },
     "DeleteRoleRequest": {
       "type": "object",
@@ -4832,30 +4556,28 @@
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "RoleId": {
           "description": "The ID of the role to delete. Role IDs must be between 1 and 64 characters long.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "DeleteRoleRequest"
+      "required": [
+        "Group"
+      ]
     },
     "EffectType": {
       "type": "object",
       "enum": [
         "Allow",
         "Deny"
-      ],
-      "x-ClassName": "EffectType"
+      ]
     },
     "EmptyResult": {
       "type": "object",
-      "properties": {},
-      "x-ClassName": "EmptyResult"
+      "properties": {}
     },
     "EntityDataObject": {
       "description": "An entity object and its associated meta data.",
@@ -4864,23 +4586,19 @@
         "DataObject": {
           "description": "Un-escaped JSON object, if DataAsObject is true.",
           "x-jsontype": "Object",
-          "x-actualtype": "object",
-          "x-optional": true
+          "x-actualtype": "object"
         },
         "EscapedDataObject": {
           "description": "Escaped string JSON body of the object, if DataAsObject is default or false.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "ObjectName": {
           "description": "Name of this object.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
-      },
-      "x-ClassName": "EntityDataObject"
+      }
     },
     "EntityKey": {
       "description": "Entity identifier class that contains both the ID and type.",
@@ -4889,25 +4607,24 @@
         "Id": {
           "description": "Entity profile ID.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "Type": {
           "$ref": "#/definitions/EntityTypes",
           "description": "Entity type. Optional to be used but one of EntityType or EntityTypeString must be set.",
           "x-jsontype": "String",
           "x-actualtype": "EntityTypes",
-          "x-isenum": true,
-          "x-optional": true
+          "x-isenum": true
         },
         "TypeString": {
           "description": "Entity type. Optional to be used but one of EntityType or EntityTypeString must be set.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "EntityKey"
+      "required": [
+        "Id"
+      ]
     },
     "EntityMemberRole": {
       "type": "object",
@@ -4918,23 +4635,19 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "EntityWithLineage",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "RoleId": {
           "description": "The ID of the role.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "RoleName": {
           "description": "The name of the role",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
-      },
-      "x-ClassName": "EntityMemberRole"
+      }
     },
     "EntityPermissionStatement": {
       "type": "object",
@@ -4942,43 +4655,42 @@
         "Action": {
           "description": "The action this statement effects. May be 'Read', 'Write' or '*' for both read and write.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "Comment": {
           "description": "A comment about the statement. Intended solely for bookkeeping and debugging.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Condition": {
           "description": "Additional conditions to be applied for entity resources.",
           "x-jsontype": "Object",
-          "x-actualtype": "object",
-          "x-optional": true
+          "x-actualtype": "object"
         },
         "Effect": {
           "$ref": "#/definitions/EffectType",
           "description": "The effect this statement will have. It may be either Allow or Deny",
           "x-jsontype": "String",
           "x-actualtype": "EffectType",
-          "x-isenum": true,
-          "x-optional": false
+          "x-isenum": true
         },
         "Principal": {
           "description": "The principal this statement will effect.",
           "x-jsontype": "Object",
-          "x-actualtype": "object",
-          "x-optional": false
+          "x-actualtype": "object"
         },
         "Resource": {
           "description": "The resource this statements effects. Similar to 'pfrn:data--title![Title ID]/Profile/*'",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "EntityPermissionStatement"
+      "required": [
+        "Resource",
+        "Action",
+        "Effect",
+        "Principal"
+      ]
     },
     "EntityProfileBody": {
       "type": "object",
@@ -4988,14 +4700,12 @@
           "description": "The entity id and type.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "EntityChain": {
           "description": "The chain of responsibility for this entity. This is a representation of 'ownership'. It is constructed using the following formats (replace '[ID]' with the unique identifier for the given entity): Namespace: 'namespace![Namespace ID]' Title: 'title![Namespace ID]/[Title ID]' Master Player Account: 'master_player_account![Namespace ID]/[MasterPlayerAccount ID]' Title Player Account: 'title_player_account![Namespace ID]/[Title ID]/[MasterPlayerAccount ID]/[TitlePlayerAccount ID]' Character: 'character![Namespace ID]/[Title ID]/[MasterPlayerAccount ID]/[TitlePlayerAccount ID]/[Character ID]'",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Files": {
           "$ref": "#/definitions/EntityProfileFileMetadata",
@@ -5003,8 +4713,7 @@
           "x-collection": "map",
           "x-jsontype": "Object",
           "x-actualtype": "EntityProfileFileMetadata",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "Objects": {
           "$ref": "#/definitions/EntityDataObject",
@@ -5012,8 +4721,7 @@
           "x-collection": "map",
           "x-jsontype": "Object",
           "x-actualtype": "EntityDataObject",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "Permissions": {
           "$ref": "#/definitions/EntityPermissionStatement",
@@ -5021,17 +4729,17 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "EntityPermissionStatement",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "VersionNumber": {
           "description": "The version number of the profile in persistent storage at the time of the read. Used for optional optimistic concurrency during update.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         }
       },
-      "x-ClassName": "EntityProfileBody"
+      "required": [
+        "VersionNumber"
+      ]
     },
     "EntityProfileFileMetadata": {
       "description": "An entity file's meta data. To get a download URL call File/GetFiles API.",
@@ -5040,29 +4748,28 @@
         "Checksum": {
           "description": "Checksum value for the file",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "FileName": {
           "description": "Name of the file",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "LastModified": {
           "description": "Last UTC time the file was modified",
           "x-jsontype": "String",
-          "x-actualtype": "DateTime",
-          "x-optional": false
+          "x-actualtype": "DateTime"
         },
         "Size": {
           "description": "Storage service's reported byte count",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         }
       },
-      "x-ClassName": "EntityProfileFileMetadata"
+      "required": [
+        "Size",
+        "LastModified"
+      ]
     },
     "EntityTypes": {
       "type": "object",
@@ -5073,8 +4780,7 @@
         "character",
         "group",
         "service"
-      ],
-      "x-ClassName": "EntityTypes"
+      ]
     },
     "EntityWithLineage": {
       "description": "Entity wrapper class that contains the entity key and the entities that make up the lineage of the entity.",
@@ -5085,8 +4791,7 @@
           "description": "The entity key for the specified entity",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "Lineage": {
           "$ref": "#/definitions/EntityKey",
@@ -5094,11 +4799,9 @@
           "x-collection": "map",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
-      },
-      "x-ClassName": "EntityWithLineage"
+      }
     },
     "EventContents": {
       "type": "object",
@@ -5108,47 +4811,43 @@
           "description": "Entity associated with the event",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "EventNamespace": {
           "description": "The namespace in which the event is defined. For example: 'com.playfab.matchmaking'. If not specified, a default will be chosen based on the calling identity.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Name": {
           "description": "The name of this event.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "OriginalId": {
           "description": "The original unique identifier associated with this event before it was posted to PlayFab. The value might differ from the EventId value, which is assigned when the event is received by the server.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "OriginalTimestamp": {
           "description": "The time (in UTC) associated with this event when it occurred. If specified, this value is stored in the OriginalTimestamp property of the PlayStream event.",
           "x-jsontype": "String",
-          "x-actualtype": "DateTime",
-          "x-optional": true
+          "x-actualtype": "DateTime"
         },
         "Payload": {
           "description": "Arbitrary data associated with the event.",
           "x-jsontype": "Object",
-          "x-actualtype": "object",
-          "x-optional": true
+          "x-actualtype": "object"
         },
         "PayloadJSON": {
           "description": "Arbitrary data associated with the event, represented as a JSON serialized string.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "EventContents",
+      "required": [
+        "Entity",
+        "Name"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -5161,18 +4860,19 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "FileNames": {
           "description": "Names of the files to be finalized. Restricted to a-Z, 0-9, '(', ')', '_', '-' and '.'",
           "x-collection": "array",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "FinalizeFileUploadsRequest"
+      "required": [
+        "FileNames",
+        "Entity"
+      ]
     },
     "FinalizeFileUploadsResponse": {
       "type": "object",
@@ -5182,8 +4882,7 @@
           "description": "The entity id and type.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "Metadata": {
           "$ref": "#/definitions/GetFileMetadata",
@@ -5191,17 +4890,17 @@
           "x-collection": "map",
           "x-jsontype": "Object",
           "x-actualtype": "GetFileMetadata",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "ProfileVersion": {
           "description": "The current version of the profile, can be used for concurrency control during updates.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         }
       },
-      "x-ClassName": "FinalizeFileUploadsResponse"
+      "required": [
+        "ProfileVersion"
+      ]
     },
     "GetAssetUploadUrlRequest": {
       "type": "object",
@@ -5209,16 +4908,16 @@
         "Metadata": {
           "x-collection": "map",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Name": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "GetAssetUploadUrlRequest",
+      "required": [
+        "Name"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -5228,22 +4927,18 @@
       "properties": {
         "AssetUploadUrl": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Metadata": {
           "x-collection": "map",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Name": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "GetAssetUploadUrlResult",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -5253,11 +4948,12 @@
       "properties": {
         "BuildId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "GetBuildRequest",
+      "required": [
+        "BuildId"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -5269,11 +4965,9 @@
           "$ref": "#/definitions/BuildSummary",
           "x-jsontype": "Object",
           "x-actualtype": "BuildSummary",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
       },
-      "x-ClassName": "GetBuildResult",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -5284,19 +4978,19 @@
         "DataAsObject": {
           "description": "Determines whether the objects will be returned as an escaped JSON string or as a un-escaped JSON object. Default is JSON string.",
           "x-jsontype": "Boolean",
-          "x-actualtype": "Boolean",
-          "x-optional": true
+          "x-actualtype": "Boolean"
         },
         "Entity": {
           "$ref": "#/definitions/EntityKey",
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "GetEntityProfileRequest"
+      "required": [
+        "Entity"
+      ]
     },
     "GetEntityProfileResponse": {
       "type": "object",
@@ -5306,11 +5000,9 @@
           "description": "Entity profile",
           "x-jsontype": "Object",
           "x-actualtype": "EntityProfileBody",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
-      },
-      "x-ClassName": "GetEntityProfileResponse"
+      }
     },
     "GetEntityProfilesRequest": {
       "type": "object",
@@ -5318,8 +5010,7 @@
         "DataAsObject": {
           "description": "Determines whether the objects will be returned as an escaped JSON string or as a un-escaped JSON object. Default is JSON string.",
           "x-jsontype": "Boolean",
-          "x-actualtype": "Boolean",
-          "x-optional": true
+          "x-actualtype": "Boolean"
         },
         "Entities": {
           "$ref": "#/definitions/EntityKey",
@@ -5327,11 +5018,12 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "GetEntityProfilesRequest"
+      "required": [
+        "Entities"
+      ]
     },
     "GetEntityProfilesResponse": {
       "type": "object",
@@ -5342,11 +5034,9 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "EntityProfileBody",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
-      },
-      "x-ClassName": "GetEntityProfilesResponse"
+      }
     },
     "GetEntityTokenRequest": {
       "type": "object",
@@ -5356,11 +5046,9 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
-      },
-      "x-ClassName": "GetEntityTokenRequest"
+      }
     },
     "GetEntityTokenResponse": {
       "type": "object",
@@ -5370,23 +5058,19 @@
           "description": "The entity id and type.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "EntityToken": {
           "description": "The token used to set X-EntityToken for all entity based API calls.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "TokenExpiration": {
           "description": "The time the token will expire, if it is an expiring token, in UTC.",
           "x-jsontype": "String",
-          "x-actualtype": "DateTime",
-          "x-optional": true
+          "x-actualtype": "DateTime"
         }
-      },
-      "x-ClassName": "GetEntityTokenResponse"
+      }
     },
     "GetFileMetadata": {
       "type": "object",
@@ -5394,35 +5078,33 @@
         "Checksum": {
           "description": "Checksum value for the file",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "DownloadUrl": {
           "description": "Download URL where the file can be retrieved",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "FileName": {
           "description": "Name of the file",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "LastModified": {
           "description": "Last UTC time the file was modified",
           "x-jsontype": "String",
-          "x-actualtype": "DateTime",
-          "x-optional": false
+          "x-actualtype": "DateTime"
         },
         "Size": {
           "description": "Storage service's reported byte count",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         }
       },
-      "x-ClassName": "GetFileMetadata"
+      "required": [
+        "Size",
+        "LastModified"
+      ]
     },
     "GetFilesRequest": {
       "type": "object",
@@ -5432,11 +5114,12 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "GetFilesRequest"
+      "required": [
+        "Entity"
+      ]
     },
     "GetFilesResponse": {
       "type": "object",
@@ -5446,8 +5129,7 @@
           "description": "The entity id and type.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "Metadata": {
           "$ref": "#/definitions/GetFileMetadata",
@@ -5455,22 +5137,21 @@
           "x-collection": "map",
           "x-jsontype": "Object",
           "x-actualtype": "GetFileMetadata",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "ProfileVersion": {
           "description": "The current version of the profile, can be used for concurrency control during updates.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         }
       },
-      "x-ClassName": "GetFilesResponse"
+      "required": [
+        "ProfileVersion"
+      ]
     },
     "GetGlobalPolicyRequest": {
       "type": "object",
-      "properties": {},
-      "x-ClassName": "GetGlobalPolicyRequest"
+      "properties": {}
     },
     "GetGlobalPolicyResponse": {
       "type": "object",
@@ -5481,11 +5162,9 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "EntityPermissionStatement",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
-      },
-      "x-ClassName": "GetGlobalPolicyResponse"
+      }
     },
     "GetGroupRequest": {
       "type": "object",
@@ -5495,17 +5174,14 @@
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "GroupName": {
           "description": "The full name of the group",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
-      },
-      "x-ClassName": "GetGroupRequest"
+      }
     },
     "GetGroupResponse": {
       "type": "object",
@@ -5513,50 +5189,47 @@
         "AdminRoleId": {
           "description": "The ID of the administrator role for the group.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Created": {
           "description": "The server date and time the group was created.",
           "x-jsontype": "String",
-          "x-actualtype": "DateTime",
-          "x-optional": false
+          "x-actualtype": "DateTime"
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "GroupName": {
           "description": "The name of the group.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "MemberRoleId": {
           "description": "The ID of the default member role for the group.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "ProfileVersion": {
           "description": "The current version of the profile, can be used for concurrency control during updates.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         },
         "Roles": {
           "description": "The list of roles and names that belong to the group.",
           "x-collection": "map",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "GetGroupResponse"
+      "required": [
+        "Group",
+        "Created",
+        "ProfileVersion"
+      ]
     },
     "GetMatchmakingTicketRequest": {
       "type": "object",
@@ -5566,29 +5239,29 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "EscapeObject": {
           "description": "Determines whether the matchmaking attributes will be returned as an escaped JSON string or as an un-escaped JSON object.",
           "x-jsontype": "Boolean",
-          "x-actualtype": "Boolean",
-          "x-optional": false
+          "x-actualtype": "Boolean"
         },
         "HopperId": {
           "description": "The Id of the hopper to find a match for.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "TicketId": {
           "description": "The Id of the ticket to find a match for.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "GetMatchmakingTicketRequest",
+      "required": [
+        "TicketId",
+        "HopperId",
+        "EscapeObject"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -5599,34 +5272,29 @@
         "Created": {
           "description": "The server date and time at which ticket was created.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "Creator": {
           "$ref": "#/definitions/EntityKey",
           "description": "The Creator's entity key.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "GiveUpAfterSeconds": {
           "description": "How long to attempt matching this ticket in seconds.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         },
         "HopperId": {
           "description": "The Id of a match hopper.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "MatchId": {
           "description": "The Id of a match.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "Members": {
           "$ref": "#/definitions/MatchmakingUser",
@@ -5634,8 +5302,7 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "MatchmakingUser",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "MembersToMatchWith": {
           "$ref": "#/definitions/EntityKey",
@@ -5643,23 +5310,30 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "Status": {
           "description": "The current ticket status.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "TicketId": {
           "description": "The Id of the ticket to find a match for.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "GetMatchmakingTicketResult",
+      "required": [
+        "TicketId",
+        "HopperId",
+        "MatchId",
+        "Created",
+        "Status",
+        "GiveUpAfterSeconds",
+        "MembersToMatchWith",
+        "Members",
+        "Creator"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -5672,29 +5346,29 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "EscapeObject": {
           "description": "Determines whether the matchmaking attributes will be returned as an escaped JSON string or as an un-escaped JSON object.",
           "x-jsontype": "Boolean",
-          "x-actualtype": "Boolean",
-          "x-optional": false
+          "x-actualtype": "Boolean"
         },
         "HopperId": {
           "description": "The Id of the hopper to join.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "MatchId": {
           "description": "The Id of a match.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "GetMatchRequest",
+      "required": [
+        "MatchId",
+        "HopperId",
+        "EscapeObject"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -5705,8 +5379,7 @@
         "MatchId": {
           "description": "The Id of a match.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "Members": {
           "$ref": "#/definitions/MatchmakingUserWithTeamAssignment",
@@ -5714,11 +5387,13 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "MatchmakingUserWithTeamAssignment",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "GetMatchResult",
+      "required": [
+        "MatchId",
+        "Members"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -5731,17 +5406,17 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "EscapeObject": {
           "description": "Determines whether the object will be returned as an escaped JSON string or as a un-escaped JSON object. Default is JSON object.",
           "x-jsontype": "Boolean",
-          "x-actualtype": "Boolean",
-          "x-optional": true
+          "x-actualtype": "Boolean"
         }
       },
-      "x-ClassName": "GetObjectsRequest"
+      "required": [
+        "Entity"
+      ]
     },
     "GetObjectsResponse": {
       "type": "object",
@@ -5751,8 +5426,7 @@
           "description": "The entity id and type.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "Objects": {
           "$ref": "#/definitions/ObjectResult",
@@ -5760,48 +5434,60 @@
           "x-collection": "map",
           "x-jsontype": "Object",
           "x-actualtype": "ObjectResult",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "ProfileVersion": {
           "description": "The current version of the profile, can be used for concurrency control during updates.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         }
       },
-      "x-ClassName": "GetObjectsResponse"
+      "required": [
+        "ProfileVersion"
+      ]
     },
     "GetRemoteLoginEndpointRequest": {
       "type": "object",
       "properties": {
         "BuildId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "Region": {
           "$ref": "#/definitions/AzureRegion",
           "x-jsontype": "String",
           "x-actualtype": "AzureRegion",
-          "x-isenum": true,
-          "x-optional": false
+          "x-isenum": true
         },
         "VmId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "GetRemoteLoginEndpointRequest",
+      "required": [
+        "BuildId",
+        "Region",
+        "VmId"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
     },
     "GetRemoteLoginEndpointResult": {
       "type": "object",
-      "properties": {},
-      "x-ClassName": "GetRemoteLoginEndpointResult",
+      "properties": {
+        "IpV4Address": {
+          "x-jsontype": "String",
+          "x-actualtype": "String"
+        },
+        "Port": {
+          "x-jsontype": "Number",
+          "x-actualtype": "int32"
+        }
+      },
+      "required": [
+        "Port"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -5811,16 +5497,17 @@
       "properties": {
         "BuildId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "SessionId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "GetSessionHostDetailsRequest",
+      "required": [
+        "BuildId",
+        "SessionId"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -5833,51 +5520,42 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "ConnectedPlayer",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "IPv4Address": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Ports": {
           "$ref": "#/definitions/Port",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "Port",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "Region": {
           "$ref": "#/definitions/AzureRegion",
           "x-jsontype": "String",
           "x-actualtype": "AzureRegion",
-          "x-isenum": true,
-          "x-optional": true
+          "x-isenum": true
         },
         "SessionHostId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "SessionId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "State": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "VmId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "GetSessionHostResultDetailsResult",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -5891,25 +5569,24 @@
           "description": "Type of entity that requested membership",
           "x-jsontype": "Object",
           "x-actualtype": "EntityWithLineage",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "Expires": {
           "description": "When the application to join will expire and be deleted",
           "x-jsontype": "String",
-          "x-actualtype": "DateTime",
-          "x-optional": false
+          "x-actualtype": "DateTime"
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "ID of the group that the entity requesting membership to",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
       },
-      "x-ClassName": "GroupApplication"
+      "required": [
+        "Expires"
+      ]
     },
     "GroupBlock": {
       "description": "Describes an entity that is blocked from joining a group.",
@@ -5920,19 +5597,19 @@
           "description": "The entity that is blocked",
           "x-jsontype": "Object",
           "x-actualtype": "EntityWithLineage",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "ID of the group that the entity is blocked from",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "GroupBlock"
+      "required": [
+        "Group"
+      ]
     },
     "GroupInvitation": {
       "description": "Describes an invitation to a group.",
@@ -5941,41 +5618,38 @@
         "Expires": {
           "description": "When the invitation will expire and be deleted",
           "x-jsontype": "String",
-          "x-actualtype": "DateTime",
-          "x-optional": false
+          "x-actualtype": "DateTime"
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "The group that the entity invited to",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "InvitedByEntity": {
           "$ref": "#/definitions/EntityWithLineage",
           "description": "The entity that created the invitation",
           "x-jsontype": "Object",
           "x-actualtype": "EntityWithLineage",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "InvitedEntity": {
           "$ref": "#/definitions/EntityWithLineage",
           "description": "The entity that is invited",
           "x-jsontype": "Object",
           "x-actualtype": "EntityWithLineage",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "RoleId": {
           "description": "ID of the role in the group to assign the user to.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "GroupInvitation"
+      "required": [
+        "Expires"
+      ]
     },
     "GroupRole": {
       "description": "Describes a group role",
@@ -5984,17 +5658,14 @@
         "RoleId": {
           "description": "ID for the role",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "RoleName": {
           "description": "The name of the role",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
-      },
-      "x-ClassName": "GroupRole"
+      }
     },
     "GroupWithRoles": {
       "description": "Describes a group and the roles that it contains",
@@ -6005,20 +5676,17 @@
           "description": "ID for the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "GroupName": {
           "description": "The name of the group",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "ProfileVersion": {
           "description": "The current version of the profile, can be used for concurrency control during updates.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         },
         "Roles": {
           "$ref": "#/definitions/GroupRole",
@@ -6026,11 +5694,12 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "GroupRole",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
       },
-      "x-ClassName": "GroupWithRoles"
+      "required": [
+        "ProfileVersion"
+      ]
     },
     "InitiateFileUploadMetadata": {
       "type": "object",
@@ -6038,17 +5707,14 @@
         "FileName": {
           "description": "Name of the file.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "UploadUrl": {
           "description": "Location the data should be sent to via an HTTP PUT operation.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
-      },
-      "x-ClassName": "InitiateFileUploadMetadata"
+      }
     },
     "InitiateFileUploadsRequest": {
       "type": "object",
@@ -6058,24 +5724,24 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "FileNames": {
           "description": "Names of the files to be set. Restricted to a-Z, 0-9, '(', ')', '_', '-' and '.'",
           "x-collection": "array",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "ProfileVersion": {
           "description": "The expected version of the profile, if set and doesn't match the current version of the profile the operation will not be performed.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": true
+          "x-actualtype": "int32"
         }
       },
-      "x-ClassName": "InitiateFileUploadsRequest"
+      "required": [
+        "FileNames",
+        "Entity"
+      ]
     },
     "InitiateFileUploadsResponse": {
       "type": "object",
@@ -6085,14 +5751,12 @@
           "description": "The entity id and type.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "ProfileVersion": {
           "description": "The current version of the profile, can be used for concurrency control during updates.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         },
         "UploadDetails": {
           "$ref": "#/definitions/InitiateFileUploadMetadata",
@@ -6100,11 +5764,12 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "InitiateFileUploadMetadata",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
       },
-      "x-ClassName": "InitiateFileUploadsResponse"
+      "required": [
+        "ProfileVersion"
+      ]
     },
     "InviteToGroupRequest": {
       "type": "object",
@@ -6112,33 +5777,32 @@
         "AutoAcceptOutstandingApplication": {
           "description": "Optional, default true. Automatically accept an application if one exists instead of creating an invitation",
           "x-jsontype": "Boolean",
-          "x-actualtype": "Boolean",
-          "x-optional": true
+          "x-actualtype": "Boolean"
         },
         "Entity": {
           "$ref": "#/definitions/EntityKey",
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "RoleId": {
           "description": "Optional. ID of an existing a role in the group to assign the user to. The group's default member role is used if this is not specified. Role IDs must be between 1 and 64 characters long.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "InviteToGroupRequest"
+      "required": [
+        "Group",
+        "Entity"
+      ]
     },
     "InviteToGroupResponse": {
       "description": "Describes an invitation to a group.",
@@ -6147,41 +5811,38 @@
         "Expires": {
           "description": "When the invitation will expire and be deleted",
           "x-jsontype": "String",
-          "x-actualtype": "DateTime",
-          "x-optional": false
+          "x-actualtype": "DateTime"
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "The group that the entity invited to",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "InvitedByEntity": {
           "$ref": "#/definitions/EntityWithLineage",
           "description": "The entity that created the invitation",
           "x-jsontype": "Object",
           "x-actualtype": "EntityWithLineage",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "InvitedEntity": {
           "$ref": "#/definitions/EntityWithLineage",
           "description": "The entity that is invited",
           "x-jsontype": "Object",
           "x-actualtype": "EntityWithLineage",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "RoleId": {
           "description": "ID of the role in the group to assign the user to.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "InviteToGroupResponse"
+      "required": [
+        "Expires"
+      ]
     },
     "IsMemberRequest": {
       "type": "object",
@@ -6191,25 +5852,25 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "RoleId": {
           "description": "Optional: ID of the role to check membership of. Defaults to any role (that is, check to see if the entity is a member of the group in any capacity) if not specified.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "IsMemberRequest"
+      "required": [
+        "Group",
+        "Entity"
+      ]
     },
     "IsMemberResponse": {
       "type": "object",
@@ -6217,11 +5878,12 @@
         "IsMember": {
           "description": "A value indicating whether or not the entity is a member.",
           "x-jsontype": "Boolean",
-          "x-actualtype": "Boolean",
-          "x-optional": false
+          "x-actualtype": "Boolean"
         }
       },
-      "x-ClassName": "IsMemberResponse"
+      "required": [
+        "IsMember"
+      ]
     },
     "JoinMatchmakingTicketRequest": {
       "type": "object",
@@ -6231,31 +5893,31 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "HopperId": {
           "description": "The Id of the hopper to join.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "Member": {
           "$ref": "#/definitions/MatchmakingUser",
           "description": "The User who wants to join the ticket. Their Id must be listed in PlayFabIdsToMatchWith.",
           "x-jsontype": "Object",
           "x-actualtype": "MatchmakingUser",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "TicketId": {
           "description": "The Id of the ticket to find a match for.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "JoinMatchmakingTicketRequest",
+      "required": [
+        "TicketId",
+        "HopperId",
+        "Member"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6263,7 +5925,6 @@
     "JoinMatchmakingTicketResult": {
       "type": "object",
       "properties": {},
-      "x-ClassName": "JoinMatchmakingTicketResult",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6271,7 +5932,6 @@
     "ListAssetsRequest": {
       "type": "object",
       "properties": {},
-      "x-ClassName": "ListAssetsRequest",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6284,16 +5944,13 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "AssetSummary",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "NextLink": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "ListAssetsResult",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6301,7 +5958,6 @@
     "ListBuildsRequest": {
       "type": "object",
       "properties": {},
-      "x-ClassName": "ListBuildsRequest",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6314,16 +5970,13 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "BuildSummary",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "NextLink": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "ListBuildsResult",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6331,7 +5984,6 @@
     "ListCertificatesRequest": {
       "type": "object",
       "properties": {},
-      "x-ClassName": "ListCertificatesRequest",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6344,16 +5996,13 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "CertificateSummary",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "NextLink": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "ListCertificatesResult",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6366,11 +6015,12 @@
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "ListGroupApplicationsRequest"
+      "required": [
+        "Group"
+      ]
     },
     "ListGroupApplicationsResponse": {
       "type": "object",
@@ -6381,11 +6031,9 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "GroupApplication",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
-      },
-      "x-ClassName": "ListGroupApplicationsResponse"
+      }
     },
     "ListGroupBlocksRequest": {
       "type": "object",
@@ -6395,11 +6043,12 @@
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "ListGroupBlocksRequest"
+      "required": [
+        "Group"
+      ]
     },
     "ListGroupBlocksResponse": {
       "type": "object",
@@ -6410,11 +6059,9 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "GroupBlock",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
-      },
-      "x-ClassName": "ListGroupBlocksResponse"
+      }
     },
     "ListGroupInvitationsRequest": {
       "type": "object",
@@ -6424,11 +6071,12 @@
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "ListGroupInvitationsRequest"
+      "required": [
+        "Group"
+      ]
     },
     "ListGroupInvitationsResponse": {
       "type": "object",
@@ -6439,11 +6087,9 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "GroupInvitation",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
-      },
-      "x-ClassName": "ListGroupInvitationsResponse"
+      }
     },
     "ListGroupMembersRequest": {
       "type": "object",
@@ -6453,11 +6099,12 @@
           "description": "ID of the group to list the members and roles for",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "ListGroupMembersRequest"
+      "required": [
+        "Group"
+      ]
     },
     "ListGroupMembersResponse": {
       "type": "object",
@@ -6468,11 +6115,9 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "EntityMemberRole",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
-      },
-      "x-ClassName": "ListGroupMembersResponse"
+      }
     },
     "ListMembershipOpportunitiesRequest": {
       "type": "object",
@@ -6482,11 +6127,9 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
-      },
-      "x-ClassName": "ListMembershipOpportunitiesRequest"
+      }
     },
     "ListMembershipOpportunitiesResponse": {
       "type": "object",
@@ -6497,8 +6140,7 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "GroupApplication",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "Invitations": {
           "$ref": "#/definitions/GroupInvitation",
@@ -6506,11 +6148,9 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "GroupInvitation",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
-      },
-      "x-ClassName": "ListMembershipOpportunitiesResponse"
+      }
     },
     "ListMembershipRequest": {
       "type": "object",
@@ -6520,11 +6160,9 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
-      },
-      "x-ClassName": "ListMembershipRequest"
+      }
     },
     "ListMembershipResponse": {
       "type": "object",
@@ -6535,16 +6173,13 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "GroupWithRoles",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
-      },
-      "x-ClassName": "ListMembershipResponse"
+      }
     },
     "ListQosServersRequest": {
       "type": "object",
       "properties": {},
-      "x-ClassName": "ListQosServersRequest",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6554,19 +6189,16 @@
       "properties": {
         "NextLink": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "QosServers": {
           "$ref": "#/definitions/QosServer",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "QosServer",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
       },
-      "x-ClassName": "ListQosServersResult",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6576,18 +6208,19 @@
       "properties": {
         "BuildId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "Region": {
           "$ref": "#/definitions/AzureRegion",
           "x-jsontype": "String",
           "x-actualtype": "AzureRegion",
-          "x-isenum": true,
-          "x-optional": false
+          "x-isenum": true
         }
       },
-      "x-ClassName": "ListSessionHostsRequest",
+      "required": [
+        "BuildId",
+        "Region"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6597,24 +6230,20 @@
       "properties": {
         "NextLink": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "NumSessionHosts": {
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": true
+          "x-actualtype": "int32"
         },
         "SessionHostSummaries": {
           "$ref": "#/definitions/SessionHostSummary",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "SessionHostSummary",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
       },
-      "x-ClassName": "ListSessionHostsResult",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6627,19 +6256,19 @@
           "description": "The user's attributes custom to the title.",
           "x-jsontype": "Object",
           "x-actualtype": "MatchmakingUserAttributes",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "Entity": {
           "$ref": "#/definitions/EntityKey",
           "description": "The entity key of the matchmaking user.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "MatchmakingUser",
+      "required": [
+        "Entity"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6650,17 +6279,14 @@
         "DataObject": {
           "description": "A data object representing a user's attributes.",
           "x-jsontype": "Object",
-          "x-actualtype": "object",
-          "x-optional": true
+          "x-actualtype": "object"
         },
         "EscapedDataObject": {
           "description": "An escaped data object representing a user's attributes.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "MatchmakingUserAttributes",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6673,17 +6299,17 @@
           "description": "The entity key of the matchmaking user.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "TeamId": {
           "description": "The Id of the team the User has been assigned to by matchmaking.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "MatchmakingUserWithTeamAssignment",
+      "required": [
+        "Entity"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6694,23 +6320,19 @@
         "DataObject": {
           "description": "Un-escaped JSON object, if EscapeObject false or default.",
           "x-jsontype": "Object",
-          "x-actualtype": "object",
-          "x-optional": true
+          "x-actualtype": "object"
         },
         "EscapedDataObject": {
           "description": "Escaped string JSON body of the object, if EscapeObject is true.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "ObjectName": {
           "description": "Name of the object. Restricted to a-Z, 0-9, '(', ')', '_', '-' and '.'",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
-      },
-      "x-ClassName": "ObjectResult"
+      }
     },
     "OperationTypes": {
       "type": "object",
@@ -6719,31 +6341,31 @@
         "Updated",
         "Deleted",
         "None"
-      ],
-      "x-ClassName": "OperationTypes"
+      ]
     },
     "Port": {
       "type": "object",
       "properties": {
         "Name": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "Num": {
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         },
         "Protocol": {
           "$ref": "#/definitions/ProtocolType",
           "x-jsontype": "String",
           "x-actualtype": "ProtocolType",
-          "x-isenum": true,
-          "x-optional": false
+          "x-isenum": true
         }
       },
-      "x-ClassName": "Port",
+      "required": [
+        "Name",
+        "Num",
+        "Protocol"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6754,7 +6376,6 @@
         "TCP",
         "UDP"
       ],
-      "x-ClassName": "ProtocolType",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6766,16 +6387,13 @@
           "$ref": "#/definitions/AzureRegion",
           "x-jsontype": "String",
           "x-actualtype": "AzureRegion",
-          "x-isenum": true,
-          "x-optional": true
+          "x-isenum": true
         },
         "ServerUrl": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "QosServer",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6788,19 +6406,20 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "RemoveGroupApplicationRequest"
+      "required": [
+        "Group",
+        "Entity"
+      ]
     },
     "RemoveGroupInvitationRequest": {
       "type": "object",
@@ -6810,19 +6429,20 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "RemoveGroupInvitationRequest"
+      "required": [
+        "Group",
+        "Entity"
+      ]
     },
     "RemoveMembersRequest": {
       "type": "object",
@@ -6832,8 +6452,7 @@
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "Members": {
           "$ref": "#/definitions/EntityKey",
@@ -6841,17 +6460,18 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "RoleId": {
           "description": "The ID of the role to remove the entities from.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "RemoveMembersRequest"
+      "required": [
+        "Group",
+        "Members"
+      ]
     },
     "SessionHostSummary": {
       "type": "object",
@@ -6861,33 +6481,27 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "ConnectedPlayer",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         },
         "Region": {
           "$ref": "#/definitions/AzureRegion",
           "x-jsontype": "String",
           "x-actualtype": "AzureRegion",
-          "x-isenum": true,
-          "x-optional": true
+          "x-isenum": true
         },
         "SessionHostId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "State": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "VmId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "SessionHostSummary",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -6900,8 +6514,7 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "Statements": {
           "$ref": "#/definitions/EntityPermissionStatement",
@@ -6909,11 +6522,12 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "EntityPermissionStatement",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
       },
-      "x-ClassName": "SetEntityProfilePolicyRequest"
+      "required": [
+        "Entity"
+      ]
     },
     "SetEntityProfilePolicyResponse": {
       "type": "object",
@@ -6924,11 +6538,9 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "EntityPermissionStatement",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
-      },
-      "x-ClassName": "SetEntityProfilePolicyResponse"
+      }
     },
     "SetGlobalPolicyRequest": {
       "type": "object",
@@ -6939,16 +6551,13 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "EntityPermissionStatement",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
-      },
-      "x-ClassName": "SetGlobalPolicyRequest"
+      }
     },
     "SetGlobalPolicyResponse": {
       "type": "object",
-      "properties": {},
-      "x-ClassName": "SetGlobalPolicyResponse"
+      "properties": {}
     },
     "SetObject": {
       "type": "object",
@@ -6956,29 +6565,27 @@
         "DataObject": {
           "description": "Body of the object to be saved. If empty and DeleteObject is true object will be deleted if it exists, or no operation will occur if it does not exist. Only one of Object or EscapedDataObject fields may be used.",
           "x-jsontype": "Object",
-          "x-actualtype": "object",
-          "x-optional": true
+          "x-actualtype": "object"
         },
         "DeleteObject": {
           "description": "Flag to indicate that this object should be deleted. Both DataObject and EscapedDataObject must not be set as well.",
           "x-jsontype": "Boolean",
-          "x-actualtype": "Boolean",
-          "x-optional": true
+          "x-actualtype": "Boolean"
         },
         "EscapedDataObject": {
           "description": "Body of the object to be saved as an escaped JSON string. If empty and DeleteObject is true object will be deleted if it exists, or no operation will occur if it does not exist. Only one of DataObject or EscapedDataObject fields may be used.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "ObjectName": {
           "description": "Name of object. Restricted to a-Z, 0-9, '(', ')', '_', '-' and '.'.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "SetObject"
+      "required": [
+        "ObjectName"
+      ]
     },
     "SetObjectInfo": {
       "type": "object",
@@ -6986,25 +6593,21 @@
         "ObjectName": {
           "description": "Name of the object",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "OperationReason": {
           "description": "Optional reason to explain why the operation was the result that it was.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "SetResult": {
           "$ref": "#/definitions/OperationTypes",
           "description": "Indicates which operation was completed, either Created, Updated, Deleted or None.",
           "x-jsontype": "String",
           "x-actualtype": "OperationTypes",
-          "x-isenum": true,
-          "x-optional": true
+          "x-isenum": true
         }
-      },
-      "x-ClassName": "SetObjectInfo"
+      }
     },
     "SetObjectsRequest": {
       "type": "object",
@@ -7014,14 +6617,12 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "ExpectedProfileVersion": {
           "description": "Optional field used for concurrency control. By specifying the previously returned value of ProfileVersion from GetProfile API, you can ensure that the object set will only be performed if the profile has not been updated by any other clients since the version you last loaded.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": true
+          "x-actualtype": "int32"
         },
         "Objects": {
           "$ref": "#/definitions/SetObject",
@@ -7029,11 +6630,13 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "SetObject",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "SetObjectsRequest"
+      "required": [
+        "Objects",
+        "Entity"
+      ]
     },
     "SetObjectsResponse": {
       "type": "object",
@@ -7041,8 +6644,7 @@
         "ProfileVersion": {
           "description": "New version of the entity profile.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         },
         "SetResults": {
           "$ref": "#/definitions/SetObjectInfo",
@@ -7050,11 +6652,12 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "SetObjectInfo",
-          "x-isclass": true,
-          "x-optional": true
+          "x-isclass": true
         }
       },
-      "x-ClassName": "SetObjectsResponse"
+      "required": [
+        "ProfileVersion"
+      ]
     },
     "UnblockEntityRequest": {
       "type": "object",
@@ -7064,38 +6667,40 @@
           "description": "The entity to perform this action on.",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "UnblockEntityRequest"
+      "required": [
+        "Group",
+        "Entity"
+      ]
     },
     "UpdateBuildRegionsRequest": {
       "type": "object",
       "properties": {
         "BuildId": {
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         },
         "BuildRegions": {
           "$ref": "#/definitions/BuildRegionParams",
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "BuildRegionParams",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "UpdateBuildRegionsRequest",
+      "required": [
+        "BuildId",
+        "BuildRegions"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -7103,7 +6708,6 @@
     "UpdateBuildRegionsResult": {
       "type": "object",
       "properties": {},
-      "x-ClassName": "UpdateBuildRegionsResult",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -7114,37 +6718,34 @@
         "AdminRoleId": {
           "description": "Optional: the ID of an existing role to set as the new administrator role for the group",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "ExpectedProfileVersion": {
           "description": "Optional field used for concurrency control. By specifying the previously returned value of ProfileVersion from the GetGroup API, you can ensure that the group data update will only be performed if the group has not been updated by any other clients since the version you last loaded.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": true
+          "x-actualtype": "int32"
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "GroupName": {
           "description": "Optional: the new name of the group",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "MemberRoleId": {
           "description": "Optional: the ID of an existing role to set as the new member role for the group",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "UpdateGroupRequest"
+      "required": [
+        "Group"
+      ]
     },
     "UpdateGroupResponse": {
       "type": "object",
@@ -7152,25 +6753,24 @@
         "OperationReason": {
           "description": "Optional reason to explain why the operation was the result that it was.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "ProfileVersion": {
           "description": "New version of the group data.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         },
         "SetResult": {
           "$ref": "#/definitions/OperationTypes",
           "description": "Indicates which operation was completed, either Created, Updated, Deleted or None.",
           "x-jsontype": "String",
           "x-actualtype": "OperationTypes",
-          "x-isenum": true,
-          "x-optional": true
+          "x-isenum": true
         }
       },
-      "x-ClassName": "UpdateGroupResponse"
+      "required": [
+        "ProfileVersion"
+      ]
     },
     "UpdateGroupRoleRequest": {
       "type": "object",
@@ -7178,31 +6778,30 @@
         "ExpectedProfileVersion": {
           "description": "Optional field used for concurrency control. By specifying the previously returned value of ProfileVersion from the GetGroup API, you can ensure that the group data update will only be performed if the group has not been updated by any other clients since the version you last loaded.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": true
+          "x-actualtype": "int32"
         },
         "Group": {
           "$ref": "#/definitions/EntityKey",
           "description": "The identifier of the group",
           "x-jsontype": "Object",
           "x-actualtype": "EntityKey",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "RoleId": {
           "description": "ID of the role to update. Role IDs must be between 1 and 64 characters long.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "RoleName": {
           "description": "The new name of the role",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": false
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "UpdateGroupRoleRequest"
+      "required": [
+        "Group",
+        "RoleName"
+      ]
     },
     "UpdateGroupRoleResponse": {
       "type": "object",
@@ -7210,25 +6809,24 @@
         "OperationReason": {
           "description": "Optional reason to explain why the operation was the result that it was.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "ProfileVersion": {
           "description": "New version of the role data.",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         },
         "SetResult": {
           "$ref": "#/definitions/OperationTypes",
           "description": "Indicates which operation was completed, either Created, Updated, Deleted or None.",
           "x-jsontype": "String",
           "x-actualtype": "OperationTypes",
-          "x-isenum": true,
-          "x-optional": true
+          "x-isenum": true
         }
       },
-      "x-ClassName": "UpdateGroupRoleResponse"
+      "required": [
+        "ProfileVersion"
+      ]
     },
     "UploadCertificateRequest": {
       "type": "object",
@@ -7237,11 +6835,12 @@
           "$ref": "#/definitions/Certificate",
           "x-jsontype": "Object",
           "x-actualtype": "Certificate",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         }
       },
-      "x-ClassName": "UploadCertificateRequest",
+      "required": [
+        "GameCertificate"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -7249,7 +6848,6 @@
     "UploadCertificateResult": {
       "type": "object",
       "properties": {},
-      "x-ClassName": "UploadCertificateResult",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -7263,16 +6861,16 @@
           "x-collection": "array",
           "x-jsontype": "Object",
           "x-actualtype": "EventContents",
-          "x-isclass": true,
-          "x-optional": false
+          "x-isclass": true
         },
         "FlushToPlayStream": {
           "x-jsontype": "Boolean",
-          "x-actualtype": "Boolean",
-          "x-optional": true
+          "x-actualtype": "Boolean"
         }
       },
-      "x-ClassName": "WriteEventsRequest",
+      "required": [
+        "Events"
+      ],
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -7284,11 +6882,9 @@
           "description": "The unique identifiers assigned by the server to the events, in the same order as the events in the request. Only returned if FlushToPlayStream option is true.",
           "x-collection": "array",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "WriteEventsResponse",
       "x-AnyInclusiveFlags": [
         "Beta"
       ]
@@ -7301,298 +6897,298 @@
         "$ref": "#/definitions/ApiErrorWrapper"
       }
     },
+    "AbortFileUploadsResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AbortFileUploadsResponse"
+      }
+    },
+    "AllocateSessionHostResultResult": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AllocateSessionHostResultResult"
+      }
+    },
+    "ApplyToGroupResponse": {
+      "description": "Describes an application to join a group",
+      "schema": {
+        "$ref": "#/definitions/ApplyToGroupResponse"
+      }
+    },
+    "CancelMatchmakingTicketResult": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CancelMatchmakingTicketResult"
+      }
+    },
+    "CreateBuildResult": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CreateBuildResult"
+      }
+    },
+    "CreateGroupResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CreateGroupResponse"
+      }
+    },
+    "CreateGroupRoleResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CreateGroupRoleResponse"
+      }
+    },
+    "CreateMatchmakingTicketResult": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CreateMatchmakingTicketResult"
+      }
+    },
+    "CreateRemoteUserResult": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CreateRemoteUserResult"
+      }
+    },
+    "DeleteBuildResult": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeleteBuildResult"
+      }
+    },
+    "DeleteFilesResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeleteFilesResponse"
+      }
+    },
+    "EmptyResult": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/EmptyResult"
+      }
+    },
+    "FinalizeFileUploadsResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/FinalizeFileUploadsResponse"
+      }
+    },
+    "GetAssetUploadUrlResult": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetAssetUploadUrlResult"
+      }
+    },
+    "GetBuildResult": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetBuildResult"
+      }
+    },
     "GetEntityProfileResponse": {
-      "description": "TODO: Each Response Description",
+      "description": "",
       "schema": {
         "$ref": "#/definitions/GetEntityProfileResponse"
       }
     },
     "GetEntityProfilesResponse": {
-      "description": "TODO: Each Response Description",
+      "description": "",
       "schema": {
         "$ref": "#/definitions/GetEntityProfilesResponse"
       }
     },
-    "SetEntityProfilePolicyResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/SetEntityProfilePolicyResponse"
-      }
-    },
-    "GetGlobalPolicyResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/GetGlobalPolicyResponse"
-      }
-    },
-    "SetGlobalPolicyResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/SetGlobalPolicyResponse"
-      }
-    },
-    "GetObjectsResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/GetObjectsResponse"
-      }
-    },
-    "SetObjectsResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/SetObjectsResponse"
-      }
-    },
     "GetEntityTokenResponse": {
-      "description": "TODO: Each Response Description",
+      "description": "",
       "schema": {
         "$ref": "#/definitions/GetEntityTokenResponse"
       }
     },
     "GetFilesResponse": {
-      "description": "TODO: Each Response Description",
+      "description": "",
       "schema": {
         "$ref": "#/definitions/GetFilesResponse"
       }
     },
-    "InitiateFileUploadsResponse": {
-      "description": "TODO: Each Response Description",
+    "GetGlobalPolicyResponse": {
+      "description": "",
       "schema": {
-        "$ref": "#/definitions/InitiateFileUploadsResponse"
-      }
-    },
-    "FinalizeFileUploadsResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/FinalizeFileUploadsResponse"
-      }
-    },
-    "AbortFileUploadsResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/AbortFileUploadsResponse"
-      }
-    },
-    "DeleteFilesResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/DeleteFilesResponse"
-      }
-    },
-    "CreateGroupResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/CreateGroupResponse"
+        "$ref": "#/definitions/GetGlobalPolicyResponse"
       }
     },
     "GetGroupResponse": {
-      "description": "TODO: Each Response Description",
+      "description": "",
       "schema": {
         "$ref": "#/definitions/GetGroupResponse"
       }
     },
-    "UpdateGroupResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/UpdateGroupResponse"
-      }
-    },
-    "EmptyResult": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/EmptyResult"
-      }
-    },
-    "ApplyToGroupResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/ApplyToGroupResponse"
-      }
-    },
-    "ListGroupApplicationsResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/ListGroupApplicationsResponse"
-      }
-    },
-    "InviteToGroupResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/InviteToGroupResponse"
-      }
-    },
-    "ListGroupInvitationsResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/ListGroupInvitationsResponse"
-      }
-    },
-    "ListMembershipOpportunitiesResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/ListMembershipOpportunitiesResponse"
-      }
-    },
-    "ListGroupBlocksResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/ListGroupBlocksResponse"
-      }
-    },
-    "ListGroupMembersResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/ListGroupMembersResponse"
-      }
-    },
-    "IsMemberResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/IsMemberResponse"
-      }
-    },
-    "CreateGroupRoleResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/CreateGroupRoleResponse"
-      }
-    },
-    "UpdateGroupRoleResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/UpdateGroupRoleResponse"
-      }
-    },
-    "ListMembershipResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/ListMembershipResponse"
-      }
-    },
-    "WriteEventsResponse": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/WriteEventsResponse"
-      }
-    },
-    "CreateBuildResult": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/CreateBuildResult"
-      }
-    },
-    "UpdateBuildRegionsResult": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/UpdateBuildRegionsResult"
-      }
-    },
-    "GetBuildResult": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/GetBuildResult"
-      }
-    },
-    "ListBuildsResult": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/ListBuildsResult"
-      }
-    },
-    "DeleteBuildResult": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/DeleteBuildResult"
-      }
-    },
-    "ListQosServersResult": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/ListQosServersResult"
-      }
-    },
-    "GetSessionHostResultDetailsResult": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/GetSessionHostResultDetailsResult"
-      }
-    },
-    "ListSessionHostsResult": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/ListSessionHostsResult"
-      }
-    },
-    "AllocateSessionHostResultResult": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/AllocateSessionHostResultResult"
-      }
-    },
-    "GetAssetUploadUrlResult": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/GetAssetUploadUrlResult"
-      }
-    },
-    "ListAssetsResult": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/ListAssetsResult"
-      }
-    },
-    "UploadCertificateResult": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/UploadCertificateResult"
-      }
-    },
-    "ListCertificatesResult": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/ListCertificatesResult"
-      }
-    },
-    "GetRemoteLoginEndpointResult": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/GetRemoteLoginEndpointResult"
-      }
-    },
-    "CreateRemoteUserResult": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/CreateRemoteUserResult"
-      }
-    },
-    "CreateMatchmakingTicketResult": {
-      "description": "TODO: Each Response Description",
-      "schema": {
-        "$ref": "#/definitions/CreateMatchmakingTicketResult"
-      }
-    },
     "GetMatchmakingTicketResult": {
-      "description": "TODO: Each Response Description",
+      "description": "",
       "schema": {
         "$ref": "#/definitions/GetMatchmakingTicketResult"
       }
     },
+    "GetMatchResult": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetMatchResult"
+      }
+    },
+    "GetObjectsResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetObjectsResponse"
+      }
+    },
+    "GetRemoteLoginEndpointResult": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetRemoteLoginEndpointResult"
+      }
+    },
+    "GetSessionHostResultDetailsResult": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetSessionHostResultDetailsResult"
+      }
+    },
+    "InitiateFileUploadsResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/InitiateFileUploadsResponse"
+      }
+    },
+    "InviteToGroupResponse": {
+      "description": "Describes an invitation to a group.",
+      "schema": {
+        "$ref": "#/definitions/InviteToGroupResponse"
+      }
+    },
+    "IsMemberResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/IsMemberResponse"
+      }
+    },
     "JoinMatchmakingTicketResult": {
-      "description": "TODO: Each Response Description",
+      "description": "",
       "schema": {
         "$ref": "#/definitions/JoinMatchmakingTicketResult"
       }
     },
-    "CancelMatchmakingTicketResult": {
-      "description": "TODO: Each Response Description",
+    "ListAssetsResult": {
+      "description": "",
       "schema": {
-        "$ref": "#/definitions/CancelMatchmakingTicketResult"
+        "$ref": "#/definitions/ListAssetsResult"
       }
     },
-    "GetMatchResult": {
-      "description": "TODO: Each Response Description",
+    "ListBuildsResult": {
+      "description": "",
       "schema": {
-        "$ref": "#/definitions/GetMatchResult"
+        "$ref": "#/definitions/ListBuildsResult"
+      }
+    },
+    "ListCertificatesResult": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListCertificatesResult"
+      }
+    },
+    "ListGroupApplicationsResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListGroupApplicationsResponse"
+      }
+    },
+    "ListGroupBlocksResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListGroupBlocksResponse"
+      }
+    },
+    "ListGroupInvitationsResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListGroupInvitationsResponse"
+      }
+    },
+    "ListGroupMembersResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListGroupMembersResponse"
+      }
+    },
+    "ListMembershipOpportunitiesResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListMembershipOpportunitiesResponse"
+      }
+    },
+    "ListMembershipResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListMembershipResponse"
+      }
+    },
+    "ListQosServersResult": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListQosServersResult"
+      }
+    },
+    "ListSessionHostsResult": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListSessionHostsResult"
+      }
+    },
+    "SetEntityProfilePolicyResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetEntityProfilePolicyResponse"
+      }
+    },
+    "SetGlobalPolicyResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetGlobalPolicyResponse"
+      }
+    },
+    "SetObjectsResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetObjectsResponse"
+      }
+    },
+    "UpdateBuildRegionsResult": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateBuildRegionsResult"
+      }
+    },
+    "UpdateGroupResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateGroupResponse"
+      }
+    },
+    "UpdateGroupRoleResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateGroupRoleResponse"
+      }
+    },
+    "UploadCertificateResult": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UploadCertificateResult"
+      }
+    },
+    "WriteEventsResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/WriteEventsResponse"
       }
     }
   },

@@ -4,6 +4,7 @@
       "Group": "none",
       "Classes": [
         {
+          "description": "",
           "type": "object",
           "properties": {
             "AdCampaignAttributions": {
@@ -12,20 +13,17 @@
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "AdCampaignAttribution",
-              "x-isclass": true,
-              "x-optional": true
+              "x-isclass": true
             },
             "AvatarUrl": {
               "description": "Image URL of the player's avatar.",
               "x-jsontype": "String",
-              "x-actualtype": "String",
-              "x-optional": true
+              "x-actualtype": "String"
             },
             "BannedUntil": {
               "description": "Banned until UTC Date. If permanent ban this is set for 20 years after the original ban date.",
               "x-jsontype": "String",
-              "x-actualtype": "DateTime",
-              "x-optional": true
+              "x-actualtype": "DateTime"
             },
             "ContactEmailAddresses": {
               "$ref": "#/definitions/ContactEmailInfo",
@@ -33,26 +31,22 @@
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "ContactEmailInfo",
-              "x-isclass": true,
-              "x-optional": true
+              "x-isclass": true
             },
             "Created": {
               "description": "Player record created",
               "x-jsontype": "String",
-              "x-actualtype": "DateTime",
-              "x-optional": true
+              "x-actualtype": "DateTime"
             },
             "DisplayName": {
               "description": "Player Display Name",
               "x-jsontype": "String",
-              "x-actualtype": "String",
-              "x-optional": true
+              "x-actualtype": "String"
             },
             "LastLogin": {
               "description": "Last login",
               "x-jsontype": "String",
-              "x-actualtype": "DateTime",
-              "x-optional": true
+              "x-actualtype": "DateTime"
             },
             "LinkedAccounts": {
               "$ref": "#/definitions/PlayerLinkedAccount",
@@ -60,8 +54,7 @@
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "PlayerLinkedAccount",
-              "x-isclass": true,
-              "x-optional": true
+              "x-isclass": true
             },
             "Locations": {
               "$ref": "#/definitions/PlayerLocation",
@@ -69,22 +62,19 @@
               "x-collection": "map",
               "x-jsontype": "Object",
               "x-actualtype": "PlayerLocation",
-              "x-isclass": true,
-              "x-optional": true
+              "x-isclass": true
             },
             "Origination": {
               "$ref": "#/definitions/LoginIdentityProvider",
               "description": "Player account origination",
               "x-jsontype": "String",
               "x-actualtype": "LoginIdentityProvider",
-              "x-isenum": true,
-              "x-optional": true
+              "x-isenum": true
             },
             "PlayerId": {
               "description": "PlayFab Player ID",
               "x-jsontype": "String",
-              "x-actualtype": "String",
-              "x-optional": true
+              "x-actualtype": "String"
             },
             "PlayerStatistics": {
               "$ref": "#/definitions/PlayerStatistic",
@@ -92,14 +82,12 @@
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "PlayerStatistic",
-              "x-isclass": true,
-              "x-optional": true
+              "x-isclass": true
             },
             "PublisherId": {
               "description": "Publisher this player belongs to",
               "x-jsontype": "String",
-              "x-actualtype": "String",
-              "x-optional": true
+              "x-actualtype": "String"
             },
             "PushNotificationRegistrations": {
               "$ref": "#/definitions/PushNotificationRegistration",
@@ -107,57 +95,50 @@
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "PushNotificationRegistration",
-              "x-isclass": true,
-              "x-optional": true
+              "x-isclass": true
             },
             "Statistics": {
               "description": "Dictionary of player's statistics using only the latest version's value",
               "x-collection": "map",
               "x-jsontype": "Number",
-              "x-actualtype": "int32",
-              "x-optional": true
+              "x-actualtype": "int32"
             },
             "Tags": {
               "description": "List of player's tags for segmentation.",
               "x-collection": "array",
               "x-jsontype": "String",
-              "x-actualtype": "String",
-              "x-optional": true
+              "x-actualtype": "String"
             },
             "TitleId": {
               "description": "Title ID this profile applies to",
               "x-jsontype": "String",
-              "x-actualtype": "String",
-              "x-optional": true
+              "x-actualtype": "String"
             },
             "TotalValueToDateInUSD": {
               "description": "A sum of player's total purchases in USD across all currencies.",
               "x-jsontype": "Number",
-              "x-actualtype": "uint32",
-              "x-optional": true
+              "x-actualtype": "uint32"
             },
             "ValuesToDate": {
               "description": "Dictionary of player's total purchases by currency.",
               "x-collection": "map",
               "x-jsontype": "Number",
-              "x-actualtype": "uint32",
-              "x-optional": true
+              "x-actualtype": "uint32"
             },
             "VirtualCurrencyBalances": {
               "description": "Dictionary of player's virtual currency balances",
               "x-collection": "map",
               "x-jsontype": "Number",
-              "x-actualtype": "int32",
-              "x-optional": true
+              "x-actualtype": "int32"
             }
-          },
-          "x-ClassName": "PlayerProfile"
+          }
         }
       ]
     }
   ],
   "ChildTypes": [
     {
+      "description": "",
       "type": "object",
       "enum": [
         "Unknown",
@@ -174,10 +155,10 @@
         "AndroidDevice",
         "Twitch",
         "WindowsHello"
-      ],
-      "x-ClassName": "LoginIdentityProvider"
+      ]
     },
     {
+      "description": "",
       "type": "object",
       "enum": [
         "AF",
@@ -187,10 +168,10 @@
         "NA",
         "OC",
         "SA"
-      ],
-      "x-ClassName": "ContinentCode"
+      ]
     },
     {
+      "description": "",
       "type": "object",
       "enum": [
         "AF",
@@ -442,197 +423,186 @@
         "YE",
         "ZM",
         "ZW"
-      ],
-      "x-ClassName": "CountryCode"
+      ]
     },
     {
+      "description": "",
       "type": "object",
       "properties": {
         "City": {
           "description": "City of the player's geographic location.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "ContinentCode": {
           "$ref": "#/definitions/ContinentCode",
           "description": "The two-character continent code for this location",
           "x-jsontype": "String",
           "x-actualtype": "ContinentCode",
-          "x-isenum": true,
-          "x-optional": false
+          "x-isenum": true
         },
         "CountryCode": {
           "$ref": "#/definitions/CountryCode",
           "description": "The two-character ISO 3166-1 country code for the country associated with the location",
           "x-jsontype": "String",
           "x-actualtype": "CountryCode",
-          "x-isenum": true,
-          "x-optional": false
+          "x-isenum": true
         },
         "Latitude": {
           "description": "Latitude coordinate of the player's geographic location.",
           "x-jsontype": "Number",
-          "x-actualtype": "double",
-          "x-optional": true
+          "x-actualtype": "double"
         },
         "Longitude": {
           "description": "Longitude coordinate of the player's geographic location.",
           "x-jsontype": "Number",
-          "x-actualtype": "double",
-          "x-optional": true
+          "x-actualtype": "double"
         }
       },
-      "x-ClassName": "PlayerLocation"
+      "required": [
+        "ContinentCode",
+        "CountryCode"
+      ]
     },
     {
+      "description": "",
       "type": "object",
       "properties": {
         "AttributedAt": {
           "description": "UTC time stamp of attribution",
           "x-jsontype": "String",
-          "x-actualtype": "DateTime",
-          "x-optional": false
+          "x-actualtype": "DateTime"
         },
         "CampaignId": {
           "description": "Attribution campaign identifier",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Platform": {
           "description": "Attribution network name",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
       },
-      "x-ClassName": "AdCampaignAttribution"
+      "required": [
+        "AttributedAt"
+      ]
     },
     {
+      "description": "",
       "type": "object",
       "enum": [
         "ApplePushNotificationService",
         "GoogleCloudMessaging"
-      ],
-      "x-ClassName": "PushNotificationPlatform"
+      ]
     },
     {
+      "description": "",
       "type": "object",
       "properties": {
         "NotificationEndpointARN": {
           "description": "Notification configured endpoint",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Platform": {
           "$ref": "#/definitions/PushNotificationPlatform",
           "description": "Push notification platform",
           "x-jsontype": "String",
           "x-actualtype": "PushNotificationPlatform",
-          "x-isenum": true,
-          "x-optional": true
+          "x-isenum": true
         }
-      },
-      "x-ClassName": "PushNotificationRegistration"
+      }
     },
     {
+      "description": "",
       "type": "object",
       "properties": {
         "Email": {
           "description": "Linked account's email",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Platform": {
           "$ref": "#/definitions/LoginIdentityProvider",
           "description": "Authentication platform",
           "x-jsontype": "String",
           "x-actualtype": "LoginIdentityProvider",
-          "x-isenum": true,
-          "x-optional": true
+          "x-isenum": true
         },
         "PlatformUserId": {
           "description": "Platform user identifier",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Username": {
           "description": "Linked account's username",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         }
-      },
-      "x-ClassName": "PlayerLinkedAccount"
+      }
     },
     {
+      "description": "",
       "type": "object",
       "properties": {
         "Id": {
           "description": "Statistic ID",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Name": {
           "description": "Statistic name",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "StatisticValue": {
           "description": "Current statistic value",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         },
         "StatisticVersion": {
           "description": "Statistic version (0 if not a versioned statistic)",
           "x-jsontype": "Number",
-          "x-actualtype": "int32",
-          "x-optional": false
+          "x-actualtype": "int32"
         }
       },
-      "x-ClassName": "PlayerStatistic"
+      "required": [
+        "StatisticVersion",
+        "StatisticValue"
+      ]
     },
     {
+      "description": "",
       "type": "object",
       "enum": [
         "Unverified",
         "Pending",
         "Confirmed"
-      ],
-      "x-ClassName": "EmailVerificationStatus"
+      ]
     },
     {
+      "description": "",
       "type": "object",
       "properties": {
         "EmailAddress": {
           "description": "The email address",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "Name": {
           "description": "The name of the email info data",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "VerificationStatus": {
           "$ref": "#/definitions/EmailVerificationStatus",
           "description": "The verification status of the email",
           "x-jsontype": "String",
           "x-actualtype": "EmailVerificationStatus",
-          "x-isenum": true,
-          "x-optional": true
+          "x-isenum": true
         }
-      },
-      "x-ClassName": "ContactEmailInfo"
+      }
     }
   ]
 }

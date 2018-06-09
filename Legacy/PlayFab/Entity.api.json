@@ -664,6 +664,12 @@
           "optional": true
         },
         {
+          "name": "SessionHostCountPerVm",
+          "jsontype": "Number",
+          "actualtype": "int32",
+          "optional": false
+        },
+        {
           "name": "StartGameCommand",
           "jsontype": "String",
           "actualtype": "String",
@@ -844,29 +850,6 @@
         }
       ]
     },
-    "ContainerImageReferenceParams": {
-      "name": "ContainerImageReferenceParams",
-      "className": "ContainerImageReferenceParams",
-      "classNameSpace": "PlayFab.Entity.Models",
-      "assembly": "PlayFab.Entity.Models",
-      "AnyInclusiveFlags": [
-        "Beta"
-      ],
-      "properties": [
-        {
-          "name": "ImageName",
-          "jsontype": "String",
-          "actualtype": "String",
-          "optional": false
-        },
-        {
-          "name": "Tag",
-          "jsontype": "String",
-          "actualtype": "String",
-          "optional": true
-        }
-      ]
-    },
     "CreateBuildRequest": {
       "name": "CreateBuildRequest",
       "className": "CreateBuildRequest",
@@ -903,13 +886,6 @@
           "jsontype": "String",
           "actualtype": "String",
           "optional": true
-        },
-        {
-          "name": "GameContainerImage",
-          "jsontype": "Object",
-          "actualtype": "ContainerImageReferenceParams",
-          "isclass": true,
-          "optional": false
         },
         {
           "name": "MappedPorts",
@@ -2523,7 +2499,20 @@
       "AnyInclusiveFlags": [
         "Beta"
       ],
-      "properties": []
+      "properties": [
+        {
+          "name": "IpV4Address",
+          "jsontype": "String",
+          "actualtype": "String",
+          "optional": true
+        },
+        {
+          "name": "Port",
+          "jsontype": "Number",
+          "actualtype": "int32",
+          "optional": false
+        }
+      ]
     },
     "GetSessionHostDetailsRequest": {
       "name": "GetSessionHostDetailsRequest",
@@ -5026,7 +5015,7 @@
       "request": "GetMatchmakingTicketRequest",
       "requestExample": "{\r\n  \"TicketId\": \"1c4b0daa-150e-47ae-9923-d770c0f9b07c\",\r\n  \"HopperId\": \"custom123\",\r\n  \"EscapeObject\": false\r\n}",
       "result": "GetMatchmakingTicketResult",
-      "resultExample": "{\r\n  \"code\": 200,\r\n  \"status\": \"OK\",\r\n  \"data\": {\r\n    \"TicketId\": \"1c4b0daa-150e-47ae-9923-d770c0f9b07c\",\r\n    \"HopperId\": \"custom123\",\r\n    \"MatchId\": \"4e0c5fd7-80e9-4744-b0ce-061a7f067ff5\",\r\n    \"Created\": \"6/6/2018 3:39:04 PM\",\r\n    \"Status\": \"MATCHED\",\r\n    \"GiveUpAfterSeconds\": 100000,\r\n    \"MembersToMatchWith\": [\r\n      {\r\n        \"Id\": \"123123123\",\r\n        \"TypeString\": \"title_player_acount\"\r\n      }\r\n    ],\r\n    \"Members\": [],\r\n    \"Creator\": {\r\n      \"Id\": \"123123123\",\r\n      \"TypeString\": \"title_player_acount\"\r\n    }\r\n  }\r\n}",
+      "resultExample": "{\r\n  \"code\": 200,\r\n  \"status\": \"OK\",\r\n  \"data\": {\r\n    \"TicketId\": \"1c4b0daa-150e-47ae-9923-d770c0f9b07c\",\r\n    \"HopperId\": \"custom123\",\r\n    \"MatchId\": \"4e0c5fd7-80e9-4744-b0ce-061a7f067ff5\",\r\n    \"Created\": \"6/8/2018 4:58:07 PM\",\r\n    \"Status\": \"MATCHED\",\r\n    \"GiveUpAfterSeconds\": 100000,\r\n    \"MembersToMatchWith\": [\r\n      {\r\n        \"Id\": \"123123123\",\r\n        \"TypeString\": \"title_player_acount\"\r\n      }\r\n    ],\r\n    \"Members\": [],\r\n    \"Creator\": {\r\n      \"Id\": \"123123123\",\r\n      \"TypeString\": \"title_player_acount\"\r\n    }\r\n  }\r\n}",
       "AnyInclusiveFlags": [
         "Beta"
       ],

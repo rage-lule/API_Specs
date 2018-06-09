@@ -4,44 +4,39 @@
       "Group": "none",
       "Classes": [
         {
+          "description": "",
           "type": "object",
           "properties": {
             "CustomTags": {
               "description": "Key-Value pair storage. Any provider of this event schema is allowed to send additional values in this property.",
               "x-collection": "map",
               "x-jsontype": "String",
-              "x-actualtype": "String",
-              "x-optional": true
+              "x-actualtype": "String"
             },
             "EntityId": {
               "description": "The identifier for the entity (title, player, etc) to which this event applies.",
               "x-jsontype": "String",
-              "x-actualtype": "String",
-              "x-optional": true
+              "x-actualtype": "String"
             },
             "EntityType": {
               "description": "The type of entity (player, title, etc.) to which this event applies. If PlayFab is meant to take action on this entity, then the EntityType must be either 'player', 'character', or 'title'. It is required  that any entity type that PlayFab does not currently parse should be prepended with a namespace (like 'com.mygame.guild') as PlayFab may begin to parse root entities at any time.",
               "x-jsontype": "String",
-              "x-actualtype": "String",
-              "x-optional": false
+              "x-actualtype": "String"
             },
             "EventId": {
               "description": "PlayFab-assigned unique identifier for this event.",
               "x-jsontype": "String",
-              "x-actualtype": "String",
-              "x-optional": true
+              "x-actualtype": "String"
             },
             "EventName": {
               "description": "The name of this event.",
               "x-jsontype": "String",
-              "x-actualtype": "String",
-              "x-optional": false
+              "x-actualtype": "String"
             },
             "EventNamespace": {
               "description": "The assigned namespacing for this event. For example: 'com.myprogram.ads'",
               "x-jsontype": "String",
-              "x-actualtype": "String",
-              "x-optional": true
+              "x-actualtype": "String"
             },
             "History": {
               "$ref": "#/definitions/PlayStreamEventHistory",
@@ -49,43 +44,42 @@
               "x-collection": "array",
               "x-jsontype": "Object",
               "x-actualtype": "PlayStreamEventHistory",
-              "x-isclass": true,
-              "x-optional": true
+              "x-isclass": true
             },
             "Reserved": {
               "description": "Reserved exclusively for PlayFab internal use.",
               "x-jsontype": "Object",
-              "x-actualtype": "object",
-              "x-optional": true
+              "x-actualtype": "object"
             },
             "Source": {
               "description": "The name of the source of this PlayStream event; will be PlayFab if the event originated from us.",
               "x-jsontype": "String",
-              "x-actualtype": "String",
-              "x-optional": true
+              "x-actualtype": "String"
             },
             "SourceType": {
               "$ref": "#/definitions/SourceType",
               "description": "The type of source of this event (PlayFab partner, other backend, or from the PlayFab API).",
               "x-jsontype": "String",
               "x-actualtype": "SourceType",
-              "x-isenum": true,
-              "x-optional": true
+              "x-isenum": true
             },
             "Timestamp": {
               "description": "The time (in UTC) associated with this event.",
               "x-jsontype": "String",
-              "x-actualtype": "DateTime",
-              "x-optional": true
+              "x-actualtype": "DateTime"
             }
           },
-          "x-ClassName": "CustomEventData"
+          "required": [
+            "EventName",
+            "EntityType"
+          ]
         }
       ]
     }
   ],
   "ChildTypes": [
     {
+      "description": "",
       "type": "object",
       "enum": [
         "Admin",
@@ -93,32 +87,31 @@
         "GameClient",
         "GameServer",
         "Partner"
-      ],
-      "x-ClassName": "SourceType"
+      ]
     },
     {
+      "description": "",
       "type": "object",
       "properties": {
         "ParentEventId": {
           "description": "The ID of the previous event that caused this event to be created by hitting a trigger.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "ParentTriggerId": {
           "description": "The ID of the trigger that caused this event to be created.",
           "x-jsontype": "String",
-          "x-actualtype": "String",
-          "x-optional": true
+          "x-actualtype": "String"
         },
         "TriggeredEvents": {
           "description": "If true, then this event was allowed to trigger subsequent events in a trigger.",
           "x-jsontype": "Boolean",
-          "x-actualtype": "Boolean",
-          "x-optional": false
+          "x-actualtype": "Boolean"
         }
       },
-      "x-ClassName": "PlayStreamEventHistory"
+      "required": [
+        "TriggeredEvents"
+      ]
     }
   ]
 }
