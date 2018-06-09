@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "180608",
+    "version": "180609",
     "title": "PlayFab Server API",
     "description": "Provides functionality to allow external (developer-controlled) servers to interact with user inventories and data in a trusted manner, and to handle matchmaking and client connection orchestration",
     "termsOfService": "https://playfab.com/terms/",
@@ -35,7 +35,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AddCharacterVirtualCurrencyRequest"
+            "$ref": "#/parameters/AddCharacterVirtualCurrencyRequest"
           }
         ],
         "security": [
@@ -87,7 +87,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AddFriendRequest"
+            "$ref": "#/parameters/AddFriendRequest"
           }
         ],
         "security": [
@@ -142,7 +142,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AddPlayerTagRequest"
+            "$ref": "#/parameters/AddPlayerTagRequest"
           }
         ],
         "security": [
@@ -196,7 +196,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AddSharedGroupMembersRequest"
+            "$ref": "#/parameters/AddSharedGroupMembersRequest"
           }
         ],
         "security": [
@@ -246,7 +246,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AddUserVirtualCurrencyRequest"
+            "$ref": "#/parameters/AddUserVirtualCurrencyRequest"
           }
         ],
         "security": [
@@ -297,7 +297,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AuthenticateSessionTicketRequest"
+            "$ref": "#/parameters/AuthenticateSessionTicketRequest"
           }
         ],
         "security": [
@@ -346,7 +346,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AwardSteamAchievementRequest"
+            "$ref": "#/parameters/AwardSteamAchievementRequest"
           }
         ],
         "security": [
@@ -391,7 +391,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/BanUsersRequest"
+            "$ref": "#/parameters/BanUsersRequest"
           }
         ],
         "security": [
@@ -443,7 +443,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ConsumeItemRequest"
+            "$ref": "#/parameters/ConsumeItemRequest"
           }
         ],
         "security": [
@@ -495,7 +495,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/CreateSharedGroupRequest"
+            "$ref": "#/parameters/CreateSharedGroupRequest"
           }
         ],
         "security": [
@@ -544,7 +544,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/DeleteCharacterFromUserRequest"
+            "$ref": "#/parameters/DeleteCharacterFromUserRequest"
           }
         ],
         "security": [
@@ -594,7 +594,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/DeleteSharedGroupRequest"
+            "$ref": "#/parameters/DeleteSharedGroupRequest"
           }
         ],
         "security": [
@@ -642,7 +642,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/DeleteUsersRequest"
+            "$ref": "#/parameters/DeleteUsersRequest"
           }
         ],
         "security": [
@@ -693,7 +693,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/DeregisterGameRequest"
+            "$ref": "#/parameters/DeregisterGameRequest"
           }
         ],
         "security": [
@@ -741,7 +741,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/EvaluateRandomResultTableRequest"
+            "$ref": "#/parameters/EvaluateRandomResultTableRequest"
           }
         ],
         "security": [
@@ -791,7 +791,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ExecuteCloudScriptServerRequest"
+            "$ref": "#/parameters/ExecuteCloudScriptServerRequest"
           }
         ],
         "security": [
@@ -844,7 +844,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetAllActionGroupsRequest"
+            "$ref": "#/parameters/GetAllActionGroupsRequest"
           }
         ],
         "security": [
@@ -898,7 +898,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetAllSegmentsRequest"
+            "$ref": "#/parameters/GetAllSegmentsRequest"
           }
         ],
         "security": [
@@ -947,7 +947,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ListUsersCharactersRequest"
+            "$ref": "#/parameters/ListUsersCharactersRequest"
           }
         ],
         "security": [
@@ -993,7 +993,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetCatalogItemsRequest"
+            "$ref": "#/parameters/GetCatalogItemsRequest"
           }
         ],
         "security": [
@@ -1038,7 +1038,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetCharacterDataRequest"
+            "$ref": "#/parameters/GetCharacterDataRequest"
           }
         ],
         "security": [
@@ -1094,7 +1094,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetCharacterDataRequest"
+            "$ref": "#/parameters/GetCharacterDataRequest"
           }
         ],
         "security": [
@@ -1150,7 +1150,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetCharacterInventoryRequest"
+            "$ref": "#/parameters/GetCharacterInventoryRequest"
           }
         ],
         "security": [
@@ -1202,7 +1202,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetCharacterLeaderboardRequest"
+            "$ref": "#/parameters/GetCharacterLeaderboardRequest"
           }
         ],
         "security": [
@@ -1253,7 +1253,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetCharacterDataRequest"
+            "$ref": "#/parameters/GetCharacterDataRequest"
           }
         ],
         "security": [
@@ -1309,7 +1309,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetCharacterStatisticsRequest"
+            "$ref": "#/parameters/GetCharacterStatisticsRequest"
           }
         ],
         "security": [
@@ -1364,7 +1364,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetContentDownloadUrlRequest"
+            "$ref": "#/parameters/GetContentDownloadUrlRequest"
           }
         ],
         "security": [
@@ -1415,7 +1415,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetFriendLeaderboardRequest"
+            "$ref": "#/parameters/GetFriendLeaderboardRequest"
           }
         ],
         "security": [
@@ -1469,7 +1469,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetFriendsListRequest"
+            "$ref": "#/parameters/GetFriendsListRequest"
           }
         ],
         "security": [
@@ -1525,7 +1525,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetLeaderboardRequest"
+            "$ref": "#/parameters/GetLeaderboardRequest"
           }
         ],
         "security": [
@@ -1579,7 +1579,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetLeaderboardAroundCharacterRequest"
+            "$ref": "#/parameters/GetLeaderboardAroundCharacterRequest"
           }
         ],
         "security": [
@@ -1633,7 +1633,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetLeaderboardAroundUserRequest"
+            "$ref": "#/parameters/GetLeaderboardAroundUserRequest"
           }
         ],
         "security": [
@@ -1688,7 +1688,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetLeaderboardForUsersCharactersRequest"
+            "$ref": "#/parameters/GetLeaderboardForUsersCharactersRequest"
           }
         ],
         "security": [
@@ -1742,7 +1742,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayerCombinedInfoRequest"
+            "$ref": "#/parameters/GetPlayerCombinedInfoRequest"
           }
         ],
         "security": [
@@ -1787,7 +1787,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayerProfileRequest"
+            "$ref": "#/parameters/GetPlayerProfileRequest"
           }
         ],
         "security": [
@@ -1837,7 +1837,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayersSegmentsRequest"
+            "$ref": "#/parameters/GetPlayersSegmentsRequest"
           }
         ],
         "security": [
@@ -1885,7 +1885,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayersInSegmentRequest"
+            "$ref": "#/parameters/GetPlayersInSegmentRequest"
           }
         ],
         "security": [
@@ -1938,7 +1938,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayerStatisticsRequest"
+            "$ref": "#/parameters/GetPlayerStatisticsRequest"
           }
         ],
         "security": [
@@ -1993,7 +1993,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayerStatisticVersionsRequest"
+            "$ref": "#/parameters/GetPlayerStatisticVersionsRequest"
           }
         ],
         "security": [
@@ -2047,7 +2047,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayerTagsRequest"
+            "$ref": "#/parameters/GetPlayerTagsRequest"
           }
         ],
         "security": [
@@ -2100,7 +2100,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayFabIDsFromFacebookIDsRequest"
+            "$ref": "#/parameters/GetPlayFabIDsFromFacebookIDsRequest"
           }
         ],
         "security": [
@@ -2150,7 +2150,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayFabIDsFromSteamIDsRequest"
+            "$ref": "#/parameters/GetPlayFabIDsFromSteamIDsRequest"
           }
         ],
         "security": [
@@ -2200,7 +2200,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPublisherDataRequest"
+            "$ref": "#/parameters/GetPublisherDataRequest"
           }
         ],
         "security": [
@@ -2252,7 +2252,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetRandomResultTablesRequest"
+            "$ref": "#/parameters/GetRandomResultTablesRequest"
           }
         ],
         "security": [
@@ -2305,7 +2305,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetSharedGroupDataRequest"
+            "$ref": "#/parameters/GetSharedGroupDataRequest"
           }
         ],
         "security": [
@@ -2353,7 +2353,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetTimeRequest"
+            "$ref": "#/parameters/GetTimeRequest"
           }
         ],
         "security": [
@@ -2403,7 +2403,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetTitleDataRequest"
+            "$ref": "#/parameters/GetTitleDataRequest"
           }
         ],
         "security": [
@@ -2452,7 +2452,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetTitleDataRequest"
+            "$ref": "#/parameters/GetTitleDataRequest"
           }
         ],
         "security": [
@@ -2501,7 +2501,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetTitleNewsRequest"
+            "$ref": "#/parameters/GetTitleNewsRequest"
           }
         ],
         "security": [
@@ -2546,7 +2546,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserAccountInfoRequest"
+            "$ref": "#/parameters/GetUserAccountInfoRequest"
           }
         ],
         "security": [
@@ -2595,7 +2595,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserBansRequest"
+            "$ref": "#/parameters/GetUserBansRequest"
           }
         ],
         "security": [
@@ -2650,7 +2650,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserDataRequest"
+            "$ref": "#/parameters/GetUserDataRequest"
           }
         ],
         "security": [
@@ -2703,7 +2703,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserDataRequest"
+            "$ref": "#/parameters/GetUserDataRequest"
           }
         ],
         "security": [
@@ -2756,7 +2756,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserInventoryRequest"
+            "$ref": "#/parameters/GetUserInventoryRequest"
           }
         ],
         "security": [
@@ -2805,7 +2805,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserDataRequest"
+            "$ref": "#/parameters/GetUserDataRequest"
           }
         ],
         "security": [
@@ -2861,7 +2861,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserDataRequest"
+            "$ref": "#/parameters/GetUserDataRequest"
           }
         ],
         "security": [
@@ -2917,7 +2917,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserDataRequest"
+            "$ref": "#/parameters/GetUserDataRequest"
           }
         ],
         "security": [
@@ -2973,7 +2973,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserDataRequest"
+            "$ref": "#/parameters/GetUserDataRequest"
           }
         ],
         "security": [
@@ -3026,7 +3026,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserStatisticsRequest"
+            "$ref": "#/parameters/GetUserStatisticsRequest"
           }
         ],
         "security": [
@@ -3089,7 +3089,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GrantCharacterToUserRequest"
+            "$ref": "#/parameters/GrantCharacterToUserRequest"
           }
         ],
         "security": [
@@ -3138,7 +3138,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GrantItemsToCharacterRequest"
+            "$ref": "#/parameters/GrantItemsToCharacterRequest"
           }
         ],
         "security": [
@@ -3189,7 +3189,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GrantItemsToUserRequest"
+            "$ref": "#/parameters/GrantItemsToUserRequest"
           }
         ],
         "security": [
@@ -3239,7 +3239,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GrantItemsToUsersRequest"
+            "$ref": "#/parameters/GrantItemsToUsersRequest"
           }
         ],
         "security": [
@@ -3289,7 +3289,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/LogEventRequest"
+            "$ref": "#/parameters/LogEventRequest"
           }
         ],
         "security": [
@@ -3349,7 +3349,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ModifyItemUsesRequest"
+            "$ref": "#/parameters/ModifyItemUsesRequest"
           }
         ],
         "security": [
@@ -3399,7 +3399,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/MoveItemToCharacterFromCharacterRequest"
+            "$ref": "#/parameters/MoveItemToCharacterFromCharacterRequest"
           }
         ],
         "security": [
@@ -3455,7 +3455,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/MoveItemToCharacterFromUserRequest"
+            "$ref": "#/parameters/MoveItemToCharacterFromUserRequest"
           }
         ],
         "security": [
@@ -3510,7 +3510,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/MoveItemToUserFromCharacterRequest"
+            "$ref": "#/parameters/MoveItemToUserFromCharacterRequest"
           }
         ],
         "security": [
@@ -3565,7 +3565,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/NotifyMatchmakerPlayerLeftRequest"
+            "$ref": "#/parameters/NotifyMatchmakerPlayerLeftRequest"
           }
         ],
         "security": [
@@ -3613,7 +3613,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RedeemCouponRequest"
+            "$ref": "#/parameters/RedeemCouponRequest"
           }
         ],
         "security": [
@@ -3665,7 +3665,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RedeemMatchmakerTicketRequest"
+            "$ref": "#/parameters/RedeemMatchmakerTicketRequest"
           }
         ],
         "security": [
@@ -3717,7 +3717,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RefreshGameServerInstanceHeartbeatRequest"
+            "$ref": "#/parameters/RefreshGameServerInstanceHeartbeatRequest"
           }
         ],
         "security": [
@@ -3765,7 +3765,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RegisterGameRequest"
+            "$ref": "#/parameters/RegisterGameRequest"
           }
         ],
         "security": [
@@ -3816,7 +3816,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RemoveFriendRequest"
+            "$ref": "#/parameters/RemoveFriendRequest"
           }
         ],
         "security": [
@@ -3868,7 +3868,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RemovePlayerTagRequest"
+            "$ref": "#/parameters/RemovePlayerTagRequest"
           }
         ],
         "security": [
@@ -3921,7 +3921,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RemoveSharedGroupMembersRequest"
+            "$ref": "#/parameters/RemoveSharedGroupMembersRequest"
           }
         ],
         "security": [
@@ -3969,7 +3969,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ReportPlayerServerRequest"
+            "$ref": "#/parameters/ReportPlayerServerRequest"
           }
         ],
         "security": [
@@ -4015,7 +4015,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RevokeAllBansForUserRequest"
+            "$ref": "#/parameters/RevokeAllBansForUserRequest"
           }
         ],
         "security": [
@@ -4070,7 +4070,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RevokeBansRequest"
+            "$ref": "#/parameters/RevokeBansRequest"
           }
         ],
         "security": [
@@ -4122,7 +4122,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RevokeInventoryItemRequest"
+            "$ref": "#/parameters/RevokeInventoryItemRequest"
           }
         ],
         "security": [
@@ -4174,7 +4174,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RevokeInventoryItemsRequest"
+            "$ref": "#/parameters/RevokeInventoryItemsRequest"
           }
         ],
         "security": [
@@ -4226,7 +4226,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SendCustomAccountRecoveryEmailRequest"
+            "$ref": "#/parameters/SendCustomAccountRecoveryEmailRequest"
           }
         ],
         "security": [
@@ -4280,7 +4280,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SendEmailFromTemplateRequest"
+            "$ref": "#/parameters/SendEmailFromTemplateRequest"
           }
         ],
         "security": [
@@ -4333,7 +4333,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SendPushNotificationRequest"
+            "$ref": "#/parameters/SendPushNotificationRequest"
           }
         ],
         "security": [
@@ -4382,7 +4382,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SetFriendTagsRequest"
+            "$ref": "#/parameters/SetFriendTagsRequest"
           }
         ],
         "security": [
@@ -4436,7 +4436,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SetGameServerInstanceDataRequest"
+            "$ref": "#/parameters/SetGameServerInstanceDataRequest"
           }
         ],
         "security": [
@@ -4484,7 +4484,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SetGameServerInstanceStateRequest"
+            "$ref": "#/parameters/SetGameServerInstanceStateRequest"
           }
         ],
         "security": [
@@ -4532,7 +4532,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SetGameServerInstanceTagsRequest"
+            "$ref": "#/parameters/SetGameServerInstanceTagsRequest"
           }
         ],
         "security": [
@@ -4580,7 +4580,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SetPlayerSecretRequest"
+            "$ref": "#/parameters/SetPlayerSecretRequest"
           }
         ],
         "security": [
@@ -4629,7 +4629,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SetPublisherDataRequest"
+            "$ref": "#/parameters/SetPublisherDataRequest"
           }
         ],
         "security": [
@@ -4681,7 +4681,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SetTitleDataRequest"
+            "$ref": "#/parameters/SetTitleDataRequest"
           }
         ],
         "security": [
@@ -4734,7 +4734,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SetTitleDataRequest"
+            "$ref": "#/parameters/SetTitleDataRequest"
           }
         ],
         "security": [
@@ -4787,7 +4787,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SubtractCharacterVirtualCurrencyRequest"
+            "$ref": "#/parameters/SubtractCharacterVirtualCurrencyRequest"
           }
         ],
         "security": [
@@ -4839,7 +4839,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SubtractUserVirtualCurrencyRequest"
+            "$ref": "#/parameters/SubtractUserVirtualCurrencyRequest"
           }
         ],
         "security": [
@@ -4890,7 +4890,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UnlockContainerInstanceRequest"
+            "$ref": "#/parameters/UnlockContainerInstanceRequest"
           }
         ],
         "security": [
@@ -4944,7 +4944,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UnlockContainerItemRequest"
+            "$ref": "#/parameters/UnlockContainerItemRequest"
           }
         ],
         "security": [
@@ -4998,7 +4998,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateAvatarUrlRequest"
+            "$ref": "#/parameters/UpdateAvatarUrlRequest"
           }
         ],
         "security": [
@@ -5046,7 +5046,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateBansRequest"
+            "$ref": "#/parameters/UpdateBansRequest"
           }
         ],
         "security": [
@@ -5098,7 +5098,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateCharacterDataRequest"
+            "$ref": "#/parameters/UpdateCharacterDataRequest"
           }
         ],
         "security": [
@@ -5154,7 +5154,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateCharacterDataRequest"
+            "$ref": "#/parameters/UpdateCharacterDataRequest"
           }
         ],
         "security": [
@@ -5210,7 +5210,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateCharacterDataRequest"
+            "$ref": "#/parameters/UpdateCharacterDataRequest"
           }
         ],
         "security": [
@@ -5266,7 +5266,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateCharacterStatisticsRequest"
+            "$ref": "#/parameters/UpdateCharacterStatisticsRequest"
           }
         ],
         "security": [
@@ -5317,7 +5317,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdatePlayerStatisticsRequest"
+            "$ref": "#/parameters/UpdatePlayerStatisticsRequest"
           }
         ],
         "security": [
@@ -5378,7 +5378,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateSharedGroupDataRequest"
+            "$ref": "#/parameters/UpdateSharedGroupDataRequest"
           }
         ],
         "security": [
@@ -5428,7 +5428,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateUserDataRequest"
+            "$ref": "#/parameters/UpdateUserDataRequest"
           }
         ],
         "security": [
@@ -5481,7 +5481,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateUserInternalDataRequest"
+            "$ref": "#/parameters/UpdateUserInternalDataRequest"
           }
         ],
         "security": [
@@ -5534,7 +5534,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateUserInventoryItemDataRequest"
+            "$ref": "#/parameters/UpdateUserInventoryItemDataRequest"
           }
         ],
         "security": [
@@ -5584,7 +5584,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateUserDataRequest"
+            "$ref": "#/parameters/UpdateUserDataRequest"
           }
         ],
         "security": [
@@ -5640,7 +5640,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateUserInternalDataRequest"
+            "$ref": "#/parameters/UpdateUserInternalDataRequest"
           }
         ],
         "security": [
@@ -5696,7 +5696,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateUserDataRequest"
+            "$ref": "#/parameters/UpdateUserDataRequest"
           }
         ],
         "security": [
@@ -5752,7 +5752,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateUserDataRequest"
+            "$ref": "#/parameters/UpdateUserDataRequest"
           }
         ],
         "security": [
@@ -5805,7 +5805,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateUserStatisticsRequest"
+            "$ref": "#/parameters/UpdateUserStatisticsRequest"
           }
         ],
         "security": [
@@ -5871,7 +5871,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/WriteServerCharacterEventRequest"
+            "$ref": "#/parameters/WriteServerCharacterEventRequest"
           }
         ],
         "security": [
@@ -5922,7 +5922,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/WriteServerPlayerEventRequest"
+            "$ref": "#/parameters/WriteServerPlayerEventRequest"
           }
         ],
         "security": [
@@ -5974,7 +5974,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/WriteTitleEventRequest"
+            "$ref": "#/parameters/WriteTitleEventRequest"
           }
         ],
         "security": [
@@ -13207,9 +13207,811 @@
       ]
     }
   },
+  "parameters": {
+    "AddCharacterVirtualCurrencyRequest": {
+      "name": "AddCharacterVirtualCurrencyRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AddCharacterVirtualCurrencyRequest"
+      }
+    },
+    "AddFriendRequest": {
+      "name": "AddFriendRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AddFriendRequest"
+      }
+    },
+    "AddPlayerTagRequest": {
+      "name": "AddPlayerTagRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AddPlayerTagRequest"
+      }
+    },
+    "AddSharedGroupMembersRequest": {
+      "name": "AddSharedGroupMembersRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AddSharedGroupMembersRequest"
+      }
+    },
+    "AddUserVirtualCurrencyRequest": {
+      "name": "AddUserVirtualCurrencyRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AddUserVirtualCurrencyRequest"
+      }
+    },
+    "AuthenticateSessionTicketRequest": {
+      "name": "AuthenticateSessionTicketRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AuthenticateSessionTicketRequest"
+      }
+    },
+    "AwardSteamAchievementRequest": {
+      "name": "AwardSteamAchievementRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AwardSteamAchievementRequest"
+      }
+    },
+    "BanUsersRequest": {
+      "name": "BanUsersRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/BanUsersRequest"
+      }
+    },
+    "ConsumeItemRequest": {
+      "name": "ConsumeItemRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ConsumeItemRequest"
+      }
+    },
+    "CreateSharedGroupRequest": {
+      "name": "CreateSharedGroupRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CreateSharedGroupRequest"
+      }
+    },
+    "DeleteCharacterFromUserRequest": {
+      "name": "DeleteCharacterFromUserRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeleteCharacterFromUserRequest"
+      }
+    },
+    "DeleteSharedGroupRequest": {
+      "name": "DeleteSharedGroupRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeleteSharedGroupRequest"
+      }
+    },
+    "DeleteUsersRequest": {
+      "name": "DeleteUsersRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeleteUsersRequest"
+      }
+    },
+    "DeregisterGameRequest": {
+      "name": "DeregisterGameRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeregisterGameRequest"
+      }
+    },
+    "EvaluateRandomResultTableRequest": {
+      "name": "EvaluateRandomResultTableRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/EvaluateRandomResultTableRequest"
+      }
+    },
+    "ExecuteCloudScriptServerRequest": {
+      "name": "ExecuteCloudScriptServerRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ExecuteCloudScriptServerRequest"
+      }
+    },
+    "GetAllActionGroupsRequest": {
+      "name": "GetAllActionGroupsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetAllActionGroupsRequest"
+      }
+    },
+    "GetAllSegmentsRequest": {
+      "name": "GetAllSegmentsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetAllSegmentsRequest"
+      }
+    },
+    "GetCatalogItemsRequest": {
+      "name": "GetCatalogItemsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetCatalogItemsRequest"
+      }
+    },
+    "GetCharacterDataRequest": {
+      "name": "GetCharacterDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetCharacterDataRequest"
+      }
+    },
+    "GetCharacterInventoryRequest": {
+      "name": "GetCharacterInventoryRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetCharacterInventoryRequest"
+      }
+    },
+    "GetCharacterLeaderboardRequest": {
+      "name": "GetCharacterLeaderboardRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetCharacterLeaderboardRequest"
+      }
+    },
+    "GetCharacterStatisticsRequest": {
+      "name": "GetCharacterStatisticsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetCharacterStatisticsRequest"
+      }
+    },
+    "GetContentDownloadUrlRequest": {
+      "name": "GetContentDownloadUrlRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetContentDownloadUrlRequest"
+      }
+    },
+    "GetFriendLeaderboardRequest": {
+      "name": "GetFriendLeaderboardRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetFriendLeaderboardRequest"
+      }
+    },
+    "GetFriendsListRequest": {
+      "name": "GetFriendsListRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetFriendsListRequest"
+      }
+    },
+    "GetLeaderboardAroundCharacterRequest": {
+      "name": "GetLeaderboardAroundCharacterRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetLeaderboardAroundCharacterRequest"
+      }
+    },
+    "GetLeaderboardAroundUserRequest": {
+      "name": "GetLeaderboardAroundUserRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetLeaderboardAroundUserRequest"
+      }
+    },
+    "GetLeaderboardForUsersCharactersRequest": {
+      "name": "GetLeaderboardForUsersCharactersRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetLeaderboardForUsersCharactersRequest"
+      }
+    },
+    "GetLeaderboardRequest": {
+      "name": "GetLeaderboardRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetLeaderboardRequest"
+      }
+    },
+    "GetPlayerCombinedInfoRequest": {
+      "name": "GetPlayerCombinedInfoRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayerCombinedInfoRequest"
+      }
+    },
+    "GetPlayerProfileRequest": {
+      "name": "GetPlayerProfileRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayerProfileRequest"
+      }
+    },
+    "GetPlayersInSegmentRequest": {
+      "name": "GetPlayersInSegmentRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayersInSegmentRequest"
+      }
+    },
+    "GetPlayersSegmentsRequest": {
+      "name": "GetPlayersSegmentsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayersSegmentsRequest"
+      }
+    },
+    "GetPlayerStatisticsRequest": {
+      "name": "GetPlayerStatisticsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayerStatisticsRequest"
+      }
+    },
+    "GetPlayerStatisticVersionsRequest": {
+      "name": "GetPlayerStatisticVersionsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayerStatisticVersionsRequest"
+      }
+    },
+    "GetPlayerTagsRequest": {
+      "name": "GetPlayerTagsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayerTagsRequest"
+      }
+    },
+    "GetPlayFabIDsFromFacebookIDsRequest": {
+      "name": "GetPlayFabIDsFromFacebookIDsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayFabIDsFromFacebookIDsRequest"
+      }
+    },
+    "GetPlayFabIDsFromSteamIDsRequest": {
+      "name": "GetPlayFabIDsFromSteamIDsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayFabIDsFromSteamIDsRequest"
+      }
+    },
+    "GetPublisherDataRequest": {
+      "name": "GetPublisherDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPublisherDataRequest"
+      }
+    },
+    "GetRandomResultTablesRequest": {
+      "name": "GetRandomResultTablesRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetRandomResultTablesRequest"
+      }
+    },
+    "GetSharedGroupDataRequest": {
+      "name": "GetSharedGroupDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetSharedGroupDataRequest"
+      }
+    },
+    "GetTimeRequest": {
+      "name": "GetTimeRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetTimeRequest"
+      }
+    },
+    "GetTitleDataRequest": {
+      "name": "GetTitleDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetTitleDataRequest"
+      }
+    },
+    "GetTitleNewsRequest": {
+      "name": "GetTitleNewsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetTitleNewsRequest"
+      }
+    },
+    "GetUserAccountInfoRequest": {
+      "name": "GetUserAccountInfoRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetUserAccountInfoRequest"
+      }
+    },
+    "GetUserBansRequest": {
+      "name": "GetUserBansRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetUserBansRequest"
+      }
+    },
+    "GetUserDataRequest": {
+      "name": "GetUserDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetUserDataRequest"
+      }
+    },
+    "GetUserInventoryRequest": {
+      "name": "GetUserInventoryRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetUserInventoryRequest"
+      }
+    },
+    "GetUserStatisticsRequest": {
+      "name": "GetUserStatisticsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetUserStatisticsRequest"
+      }
+    },
+    "GrantCharacterToUserRequest": {
+      "name": "GrantCharacterToUserRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GrantCharacterToUserRequest"
+      }
+    },
+    "GrantItemsToCharacterRequest": {
+      "name": "GrantItemsToCharacterRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GrantItemsToCharacterRequest"
+      }
+    },
+    "GrantItemsToUserRequest": {
+      "name": "GrantItemsToUserRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GrantItemsToUserRequest"
+      }
+    },
+    "GrantItemsToUsersRequest": {
+      "name": "GrantItemsToUsersRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GrantItemsToUsersRequest"
+      }
+    },
+    "ListUsersCharactersRequest": {
+      "name": "ListUsersCharactersRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListUsersCharactersRequest"
+      }
+    },
+    "LogEventRequest": {
+      "name": "LogEventRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/LogEventRequest"
+      }
+    },
+    "ModifyItemUsesRequest": {
+      "name": "ModifyItemUsesRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ModifyItemUsesRequest"
+      }
+    },
+    "MoveItemToCharacterFromCharacterRequest": {
+      "name": "MoveItemToCharacterFromCharacterRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/MoveItemToCharacterFromCharacterRequest"
+      }
+    },
+    "MoveItemToCharacterFromUserRequest": {
+      "name": "MoveItemToCharacterFromUserRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/MoveItemToCharacterFromUserRequest"
+      }
+    },
+    "MoveItemToUserFromCharacterRequest": {
+      "name": "MoveItemToUserFromCharacterRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/MoveItemToUserFromCharacterRequest"
+      }
+    },
+    "NotifyMatchmakerPlayerLeftRequest": {
+      "name": "NotifyMatchmakerPlayerLeftRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/NotifyMatchmakerPlayerLeftRequest"
+      }
+    },
+    "RedeemCouponRequest": {
+      "name": "RedeemCouponRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RedeemCouponRequest"
+      }
+    },
+    "RedeemMatchmakerTicketRequest": {
+      "name": "RedeemMatchmakerTicketRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RedeemMatchmakerTicketRequest"
+      }
+    },
+    "RefreshGameServerInstanceHeartbeatRequest": {
+      "name": "RefreshGameServerInstanceHeartbeatRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RefreshGameServerInstanceHeartbeatRequest"
+      }
+    },
+    "RegisterGameRequest": {
+      "name": "RegisterGameRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RegisterGameRequest"
+      }
+    },
+    "RemoveFriendRequest": {
+      "name": "RemoveFriendRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RemoveFriendRequest"
+      }
+    },
+    "RemovePlayerTagRequest": {
+      "name": "RemovePlayerTagRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RemovePlayerTagRequest"
+      }
+    },
+    "RemoveSharedGroupMembersRequest": {
+      "name": "RemoveSharedGroupMembersRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RemoveSharedGroupMembersRequest"
+      }
+    },
+    "ReportPlayerServerRequest": {
+      "name": "ReportPlayerServerRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ReportPlayerServerRequest"
+      }
+    },
+    "RevokeAllBansForUserRequest": {
+      "name": "RevokeAllBansForUserRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RevokeAllBansForUserRequest"
+      }
+    },
+    "RevokeBansRequest": {
+      "name": "RevokeBansRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RevokeBansRequest"
+      }
+    },
+    "RevokeInventoryItemRequest": {
+      "name": "RevokeInventoryItemRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RevokeInventoryItemRequest"
+      }
+    },
+    "RevokeInventoryItemsRequest": {
+      "name": "RevokeInventoryItemsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RevokeInventoryItemsRequest"
+      }
+    },
+    "SendCustomAccountRecoveryEmailRequest": {
+      "name": "SendCustomAccountRecoveryEmailRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SendCustomAccountRecoveryEmailRequest"
+      }
+    },
+    "SendEmailFromTemplateRequest": {
+      "name": "SendEmailFromTemplateRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SendEmailFromTemplateRequest"
+      }
+    },
+    "SendPushNotificationRequest": {
+      "name": "SendPushNotificationRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SendPushNotificationRequest"
+      }
+    },
+    "SetFriendTagsRequest": {
+      "name": "SetFriendTagsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetFriendTagsRequest"
+      }
+    },
+    "SetGameServerInstanceDataRequest": {
+      "name": "SetGameServerInstanceDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetGameServerInstanceDataRequest"
+      }
+    },
+    "SetGameServerInstanceStateRequest": {
+      "name": "SetGameServerInstanceStateRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetGameServerInstanceStateRequest"
+      }
+    },
+    "SetGameServerInstanceTagsRequest": {
+      "name": "SetGameServerInstanceTagsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetGameServerInstanceTagsRequest"
+      }
+    },
+    "SetPlayerSecretRequest": {
+      "name": "SetPlayerSecretRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetPlayerSecretRequest"
+      }
+    },
+    "SetPublisherDataRequest": {
+      "name": "SetPublisherDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetPublisherDataRequest"
+      }
+    },
+    "SetTitleDataRequest": {
+      "name": "SetTitleDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetTitleDataRequest"
+      }
+    },
+    "SubtractCharacterVirtualCurrencyRequest": {
+      "name": "SubtractCharacterVirtualCurrencyRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SubtractCharacterVirtualCurrencyRequest"
+      }
+    },
+    "SubtractUserVirtualCurrencyRequest": {
+      "name": "SubtractUserVirtualCurrencyRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SubtractUserVirtualCurrencyRequest"
+      }
+    },
+    "UnlockContainerInstanceRequest": {
+      "name": "UnlockContainerInstanceRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UnlockContainerInstanceRequest"
+      }
+    },
+    "UnlockContainerItemRequest": {
+      "name": "UnlockContainerItemRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UnlockContainerItemRequest"
+      }
+    },
+    "UpdateAvatarUrlRequest": {
+      "name": "UpdateAvatarUrlRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateAvatarUrlRequest"
+      }
+    },
+    "UpdateBansRequest": {
+      "name": "UpdateBansRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateBansRequest"
+      }
+    },
+    "UpdateCharacterDataRequest": {
+      "name": "UpdateCharacterDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateCharacterDataRequest"
+      }
+    },
+    "UpdateCharacterStatisticsRequest": {
+      "name": "UpdateCharacterStatisticsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateCharacterStatisticsRequest"
+      }
+    },
+    "UpdatePlayerStatisticsRequest": {
+      "name": "UpdatePlayerStatisticsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdatePlayerStatisticsRequest"
+      }
+    },
+    "UpdateSharedGroupDataRequest": {
+      "name": "UpdateSharedGroupDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateSharedGroupDataRequest"
+      }
+    },
+    "UpdateUserDataRequest": {
+      "name": "UpdateUserDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateUserDataRequest"
+      }
+    },
+    "UpdateUserInternalDataRequest": {
+      "name": "UpdateUserInternalDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateUserInternalDataRequest"
+      }
+    },
+    "UpdateUserInventoryItemDataRequest": {
+      "name": "UpdateUserInventoryItemDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateUserInventoryItemDataRequest"
+      }
+    },
+    "UpdateUserStatisticsRequest": {
+      "name": "UpdateUserStatisticsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateUserStatisticsRequest"
+      }
+    },
+    "WriteServerCharacterEventRequest": {
+      "name": "WriteServerCharacterEventRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/WriteServerCharacterEventRequest"
+      }
+    },
+    "WriteServerPlayerEventRequest": {
+      "name": "WriteServerPlayerEventRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/WriteServerPlayerEventRequest"
+      }
+    },
+    "WriteTitleEventRequest": {
+      "name": "WriteTitleEventRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/WriteTitleEventRequest"
+      }
+    }
+  },
   "responses": {
     "ApiErrorWrapper": {
-      "description": "This is the outer-wrapper for all successful results",
+      "description": "This is the outer-wrapper for all results with errors",
       "schema": {
         "$ref": "#/definitions/ApiErrorWrapper"
       }
@@ -13746,7 +14548,7 @@
   "tags": [
     {
       "name": "Account Management",
-      "description": "https://api.playfab.com/documentation/Server#Account Management"
+      "description": "https://api.playfab.com/documentation/Server#Account-Management"
     },
     {
       "name": "Analytics",
@@ -13758,7 +14560,7 @@
     },
     {
       "name": "Character Data",
-      "description": "https://api.playfab.com/documentation/Server#Character Data"
+      "description": "https://api.playfab.com/documentation/Server#Character-Data"
     },
     {
       "name": "Characters",
@@ -13770,7 +14572,7 @@
     },
     {
       "name": "Friend List Management",
-      "description": "https://api.playfab.com/documentation/Server#Friend List Management"
+      "description": "https://api.playfab.com/documentation/Server#Friend-List-Management"
     },
     {
       "name": "Matchmaking",
@@ -13778,15 +14580,15 @@
     },
     {
       "name": "Platform Specific Methods",
-      "description": "https://api.playfab.com/documentation/Server#Platform Specific Methods"
+      "description": "https://api.playfab.com/documentation/Server#Platform-Specific-Methods"
     },
     {
       "name": "Player Data Management",
-      "description": "https://api.playfab.com/documentation/Server#Player Data Management"
+      "description": "https://api.playfab.com/documentation/Server#Player-Data-Management"
     },
     {
       "name": "Player Item Management",
-      "description": "https://api.playfab.com/documentation/Server#Player Item Management"
+      "description": "https://api.playfab.com/documentation/Server#Player-Item-Management"
     },
     {
       "name": "PlayStream",
@@ -13794,18 +14596,24 @@
     },
     {
       "name": "Server-Side Cloud Script",
-      "description": "https://api.playfab.com/documentation/Server#Server-Side Cloud Script"
+      "description": "https://api.playfab.com/documentation/Server#Server-Side-Cloud-Script"
     },
     {
       "name": "Shared Group Data",
-      "description": "https://api.playfab.com/documentation/Server#Shared Group Data"
+      "description": "https://api.playfab.com/documentation/Server#Shared-Group-Data"
     },
     {
       "name": "Title-Wide Data Management",
-      "description": "https://api.playfab.com/documentation/Server#Title-Wide Data Management"
+      "description": "https://api.playfab.com/documentation/Server#Title-Wide-Data-Management"
     }
   ],
   "securityDefinitions": {
+    "None": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "None",
+      "description": "This API requires no authentication headers (usually provides one to other calls)."
+    },
     "SessionTicket": {
       "type": "apiKey",
       "in": "header",

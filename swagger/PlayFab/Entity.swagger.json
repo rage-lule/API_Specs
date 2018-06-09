@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "180608",
+    "version": "180609",
     "title": "PlayFab Entity API",
     "description": "PlayFab Entity APIs provide a variety of core PlayFab features and work consistently across a broad set of entities, such as titles, players, characters, and more.",
     "termsOfService": "https://playfab.com/terms/",
@@ -35,7 +35,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetEntityTokenRequest"
+            "$ref": "#/parameters/GetEntityTokenRequest"
           }
         ],
         "security": [
@@ -87,7 +87,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/WriteEventsRequest"
+            "$ref": "#/parameters/WriteEventsRequest"
           }
         ],
         "security": [
@@ -144,7 +144,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AbortFileUploadsRequest"
+            "$ref": "#/parameters/AbortFileUploadsRequest"
           }
         ],
         "security": [
@@ -200,7 +200,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/DeleteFilesRequest"
+            "$ref": "#/parameters/DeleteFilesRequest"
           }
         ],
         "security": [
@@ -255,7 +255,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/FinalizeFileUploadsRequest"
+            "$ref": "#/parameters/FinalizeFileUploadsRequest"
           }
         ],
         "security": [
@@ -311,7 +311,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetFilesRequest"
+            "$ref": "#/parameters/GetFilesRequest"
           }
         ],
         "security": [
@@ -363,7 +363,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/InitiateFileUploadsRequest"
+            "$ref": "#/parameters/InitiateFileUploadsRequest"
           }
         ],
         "security": [
@@ -418,7 +418,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AllocateSessionHostRequest"
+            "$ref": "#/parameters/AllocateSessionHostRequest"
           }
         ],
         "security": [
@@ -479,7 +479,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/CreateBuildRequest"
+            "$ref": "#/parameters/CreateBuildRequest"
           }
         ],
         "security": [
@@ -540,7 +540,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/CreateRemoteUserRequest"
+            "$ref": "#/parameters/CreateRemoteUserRequest"
           }
         ],
         "security": [
@@ -603,7 +603,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/DeleteBuildRequest"
+            "$ref": "#/parameters/DeleteBuildRequest"
           }
         ],
         "security": [
@@ -664,7 +664,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetAssetUploadUrlRequest"
+            "$ref": "#/parameters/GetAssetUploadUrlRequest"
           }
         ],
         "security": [
@@ -729,7 +729,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetBuildRequest"
+            "$ref": "#/parameters/GetBuildRequest"
           }
         ],
         "security": [
@@ -791,7 +791,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetRemoteLoginEndpointRequest"
+            "$ref": "#/parameters/GetRemoteLoginEndpointRequest"
           }
         ],
         "security": [
@@ -854,7 +854,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetSessionHostDetailsRequest"
+            "$ref": "#/parameters/GetSessionHostDetailsRequest"
           }
         ],
         "security": [
@@ -914,7 +914,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ListAssetsRequest"
+            "$ref": "#/parameters/ListAssetsRequest"
           }
         ],
         "security": [
@@ -979,7 +979,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ListBuildsRequest"
+            "$ref": "#/parameters/ListBuildsRequest"
           }
         ],
         "security": [
@@ -1040,7 +1040,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ListCertificatesRequest"
+            "$ref": "#/parameters/ListCertificatesRequest"
           }
         ],
         "security": [
@@ -1105,7 +1105,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ListQosServersRequest"
+            "$ref": "#/parameters/ListQosServersRequest"
           }
         ],
         "security": [
@@ -1160,7 +1160,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ListSessionHostsRequest"
+            "$ref": "#/parameters/ListSessionHostsRequest"
           }
         ],
         "security": [
@@ -1220,7 +1220,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateBuildRegionsRequest"
+            "$ref": "#/parameters/UpdateBuildRegionsRequest"
           }
         ],
         "security": [
@@ -1281,7 +1281,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UploadCertificateRequest"
+            "$ref": "#/parameters/UploadCertificateRequest"
           }
         ],
         "security": [
@@ -1346,7 +1346,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AcceptGroupApplicationRequest"
+            "$ref": "#/parameters/AcceptGroupApplicationRequest"
           }
         ],
         "security": [
@@ -1401,7 +1401,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AcceptGroupInvitationRequest"
+            "$ref": "#/parameters/AcceptGroupInvitationRequest"
           }
         ],
         "security": [
@@ -1457,7 +1457,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AddMembersRequest"
+            "$ref": "#/parameters/AddMembersRequest"
           }
         ],
         "security": [
@@ -1515,7 +1515,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ApplyToGroupRequest"
+            "$ref": "#/parameters/ApplyToGroupRequest"
           }
         ],
         "security": [
@@ -1572,7 +1572,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/BlockEntityRequest"
+            "$ref": "#/parameters/BlockEntityRequest"
           }
         ],
         "security": [
@@ -1626,7 +1626,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ChangeMemberRoleRequest"
+            "$ref": "#/parameters/ChangeMemberRoleRequest"
           }
         ],
         "security": [
@@ -1683,7 +1683,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/CreateGroupRequest"
+            "$ref": "#/parameters/CreateGroupRequest"
           }
         ],
         "security": [
@@ -1743,7 +1743,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/CreateGroupRoleRequest"
+            "$ref": "#/parameters/CreateGroupRoleRequest"
           }
         ],
         "security": [
@@ -1798,7 +1798,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/DeleteGroupRequest"
+            "$ref": "#/parameters/DeleteGroupRequest"
           }
         ],
         "security": [
@@ -1851,7 +1851,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/DeleteRoleRequest"
+            "$ref": "#/parameters/DeleteRoleRequest"
           }
         ],
         "security": [
@@ -1905,7 +1905,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetGroupRequest"
+            "$ref": "#/parameters/GetGroupRequest"
           }
         ],
         "security": [
@@ -1958,7 +1958,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/InviteToGroupRequest"
+            "$ref": "#/parameters/InviteToGroupRequest"
           }
         ],
         "security": [
@@ -2016,7 +2016,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/IsMemberRequest"
+            "$ref": "#/parameters/IsMemberRequest"
           }
         ],
         "security": [
@@ -2069,7 +2069,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ListGroupApplicationsRequest"
+            "$ref": "#/parameters/ListGroupApplicationsRequest"
           }
         ],
         "security": [
@@ -2124,7 +2124,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ListGroupBlocksRequest"
+            "$ref": "#/parameters/ListGroupBlocksRequest"
           }
         ],
         "security": [
@@ -2178,7 +2178,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ListGroupInvitationsRequest"
+            "$ref": "#/parameters/ListGroupInvitationsRequest"
           }
         ],
         "security": [
@@ -2234,7 +2234,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ListGroupMembersRequest"
+            "$ref": "#/parameters/ListGroupMembersRequest"
           }
         ],
         "security": [
@@ -2287,7 +2287,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ListMembershipRequest"
+            "$ref": "#/parameters/ListMembershipRequest"
           }
         ],
         "security": [
@@ -2341,7 +2341,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ListMembershipOpportunitiesRequest"
+            "$ref": "#/parameters/ListMembershipOpportunitiesRequest"
           }
         ],
         "security": [
@@ -2395,7 +2395,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RemoveGroupApplicationRequest"
+            "$ref": "#/parameters/RemoveGroupApplicationRequest"
           }
         ],
         "security": [
@@ -2451,7 +2451,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RemoveGroupInvitationRequest"
+            "$ref": "#/parameters/RemoveGroupInvitationRequest"
           }
         ],
         "security": [
@@ -2507,7 +2507,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RemoveMembersRequest"
+            "$ref": "#/parameters/RemoveMembersRequest"
           }
         ],
         "security": [
@@ -2561,7 +2561,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UnblockEntityRequest"
+            "$ref": "#/parameters/UnblockEntityRequest"
           }
         ],
         "security": [
@@ -2615,7 +2615,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateGroupRequest"
+            "$ref": "#/parameters/UpdateGroupRequest"
           }
         ],
         "security": [
@@ -2671,7 +2671,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateGroupRoleRequest"
+            "$ref": "#/parameters/UpdateGroupRoleRequest"
           }
         ],
         "security": [
@@ -2726,7 +2726,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/CancelMatchmakingTicketRequest"
+            "$ref": "#/parameters/CancelMatchmakingTicketRequest"
           }
         ],
         "security": [
@@ -2785,7 +2785,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/CreateMatchmakingTicketRequest"
+            "$ref": "#/parameters/CreateMatchmakingTicketRequest"
           }
         ],
         "security": [
@@ -2848,7 +2848,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/CreateServerMatchmakingTicketRequest"
+            "$ref": "#/parameters/CreateServerMatchmakingTicketRequest"
           }
         ],
         "security": [
@@ -2909,7 +2909,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetMatchRequest"
+            "$ref": "#/parameters/GetMatchRequest"
           }
         ],
         "security": [
@@ -2965,7 +2965,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetMatchmakingTicketRequest"
+            "$ref": "#/parameters/GetMatchmakingTicketRequest"
           }
         ],
         "security": [
@@ -3023,7 +3023,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/JoinMatchmakingTicketRequest"
+            "$ref": "#/parameters/JoinMatchmakingTicketRequest"
           }
         ],
         "security": [
@@ -3087,7 +3087,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetObjectsRequest"
+            "$ref": "#/parameters/GetObjectsRequest"
           }
         ],
         "security": [
@@ -3136,7 +3136,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SetObjectsRequest"
+            "$ref": "#/parameters/SetObjectsRequest"
           }
         ],
         "security": [
@@ -3188,7 +3188,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetGlobalPolicyRequest"
+            "$ref": "#/parameters/GetGlobalPolicyRequest"
           }
         ],
         "security": [
@@ -3240,7 +3240,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetEntityProfileRequest"
+            "$ref": "#/parameters/GetEntityProfileRequest"
           }
         ],
         "security": [
@@ -3291,7 +3291,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetEntityProfilesRequest"
+            "$ref": "#/parameters/GetEntityProfilesRequest"
           }
         ],
         "security": [
@@ -3342,7 +3342,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SetGlobalPolicyRequest"
+            "$ref": "#/parameters/SetGlobalPolicyRequest"
           }
         ],
         "security": [
@@ -3394,7 +3394,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SetEntityProfilePolicyRequest"
+            "$ref": "#/parameters/SetEntityProfilePolicyRequest"
           }
         ],
         "security": [
@@ -6890,9 +6890,491 @@
       ]
     }
   },
+  "parameters": {
+    "AbortFileUploadsRequest": {
+      "name": "AbortFileUploadsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AbortFileUploadsRequest"
+      }
+    },
+    "AcceptGroupApplicationRequest": {
+      "name": "AcceptGroupApplicationRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AcceptGroupApplicationRequest"
+      }
+    },
+    "AcceptGroupInvitationRequest": {
+      "name": "AcceptGroupInvitationRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AcceptGroupInvitationRequest"
+      }
+    },
+    "AddMembersRequest": {
+      "name": "AddMembersRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AddMembersRequest"
+      }
+    },
+    "AllocateSessionHostRequest": {
+      "name": "AllocateSessionHostRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AllocateSessionHostRequest"
+      }
+    },
+    "ApplyToGroupRequest": {
+      "name": "ApplyToGroupRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ApplyToGroupRequest"
+      }
+    },
+    "BlockEntityRequest": {
+      "name": "BlockEntityRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/BlockEntityRequest"
+      }
+    },
+    "CancelMatchmakingTicketRequest": {
+      "name": "CancelMatchmakingTicketRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CancelMatchmakingTicketRequest"
+      }
+    },
+    "ChangeMemberRoleRequest": {
+      "name": "ChangeMemberRoleRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ChangeMemberRoleRequest"
+      }
+    },
+    "CreateBuildRequest": {
+      "name": "CreateBuildRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CreateBuildRequest"
+      }
+    },
+    "CreateGroupRequest": {
+      "name": "CreateGroupRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CreateGroupRequest"
+      }
+    },
+    "CreateGroupRoleRequest": {
+      "name": "CreateGroupRoleRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CreateGroupRoleRequest"
+      }
+    },
+    "CreateMatchmakingTicketRequest": {
+      "name": "CreateMatchmakingTicketRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CreateMatchmakingTicketRequest"
+      }
+    },
+    "CreateRemoteUserRequest": {
+      "name": "CreateRemoteUserRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CreateRemoteUserRequest"
+      }
+    },
+    "CreateServerMatchmakingTicketRequest": {
+      "name": "CreateServerMatchmakingTicketRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CreateServerMatchmakingTicketRequest"
+      }
+    },
+    "DeleteBuildRequest": {
+      "name": "DeleteBuildRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeleteBuildRequest"
+      }
+    },
+    "DeleteFilesRequest": {
+      "name": "DeleteFilesRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeleteFilesRequest"
+      }
+    },
+    "DeleteGroupRequest": {
+      "name": "DeleteGroupRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeleteGroupRequest"
+      }
+    },
+    "DeleteRoleRequest": {
+      "name": "DeleteRoleRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeleteRoleRequest"
+      }
+    },
+    "FinalizeFileUploadsRequest": {
+      "name": "FinalizeFileUploadsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/FinalizeFileUploadsRequest"
+      }
+    },
+    "GetAssetUploadUrlRequest": {
+      "name": "GetAssetUploadUrlRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetAssetUploadUrlRequest"
+      }
+    },
+    "GetBuildRequest": {
+      "name": "GetBuildRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetBuildRequest"
+      }
+    },
+    "GetEntityProfileRequest": {
+      "name": "GetEntityProfileRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetEntityProfileRequest"
+      }
+    },
+    "GetEntityProfilesRequest": {
+      "name": "GetEntityProfilesRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetEntityProfilesRequest"
+      }
+    },
+    "GetEntityTokenRequest": {
+      "name": "GetEntityTokenRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetEntityTokenRequest"
+      }
+    },
+    "GetFilesRequest": {
+      "name": "GetFilesRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetFilesRequest"
+      }
+    },
+    "GetGlobalPolicyRequest": {
+      "name": "GetGlobalPolicyRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetGlobalPolicyRequest"
+      }
+    },
+    "GetGroupRequest": {
+      "name": "GetGroupRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetGroupRequest"
+      }
+    },
+    "GetMatchmakingTicketRequest": {
+      "name": "GetMatchmakingTicketRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetMatchmakingTicketRequest"
+      }
+    },
+    "GetMatchRequest": {
+      "name": "GetMatchRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetMatchRequest"
+      }
+    },
+    "GetObjectsRequest": {
+      "name": "GetObjectsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetObjectsRequest"
+      }
+    },
+    "GetRemoteLoginEndpointRequest": {
+      "name": "GetRemoteLoginEndpointRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetRemoteLoginEndpointRequest"
+      }
+    },
+    "GetSessionHostDetailsRequest": {
+      "name": "GetSessionHostDetailsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetSessionHostDetailsRequest"
+      }
+    },
+    "InitiateFileUploadsRequest": {
+      "name": "InitiateFileUploadsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/InitiateFileUploadsRequest"
+      }
+    },
+    "InviteToGroupRequest": {
+      "name": "InviteToGroupRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/InviteToGroupRequest"
+      }
+    },
+    "IsMemberRequest": {
+      "name": "IsMemberRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/IsMemberRequest"
+      }
+    },
+    "JoinMatchmakingTicketRequest": {
+      "name": "JoinMatchmakingTicketRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/JoinMatchmakingTicketRequest"
+      }
+    },
+    "ListAssetsRequest": {
+      "name": "ListAssetsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListAssetsRequest"
+      }
+    },
+    "ListBuildsRequest": {
+      "name": "ListBuildsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListBuildsRequest"
+      }
+    },
+    "ListCertificatesRequest": {
+      "name": "ListCertificatesRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListCertificatesRequest"
+      }
+    },
+    "ListGroupApplicationsRequest": {
+      "name": "ListGroupApplicationsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListGroupApplicationsRequest"
+      }
+    },
+    "ListGroupBlocksRequest": {
+      "name": "ListGroupBlocksRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListGroupBlocksRequest"
+      }
+    },
+    "ListGroupInvitationsRequest": {
+      "name": "ListGroupInvitationsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListGroupInvitationsRequest"
+      }
+    },
+    "ListGroupMembersRequest": {
+      "name": "ListGroupMembersRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListGroupMembersRequest"
+      }
+    },
+    "ListMembershipOpportunitiesRequest": {
+      "name": "ListMembershipOpportunitiesRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListMembershipOpportunitiesRequest"
+      }
+    },
+    "ListMembershipRequest": {
+      "name": "ListMembershipRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListMembershipRequest"
+      }
+    },
+    "ListQosServersRequest": {
+      "name": "ListQosServersRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListQosServersRequest"
+      }
+    },
+    "ListSessionHostsRequest": {
+      "name": "ListSessionHostsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListSessionHostsRequest"
+      }
+    },
+    "RemoveGroupApplicationRequest": {
+      "name": "RemoveGroupApplicationRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RemoveGroupApplicationRequest"
+      }
+    },
+    "RemoveGroupInvitationRequest": {
+      "name": "RemoveGroupInvitationRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RemoveGroupInvitationRequest"
+      }
+    },
+    "RemoveMembersRequest": {
+      "name": "RemoveMembersRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RemoveMembersRequest"
+      }
+    },
+    "SetEntityProfilePolicyRequest": {
+      "name": "SetEntityProfilePolicyRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetEntityProfilePolicyRequest"
+      }
+    },
+    "SetGlobalPolicyRequest": {
+      "name": "SetGlobalPolicyRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetGlobalPolicyRequest"
+      }
+    },
+    "SetObjectsRequest": {
+      "name": "SetObjectsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetObjectsRequest"
+      }
+    },
+    "UnblockEntityRequest": {
+      "name": "UnblockEntityRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UnblockEntityRequest"
+      }
+    },
+    "UpdateBuildRegionsRequest": {
+      "name": "UpdateBuildRegionsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateBuildRegionsRequest"
+      }
+    },
+    "UpdateGroupRequest": {
+      "name": "UpdateGroupRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateGroupRequest"
+      }
+    },
+    "UpdateGroupRoleRequest": {
+      "name": "UpdateGroupRoleRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateGroupRoleRequest"
+      }
+    },
+    "UploadCertificateRequest": {
+      "name": "UploadCertificateRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UploadCertificateRequest"
+      }
+    },
+    "WriteEventsRequest": {
+      "name": "WriteEventsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/WriteEventsRequest"
+      }
+    }
+  },
   "responses": {
     "ApiErrorWrapper": {
-      "description": "This is the outer-wrapper for all successful results",
+      "description": "This is the outer-wrapper for all results with errors",
       "schema": {
         "$ref": "#/definitions/ApiErrorWrapper"
       }
@@ -7195,7 +7677,7 @@
   "tags": [
     {
       "name": "Account Management",
-      "description": "https://api.playfab.com/documentation/Entity#Account Management"
+      "description": "https://api.playfab.com/documentation/Entity#Account-Management"
     },
     {
       "name": "Authentication",
@@ -7223,10 +7705,16 @@
     },
     {
       "name": "PlayStream Events",
-      "description": "https://api.playfab.com/documentation/Entity#PlayStream Events"
+      "description": "https://api.playfab.com/documentation/Entity#PlayStream-Events"
     }
   ],
   "securityDefinitions": {
+    "None": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "None",
+      "description": "This API requires no authentication headers (usually provides one to other calls)."
+    },
     "SessionTicket": {
       "type": "apiKey",
       "in": "header",

@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "180608",
+    "version": "180609",
     "title": "PlayFab Admin API",
     "description": "APIs for managing title configurations, uploaded Game Server code executables, and user data",
     "termsOfService": "https://playfab.com/terms/",
@@ -35,7 +35,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AbortTaskInstanceRequest"
+            "$ref": "#/parameters/AbortTaskInstanceRequest"
           }
         ],
         "security": [
@@ -90,7 +90,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AddNewsRequest"
+            "$ref": "#/parameters/AddNewsRequest"
           }
         ],
         "security": [
@@ -138,7 +138,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AddPlayerTagRequest"
+            "$ref": "#/parameters/AddPlayerTagRequest"
           }
         ],
         "security": [
@@ -192,7 +192,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AddServerBuildRequest"
+            "$ref": "#/parameters/AddServerBuildRequest"
           }
         ],
         "security": [
@@ -251,7 +251,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AddUserVirtualCurrencyRequest"
+            "$ref": "#/parameters/AddUserVirtualCurrencyRequest"
           }
         ],
         "security": [
@@ -302,7 +302,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/AddVirtualCurrencyTypesRequest"
+            "$ref": "#/parameters/AddVirtualCurrencyTypesRequest"
           }
         ],
         "security": [
@@ -356,7 +356,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/BanUsersRequest"
+            "$ref": "#/parameters/BanUsersRequest"
           }
         ],
         "security": [
@@ -408,7 +408,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/CheckLimitedEditionItemAvailabilityRequest"
+            "$ref": "#/parameters/CheckLimitedEditionItemAvailabilityRequest"
           }
         ],
         "security": [
@@ -457,7 +457,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/CreateActionsOnPlayerSegmentTaskRequest"
+            "$ref": "#/parameters/CreateActionsOnPlayerSegmentTaskRequest"
           }
         ],
         "security": [
@@ -516,7 +516,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/CreateCloudScriptTaskRequest"
+            "$ref": "#/parameters/CreateCloudScriptTaskRequest"
           }
         ],
         "security": [
@@ -575,7 +575,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/CreatePlayerSharedSecretRequest"
+            "$ref": "#/parameters/CreatePlayerSharedSecretRequest"
           }
         ],
         "security": [
@@ -625,7 +625,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/CreatePlayerStatisticDefinitionRequest"
+            "$ref": "#/parameters/CreatePlayerStatisticDefinitionRequest"
           }
         ],
         "security": [
@@ -684,7 +684,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/DeleteContentRequest"
+            "$ref": "#/parameters/DeleteContentRequest"
           }
         ],
         "security": [
@@ -735,7 +735,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/DeleteMasterPlayerAccountRequest"
+            "$ref": "#/parameters/DeleteMasterPlayerAccountRequest"
           }
         ],
         "security": [
@@ -788,7 +788,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/DeletePlayerRequest"
+            "$ref": "#/parameters/DeletePlayerRequest"
           }
         ],
         "security": [
@@ -838,7 +838,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/DeletePlayerSharedSecretRequest"
+            "$ref": "#/parameters/DeletePlayerSharedSecretRequest"
           }
         ],
         "security": [
@@ -892,7 +892,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/DeleteStoreRequest"
+            "$ref": "#/parameters/DeleteStoreRequest"
           }
         ],
         "security": [
@@ -947,7 +947,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/DeleteTaskRequest"
+            "$ref": "#/parameters/DeleteTaskRequest"
           }
         ],
         "security": [
@@ -1000,7 +1000,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/DeleteTitleRequest"
+            "$ref": "#/parameters/DeleteTitleRequest"
           }
         ],
         "security": [
@@ -1055,7 +1055,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/DeleteUsersRequest"
+            "$ref": "#/parameters/DeleteUsersRequest"
           }
         ],
         "security": [
@@ -1112,7 +1112,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ExportMasterPlayerDataRequest"
+            "$ref": "#/parameters/ExportMasterPlayerDataRequest"
           }
         ],
         "security": [
@@ -1162,7 +1162,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetTaskInstanceRequest"
+            "$ref": "#/parameters/GetTaskInstanceRequest"
           }
         ],
         "security": [
@@ -1217,7 +1217,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetAllActionGroupsRequest"
+            "$ref": "#/parameters/GetAllActionGroupsRequest"
           }
         ],
         "security": [
@@ -1271,7 +1271,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetAllSegmentsRequest"
+            "$ref": "#/parameters/GetAllSegmentsRequest"
           }
         ],
         "security": [
@@ -1320,7 +1320,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetCatalogItemsRequest"
+            "$ref": "#/parameters/GetCatalogItemsRequest"
           }
         ],
         "security": [
@@ -1369,7 +1369,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetCloudScriptRevisionRequest"
+            "$ref": "#/parameters/GetCloudScriptRevisionRequest"
           }
         ],
         "security": [
@@ -1418,7 +1418,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetTaskInstanceRequest"
+            "$ref": "#/parameters/GetTaskInstanceRequest"
           }
         ],
         "security": [
@@ -1473,7 +1473,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetCloudScriptVersionsRequest"
+            "$ref": "#/parameters/GetCloudScriptVersionsRequest"
           }
         ],
         "security": [
@@ -1518,7 +1518,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetContentListRequest"
+            "$ref": "#/parameters/GetContentListRequest"
           }
         ],
         "security": [
@@ -1572,7 +1572,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetContentUploadUrlRequest"
+            "$ref": "#/parameters/GetContentUploadUrlRequest"
           }
         ],
         "security": [
@@ -1627,7 +1627,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetDataReportRequest"
+            "$ref": "#/parameters/GetDataReportRequest"
           }
         ],
         "security": [
@@ -1677,7 +1677,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetMatchmakerGameInfoRequest"
+            "$ref": "#/parameters/GetMatchmakerGameInfoRequest"
           }
         ],
         "security": [
@@ -1729,7 +1729,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetMatchmakerGameModesRequest"
+            "$ref": "#/parameters/GetMatchmakerGameModesRequest"
           }
         ],
         "security": [
@@ -1779,7 +1779,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayedTitleListRequest"
+            "$ref": "#/parameters/GetPlayedTitleListRequest"
           }
         ],
         "security": [
@@ -1832,7 +1832,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayerIdFromAuthTokenRequest"
+            "$ref": "#/parameters/GetPlayerIdFromAuthTokenRequest"
           }
         ],
         "security": [
@@ -1881,7 +1881,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayerProfileRequest"
+            "$ref": "#/parameters/GetPlayerProfileRequest"
           }
         ],
         "security": [
@@ -1931,7 +1931,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayersSegmentsRequest"
+            "$ref": "#/parameters/GetPlayersSegmentsRequest"
           }
         ],
         "security": [
@@ -1982,7 +1982,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayerSharedSecretsRequest"
+            "$ref": "#/parameters/GetPlayerSharedSecretsRequest"
           }
         ],
         "security": [
@@ -2032,7 +2032,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayersInSegmentRequest"
+            "$ref": "#/parameters/GetPlayersInSegmentRequest"
           }
         ],
         "security": [
@@ -2085,7 +2085,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayerStatisticDefinitionsRequest"
+            "$ref": "#/parameters/GetPlayerStatisticDefinitionsRequest"
           }
         ],
         "security": [
@@ -2139,7 +2139,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayerStatisticVersionsRequest"
+            "$ref": "#/parameters/GetPlayerStatisticVersionsRequest"
           }
         ],
         "security": [
@@ -2197,7 +2197,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPlayerTagsRequest"
+            "$ref": "#/parameters/GetPlayerTagsRequest"
           }
         ],
         "security": [
@@ -2250,7 +2250,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPolicyRequest"
+            "$ref": "#/parameters/GetPolicyRequest"
           }
         ],
         "security": [
@@ -2299,7 +2299,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetPublisherDataRequest"
+            "$ref": "#/parameters/GetPublisherDataRequest"
           }
         ],
         "security": [
@@ -2351,7 +2351,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetRandomResultTablesRequest"
+            "$ref": "#/parameters/GetRandomResultTablesRequest"
           }
         ],
         "security": [
@@ -2399,7 +2399,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetServerBuildInfoRequest"
+            "$ref": "#/parameters/GetServerBuildInfoRequest"
           }
         ],
         "security": [
@@ -2453,7 +2453,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetServerBuildUploadURLRequest"
+            "$ref": "#/parameters/GetServerBuildUploadURLRequest"
           }
         ],
         "security": [
@@ -2507,7 +2507,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetStoreItemsRequest"
+            "$ref": "#/parameters/GetStoreItemsRequest"
           }
         ],
         "security": [
@@ -2558,7 +2558,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetTaskInstancesRequest"
+            "$ref": "#/parameters/GetTaskInstancesRequest"
           }
         ],
         "security": [
@@ -2613,7 +2613,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetTasksRequest"
+            "$ref": "#/parameters/GetTasksRequest"
           }
         ],
         "security": [
@@ -2665,7 +2665,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetTitleDataRequest"
+            "$ref": "#/parameters/GetTitleDataRequest"
           }
         ],
         "security": [
@@ -2714,7 +2714,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetTitleDataRequest"
+            "$ref": "#/parameters/GetTitleDataRequest"
           }
         ],
         "security": [
@@ -2763,7 +2763,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/LookupUserAccountInfoRequest"
+            "$ref": "#/parameters/LookupUserAccountInfoRequest"
           }
         ],
         "security": [
@@ -2816,7 +2816,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserBansRequest"
+            "$ref": "#/parameters/GetUserBansRequest"
           }
         ],
         "security": [
@@ -2871,7 +2871,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserDataRequest"
+            "$ref": "#/parameters/GetUserDataRequest"
           }
         ],
         "security": [
@@ -2924,7 +2924,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserDataRequest"
+            "$ref": "#/parameters/GetUserDataRequest"
           }
         ],
         "security": [
@@ -2977,7 +2977,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserInventoryRequest"
+            "$ref": "#/parameters/GetUserInventoryRequest"
           }
         ],
         "security": [
@@ -3026,7 +3026,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserDataRequest"
+            "$ref": "#/parameters/GetUserDataRequest"
           }
         ],
         "security": [
@@ -3079,7 +3079,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserDataRequest"
+            "$ref": "#/parameters/GetUserDataRequest"
           }
         ],
         "security": [
@@ -3132,7 +3132,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserDataRequest"
+            "$ref": "#/parameters/GetUserDataRequest"
           }
         ],
         "security": [
@@ -3185,7 +3185,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GetUserDataRequest"
+            "$ref": "#/parameters/GetUserDataRequest"
           }
         ],
         "security": [
@@ -3238,7 +3238,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/GrantItemsToUsersRequest"
+            "$ref": "#/parameters/GrantItemsToUsersRequest"
           }
         ],
         "security": [
@@ -3288,7 +3288,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/IncrementLimitedEditionItemAvailabilityRequest"
+            "$ref": "#/parameters/IncrementLimitedEditionItemAvailabilityRequest"
           }
         ],
         "security": [
@@ -3340,7 +3340,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/IncrementPlayerStatisticVersionRequest"
+            "$ref": "#/parameters/IncrementPlayerStatisticVersionRequest"
           }
         ],
         "security": [
@@ -3401,7 +3401,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ListBuildsRequest"
+            "$ref": "#/parameters/ListBuildsRequest"
           }
         ],
         "security": [
@@ -3454,7 +3454,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ListVirtualCurrencyTypesRequest"
+            "$ref": "#/parameters/ListVirtualCurrencyTypesRequest"
           }
         ],
         "security": [
@@ -3503,7 +3503,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ModifyMatchmakerGameModesRequest"
+            "$ref": "#/parameters/ModifyMatchmakerGameModesRequest"
           }
         ],
         "security": [
@@ -3553,7 +3553,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ModifyServerBuildRequest"
+            "$ref": "#/parameters/ModifyServerBuildRequest"
           }
         ],
         "security": [
@@ -3609,7 +3609,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RefundPurchaseRequest"
+            "$ref": "#/parameters/RefundPurchaseRequest"
           }
         ],
         "security": [
@@ -3654,7 +3654,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RemovePlayerTagRequest"
+            "$ref": "#/parameters/RemovePlayerTagRequest"
           }
         ],
         "security": [
@@ -3707,7 +3707,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RemoveServerBuildRequest"
+            "$ref": "#/parameters/RemoveServerBuildRequest"
           }
         ],
         "security": [
@@ -3760,7 +3760,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RemoveVirtualCurrencyTypesRequest"
+            "$ref": "#/parameters/RemoveVirtualCurrencyTypesRequest"
           }
         ],
         "security": [
@@ -3814,7 +3814,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ResetCharacterStatisticsRequest"
+            "$ref": "#/parameters/ResetCharacterStatisticsRequest"
           }
         ],
         "security": [
@@ -3863,7 +3863,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ResetPasswordRequest"
+            "$ref": "#/parameters/ResetPasswordRequest"
           }
         ],
         "security": [
@@ -3916,7 +3916,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ResetUsersRequest"
+            "$ref": "#/parameters/ResetUsersRequest"
           }
         ],
         "security": [
@@ -3971,7 +3971,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ResetUserStatisticsRequest"
+            "$ref": "#/parameters/ResetUserStatisticsRequest"
           }
         ],
         "security": [
@@ -4017,7 +4017,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/ResolvePurchaseDisputeRequest"
+            "$ref": "#/parameters/ResolvePurchaseDisputeRequest"
           }
         ],
         "security": [
@@ -4062,7 +4062,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RevokeAllBansForUserRequest"
+            "$ref": "#/parameters/RevokeAllBansForUserRequest"
           }
         ],
         "security": [
@@ -4117,7 +4117,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RevokeBansRequest"
+            "$ref": "#/parameters/RevokeBansRequest"
           }
         ],
         "security": [
@@ -4169,7 +4169,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RevokeInventoryItemRequest"
+            "$ref": "#/parameters/RevokeInventoryItemRequest"
           }
         ],
         "security": [
@@ -4221,7 +4221,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RevokeInventoryItemsRequest"
+            "$ref": "#/parameters/RevokeInventoryItemsRequest"
           }
         ],
         "security": [
@@ -4273,7 +4273,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/RunTaskRequest"
+            "$ref": "#/parameters/RunTaskRequest"
           }
         ],
         "security": [
@@ -4329,7 +4329,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SendAccountRecoveryEmailRequest"
+            "$ref": "#/parameters/SendAccountRecoveryEmailRequest"
           }
         ],
         "security": [
@@ -4378,7 +4378,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateCatalogItemsRequest"
+            "$ref": "#/parameters/UpdateCatalogItemsRequest"
           }
         ],
         "security": [
@@ -4433,7 +4433,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SetPlayerSecretRequest"
+            "$ref": "#/parameters/SetPlayerSecretRequest"
           }
         ],
         "security": [
@@ -4479,7 +4479,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SetPublishedRevisionRequest"
+            "$ref": "#/parameters/SetPublishedRevisionRequest"
           }
         ],
         "security": [
@@ -4528,7 +4528,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SetPublisherDataRequest"
+            "$ref": "#/parameters/SetPublisherDataRequest"
           }
         ],
         "security": [
@@ -4580,7 +4580,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateStoreItemsRequest"
+            "$ref": "#/parameters/UpdateStoreItemsRequest"
           }
         ],
         "security": [
@@ -4636,7 +4636,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SetTitleDataRequest"
+            "$ref": "#/parameters/SetTitleDataRequest"
           }
         ],
         "security": [
@@ -4689,7 +4689,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SetTitleDataRequest"
+            "$ref": "#/parameters/SetTitleDataRequest"
           }
         ],
         "security": [
@@ -4742,7 +4742,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SetupPushNotificationRequest"
+            "$ref": "#/parameters/SetupPushNotificationRequest"
           }
         ],
         "security": [
@@ -4793,7 +4793,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/SubtractUserVirtualCurrencyRequest"
+            "$ref": "#/parameters/SubtractUserVirtualCurrencyRequest"
           }
         ],
         "security": [
@@ -4844,7 +4844,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateBansRequest"
+            "$ref": "#/parameters/UpdateBansRequest"
           }
         ],
         "security": [
@@ -4896,7 +4896,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateCatalogItemsRequest"
+            "$ref": "#/parameters/UpdateCatalogItemsRequest"
           }
         ],
         "security": [
@@ -4950,7 +4950,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateCloudScriptRequest"
+            "$ref": "#/parameters/UpdateCloudScriptRequest"
           }
         ],
         "security": [
@@ -4999,7 +4999,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdatePlayerSharedSecretRequest"
+            "$ref": "#/parameters/UpdatePlayerSharedSecretRequest"
           }
         ],
         "security": [
@@ -5049,7 +5049,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdatePlayerStatisticDefinitionRequest"
+            "$ref": "#/parameters/UpdatePlayerStatisticDefinitionRequest"
           }
         ],
         "security": [
@@ -5108,7 +5108,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdatePolicyRequest"
+            "$ref": "#/parameters/UpdatePolicyRequest"
           }
         ],
         "security": [
@@ -5157,7 +5157,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateRandomResultTablesRequest"
+            "$ref": "#/parameters/UpdateRandomResultTablesRequest"
           }
         ],
         "security": [
@@ -5210,7 +5210,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateStoreItemsRequest"
+            "$ref": "#/parameters/UpdateStoreItemsRequest"
           }
         ],
         "security": [
@@ -5265,7 +5265,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateTaskRequest"
+            "$ref": "#/parameters/UpdateTaskRequest"
           }
         ],
         "security": [
@@ -5326,7 +5326,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateUserDataRequest"
+            "$ref": "#/parameters/UpdateUserDataRequest"
           }
         ],
         "security": [
@@ -5379,7 +5379,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateUserInternalDataRequest"
+            "$ref": "#/parameters/UpdateUserInternalDataRequest"
           }
         ],
         "security": [
@@ -5432,7 +5432,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateUserDataRequest"
+            "$ref": "#/parameters/UpdateUserDataRequest"
           }
         ],
         "security": [
@@ -5488,7 +5488,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateUserInternalDataRequest"
+            "$ref": "#/parameters/UpdateUserInternalDataRequest"
           }
         ],
         "security": [
@@ -5544,7 +5544,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateUserDataRequest"
+            "$ref": "#/parameters/UpdateUserDataRequest"
           }
         ],
         "security": [
@@ -5600,7 +5600,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateUserDataRequest"
+            "$ref": "#/parameters/UpdateUserDataRequest"
           }
         ],
         "security": [
@@ -5653,7 +5653,7 @@
         },
         "parameters": [
           {
-            "$ref": "#/definitions/UpdateUserTitleDisplayNameRequest"
+            "$ref": "#/parameters/UpdateUserTitleDisplayNameRequest"
           }
         ],
         "security": [
@@ -12540,9 +12540,763 @@
       ]
     }
   },
+  "parameters": {
+    "AbortTaskInstanceRequest": {
+      "name": "AbortTaskInstanceRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AbortTaskInstanceRequest"
+      }
+    },
+    "AddNewsRequest": {
+      "name": "AddNewsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AddNewsRequest"
+      }
+    },
+    "AddPlayerTagRequest": {
+      "name": "AddPlayerTagRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AddPlayerTagRequest"
+      }
+    },
+    "AddServerBuildRequest": {
+      "name": "AddServerBuildRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AddServerBuildRequest"
+      }
+    },
+    "AddUserVirtualCurrencyRequest": {
+      "name": "AddUserVirtualCurrencyRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AddUserVirtualCurrencyRequest"
+      }
+    },
+    "AddVirtualCurrencyTypesRequest": {
+      "name": "AddVirtualCurrencyTypesRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/AddVirtualCurrencyTypesRequest"
+      }
+    },
+    "BanUsersRequest": {
+      "name": "BanUsersRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/BanUsersRequest"
+      }
+    },
+    "CheckLimitedEditionItemAvailabilityRequest": {
+      "name": "CheckLimitedEditionItemAvailabilityRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CheckLimitedEditionItemAvailabilityRequest"
+      }
+    },
+    "CreateActionsOnPlayerSegmentTaskRequest": {
+      "name": "CreateActionsOnPlayerSegmentTaskRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CreateActionsOnPlayerSegmentTaskRequest"
+      }
+    },
+    "CreateCloudScriptTaskRequest": {
+      "name": "CreateCloudScriptTaskRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CreateCloudScriptTaskRequest"
+      }
+    },
+    "CreatePlayerSharedSecretRequest": {
+      "name": "CreatePlayerSharedSecretRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CreatePlayerSharedSecretRequest"
+      }
+    },
+    "CreatePlayerStatisticDefinitionRequest": {
+      "name": "CreatePlayerStatisticDefinitionRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CreatePlayerStatisticDefinitionRequest"
+      }
+    },
+    "DeleteContentRequest": {
+      "name": "DeleteContentRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeleteContentRequest"
+      }
+    },
+    "DeleteMasterPlayerAccountRequest": {
+      "name": "DeleteMasterPlayerAccountRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeleteMasterPlayerAccountRequest"
+      }
+    },
+    "DeletePlayerRequest": {
+      "name": "DeletePlayerRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeletePlayerRequest"
+      }
+    },
+    "DeletePlayerSharedSecretRequest": {
+      "name": "DeletePlayerSharedSecretRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeletePlayerSharedSecretRequest"
+      }
+    },
+    "DeleteStoreRequest": {
+      "name": "DeleteStoreRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeleteStoreRequest"
+      }
+    },
+    "DeleteTaskRequest": {
+      "name": "DeleteTaskRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeleteTaskRequest"
+      }
+    },
+    "DeleteTitleRequest": {
+      "name": "DeleteTitleRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeleteTitleRequest"
+      }
+    },
+    "DeleteUsersRequest": {
+      "name": "DeleteUsersRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/DeleteUsersRequest"
+      }
+    },
+    "ExportMasterPlayerDataRequest": {
+      "name": "ExportMasterPlayerDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ExportMasterPlayerDataRequest"
+      }
+    },
+    "GetAllActionGroupsRequest": {
+      "name": "GetAllActionGroupsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetAllActionGroupsRequest"
+      }
+    },
+    "GetAllSegmentsRequest": {
+      "name": "GetAllSegmentsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetAllSegmentsRequest"
+      }
+    },
+    "GetCatalogItemsRequest": {
+      "name": "GetCatalogItemsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetCatalogItemsRequest"
+      }
+    },
+    "GetCloudScriptRevisionRequest": {
+      "name": "GetCloudScriptRevisionRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetCloudScriptRevisionRequest"
+      }
+    },
+    "GetCloudScriptVersionsRequest": {
+      "name": "GetCloudScriptVersionsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetCloudScriptVersionsRequest"
+      }
+    },
+    "GetContentListRequest": {
+      "name": "GetContentListRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetContentListRequest"
+      }
+    },
+    "GetContentUploadUrlRequest": {
+      "name": "GetContentUploadUrlRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetContentUploadUrlRequest"
+      }
+    },
+    "GetDataReportRequest": {
+      "name": "GetDataReportRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetDataReportRequest"
+      }
+    },
+    "GetMatchmakerGameInfoRequest": {
+      "name": "GetMatchmakerGameInfoRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetMatchmakerGameInfoRequest"
+      }
+    },
+    "GetMatchmakerGameModesRequest": {
+      "name": "GetMatchmakerGameModesRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetMatchmakerGameModesRequest"
+      }
+    },
+    "GetPlayedTitleListRequest": {
+      "name": "GetPlayedTitleListRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayedTitleListRequest"
+      }
+    },
+    "GetPlayerIdFromAuthTokenRequest": {
+      "name": "GetPlayerIdFromAuthTokenRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayerIdFromAuthTokenRequest"
+      }
+    },
+    "GetPlayerProfileRequest": {
+      "name": "GetPlayerProfileRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayerProfileRequest"
+      }
+    },
+    "GetPlayerSharedSecretsRequest": {
+      "name": "GetPlayerSharedSecretsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayerSharedSecretsRequest"
+      }
+    },
+    "GetPlayersInSegmentRequest": {
+      "name": "GetPlayersInSegmentRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayersInSegmentRequest"
+      }
+    },
+    "GetPlayersSegmentsRequest": {
+      "name": "GetPlayersSegmentsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayersSegmentsRequest"
+      }
+    },
+    "GetPlayerStatisticDefinitionsRequest": {
+      "name": "GetPlayerStatisticDefinitionsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayerStatisticDefinitionsRequest"
+      }
+    },
+    "GetPlayerStatisticVersionsRequest": {
+      "name": "GetPlayerStatisticVersionsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayerStatisticVersionsRequest"
+      }
+    },
+    "GetPlayerTagsRequest": {
+      "name": "GetPlayerTagsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPlayerTagsRequest"
+      }
+    },
+    "GetPolicyRequest": {
+      "name": "GetPolicyRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPolicyRequest"
+      }
+    },
+    "GetPublisherDataRequest": {
+      "name": "GetPublisherDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetPublisherDataRequest"
+      }
+    },
+    "GetRandomResultTablesRequest": {
+      "name": "GetRandomResultTablesRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetRandomResultTablesRequest"
+      }
+    },
+    "GetServerBuildInfoRequest": {
+      "name": "GetServerBuildInfoRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetServerBuildInfoRequest"
+      }
+    },
+    "GetServerBuildUploadURLRequest": {
+      "name": "GetServerBuildUploadURLRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetServerBuildUploadURLRequest"
+      }
+    },
+    "GetStoreItemsRequest": {
+      "name": "GetStoreItemsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetStoreItemsRequest"
+      }
+    },
+    "GetTaskInstanceRequest": {
+      "name": "GetTaskInstanceRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetTaskInstanceRequest"
+      }
+    },
+    "GetTaskInstancesRequest": {
+      "name": "GetTaskInstancesRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetTaskInstancesRequest"
+      }
+    },
+    "GetTasksRequest": {
+      "name": "GetTasksRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetTasksRequest"
+      }
+    },
+    "GetTitleDataRequest": {
+      "name": "GetTitleDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetTitleDataRequest"
+      }
+    },
+    "GetUserBansRequest": {
+      "name": "GetUserBansRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetUserBansRequest"
+      }
+    },
+    "GetUserDataRequest": {
+      "name": "GetUserDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetUserDataRequest"
+      }
+    },
+    "GetUserInventoryRequest": {
+      "name": "GetUserInventoryRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GetUserInventoryRequest"
+      }
+    },
+    "GrantItemsToUsersRequest": {
+      "name": "GrantItemsToUsersRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/GrantItemsToUsersRequest"
+      }
+    },
+    "IncrementLimitedEditionItemAvailabilityRequest": {
+      "name": "IncrementLimitedEditionItemAvailabilityRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/IncrementLimitedEditionItemAvailabilityRequest"
+      }
+    },
+    "IncrementPlayerStatisticVersionRequest": {
+      "name": "IncrementPlayerStatisticVersionRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/IncrementPlayerStatisticVersionRequest"
+      }
+    },
+    "ListBuildsRequest": {
+      "name": "ListBuildsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListBuildsRequest"
+      }
+    },
+    "ListVirtualCurrencyTypesRequest": {
+      "name": "ListVirtualCurrencyTypesRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ListVirtualCurrencyTypesRequest"
+      }
+    },
+    "LookupUserAccountInfoRequest": {
+      "name": "LookupUserAccountInfoRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/LookupUserAccountInfoRequest"
+      }
+    },
+    "ModifyMatchmakerGameModesRequest": {
+      "name": "ModifyMatchmakerGameModesRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ModifyMatchmakerGameModesRequest"
+      }
+    },
+    "ModifyServerBuildRequest": {
+      "name": "ModifyServerBuildRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ModifyServerBuildRequest"
+      }
+    },
+    "RefundPurchaseRequest": {
+      "name": "RefundPurchaseRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RefundPurchaseRequest"
+      }
+    },
+    "RemovePlayerTagRequest": {
+      "name": "RemovePlayerTagRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RemovePlayerTagRequest"
+      }
+    },
+    "RemoveServerBuildRequest": {
+      "name": "RemoveServerBuildRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RemoveServerBuildRequest"
+      }
+    },
+    "RemoveVirtualCurrencyTypesRequest": {
+      "name": "RemoveVirtualCurrencyTypesRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RemoveVirtualCurrencyTypesRequest"
+      }
+    },
+    "ResetCharacterStatisticsRequest": {
+      "name": "ResetCharacterStatisticsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ResetCharacterStatisticsRequest"
+      }
+    },
+    "ResetPasswordRequest": {
+      "name": "ResetPasswordRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ResetPasswordRequest"
+      }
+    },
+    "ResetUsersRequest": {
+      "name": "ResetUsersRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ResetUsersRequest"
+      }
+    },
+    "ResetUserStatisticsRequest": {
+      "name": "ResetUserStatisticsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ResetUserStatisticsRequest"
+      }
+    },
+    "ResolvePurchaseDisputeRequest": {
+      "name": "ResolvePurchaseDisputeRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ResolvePurchaseDisputeRequest"
+      }
+    },
+    "RevokeAllBansForUserRequest": {
+      "name": "RevokeAllBansForUserRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RevokeAllBansForUserRequest"
+      }
+    },
+    "RevokeBansRequest": {
+      "name": "RevokeBansRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RevokeBansRequest"
+      }
+    },
+    "RevokeInventoryItemRequest": {
+      "name": "RevokeInventoryItemRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RevokeInventoryItemRequest"
+      }
+    },
+    "RevokeInventoryItemsRequest": {
+      "name": "RevokeInventoryItemsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RevokeInventoryItemsRequest"
+      }
+    },
+    "RunTaskRequest": {
+      "name": "RunTaskRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/RunTaskRequest"
+      }
+    },
+    "SendAccountRecoveryEmailRequest": {
+      "name": "SendAccountRecoveryEmailRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SendAccountRecoveryEmailRequest"
+      }
+    },
+    "SetPlayerSecretRequest": {
+      "name": "SetPlayerSecretRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetPlayerSecretRequest"
+      }
+    },
+    "SetPublishedRevisionRequest": {
+      "name": "SetPublishedRevisionRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetPublishedRevisionRequest"
+      }
+    },
+    "SetPublisherDataRequest": {
+      "name": "SetPublisherDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetPublisherDataRequest"
+      }
+    },
+    "SetTitleDataRequest": {
+      "name": "SetTitleDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetTitleDataRequest"
+      }
+    },
+    "SetupPushNotificationRequest": {
+      "name": "SetupPushNotificationRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SetupPushNotificationRequest"
+      }
+    },
+    "SubtractUserVirtualCurrencyRequest": {
+      "name": "SubtractUserVirtualCurrencyRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/SubtractUserVirtualCurrencyRequest"
+      }
+    },
+    "UpdateBansRequest": {
+      "name": "UpdateBansRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateBansRequest"
+      }
+    },
+    "UpdateCatalogItemsRequest": {
+      "name": "UpdateCatalogItemsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateCatalogItemsRequest"
+      }
+    },
+    "UpdateCloudScriptRequest": {
+      "name": "UpdateCloudScriptRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateCloudScriptRequest"
+      }
+    },
+    "UpdatePlayerSharedSecretRequest": {
+      "name": "UpdatePlayerSharedSecretRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdatePlayerSharedSecretRequest"
+      }
+    },
+    "UpdatePlayerStatisticDefinitionRequest": {
+      "name": "UpdatePlayerStatisticDefinitionRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdatePlayerStatisticDefinitionRequest"
+      }
+    },
+    "UpdatePolicyRequest": {
+      "name": "UpdatePolicyRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdatePolicyRequest"
+      }
+    },
+    "UpdateRandomResultTablesRequest": {
+      "name": "UpdateRandomResultTablesRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateRandomResultTablesRequest"
+      }
+    },
+    "UpdateStoreItemsRequest": {
+      "name": "UpdateStoreItemsRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateStoreItemsRequest"
+      }
+    },
+    "UpdateTaskRequest": {
+      "name": "UpdateTaskRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateTaskRequest"
+      }
+    },
+    "UpdateUserDataRequest": {
+      "name": "UpdateUserDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateUserDataRequest"
+      }
+    },
+    "UpdateUserInternalDataRequest": {
+      "name": "UpdateUserInternalDataRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateUserInternalDataRequest"
+      }
+    },
+    "UpdateUserTitleDisplayNameRequest": {
+      "name": "UpdateUserTitleDisplayNameRequest",
+      "in": "body",
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/UpdateUserTitleDisplayNameRequest"
+      }
+    }
+  },
   "responses": {
     "ApiErrorWrapper": {
-      "description": "This is the outer-wrapper for all successful results",
+      "description": "This is the outer-wrapper for all results with errors",
       "schema": {
         "$ref": "#/definitions/ApiErrorWrapper"
       }
@@ -13073,7 +13827,7 @@
   "tags": [
     {
       "name": "Account Management",
-      "description": "https://api.playfab.com/documentation/Admin#Account Management"
+      "description": "https://api.playfab.com/documentation/Admin#Account-Management"
     },
     {
       "name": "Authentication",
@@ -13089,7 +13843,7 @@
     },
     {
       "name": "Custom Server Management",
-      "description": "https://api.playfab.com/documentation/Admin#Custom Server Management"
+      "description": "https://api.playfab.com/documentation/Admin#Custom-Server-Management"
     },
     {
       "name": "Matchmaking",
@@ -13097,11 +13851,11 @@
     },
     {
       "name": "Player Data Management",
-      "description": "https://api.playfab.com/documentation/Admin#Player Data Management"
+      "description": "https://api.playfab.com/documentation/Admin#Player-Data-Management"
     },
     {
       "name": "Player Item Management",
-      "description": "https://api.playfab.com/documentation/Admin#Player Item Management"
+      "description": "https://api.playfab.com/documentation/Admin#Player-Item-Management"
     },
     {
       "name": "PlayStream",
@@ -13113,18 +13867,24 @@
     },
     {
       "name": "Server-Side Cloud Script",
-      "description": "https://api.playfab.com/documentation/Admin#Server-Side Cloud Script"
+      "description": "https://api.playfab.com/documentation/Admin#Server-Side-Cloud-Script"
     },
     {
       "name": "Shared Group Data",
-      "description": "https://api.playfab.com/documentation/Admin#Shared Group Data"
+      "description": "https://api.playfab.com/documentation/Admin#Shared-Group-Data"
     },
     {
       "name": "Title-Wide Data Management",
-      "description": "https://api.playfab.com/documentation/Admin#Title-Wide Data Management"
+      "description": "https://api.playfab.com/documentation/Admin#Title-Wide-Data-Management"
     }
   ],
   "securityDefinitions": {
+    "None": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "None",
+      "description": "This API requires no authentication headers (usually provides one to other calls)."
+    },
     "SessionTicket": {
       "type": "apiKey",
       "in": "header",
